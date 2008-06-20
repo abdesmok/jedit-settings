@@ -1,4 +1,5 @@
 [vfs.browser.path]
+E:\\projects\\jedit\\home\\.jedit
 E:\\projects\\covera\\covera\\trunk\\src\\shell\\scripting
 E:\\projects\\covera\\covera\\trunk\\src\\shell
 E:\\projects\\covera\\covera\\trunk\\src\\positioning\\server\\http
@@ -8,7 +9,12 @@ E:\\qt\\win32-g++\\4.4.0\\src\\corelib\\tools
 E:\\projects\\covera\\covera\\trunk\\src\\positioning\\map\\methods
 E:\\projects\\covera\\covera\\trunk\\src\\mainwindow
 E:\\projects\\covera\\covera\\trunk\\output\\c_coverapos_d\\mainwindow
-E:\\projects\\covera\\covera\\trunk
+[sftp.host]
+192.168.17.2
+192.168.17.2:22
+[vfs.browser.filter]
+*\[^~#\]
+*
 [helpviewer.search]
 SearchAndReplace
 reloaded
@@ -20,12 +26,6 @@ undoredo
 bsh command
 command
 -noserver
-[vfs.browser.filter]
-*\[^~#\]
-*
-[sftp.host]
-192.168.17.2
-192.168.17.2:22
 [FindFilePlugin.path]
 E:\\projects\\covera\\covera\\trunk\\manual\\src\\
 E:\\kde\\src\\
@@ -53,17 +53,6 @@ E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\exe_win32-g++\\iperf-2.0.4\\sr
 E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\win32-msvc2008\\iperf-2.0.4
 E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\src\\
 E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\diff\\iperf-2.0.4\\
-[console.BeanShell]
-55 + 566 / 45555
-55 + 566 / 45
-55 + 566 / 458
-55 + 566
-a + 566
-a
-a=\"kk\";
-System.println(\"kkk\");
-System.io.println(\"kkk\");
-sys.io.println(\"kkk\");
 [replace]
 nmap
 __MAPTABLE_H__
@@ -75,6 +64,17 @@ SET_MAP
 __MAP_H__
 map.h
 Map
+[console.BeanShell]
+55 + 566 / 45555
+55 + 566 / 45
+55 + 566 / 458
+55 + 566
+a + 566
+a
+a=\"kk\";
+System.println(\"kkk\");
+System.io.println(\"kkk\");
+sys.io.println(\"kkk\");
 [console.GDB/MI]
 start
 open ee
@@ -84,17 +84,6 @@ gdb
 k
 q
 c
-[search.filter]
-*.xslt
-(re)((?!moc_)(?!\[a-z0-9_\]+_moc)(?!\[a-z0-9_\]+_data)(?!\[a-z0-9_\]*outsrc\[a-z0-9_\]*)\[a-z0-9_\]+\\.(cpp|h))
-*
-*.h|*.hpp|*.c|*.cpp
-*.h
-*.cfg
-*.*
-*.xsl
-*.xml
-*.wxs
 [console.ssh]
 /var/svn/covera/hooks/svn_buildbot.py --exclude=\"tags/?.*\" --repository=\"/var/svn/covera\" --revision=\"1941\" --bbserver=\"localhost\" --bbport=9989
 history
@@ -106,21 +95,32 @@ exit
 open svn
 /var/svn/covera/hooks/svn_buildbot.py --repository=\"/var/svn/covera/\" --revision=\"1920\" --bbserver=\"localhost\" --bbport=9989
 /etc/init.d/buildbot restart
+[search.filter]
+*.xslt
+(re)((?!moc_)(?!\[a-z0-9_\]+_moc)(?!\[a-z0-9_\]+_data)(?!\[a-z0-9_\]*outsrc\[a-z0-9_\]*)\[a-z0-9_\]+\\.(cpp|h))
+*
+*.h|*.hpp|*.c|*.cpp
+*.h
+*.cfg
+*.*
+*.xsl
+*.xml
+*.wxs
 [FindFilePlugin.filter]
 *.txt
 deleme.txt
 qserial.h
 [action]
 save
+search-in-directory
 delete
 select-document-end
+document-home
+next-page
+document-end
 home
 prev-line
-document-end
 close-all
-make/make_exec
-backspace
-make/make_all
 [gatchan-highlight.expression]
 \[a-zA-Z_;,\]  +
 \[a-zA-Z_;\]  +

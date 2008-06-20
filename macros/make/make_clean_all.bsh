@@ -1,0 +1,4 @@
+source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
+
+command("make clean_all");
+

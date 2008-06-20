@@ -1,0 +1,167 @@
+[vfs.browser.path]
+E:\\projects\\covera\\covera\\trunk\\src\\shell\\scripting
+E:\\projects\\covera\\covera\\trunk\\src\\shell
+E:\\projects\\covera\\covera\\trunk\\src\\positioning\\server\\http
+C:\\Documents and Settings\\Administrator\\2005-2006\\teledetect\\mini_projet\\src
+E:\\qt\\win32-g++\\4.4.0\\src\\corelib
+E:\\qt\\win32-g++\\4.4.0\\src\\corelib\\tools
+E:\\projects\\covera\\covera\\trunk\\src\\positioning\\map\\methods
+E:\\projects\\covera\\covera\\trunk\\src\\mainwindow
+E:\\projects\\covera\\covera\\trunk\\output\\c_coverapos_d\\mainwindow
+E:\\projects\\covera\\covera\\trunk
+[helpviewer.search]
+SearchAndReplace
+reloaded
+xml errors
+parsing errors
+search filter
+undo level
+undoredo
+bsh command
+command
+-noserver
+[vfs.browser.filter]
+*\[^~#\]
+*
+[sftp.host]
+192.168.17.2
+192.168.17.2:22
+[FindFilePlugin.path]
+E:\\projects\\covera\\covera\\trunk\\manual\\src\\
+E:\\kde\\src\\
+[replace.script]
+nmap
+_1 + \"map\" + _2
+\"*map\" + _1
+_1 + \"map->\"
+\"   <m source=\\\"\" + _2 + \"\\\" value=\\\"\" + _1 + \"\\\" />\"
+\"  <m source=\\\"\" + _2 + \"\\\" value=\\\"\" + _1 + \"\\\" />\"
+\"    <m source=\\\"\" + _2 + \"\\\" value=\\\"\" + _1 + \"\\\" />\"
+\"    <m source=\\\"\" + _2 + \"\\\" value=\\\"\" + _1 + \"\\\">\"
+_qt_
+\"${LIB_PATH_PREFIX}\"
+[ftp.user]
+root
+[search.directory]
+E:\\projects\\covera\\covera\\trunk\\src\\resources\\xslt\\
+E:\\projects\\covera\\covera\\trunk\\src
+E:\\projects\\covera\\covera\\trunk\\src\\positioning
+E:\\projects\\covera\\covera\\trunk\\buildconf
+E:\\projects\\covera\\covera\\branches\\2.1.x\\src
+E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\exe_win32-g++\\iperf-2.0.4\\
+E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\exe_win32-g++\\iperf-2.0.4\\src\\
+E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\win32-msvc2008\\iperf-2.0.4
+E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\src\\
+E:\\projects\\covera\\covera\\trunk\\libs\\iperf\\diff\\iperf-2.0.4\\
+[console.BeanShell]
+55 + 566 / 45555
+55 + 566 / 45
+55 + 566 / 458
+55 + 566
+a + 566
+a
+a=\"kk\";
+System.println(\"kkk\");
+System.io.println(\"kkk\");
+sys.io.println(\"kkk\");
+[replace]
+nmap
+__MAPTABLE_H__
+maptable.h
+mapmanagerdw.h
+__MAPMANAGERDW_H__
+NEEDS_ACTIVE_MAP
+SET_MAP
+__MAP_H__
+map.h
+Map
+[console.GDB/MI]
+start
+open ee
+r
+s
+gdb
+k
+q
+c
+[search.filter]
+*.xslt
+(re)((?!moc_)(?!\[a-z0-9_\]+_moc)(?!\[a-z0-9_\]+_data)(?!\[a-z0-9_\]*outsrc\[a-z0-9_\]*)\[a-z0-9_\]+\\.(cpp|h))
+*
+*.h|*.hpp|*.c|*.cpp
+*.h
+*.cfg
+*.*
+*.xsl
+*.xml
+*.wxs
+[console.ssh]
+/var/svn/covera/hooks/svn_buildbot.py --exclude=\"tags/?.*\" --repository=\"/var/svn/covera\" --revision=\"1941\" --bbserver=\"localhost\" --bbport=9989
+history
+/var/svn/covera/hooks/svn_buildbot.py --exclude=\"tags/?.*\" --repository=/var/svn/covera --revision=\"1941\" --bbserver=\"localhost\" --bbport=9989cd
+/var/svn/covera/hooks/svn_buildbot.py --exclude=\"tags/?.*\" --repository=/var/svn/covera --revision=\"1941\" --bbserver=\"localhost\" --bbport=9989cd /var/svn/covera
+/var/svn/covera/hooks/svn_buildbot.py --exclude=\"tags/?.*\" --repository=.. --revision=\"1941\" --bbserver=\"localhost\" --bbport=9989cd /var/svn/covera
+pwd
+exit
+open svn
+/var/svn/covera/hooks/svn_buildbot.py --repository=\"/var/svn/covera/\" --revision=\"1920\" --bbserver=\"localhost\" --bbport=9989
+/etc/init.d/buildbot restart
+[FindFilePlugin.filter]
+*.txt
+deleme.txt
+qserial.h
+[action]
+save
+delete
+select-document-end
+home
+prev-line
+document-end
+close-all
+make/make_exec
+backspace
+make/make_all
+[gatchan-highlight.expression]
+\[a-zA-Z_;,\]  +
+\[a-zA-Z_;\]  +
+\[a-zA-Z_\]  +
+\[a-zA-Z\]  +
+\[a-zA-\]  +
+\[a-zA\]  +
+\[a-z\]  +
+\[a-\]  +
+\[a\]  +
+\[\]  +
+[clipboard]
+ncamp
+__CAMPAIGNTABLE_H__
+__CAMPAIGNMANAGERDW_H__
+NEEDS_ACTIVE_CAMPAIGN
+SET_CAMPAIGN
+name
+Q_PROPERTY( bool enabled WRITE setEnabled READ isEnabled )
+ScrProject
+Q_DECLARE_METATYPE(MyObject*)\n\n     QScriptValue myObjectToScriptValue(QScriptEngine *engine, MyObject* const &in)\n     { return engine->newQObject(in); }\n\n     void myObjectFromScriptValue(const QScriptValue &object, MyObject* &out)\n     { out = qobject_cast<MyObject*>(object.toQObject()); }\n\n     ...\n\n     qScriptRegisterMetaType(&engine, myObjectToScriptValue, myObjectFromScriptValue); \n
+#include <QObject>\n\n#include \"objectref.h\"\n\nclass Project;\n\nclass ScrProject : public QObject\n{\n  Q_OBJECT\n  \n  \npublic:\n  ScrProject(Project *project);\n  \npublic slots:\n  \n  \nprivate:\n  Pointer<Project> *project;\n};\n
+[console.System]
+make exec
+E:\\projects\\covera\\covera\\trunk
+make
+\"e:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/bin/moc\" -f./src/mainwindow/mainwindow_export.cpp src/mainwindow/mainwindow_export.cpp -o output/c_coverapos_d/mainwindow/mainwindow_export_moc.cpp
+\"e:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/bin/moc\" -f\"./src/mainwindow/mainwindow_export.cpp\" src/mainwindow/mainwindow_export.cpp -o output/c_coverapos_d/mainwindow/mainwindow_export_moc.cpp
+\"e:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/bin/moc\" src/mainwindow/mainwindow_export.cpp -o output/c_coverapos_d/mainwindow/mainwindow_export_moc.cpp
+\"e:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/bin/moc\" -I\".\" -I\"./include/coverapos\" -nw -f\"./src/mainwindow/mainwindow_export.cpp\" src/mainwindow/mainwindow_export.cpp -o output/c_coverapos_d/mainwindow/mainwindow_export_moc.cpp
+\"e:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/bin/moc\" -I\".\" -I\"./include/coverapos\" -nw -DCVR_COVERAPOS -DCVR_STATIC -DUNICODE -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -f\"./src/mainwindow/mainwindow_export.cpp\" src/mainwindow/mainwindow_export.cpp -o output/c_coverapos_d/mainwindow/mainwindow_export_moc.cpp
+\"e:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/bin/moc\" -I\".\" -I\"./include/coverapos\" -nw -DCVR_COVERAPOS -DCVR_STATIC -DUNICODE -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -I./libs -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include/QtCore -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include/QtNetwork -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include/QtGui -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include -Ilibs/gnome/win32-g++/libxml2/2.6.32/include -Ilibs/gnome/win32-g++/libxslt/1.1.23/include -Ilibs/iperf/win32-g++/2.0.4/include -f\"./src/mainwindow/mainwindow_export.cpp\" src/mainwindow/mainwindow_export.cpp -o output/c_coverapos_d/mainwindow/mainwindow_export_moc.cpp
+\"e:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/bin/moc\" -I\".\" -I\"./include/coverapos\" -DCVR_COVERAPOS -DCVR_STATIC -DUNICODE -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -I./libs -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include/QtCore -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include/QtNetwork -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include/QtGui -Ie:/projects/covera/covera/trunk/libs/qt/win32-g++/4.4.0-static/include -Ilibs/gnome/win32-g++/libxml2/2.6.32/include -Ilibs/gnome/win32-g++/libxslt/1.1.23/include -Ilibs/iperf/win32-g++/2.0.4/include -f\"./src/mainwindow/mainwindow_export.cpp\" src/mainwindow/mainwindow_export.cpp -o output/c_coverapos_d/mainwindow/mainwindow_export_moc.cpp
+[find]
+camp
+ncamp
+(\[^a-zA-Z_\])camp(\[^a-zA-Z_\])
+\\*camp(\[^a-zA-Z_\])
+(\[^a-zA-Z_\])camp->
+\[^a-zA-Z_\]camp->
+camp->
+\[^a-zA-Z_\]camp\[^a\]
+camp\[^a\]
+campaign

@@ -1,0 +1,24 @@
+// simple script to open the help for an ant core task under Windows 98
+// the ant "manual" html files directory is assumed to be copied to 
+// <user.home>.jedit\contexthelp\xml
+// change the command string for other opertaing systems
+import contexthelp.BrowserLauncher;
+
+// Construct the command which will be executed
+command = new StringBuffer();
+
+// only for my ant build files:
+if ( fileURL.endsWith("build.xml") ) {
+// helpDirectory is something like <user.home>.jedit\contexthelp\xml
+  command.append("command.com /c start ");
+  command.append(helpDirectory);
+  command.append("\\manual\\CoreTasks\\");
+  keyWord=keyWord.toLowerCase();
+  command.append(keyWord);
+  command.append(".html");
+}
+
+// change to the documents directory if necessary
+// runCommandInConsole(view,"System","cd c:\\java");
+ runCommandInConsole(view,"System",command.toString());
+

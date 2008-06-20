@@ -1,0 +1,18 @@
+// Construct the command which will be executed
+// extract the texinfo help files from the http://www.miktex.org distribution
+command = new StringBuffer();
+
+// HTML Help executable:
+command.append("winhlp32 -k");
+// this assumes, that you have "double-clicked" the keyWord in the jEdit buffer:
+command.append(keyWord);
+command.append(" ");
+
+// helpDirectory is something like <user.home>.jedit\contexthelp\java
+command.append(helpDirectory);
+command.append("/Texinfo.hlp");
+
+// change to the documents directory if necessary
+// runCommandInConsole(view,"System","cd c:\\java");
+runCommandInConsole(view,"System",command.toString());
+

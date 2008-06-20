@@ -1,0 +1,16 @@
+// This is a temporary macro. First, check over the
+// commands to make sure this is what you intended.
+// Then, to run this macro, switch to the buffer
+// where you would like to execute it and press C+m C+p.
+
+jEdit.newFile(view);
+textArea.setSelectedText(
+  "#include <stdio.h>\n"
++ "#include <stdlib.h>\n"
++ "\n"
++ "int main(int argc, char **argv) {\n"
++ "\n"
++ "  return 0;\n"
++ "}\n");
+buffer.save(view,null,true);
+

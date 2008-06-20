@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="C:/coverazone">
+<property name="projectviewer.folder_tree_state" value="1000" />
+<property name="projectviewer.import.filteridx" data="rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAA" />
+<directory path="C:/coverazone/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation">
+<directory path="C:/coverazone/Vendor documentation/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/app">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/app/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/app/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/app/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/app/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/driver">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/driver/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/driver/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/driver/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/driver/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/inc">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/inc/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/inc/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/inc/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/atmsmple/inc/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/coisdn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/coisdn/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/coisdn/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/coisdn/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/coisdn/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/50">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/50/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/50/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/50/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/50/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/51">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/51/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/51/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/51/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/51/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/kd">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/kd/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/kd/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/kd/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/kd/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/i386">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/i386/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/i386/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/i386/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/i386/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/ia64">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/ia64/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/ia64/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/ia64/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/private/ia64/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/testwmi">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/testwmi/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/testwmi/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/testwmi/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/e100bex/testwmi/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/isdnwan">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/isdnwan/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/isdnwan/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/isdnwan/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/isdnwan/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/driver">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/driver/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/driver/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/driver/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/driver/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/notifyob">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/notifyob/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/notifyob/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/notifyob/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/mux/notifyob/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/sys">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/sys/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/sys/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/sys/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/sys/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/test">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/test/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/test/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/test/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/ndisuio/test/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/.svn">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/driver">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/driver/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/driver/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/driver/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/driver/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/notifyob">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/notifyob/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/notifyob/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/notifyob/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/passthru/notifyob/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/tbatm155">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/tbatm155/.svn">
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/tbatm155/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/tbatm155/.svn/props">
+</directory>
+<directory path="C:/coverazone/Vendor documentation/Microsoft/DDK/NETW_NDIS/src/network/ndis/tbatm155/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk">
+<directory path="C:/coverazone/trunk/.svn">
+<directory path="C:/coverazone/trunk/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/ArtWork">
+<directory path="C:/coverazone/trunk/ArtWork/.svn">
+<directory path="C:/coverazone/trunk/ArtWork/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/ArtWork/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/ArtWork/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/DES">
+<directory path="C:/coverazone/trunk/DES/.svn">
+<directory path="C:/coverazone/trunk/DES/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/DES/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/DES/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Debug">
+<directory path="C:/coverazone/trunk/Debug/.svn">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/FRA">
+<directory path="C:/coverazone/trunk/FRA/.svn">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Gif">
+<directory path="C:/coverazone/trunk/Gif/.svn">
+<directory path="C:/coverazone/trunk/Gif/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Gif/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Gif/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Help">
+<directory path="C:/coverazone/trunk/Help/.svn">
+<directory path="C:/coverazone/trunk/Help/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Help/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Help/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Help/images">
+<directory path="C:/coverazone/trunk/Help/images/.svn">
+<directory path="C:/coverazone/trunk/Help/images/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Help/images/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Help/images/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Jpeg">
+<directory path="C:/coverazone/trunk/Jpeg/.svn">
+<directory path="C:/coverazone/trunk/Jpeg/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Jpeg/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Jpeg/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Localization">
+<directory path="C:/coverazone/trunk/Localization/.svn">
+<directory path="C:/coverazone/trunk/Localization/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Localization/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Localization/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Localization/FRA">
+<directory path="C:/coverazone/trunk/Localization/FRA/.svn">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Png">
+<directory path="C:/coverazone/trunk/Png/.svn">
+<directory path="C:/coverazone/trunk/Png/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Png/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Png/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Release">
+<directory path="C:/coverazone/trunk/Release/.svn">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Report">
+<directory path="C:/coverazone/trunk/Report/.svn">
+<directory path="C:/coverazone/trunk/Report/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Report/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Report/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/SetUp">
+<directory path="C:/coverazone/trunk/SetUp/.svn">
+<directory path="C:/coverazone/trunk/SetUp/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/SetUp/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/SetUp/.svn/text-base">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/SetUp/Samples">
+<directory path="C:/coverazone/trunk/SetUp/Samples/.svn">
+<directory path="C:/coverazone/trunk/SetUp/Samples/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/SetUp/Samples/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/SetUp/Samples/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Sounds">
+<directory path="C:/coverazone/trunk/Sounds/.svn">
+<directory path="C:/coverazone/trunk/Sounds/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Sounds/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Sounds/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Trial">
+<directory path="C:/coverazone/trunk/Trial/.svn">
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Tutorial">
+<directory path="C:/coverazone/trunk/Tutorial/.svn">
+<directory path="C:/coverazone/trunk/Tutorial/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Tutorial/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Tutorial/.svn/text-base">
+</directory>
+</directory>
+</directory>
+<directory path="C:/coverazone/trunk/Zlib">
+<directory path="C:/coverazone/trunk/Zlib/.svn">
+<directory path="C:/coverazone/trunk/Zlib/.svn/prop-base">
+</directory>
+<directory path="C:/coverazone/trunk/Zlib/.svn/props">
+</directory>
+<directory path="C:/coverazone/trunk/Zlib/.svn/text-base">
+</directory>
+</directory>
+</directory>
+</directory>
+</project>

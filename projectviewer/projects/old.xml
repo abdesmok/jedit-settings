@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="C:/old">
+<property name="projectviewer.folder_tree_state" value="10000000000" />
+<property name="projectviewer.import.filteridx" data="rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAB" />
+<directory path="C:/old/Covera Driver Resources">
+<directory path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio">
+<directory path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys">
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/buildchk_wxp_x86.log" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/debug.c" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/debug.h" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/excallbk.c" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/macros.h" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/ndisbind.c" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/ndisprot.h" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/ndisprot.rc" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/ntdisp.c" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/nuiouser.h" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/precomp.h" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/recv.c" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/sys/send.c" />
+</directory>
+<directory path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/test">
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/test/buildchk_wxp_x86.log" />
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/test/uiotest.c" />
+</directory>
+<file path="C:/old/Covera Driver Resources/NDIS_Driver_Celtrio/ndisprot.htm" />
+</directory>
+<directory path="C:/old/Covera Driver Resources/Windows DDK">
+<directory path="C:/old/Covera Driver Resources/Windows DDK/common">
+<file path="C:/old/Covera Driver Resources/Windows DDK/common/cabs.ini" />
+<file path="C:/old/Covera Driver Resources/Windows DDK/common/icons.ini" />
+</directory>
+<file path="C:/old/Covera Driver Resources/Windows DDK/drvfast_install.htm" />
+<file path="C:/old/Covera Driver Resources/Windows DDK/install.htm" />
+<file path="C:/old/Covera Driver Resources/Windows DDK/prefast_install.htm" />
+<file path="C:/old/Covera Driver Resources/Windows DDK/relnote.htm" />
+<file path="C:/old/Covera Driver Resources/Windows DDK/srcindex.htm" />
+</directory>
+</directory>
+<directory path="C:/old/programs">
+<file path="C:/old/programs/file_to_c_byte_array.c" />
+<file path="C:/old/programs/getOUI.pl" />
+</directory>
+<directory path="C:/old/src">
+<directory path="C:/old/src/application">
+<file path="C:/old/src/application/application.cpp" />
+<file path="C:/old/src/application/application.h" />
+</directory>
+<directory path="C:/old/src/cvrwidgets">
+<file path="C:/old/src/cvrwidgets/cvrbutton.cpp" />
+<file path="C:/old/src/cvrwidgets/cvrbutton.h" />
+<file path="C:/old/src/cvrwidgets/cvrdockarea.cpp" />
+<file path="C:/old/src/cvrwidgets/cvrdockarea.h" />
+<file path="C:/old/src/cvrwidgets/cvrdockspace.cpp" />
+<file path="C:/old/src/cvrwidgets/cvrdockspace.h" />
+<file path="C:/old/src/cvrwidgets/cvrdockwidget.cpp" />
+<file path="C:/old/src/cvrwidgets/cvrdockwidget.h" />
+<file path="C:/old/src/cvrwidgets/cvripedit.cpp" />
+<file path="C:/old/src/cvrwidgets/cvripedit.h" />
+<file path="C:/old/src/cvrwidgets/cvrmacedit.cpp" />
+<file path="C:/old/src/cvrwidgets/cvrmacedit.h" />
+<file path="C:/old/src/cvrwidgets/cvrtabworkspace.cpp" />
+<file path="C:/old/src/cvrwidgets/cvrtabworkspace.h" />
+</directory>
+<directory path="C:/old/src/images">
+<file path="C:/old/src/images/images-data.h" />
+</directory>
+<directory path="C:/old/src/interpolation">
+<file path="C:/old/src/interpolation/interpolation.cpp" />
+<file path="C:/old/src/interpolation/interpolation.h" />
+</directory>
+<directory path="C:/old/src/mainwindow">
+<file path="C:/old/src/mainwindow/mainwindow.cpp" />
+<file path="C:/old/src/mainwindow/mainwindow.h" />
+<file path="C:/old/src/mainwindow/mainwindow_slots.cpp" />
+</directory>
+<directory path="C:/old/src/mapview">
+<file path="C:/old/src/mapview/maparea.cpp" />
+<file path="C:/old/src/mapview/maparea.h" />
+<file path="C:/old/src/mapview/mapwidget.cpp" />
+<file path="C:/old/src/mapview/mapwidget.h" />
+<file path="C:/old/src/mapview/pointinfo.cpp" />
+<file path="C:/old/src/mapview/pointinfo.h" />
+</directory>
+<directory path="C:/old/src/ndis">
+<file path="C:/old/src/ndis/Ndis.cpp" />
+<file path="C:/old/src/ndis/NtDDNdis.h" />
+<file path="C:/old/src/ndis/README.TXT" />
+<file path="C:/old/src/ndis/ndis.h" />
+<file path="C:/old/src/ndis/nuiouser.h" />
+</directory>
+<directory path="C:/old/src/optionsdialog">
+<file path="C:/old/src/optionsdialog/abstractoptionswidget.cpp" />
+<file path="C:/old/src/optionsdialog/abstractoptionswidget.h" />
+<file path="C:/old/src/optionsdialog/guioptions.cpp" />
+<file path="C:/old/src/optionsdialog/guioptions.h" />
+<file path="C:/old/src/optionsdialog/optionsdialog.cpp" />
+<file path="C:/old/src/optionsdialog/optionsdialog.h" />
+</directory>
+<directory path="C:/old/src/project">
+<directory path="C:/old/src/project/support">
+<file path="C:/old/src/project/support/oldcvrzone.h" />
+</directory>
+<file path="C:/old/src/project/address.h" />
+<file path="C:/old/src/project/measure.cpp" />
+<file path="C:/old/src/project/measure.h" />
+<file path="C:/old/src/project/project.cpp" />
+<file path="C:/old/src/project/project.h" />
+<file path="C:/old/src/project/project_open.cpp" />
+<file path="C:/old/src/project/project_save.cpp" />
+<file path="C:/old/src/project/surveypoint.cpp" />
+<file path="C:/old/src/project/surveypoint.h" />
+</directory>
+<directory path="C:/old/src/svm-1.05">
+<directory path="C:/old/src/svm-1.05/src">
+<file path="C:/old/src/svm-1.05/src/svm.h" />
+<file path="C:/old/src/svm-1.05/src/svmData.h" />
+<file path="C:/old/src/svm-1.05/src/svmHyperplane.h" />
+<file path="C:/old/src/svm-1.05/src/svmKernel.h" />
+<file path="C:/old/src/svm-1.05/src/svmMetaPost.cc" />
+<file path="C:/old/src/svm-1.05/src/svmMetaPost.h" />
+<file path="C:/old/src/svm-1.05/src/svmRisk.h" />
+<file path="C:/old/src/svm-1.05/src/svmSMO-C-SVM.h" />
+<file path="C:/old/src/svm-1.05/src/svmSMO-e-SVM.h" />
+<file path="C:/old/src/svm-1.05/src/svmSMO.h" />
+<file path="C:/old/src/svm-1.05/src/svmSVM.h" />
+<file path="C:/old/src/svm-1.05/src/svmVector.h" />
+<file path="C:/old/src/svm-1.05/src/svmWrap.cc" />
+<file path="C:/old/src/svm-1.05/src/svmWrap.h" />
+</directory>
+<file path="C:/old/src/svm-1.05/ChangeLog" />
+<file path="C:/old/src/svm-1.05/INSTALL" />
+<file path="C:/old/src/svm-1.05/README" />
+<file path="C:/old/src/svm-1.05/configure" />
+<file path="C:/old/src/svm-1.05/ltmain.sh" />
+</directory>
+<directory path="C:/old/src/tools">
+<file path="C:/old/src/tools/activepointinfo.cpp" />
+<file path="C:/old/src/tools/activepointinfo.h" />
+<file path="C:/old/src/tools/connectiontools.cpp" />
+<file path="C:/old/src/tools/connectiontools.h" />
+<file path="C:/old/src/tools/listap.cpp" />
+<file path="C:/old/src/tools/listap.h" />
+<file path="C:/old/src/tools/maptools.cpp" />
+<file path="C:/old/src/tools/maptools.h" />
+<file path="C:/old/src/tools/viewfilters.cpp" />
+<file path="C:/old/src/tools/viewfilters.h" />
+<file path="C:/old/src/tools/viewproperties.cpp" />
+<file path="C:/old/src/tools/viewproperties.h" />
+</directory>
+<file path="C:/old/src/AdaptersPropertiesWindow.h" />
+<file path="C:/old/src/global.h" />
+<file path="C:/old/src/main.cpp" />
+</directory>
+<file path="C:/old/README" />
+<file path="C:/old/archive.sh" />
+<file path="C:/old/delete-autogenerated.sh" />
+<file path="C:/old/generate-makefile.sh" />
+<file path="C:/old/oui.txt" />
+<file path="C:/old/stdout.log" />
+<file path="C:/old/whattodo.sh" />
+</project>

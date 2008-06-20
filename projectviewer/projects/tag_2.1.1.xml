@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="E:/projects/covera/covera/tags/2.1.1">
+<property name="projectviewer.folder_tree_state" value="1000000000010000000000000011000001000000000000000000000000000000000" />
+<property name="projectviewer.import.filteridx" data="rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAB" />
+<open-file path="E:\projects\covera\covera\tags\2.1.1\src\project\io\project_save.cpp" />
+<open-file path="E:\projects\covera\covera\tags\2.1.1\src\project\guiaccess\drawstyleoptions.cpp" />
+<directory path="E:/projects/covera/covera/tags/2.1.1/bin-utils">
+<directory path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf">
+<directory path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib">
+<directory path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/file">
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/file/glob.pm" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/warnings">
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/warnings/register.pm" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/AutoLoader.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/Carp.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/Config.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/DynaLoader.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/Exporter.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/XSLoader.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/strict.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/vars.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/lib/warnings.pm" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/1394.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/61883.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/AVC.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/ActivityMonitor.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/AntiVirus.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Battery.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/BlueTooth.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/CDROM.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/CFSMetaDataServer.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Compression.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Computer.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/ContentScreener.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/ContinuousBackup.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/CopyProtection.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/DOT4.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/DiskDrive.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Dot4Print.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Encryption.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/FDC.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/FSFilterSystem.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/FloppyDisk.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/HDC.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/HIDClass.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/HSM.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/InfFile.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/InfSection.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Infrastructure.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Keyboard.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/MTD.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Media.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/MediumChanger.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Mouse.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Multifunction.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/MultiportSerial.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/NetClient.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/NetService.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/NetTrans.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/OpenFileBackup.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/PCMCIA.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/PhysicalQuotaManagement.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Ports.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Printer.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Processor.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/QuotaManagement.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Replication.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/SBP2.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/SCSIAdapter.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/SecurityAccelerator.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/SecurityEnhancer.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/SmartCardReader.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/SmartGlob.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/System.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/TapeDrive.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/USB.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Undelete.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/Volume.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/WCEUSBS.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/WPD.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/chkinf.bat" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/chkinf.htm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/chkinf.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/chkinf.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/display.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/faxreg.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/generic.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/image.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/infrared.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/modem.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/monitor.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/net.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/bin-utils/chkinf/pnpprinters.pm" />
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/build">
+<file path="E:/projects/covera/covera/tags/2.1.1/build/Makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/build/README" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools">
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools/src">
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/cbytearray">
+<file path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/cbytearray/cbytearray.c" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/compress">
+<file path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/compress/compress.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/configure">
+<file path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/configure/configure.sh" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/iniread">
+<file path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/iniread/iniread.sh" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/tplproc">
+<file path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/tplproc/tplproc.sh" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/updatefile">
+<file path="E:/projects/covera/covera/tags/2.1.1/buildtools/src/updatefile/updatefile.sh" />
+</directory>
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/docs">
+<directory path="E:/projects/covera/covera/tags/2.1.1/docs/config">
+<file path="E:/projects/covera/covera/tags/2.1.1/docs/config/html_footer.html.tpl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/docs/config/html_header.html" />
+<file path="E:/projects/covera/covera/tags/2.1.1/docs/config/html_stylesheet.css" />
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/documents">
+<file path="E:/projects/covera/covera/tags/2.1.1/documents/Makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/documents/legal_notice.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/documents/license.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/documents/readme.xml" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/drivers">
+<directory path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot">
+<directory path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x">
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/debug.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/debug.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/excallbk.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/macros.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/ndisbind.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/ndisprot.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/ndisprot.rc" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/ntdisp.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/nuiouser.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/precomp.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/recv.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/5x/send.c" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60">
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/debug.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/debug.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/excallbk.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/macros.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/ndisbind.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/ndisprot.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/ndisprot.rc" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/ntdisp.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/precomp.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/protuser.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/recv.c" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/ndisprot/60/send.c" />
+</directory>
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/Makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/build.bat" />
+<file path="E:/projects/covera/covera/tags/2.1.1/drivers/build.sh" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/installer">
+<directory path="E:/projects/covera/covera/tags/2.1.1/installer/driver">
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/DriverInstaller.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/DriverUninstaller.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/Makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/Uninstaller.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/Uninstaller.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/ndis5x32covera.inf" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/ndis5x32coverazone.inf" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/ndis6x32covera.inf" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/ndis6x32coverazone.inf" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/ndis6x64covera.inf" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/ndis6x64coverazone.inf" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/netcfg.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/netcfg.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/stdafx.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/driver/stdafx.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/installer/keys">
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/keys/README" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/installer/msi">
+<directory path="E:/projects/covera/covera/tags/2.1.1/installer/msi/bootstrapper">
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/bootstrapper/Makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/bootstrapper/main.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/bootstrapper/main.rc.tpl" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui">
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/BrowseDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/CancelDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/Common.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/CustomizeDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/DiskCostDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/ErrorDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/ErrorProgressText.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/ExitDialog.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/FatalError.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/FilesInUse.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/InstallDirDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/LicenseAgreementDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/MaintenanceTypeDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/MaintenanceWelcomeDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/MsiRMFilesInUse.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/OutOfDiskDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/OutOfRbDiskDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/PrepareDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/ProgressDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/ResumeDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/SetupTypeDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/UserExit.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/VerifyReadyDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/WaitForCostingDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/WelcomeDlg.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui/WelcomeEulaDlg.wxs" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/Makefile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/README.TXT" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/cvr.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/defines.wxs.tpl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/guid.ini" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/postproc.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui.wxs" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/ui_en-us.wxl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/msi/validate_guid.sh" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/installer/scripts">
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/scripts/cl.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/scripts/link.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/scripts/sign-installer.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/installer/scripts/sign.sh" />
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs">
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/gnome">
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/gnome/Makefile" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/iperf">
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/iperf/build.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/iperf/iperf.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/iperf/iperf_callback.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/iperf/iperf_start.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/iperf/sock_geterror_workaround.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/lapack">
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/lapack/build.sh" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/patches">
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/patches/Qt">
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/patches/Qt/4.3.4">
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/patches/Qt/4.3.4/0_qwizard_crash_when_accessibility_is_active">
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/patches/Qt/4.3.4/0_qwizard_crash_when_accessibility_is_active/patch.diff" />
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/qt">
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/qt/build.sh" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/windows">
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/windows/htmlhelp">
+<directory path="E:/projects/covera/covera/tags/2.1.1/libs/windows/htmlhelp/include">
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/windows/htmlhelp/include/htmlhelp.h" />
+</directory>
+</directory>
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/libs/Makefile" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/manual">
+<directory path="E:/projects/covera/covera/tags/2.1.1/manual/src">
+<directory path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted">
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/calibrating.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/campaign.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/map.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/project.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/report.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/spoint.add.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/spoint.content.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/spoint.delete.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/spoint.move.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/spoint.rename.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/spoint.update.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/spoint.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/throughput.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/gettingstarted/view.xml" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/manual/src/intro">
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/intro/activation.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/intro/installation.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/intro/requirements.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/intro/support.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/intro/whatis.xml" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui">
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/campaignwizard.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/common.accesspointdata.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/common.surveypointdata.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/dockarea.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/find.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/keys.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/maparea.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/maptoolbar.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/menu.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/modes.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/options.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/overview.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/reportmode.composition.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/reportmode.reportmanager.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveymode.campaignmanager.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveymode.chase.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveymode.gps.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveymode.ipperformance.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveymode.signalgraph.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveymode.visibleaps.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveymode.wirelessconnection.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/surveytoolbar.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/viewmode.contourlines.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/viewmode.heatmapcolorscale.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/viewmode.viewmanager.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/viewmode.viewproperties.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/ui/viewwizard.xml" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/basics.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/chm.xsl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/chm_style.css" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/custom.titlepage.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/custom.titlepage.xsl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/faq.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/fo.xsl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/glossary.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/howto.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/index.xml" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/web.xsl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/src/web_style.css" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/manual/Makefile" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs">
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs/activation">
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/activation.conf" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/activation.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/code_lib.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/core.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/include.mail.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/mail.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/tables.sql" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/activation/viewlog.php" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs/encdec">
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src">
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/base64.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/blowfish.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/bytearray.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/bytearray.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/cipher.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/compress.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/cvrviewer.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/encdec.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/encode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/encode.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/global.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/key.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/src/md5.cpp" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/encdec/Makefile" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs/modules">
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs/modules/Template">
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/modules/Template/Simple.pm" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/modules/Lite.pm" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/modules/Simple.pm" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs/report">
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/report/report.php" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/programs/update">
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/update/README" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/update/_check.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/update/check.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/update/core.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/update/page.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/update/release.php" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/update/rss.php" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/getOUI.pl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/programs/getconf.pl" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/application">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/application/application.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/application/application.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/gps">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/gps/gps.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/gps/gps.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/http">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/http/httpmeasurer.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/http/httpmeasurer.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/iperf">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/iperf/iperfmeasurer.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/iperf/iperfmeasurer.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis5">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis5/ndis5.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis6">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis6/inteloids.txt" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis6/ndis6.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis5">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis5/ntddndis5.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis5/nuiouser.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/devpkey.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/devpropdef.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/ifdef.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/ntddndis6.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/pciprop.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/protuser.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/windot11.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/ndis6/wlantypes.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/wlanapi">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wininclude/wlanapi/wlanapi_p.h" />
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wlanapi">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/wlanapi/wlanapi.cpp" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/connection.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/device.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/device.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/device_reg.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/device_reg.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis_cpp_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis_enums.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis_enums.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis_gen.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis_gen_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndis_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndisscanner.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/ndisscanner.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/station.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/station.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/visiblestationsmodel.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ndis/visiblestationsmodel.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ping">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ping/ping_win.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ping/ping_win.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ping/pingmeasurer.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/ping/pingmeasurer.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/networkmeasurer.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/aquisition/network/networkmeasurer.h" />
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/drawing">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/drawing/cvrdrawing.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/drawing/cvrdrawing.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/network">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/network/cvraddress.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/network/cvraddress.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvr2darray.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvrdatasaver.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvrdatasaver.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvrencoder.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvrencoder.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvrvariant.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvrvariant.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/tools/cvrversion.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/utm_conversion">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/utm_conversion/LatLong-UTMconversion.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/utm_conversion/LatLong-UTMconversion.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/utm_conversion/SwissGrid.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/utm_conversion/UTMConversions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/utm_conversion/constants.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/cvrconversion.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/cvrconversion.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/cvrunit.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/units/cvrunit.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrcolorbutton.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrcolorbutton.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdockarea.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdockarea.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdockspace.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdockspace.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdockwidget.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdockwidget.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdoublespinbox.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrdoublespinbox.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvributton.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvributton.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvripedit.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvripedit.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrmacedit.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrmacedit.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrresizehandler.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrresizehandler.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrstyleadapter.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrtabbar.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrtabbar.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrtabbar_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrwidgetanimator.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/widgets/cvrwidgetanimator.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/xml">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/xml/cvrxml.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/xml/cvrxmltextwriter.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/xml/cvrxmltextwriter.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/cvrglobal.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/cvrglobal.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/cvrlib/cvrmath.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dialogs">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/bugreport">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/bugreport/bugreportdialog.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/bugreport/bugreportdialog.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/bugreport/bugreportdialog_io.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/bugreport/bugreportdialog_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/bugreport/bugreportdialog_slots.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/campaign">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/campaign/campaignwizard.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/campaign/distancedlg.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/campaign/distancedlg.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/campaign/georeferencedlg.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/campaign/georeferencedlg.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/messages">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/messages/cvrmessagebox.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/messages/cvrmessagebox.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/abstractoptionswidget.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/abstractoptionswidget.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/generaloptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/generaloptions.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/gpsoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/gpsoptions.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/guioptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/guioptions.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/optionsdialog.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/reportoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/reportoptions.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/soundoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/soundoptions.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/surveyoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/surveyoptions.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/viewoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/options/viewoptions.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/projectexplorer">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/projectexplorer/projectexplorer.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/projectexplorer/projectexplorer.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/view">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/view/viewadvanceddialog.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/view/viewwizard.cpp" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/aboutdialog.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/activationwizard.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/activationwizard_data_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/adaptersdialog.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/checkupdatesdialog.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/dialogs.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/dialogs.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/finddialog.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/iperfoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/legendproperties.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/optmsgbox.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/pingoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dialogs/welcomedialog.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/reportmode">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/reportmode/compositiondw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/reportmode/compositiondw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/reportmode/reportmanagerdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/reportmode/reportmanagerdw.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/campaignmanagerdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/campaignmanagerdw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/chaseapdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/chaseapdw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/currentconnectiondw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/currentconnectiondw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/gpsdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/gpsdw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/iplayerperformancedw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/iplayerperformancedw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/monitorgraphdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/monitorgraphdw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/visiblestationsdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/surveymode/visiblestationsdw.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/colorscaledw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/colorscaledw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/contourlinesdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/contourlinesdw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/viewmanagerdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/viewmanagerdw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/viewproperties_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/viewpropertiesdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/viewmode/viewpropertiesdw.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/abstractdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/abstractdw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/activesourcedw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/activesourcedw.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/activesurveypointdw.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/dockwidgets/activesurveypointdw.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/drawing">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/drawing/defaultdrawstyle.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/drawing/defaultdrawstyle.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/drawing/defaultdrawstyle_osd.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/drawing/drawing_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/drawing/drawstyle.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/drawing/drawstyle.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/exceptionhandler">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/exceptionhandler/dbghelp_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/exceptionhandler/exceptionhandler.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/exceptionhandler/exceptionhandler_win.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/global">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/applicationdata.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/debug.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/defines.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/enums.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/global.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/global.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/global_msg.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/global_msg.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/oui.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/global/testdefines.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/help">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/help/helpballoon.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/help/helpballoon.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/help/helpballoon_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/help/helpfactory.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/itemview">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/itemview/debugprojectfilterexplorer.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/itemview/projectheaderview.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/itemview/projectheaderview.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/itemview/projecttoolbar.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/itemview/projecttoolbar.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/itemview/projecttreeview.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/itemview/projecttreeview.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/libs">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DIBitArray.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DIBitArray.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DIBlob.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DIBlob.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DIBstr.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DIBstr.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DICryptEx.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DICryptEx.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DILibComm.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DILibGlob.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DILibGlob.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DITime.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/DITime.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/Data.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/LAN.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/LAN.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/LogFile.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/LogFile.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/Machine.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/Machine.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/MachineID.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/MachineID.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/Registry.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/Registry.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/Win95Machine.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/Win95Machine.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/crtdbg.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/diAFXTEMPL.H" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/diAfx.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/diAfxVer_.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/DILib/stdafx.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/Include">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/Include/DILib.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/Include/PCIDComm.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/Include/PCIDImpl.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/Version.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/pcid.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/pcid_1_4_200/pcid.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svm.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmData.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmHyperplane.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmKernel.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmRisk.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmSMO-C-SVM.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmSMO-e-SVM.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmSMO.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmSVM.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmVector.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/libs/svm-1.05/src/svmWrap.h" />
+</directory>
+</directory>
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/licensing">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/activation.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/activation.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/activationclient.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/activationclient.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/blowfish_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/encode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/encode_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/key_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/license.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/license.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/licensing/md5_p.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow_debugslots.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow_interface.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow_p.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow_slots.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow_tools.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mainwindow/mainwindow_updates.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/mapview">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/campaigntable.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/campaigntable.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/maparea.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/maparea.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/mapwidget.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/mapwidget.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/mapwidget_drawing.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/mapwidget_events.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/mapwidget_graphicnode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/mapwidget_osd.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/pointinfo.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/mapview/pointinfo.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/guiaccess">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/guiaccess/drawstyleoptions.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/guiaccess/drawstyleoptions.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/guiaccess/guiaccess.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/guiaccess/guiaccess.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/guiaccess/guiinterface.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/io">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/io/support">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/support/oldcvrzone.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/support/oldcvrzone.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/project_io_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/project_open.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/project_save.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/projectsautosaver.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/projectsautosaver.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/io/report_export.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/model">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/abstractprojectmodel.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/abstractprojectmodel.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/abstracttreemodel.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/abstracttreemodel.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/modelsupdater.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/modelsupdater.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/projectfiltermodel.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/projectfiltermodel.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/projectmodel.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/projectmodel.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/projectsmodel.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/model/projectsmodel.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/node">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/activenode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/activenode.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/basicnode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/basicnode.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/graphicnode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/graphicnode.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/linknode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/linknode.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/nameablenode.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/nameablenode.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/node.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/node.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/nodefilter.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/nodefilter.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/nodeflags.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/node/nodeflags.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/object">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/object.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/object.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objectdata.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objectfilter.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objectfilter.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objectmimedata.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objectmimedata.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objectref.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objectref.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objecttype.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/object/objecttype.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/report">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/report/composition.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/report/composition.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/report/report.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/report/report.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/survey">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/measurementfilter.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/measurementmetadata.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/measurementmetadata.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/metadata.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/metadata.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/sourceidmetadata.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/sourceidmetadata.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/surveyobjectmetadata.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/surveyobjectmetadata.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/surveysitemetadata.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/metadata/surveysitemetadata.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/campaign.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/campaign.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/measurementgroup.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/measurementgroup.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/network.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/network.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/source.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/source.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/surveydevice.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/surveypoint.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/survey/surveypoint.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/view">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/contours">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/contours/contourscalculation.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/contours/contourscalculation_fill.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvm">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvm/rvm.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvm/rvm.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvm/rvmdata.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvm/rvmutils_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvm/xerbla.cpp" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/regressioninterface.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvminterface.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/rvminterface.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/svminterface.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/svminterface.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/viewregression.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/viewregression.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/viewregression_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/regression/vmregressioninfo_p.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/viewheatmap.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/heatmap/viewheatmap.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/viewimage.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/image/viewimage.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/colorscale.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/colorscale.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/contour.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/contour.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/view.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/view.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/viewcalculation.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/view/viewcalculation.h" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/project.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/project.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/projectenums.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/projectenums.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/project/projectenums_strings.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/resources">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/resources/images">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/images/images.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/images/images.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt">
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/common">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/common/export_iepngfix.htc" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/interactive_html">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/interactive_html/export_iscripts.js" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/interactive_html/export_istyle.css" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/interactive_html/interactive_html.xslt" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/simple_html">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/simple_html/export_sstyle.css" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/simple_html/simple_html.xslt" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/kml.xslt" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/xslt/rtf.xslt" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/application_data.cpp.tpl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/application_data.rc.tpl" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/resourcetmpfiles.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/resourcetmpfiles.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/sounds.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/resources/sounds.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/reusable">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/collapsiblegroupbox.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/collapsiblegroupbox.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/collapsiblegroupbox_p.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/collapsiblegroupbox_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/doubleslider.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/doubleslider.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/editoradapter.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/filteredit.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/filteredit.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/knownstationsmodel.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/knownstationsmodel.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/unitscombobox.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/unitscombobox.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/valueunitdisplay.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/valueunitdisplay.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/valueunitentry.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/reusable/valueunitentry.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/settings">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/settings/settings.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/settings/settings.h" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/shell">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/mwshell.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/mwshell.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_aquisition.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_campaign.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_colorscale.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_contourline.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_guiupdate.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_interface.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_node.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_p.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_project.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_report.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_surveypoint.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/shell/shell_view.cpp" />
+</directory>
+<directory path="E:/projects/covera/covera/tags/2.1.1/src/unittests">
+<file path="E:/projects/covera/covera/tags/2.1.1/src/unittests/modeltest.cpp" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/unittests/modeltest.h" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/unittests/text_draw_test.cpp" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/src/docgroups.txt" />
+<file path="E:/projects/covera/covera/tags/2.1.1/src/main.cpp" />
+</directory>
+<file path="E:/projects/covera/covera/tags/2.1.1/APPLICONF.INI" />
+<file path="E:/projects/covera/covera/tags/2.1.1/BUILDCONF.INI" />
+<file path="E:/projects/covera/covera/tags/2.1.1/Doxyfile" />
+<file path="E:/projects/covera/covera/tags/2.1.1/archive.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/delete-autogenerated.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/generate-docs.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/generate-makefile.sh" />
+<file path="E:/projects/covera/covera/tags/2.1.1/test-dependencies.sh" />
+</project>

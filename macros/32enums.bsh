@@ -1,0 +1,14 @@
+import java.lang.*;
+
+for (int i = 0; i < 32; ++i) {
+  String prefix = "0x";
+  
+  for (int j = 0; j < (32 - i - 1) / 4; ++j) {
+    prefix += "0";
+  }
+  
+  textArea.setSelectedText(prefix + Integer.toHexString(1 << i));
+  
+  textArea.insertEnterAndIndent();
+}
+

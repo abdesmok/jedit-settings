@@ -1,0 +1,20 @@
+a1 = SearchAndReplace.getBeanShellReplace();
+a3 = SearchAndReplace.getIgnoreCase();
+a4 = SearchAndReplace.getRegexp();
+a5 = SearchAndReplace.getSearchFileSet();
+
+SearchAndReplace.setBeanShellReplace(true);
+SearchAndReplace.setIgnoreCase(false);
+SearchAndReplace.setRegexp(true);
+SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
+
+SearchAndReplace.setSearchString("\\n( +)((?! )[^\\n]*)\\n((?!\\1) *|\\1 +)\\n");
+SearchAndReplace.setReplaceString("\"\\n\" + _1 + _2 + \"\\n\" + _1 + \"\\n\"");
+
+SearchAndReplace.replaceAll(view);
+
+SearchAndReplace.setBeanShellReplace(a1);
+SearchAndReplace.setIgnoreCase(a3);
+SearchAndReplace.setRegexp(a4);
+SearchAndReplace.setSearchFileSet(a5);
+

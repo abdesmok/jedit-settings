@@ -1,0 +1,63 @@
+// simple script to parse directory for keyword in file name or directory
+// This script has been written by Cyril Raphanel (cyril.raphanel@netcourrier.com)
+// Feel free to modify it.
+// It has been written to work with Tcl documentation (http://www.activestate.com/Products/ActiveTcl/)
+// but it works with any file archive documentation type
+// Tested with Mozilla 1.3 and ie 6, does not work with Opera 7
+import contexthelp.BrowserLauncher;
+
+// DEFAULT CONFIGURATION
+// set true if you want to ignore case comparison during the search
+if (ignoreCase==void) ignoreCase=true;
+if (ignoreCase) keyWord = keyWord.toLowerCase();
+// set file filter to search
+if (file_filter == void) file_filter="^"+keyWord+"\\..*$";
+// set directory filter to search
+if (directory_filter == void) directory_filter="^"+keyWord+"$";
+// set root documentc rootdirectory
+if (doc_root == void) doc_root=helpDirectory;
+// set to true if you want to search keyword in directory name
+if (directory_search == void) directory_search=false;
+// set to true if you want to search in subdirectories
+if (subdir == void) subdir=true;
+// END CONFIGURATION
+
+
+void check(File file_to_check) {
+	if (file_to_check.isDirectory()) {
+		// Get file lists
+		file_list = file_to_check.listFiles();
+		if (directory_search) {
+			if (file_compare(file_to_check)) {
+				BrowserLauncher.openURL(file_to_check.toURL().toString());
+			}
+		}
+		for (int i=0; i<file_list.length;i++) check(file_list[i]);
+	} else {
+		// test if file name has keyword
+		if (file_compare(file_to_check)) {
+			BrowserLauncher.openURL(file_to_check.toURL().toString());
+		}
+	}
+}
+
+boolean file_compare(File to_compare) {
+		file_to_check_string = to_compare.getName();
+		if (ignoreCase) {
+			file_to_check_string = file_to_check_string.toLowerCase();
+		}
+		if (to_compare.isDirectory()) {
+			query=directory_filter;
+		} else {
+			query=file_filter;
+		}
+		if (file_to_check_string.matches(query)) {
+			return true;
+		} else {
+			return false;
+		}
+}
+
+// main
+check(new File(doc_root));
+

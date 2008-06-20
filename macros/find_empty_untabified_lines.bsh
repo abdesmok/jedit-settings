@@ -1,0 +1,22 @@
+SearchAndReplace.setSearchString("\\n( +)((?! )[^\\n]*)\\n((?!\\1) *|\\1 +)\\n");
+
+a1 = SearchAndReplace.getAutoWrapAround();
+a2 = SearchAndReplace.getReverseSearch();
+a3 = SearchAndReplace.getIgnoreCase();
+a4 = SearchAndReplace.getRegexp();
+a5 = SearchAndReplace.getSearchFileSet();
+
+SearchAndReplace.setAutoWrapAround(false);
+SearchAndReplace.setReverseSearch(false);
+SearchAndReplace.setIgnoreCase(false);
+SearchAndReplace.setRegexp(true);
+SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
+
+SearchAndReplace.hyperSearch(view,false);
+
+SearchAndReplace.setAutoWrapAround(a1);
+SearchAndReplace.setReverseSearch(a2);
+SearchAndReplace.setIgnoreCase(a3);
+SearchAndReplace.setRegexp(a4);
+SearchAndReplace.setSearchFileSet(a5);
+

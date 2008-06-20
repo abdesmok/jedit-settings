@@ -1,0 +1,281 @@
+[global]
+pa|printf("\|\\n", @);
+qp|qPrintable(\|)
+_if|if (\|) {\n\t@\n}\n
+S|STOP("\|");
+_st|struct \|\n{\n\t@;\n}\n
+_lin|#include "\|"\n
+qd|qDebug("\|");
+/**|/**\n * \|\n */
+ta|toAscii().data()
+qdd|qDebug() << \|;
+n_|name().toAscii().data()
+cpr|cvrprintf("\|\\n");
+_lib|#include <stdlib.h>\n
+_el|else {\n\t\|}
+_ei|else if (\|) {\n\t@\n}
+pr|printf("\|\\n");
+_str|#include <string.h>\n
+_wh|while(\|) {\n\t@\n}
+_fo|for (\|; @; @) {\n\t@\n}
+qw|qWarning("\|");
+_io|#include <stdio.h>\n
+_in|#include <\|>\n
+ret|return\|;
+[c++]
+[sqr]
+[nsis2]
+[asp]
+[latex]
+[factor]
+[batch]
+[groovy]
+[relax-ng-compact]
+[icon]
+[velocity]
+[patch]
+[beanshell]
+[pl1]
+[pyrex]
+[inno-setup]
+[inform]
+[netrexx]
+[eiffel]
+[fortran]
+[chill]
+[smalltalk]
+[idl]
+[pvwave]
+[ada95]
+[pl-sql]
+[htaccess]
+[apacheconf]
+[io]
+[properties]
+[rhtml]
+[powerdynamo]
+[vhdl]
+slv|std_logic_vector( x downto y )
+sl|std_logic
+var|variable
+sig|signal
+[maple]
+[lotos]
+[django]
+[php]
+[lua]
+[makefile]
+[sas]
+[rtf]
+[ptl]
+[xsl]
+fes|<xsl:for-each select="\|">\n</xsl:for-each>
+nc|<xsl:number count="\|"/>
+asn|<xsl:attribute-set name="\|">\n</xsl:attribute-set>
+sse|<xsl:strip-space elements="\|"/>
+cos|<xsl:copy-of select="\|"/>
+com|<xsl:comment>\|</xsl:comment>
+imh|<xsl:import href="\|"/>
+an|<xsl:attribute name="\|"></xsl:attribute>
+mt|<xsl:message terminate="\|"></xsl:message>
+vns|<xsl:variable name="\|" select=""/>
+ai|<xsl:apply-imports/>
+ss|<xsl:sort select="\|"/>
+pn|<xsl:param name="\|"/>
+vn|<xsl:variable name="\|"/>
+pse|<xsl:preserve-space elements="\|"/>
+cwt|<xsl:choose>\n\t<xsl:when test="\|">\n\t</xsl:when>\n</xsl:choose>
+wpn|<xsl:with-param name="\|" select=""/>
+it|<xsl:if test="\|">\n</xsl:if>
+tnm|<xsl:template name="\|" match="">\n</xsl:template>
+ctn|<xsl:call-template name="\|"/>
+co|<xsl:copy>\|</xsl:copy>
+pin|<xsl:processing-instruction name="\|"></xsl:processing-instruction>
+om|<xsl:output method="\|"/>
+ats|<xsl:apply-templates select="\|"/>
+oe|<xsl:output encoding="\|"/>
+atsm|<xsl:apply-templates select="\|" mode=""/>
+x|<?xml version="1.0"?>\|
+tdoe|<xsl:text disable-output-escaping="\|"></xsl:text>
+xe|<?xml vesion="1.0" encoding="\|"?>
+t|<xsl:text>\|</xsl:text>
+ctnwp|<xsl:call-template name="\|">\n\t<xsl:with-param name="" select=""/>\n</xsl:call-template>
+s|<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">\n\|\n</xsl:stylesheet>
+o|<xsl:otherwise>\n\|\n</xsl:otherwise>
+cwto|<xsl:choose>\n\t<xsl:when test="\|">\n\t</xsl:when>\n\t<xsl:otherwise>\n\t</xsl:otherwise>\n</xsl:choose>
+n|<xsl:number/>
+tmm|<xsl:template match="\|" mode="">\n</xsl:template>
+m|<xsl:message>\|</xsl:message>
+inh|<xsl:include href="\|"/>
+k|<xsl:key name="\|" match="" use=""/>
+en|<xsl:element name="\|">\n</xsl:element>
+vos|<xsl:value-of select="\|"/>
+f|<xsl:fallback>\|</xsl:fallback>
+tn|<xsl:template name="\|">\n</xsl:template>
+tm|<xsl:template match="\|">\n</xsl:template>
+[moin]
+[bibtex]
+[modula3]
+[perl]
+[transact-sql]
+[lisp]
+[smi-mib]
+[actionscript]
+[pop11]
+[progress]
+[ini]
+[html]
+[sgml]
+[bcel]
+[psp]
+[antlr]
+[assembly-m68k]
+[omnimark]
+[interlis]
+[cvs-commit]
+[lilypond]
+[jsp]
+[foxpro]
+[rfc]
+[tex]
+[mail]
+[assembly-macro32]
+[svn-commit]
+[aspect-j]
+[squidconf]
+[rview]
+[jhtml]
+[embperl]
+[mysql]
+[rd]
+[zpt]
+[objective-c]
+[mqsc]
+[prolog]
+[assembly-r2000]
+[sdl/pr]
+[hex]
+[swig]
+[rebol]
+[s+]
+[dsssl]
+[forth]
+[nqc]
+[tpl]
+[s#]
+[occam]
+[objectrexx]
+[rpm-spec]
+[apdl]
+[myghty]
+[tcl]
+[rcp]
+[template-toolkit]
+[python]
+[i4gl]
+[clips]
+[rest]
+[twiki]
+[text]
+[awk]
+[verilog]
+[erlang]
+[shellscript]
+[gettext]
+[jcl]
+[d]
+[c]
+[coldfusion]
+[b]
+[typoscript]
+[scheme]
+[texinfo]
+[java]
+ne|nextElement()
+Il|SwingUtilities.invokeLater(new Runnable()\n{\n\tpublic void run()\n\t{\n\t\t\|\n\t}\n});
+W|while($1)\n{\n\t\|\n}
+V|Vector
+Fd|for(int $1 = $2 - 1; $1 >= 0; $1--)\n{\n\t\|\n}
+serr|System.err.println(\|);
+Fc|for(int $1 = 0; $1 < $2.size(); $1++)\n{\n\t$3 \| = ($3)$2.get($1);\n}
+Ie|if($1)\n{\n\t|\n}\nelse\n{\n\t\n}\n
+VDE|VFS.DirectoryEntry
+S|String
+JE|JEditTextArea
+Fa|for(int $1 = 0; $1 < $2.length; $1++)\n{\n\t$3 \| = $2[$1];\n}
+P|public
+O|Object
+N|$1 $2 = new $1(\|);
+gta|getTextArea()
+gp|jEdit.getProperty(\|)
+I|if($1)\n{\n\t\|\n}
+H|Hashtable
+F|for(int $1 = 0; $1 < $2; $1++)\n{\n\t\|\n}
+Br|BufferedReader $1 = new BufferedReader(\|);
+E|Exception
+D|do\n{\n\t\|\n}\nwhile($1);
+sp|jEdit.setProperty(\|);
+Mal|MalformedURLException
+C|$1 $2 = ($1)\|
+B|Buffer
+ogs|import org.gjt.sp.
+hme|hasMoreElements()
+El|else\n{\n\t\|\n}
+IO|IOException
+gb|getBuffer()
+IN|$1 $2 = ($1)$3.next();
+Ei|else if($1)\n{\n\t\|\n}
+chs|Box.createHorizontalStrut(\|)
+Cget|($1)$2.get($3)
+sbp|jEdit.setBooleanProperty(\|);
+cg|Box.createGlue()
+logw|Log.log(Log.WARNING,this,\|);
+gip|jEdit.getIntegerProperty(\|)
+CtoArray|($1[])$2.toArray(new $1[$2.size()])
+logn|Log.log(Log.NOTICE,this,\|);
+logm|Log.log(Log.MESSAGE,this,\|);
+DMTN|DefaultMutableTreeNode
+loge|Log.log(Log.ERROR,this,\|);
+cvs|Box.createVerticalStrut(\|)
+logd|Log.log(Log.DEBUG,this,\|);
+WI|while($1.hasNext())\n{\n\t\|\n}
+ogsu|import org.gjt.sp.util.
+gbp|jEdit.getBooleanProperty(\|)
+sout|System.out.println(\|);
+ogsj|import org.gjt.sp.jedit.
+[assembly-parrot]
+[xml]
+YY|<$1>\n\|\n</$1>
+Ykeycombo|<keycombo><keycap>$1</keycap><keycap>$2</keycap></keycombo>
+Ykeycap|<keycap>\|</keycap>
+[cil]
+[postscript]
+[sql-loader]
+[redcode]
+[literate-haskell]
+[renderman-rib]
+[doxygen]
+[javacc]
+[ruby]
+[pike]
+[applescript]
+[pascal]
+[c#]
+[ml]
+[bbj]
+[freemarker]
+[vbscript]
+[povray]
+[jmk]
+[slate]
+[shtml]
+[haskell]
+[hlsl]
+[cobol]
+[csv]
+[assembly-x86]
+[css]
+[javascript]
+[gnuplot]
+[uscript]
+[xq]

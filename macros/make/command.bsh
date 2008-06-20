@@ -1,0 +1,30 @@
+void command(String cmd) {
+  //JList l = new JList(view.getDockableWindowManager().getRegisteredDockableWindows());
+  //
+  //String t;
+  //for(int i = 0; i < l.getModel().getSize(); i++) {
+  //  t = t + ";" + l.getModel().getElementAt(i);
+  //}
+  //Macros.confirm(view,
+  //               t,
+  //               JOptionPane.YES_NO_OPTION,
+  //               JOptionPane.WARNING_MESSAGE);
+  //
+  //return;
+  source(jEdit.getSettingsDirectory() + "/macros/make/project_path.bsh");
+
+  if (goToActiveProject(" n'appartient à aucun projet, lancer make quand même?")) {
+    runCommandInConsole(view, "System", cmd);
+  }
+
+  if(!textArea.getDisplayManager().isLineVisible(textArea.getCaretLine()))
+  {
+    textArea.getDisplayManager().expandFold(textArea.getCaretLine(),true);
+  }
+  textArea.scrollToCaret(true);
+  textArea.requestFocus();
+  
+  //waitForConsole(view);
+  //view.getDockableWindowManager().toggleDockableWindow("console");
+}
+

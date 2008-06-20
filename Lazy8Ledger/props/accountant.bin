@@ -1,0 +1,14 @@
+#Version 1.0
+#Mon Apr 16 10:16:12 GMT 2007
+lazy8ledger-edit2=undo redo - cut copy paste - select-all 
+infoviewer.extendedState=0
+lazy8ledger-utils2=lazy8ledger-options - global-options buffer-options
+tip.show=false
+infoviewer.height=644
+lazy8ledger-file2=new-file open-file %recent-files - close-buffer close-all - save save-as save-all - print page-setup 
+lazy8ledger-search2=find find-next find-prev
+view.mbar=lazy8ledger-dataentry lazy8ledger-reportreport lazy8ledger-advanced lazy8ledger-file2 lazy8ledger-edit2 lazy8ledger-search2 lazy8ledger-utils2 plugins lazy8ledger-help-menu
+lazy8ledger-help-menu=about help tip-of-the-day - lazy8ledger-help lazy8ledger-tutorial %lazy8ledger-weblinks lazy8ledger-about
+infoviewer.y=121
+infoviewer.x=421
+infoviewer.width=476

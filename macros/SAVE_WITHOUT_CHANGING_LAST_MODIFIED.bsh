@@ -1,0 +1,12 @@
+//fname = JOptionPane.showInputDialog(null, "nom du fichier?");
+
+if (buffer.getPath() != "") {
+  long lc = buffer.getLastModified();
+  
+  buffer.save(view, null, true);
+  
+  //wait(5000);
+  
+  buffer.setLastModified(lc);
+}
+

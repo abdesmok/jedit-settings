@@ -1,0 +1,11 @@
+//fname = JOptionPane.showInputDialog(null, "nom du fichier?");
+
+String fpath = buffer.getPath();
+
+if (fpath != "") {
+  File f = new File(fpath);
+  long lc = f.lastModified();
+  buffer.save(view, null, true);
+  f.setLastModified(lc);
+}
+

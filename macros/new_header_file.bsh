@@ -1,0 +1,17 @@
+//fname = JOptionPane.showInputDialog(null, "nom du fichier?");
+String fname = buffer.getName();
+String macro_var = "__" + fname.toUpperCase().replace('.', '_').replace('-', '_') + "__";
+
+textArea.setSelectedText("#ifndef " + macro_var);
+textArea.insertEnterAndIndent();
+textArea.setSelectedText("#define " + macro_var);
+textArea.insertEnterAndIndent();
+textArea.insertEnterAndIndent();
+textArea.insertEnterAndIndent();
+textArea.insertEnterAndIndent();
+textArea.setSelectedText("#endif // " + macro_var);
+textArea.insertEnterAndIndent();
+textArea.goToPrevLine(false);
+textArea.goToPrevLine(false);
+textArea.goToPrevLine(false);
+

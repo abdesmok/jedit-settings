@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="C:/Qt/4.2.1-mw/src/network">
+<property name="projectviewer.folder_tree_state" value="1000000000000000000000000000000000000" />
+<property name="projectviewer.import.filteridx" data="rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAA" />
+<open-file path="C:\Qt\4.2.1-mw\src\network\qabstractsocket.cpp" />
+<open-file path="C:\Qt\4.2.1-mw\src\network\qabstractsocket_p.h" />
+<open-file path="C:\Qt\4.2.1-mw\src\network\qhostinfo.cpp" />
+<open-file path="C:\Qt\4.2.1-mw\src\network\qhostinfo_win.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/network.pro" />
+<file path="C:/Qt/4.2.1-mw/src/network/qabstractsocket.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qabstractsocket.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qabstractsocket_p.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qabstractsocketengine.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qabstractsocketengine_p.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qftp.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qftp.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhostaddress.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhostaddress.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhostinfo.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhostinfo.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhostinfo_p.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhostinfo_win.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhttp.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qhttp.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnativesocketengine.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnativesocketengine_p.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnativesocketengine_win.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnetworkinterface.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnetworkinterface.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnetworkinterface_p.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnetworkinterface_win.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnetworkinterface_win_p.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnetworkproxy.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qnetworkproxy.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qsocks5socketengine.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qsocks5socketengine_p.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qtcpserver.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qtcpserver.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qtcpsocket.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qtcpsocket.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qudpsocket.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qudpsocket.h" />
+<file path="C:/Qt/4.2.1-mw/src/network/qurlinfo.cpp" />
+<file path="C:/Qt/4.2.1-mw/src/network/qurlinfo.h" />
+</project>

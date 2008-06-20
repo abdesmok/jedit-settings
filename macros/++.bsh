@@ -1,0 +1,6 @@
+textArea.goToEndOfLine(false);
+while (textArea.getLineLength(textArea.getCaretLine()) < 75)
+  textArea.setSelectedText(" ");
+textArea.setSelectedText("//++");
+textArea.goToNextLine(false);
+

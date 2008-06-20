@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="C:/apache/allinone">
+<property name="projectviewer.folder_tree_state" value="111000011010000000000000000000000000000000000000000000000000000000000" />
+<property name="projectviewer.import.filteridx" data="rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAB" />
+<open-file path="C:\apache\allinone\generate-makefile.sh" />
+<open-file path="C:\apache\allinone\src\xerces-c-src_2_7_0\src\xercesc\com\StdAfx.h" />
+<directory path="C:/apache/allinone/src">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/CodeWarrior">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/CodeWarrior/XercesLib">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/CodeWarrior/XercesSamples">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/CodeWarrior/XercesSamples/DOMPrint">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/CodeWarrior/XercesSamples/SAX2Print">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/CodeWarrior/XercesSamples/XercesSampleSupport">
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/Xcode">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/Xcode/XercesLib">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/MacOS/Xcode/XercesSamples">
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/DOMCount">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/DOMPrint">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/DOMTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/EncodingTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/SAX2Count">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/SAX2Print">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/SAXCount">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/SAXPrint">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCB6/Xerces-all/XercesLib">
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCC.551">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCC.551/Xerces-all">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCC.551/Xerces-all/DeprecatedDOMCount">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCC.551/Xerces-all/MemHandlerTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/BCC.551/Xerces-all/XercesLib">
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/CodeWarrior">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/CodeWarrior/XercesLib">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/CodeWarrior/XercesSamples">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/CodeWarrior/XercesSamples/DOMPrint">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/Projects/Win32/CodeWarrior/XercesSamples/SAX2Print">
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc/html">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc/html/apiDocs">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc/html/resources">
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc/style">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc/style/dtd">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc/style/resources">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/doc/style/stylesheets">
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/CreateDOMDocument">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/DOMCount">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/DOMPrint">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/EnumVal">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/MemParse">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/PParse">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/PSVIWriter">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/Redirect">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/SAX2Count">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/SAX2Print">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/SAXCount">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/SAXPrint">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/SCMPrint">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/SEnumVal">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/StdInParse">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/samples/data">
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/scripts">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/NLS">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/NLS/EN_US">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/NLS/EN_US/XMLErrList_EN_US.Xml" />
+</directory>
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/NLS/XMLErrList.dtd" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/BindStatusCallback.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/BindStatusCallback.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/IXMLDOMCharacterDataImpl.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/IXMLDOMNodeImpl.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/IXMLDOMTextImpl.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/NodeContainerImpl.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/README.txt" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/StdAfx.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/StdAfx.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMAttribute.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMAttribute.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMCDATASection.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMComment.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMDocument.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMDocument.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMDocumentFragment.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMDocumentType.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMDocumentType.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMElement.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMElement.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMEntity.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMEntity.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMEntityReference.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMImplementation.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMImplementation.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMNamedNodeMap.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMNamedNodeMap.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMNodeList.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMNodeList.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMNotation.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMNotation.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMParseError.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMParseError.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMProcessingInstruction.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMProcessingInstruction.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMText.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMUtil.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMUtil.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMXMLDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLDOMXMLDecl.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLHTTPRequest.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/XMLHttpRequest.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/resource.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/xml4com.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/xml4com.rc" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/com/xml4comCP.h" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/AttrImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/AttrMapImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/AttrNSImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/CDATASectionImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/CharacterDataImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/ChildNode.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/CommentImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOMParser.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOMString.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Attr.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_CDATASection.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_CharacterData.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Comment.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_DOMException.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_DOMImplementation.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Document.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_DocumentFragment.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_DocumentType.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Element.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Entity.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_EntityReference.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_NamedNodeMap.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Node.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_NodeFilter.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_NodeIterator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_NodeList.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Notation.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_ProcessingInstruction.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Range.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_RangeException.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_Text.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_TreeWalker.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DOM_XMLDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DStringPool.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DeepNodeListImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DocumentFragmentImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DocumentImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DocumentTypeImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/DomMemDebug.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/ElementDefinitionImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/ElementImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/ElementNSImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/EntityImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/EntityReferenceImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/NamedNodeMapImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/NodeIDMap.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/NodeImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/NodeIteratorImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/NodeListImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/NodeVector.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/NotationImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/ParentNode.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/ProcessingInstructionImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/RangeImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/RefCountedImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/TextImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/TreeWalkerImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/deprecated/XMLDeclImpl.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMAttrImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMAttrMapImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMAttrNSImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMCDATASectionImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMCharacterDataImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMChildNode.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMCommentImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMConfigurationImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMDeepNodeListImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMDeepNodeListPool.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMDocumentFragmentImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMDocumentImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMDocumentTypeImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMElementImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMElementNSImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMEntityImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMEntityReferenceImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMErrorImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMImplementationImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMImplementationRegistry.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMLocatorImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNamedNodeMapImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNodeIDMap.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNodeImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNodeIteratorImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNodeListImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNodeVector.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNormalizer.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMNotationImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMParentNode.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMProcessingInstructionImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMRangeImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMStringPool.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMTextImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMTreeWalkerImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMTypeInfoImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/DOMWriterImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/impl/XSDElementNSImpl.cpp" />
+</directory>
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/DOMException.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/DOMRangeException.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/dom/DOMXPathException.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/PSVIAttribute.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/PSVIAttributeList.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/PSVIElement.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/PSVIItem.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSAnnotation.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSAttributeDeclaration.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSAttributeGroupDefinition.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSAttributeUse.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSComplexTypeDefinition.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSElementDeclaration.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSFacet.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSIDCDefinition.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSModel.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSModelGroup.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSModelGroupDefinition.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSMultiValueFacet.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSNamedMap.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSNamespaceItem.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSNotationDeclaration.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSObject.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSParticle.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSSimpleTypeDefinition.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSTypeDefinition.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSValue.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/psvi/XSWildcard.cpp" />
+</directory>
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/BinOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/LocalFileFormatTarget.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/LocalFileInputSource.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/MemBufFormatTarget.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/MemBufInputSource.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/StdInInputSource.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/StdOutFormatTarget.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/URLInputSource.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/Wrapper4DOMInputSource.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/Wrapper4InputSource.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLAttDef.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLAttDefList.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLAttr.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLBuffer.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLBufferMgr.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLContentModel.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLDTDDescription.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLElementDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLEntityDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLFormatter.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLGrammarDescription.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLNotationDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLRecognizer.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLRefInfo.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLSchemaDescription.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/framework/XMLValidator.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/BinFileOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/BinMemOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/DGXMLScanner.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/ElemStack.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/IGXMLScanner.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/IGXMLScanner2.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/MemoryManagerArrayImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/MemoryManagerImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/ReaderMgr.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/SGXMLScanner.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/ValidationContextImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/VecAttrListImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/VecAttributesImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/WFXMLScanner.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XMLGrammarPoolImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XMLReader.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XMLScanner.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XMLScannerResolver.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XProtoType.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XSAXMLScanner.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XSObjectFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XSerializeEngine.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/internal/XTemplateSerializer.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/parsers">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/parsers/AbstractDOMParser.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/parsers/DOMBuilderImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/parsers/SAX2XMLFilterImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/parsers/SAX2XMLReaderImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/parsers/SAXParser.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/parsers/XercesDOMParser.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/sax">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/sax/Dummy.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/sax/InputSource.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/sax/SAXException.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/sax/SAXParseException.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/sax2">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/sax2/sax2Dummy.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/CSetDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/CodeWarriorDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/DECCXXDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/GCCDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/HPCCDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/MIPSproDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/MVSCPPDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/OS400SetDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/PTXCCDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/QCCDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/SCOCCDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/SunCCDefs.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Compilers/TandemCCDefs.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/ICU">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/ICU/resources">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/ICU/resources/en_US.txt" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/ICU/resources/res-file-list-unix.txt" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/ICU/resources/res-file-list-wins.txt" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/ICU/resources/res-file-list.txt" />
+</directory>
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/ICU/ICUMsgLoader.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/InMemory">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/InMemory/InMemMsgLoader.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/MsgCatalog">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/MsgCatalog/MsgCatalogLoader.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/MsgFile">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/MsgFile/MsgLoader.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/MsgFile/XMLMessages.h" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/Win32">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/MsgLoaders/Win32/Win32MsgLoader.cpp" />
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/MacOSURLAccess">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/MacOSURLAccess/MacOSURLAccess.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/MacOSURLAccess/URLAccessBinInputStream.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/MacOSURLAccessCF">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/MacOSURLAccessCF/MacOSURLAccessCF.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/MacOSURLAccessCF/URLAccessCFBinInputStream.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/Socket">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/Socket/SocketNetAccessor.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/WinSock">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/WinSock/BinHTTPURLInputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/WinSock/WinSockNetAccessor.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/libWWW">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/libWWW/BinURLInputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NetAccessors/libWWW/LibWWWNetAccessor.cpp" />
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/AIX">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/AIX/AIXPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/BeOS">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/BeOS/BeOSPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Cygwin">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Cygwin/CygwinPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/FreeBSD">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/FreeBSD/FreeBSDPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/HPUX">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/HPUX/HPPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/IRIX">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/IRIX/IRIXPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Interix">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Interix/InterixPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Linux">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Linux/LinuxPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/MacOS">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/MacOS/MacCarbonFile.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/MacOS/MacOSPlatformUtils.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/MacOS/MacPosixFile.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/NetBSD">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/NetBSD/NetBSDPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS2">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS2/OS2PlatformUtils.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS2/os2ilck.asm" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS390">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS390/FileHandleImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS390/OS390PlatformUtils.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS390/Path390.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS400">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OS400/OS400PlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OpenServer">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/OpenServer/OpenServerPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/PTX">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/PTX/PTXPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/QNX">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/QNX/QNXPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Solaris">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Solaris/SolarisPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Tandem">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Tandem/TandemPlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Tru64">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Tru64/Tru64PlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/UnixWare">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/UnixWare/UnixWarePlatformUtils.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Win32">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Win32/Version.rc" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Win32/Win32PlatformUtils.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Platforms/Win32/resource.h" />
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Cygwin">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Cygwin/CygwinTransService.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/ICU">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/ICU/ICUTransService.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv/IconvTransService.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv390">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv390/Iconv390TransService.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv400">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv400/Iconv400TransService.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv400/iconv_cnv.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv400/iconv_util.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv400/pos400.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Iconv400/utypes.h" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/IconvFBSD">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/IconvFBSD/IconvFBSDTransService.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/IconvGNU">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/MacOSUnicodeConverter">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/MacOSUnicodeConverter/MacOSUnicodeConverter.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/Uniconv390TransService.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XML256TableTranscoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XML88591Transcoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XMLASCIITranscoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XMLEBCDICTranscoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XMLIBM1047Transcoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XMLIBM1140Transcoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XMLUTF8Transcoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/XMLWin1252Transcoder390.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/ccsid.h" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/uniconv.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Uniconv390/uniconv.h" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Win32">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Win32/Win32TransService.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Transcoders/Win32/Win32TransService2.cpp" />
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/ASCIIRangeFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/BMPattern.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/BlockRangeFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/CharToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/ClosureToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/ConcatToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/ConditionToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/Match.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/ModifierToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/Op.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/OpFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/ParenToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/ParserForXMLSchema.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/RangeFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/RangeToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/RangeTokenMap.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/RegularExpression.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/RegxParser.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/RegxUtil.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/StringToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/Token.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/TokenFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/UnicodeRangeFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/UnionToken.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/XMLRangeFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/regx/XMLUniCharacter.cpp" />
+</directory>
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Base64.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/BaseRefVectorOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/BinFileInputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/BinInputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/BinMemInputStream.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/BitSet.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/CountedPointer.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/DefaultPanicHandler.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/EncodingValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/FlagJanitor.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/HashPtr.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/HashXMLCh.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/HeaderDummy.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/HexBin.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Janitor.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/KVStringPair.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/KeyRefPair.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/KeyValuePair.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/LogicalPath.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/Mutexes.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/NameIdPool.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/PanicHandler.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/PlatformUtils.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/QName.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/RefArrayOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/RefArrayVectorOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/RefHash2KeysTableOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/RefHash3KeysIdPool.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/RefHashTableOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/RefStackOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/RefVectorOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/StringPool.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/SynchronizedStringPool.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/TransENameMap.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/TransService.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/ValueArrayOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/ValueHashTableOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/ValueStackOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/ValueVectorOf.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XML256TableTranscoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XML88591Transcoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLASCIITranscoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLAbstractDoubleFloat.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLBigDecimal.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLBigInteger.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLChTranscoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLChar.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLDateTime.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLDeleterFor.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLDouble.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLEBCDICTranscoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLException.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLFloat.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLHolder.c" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLIBM1047Transcoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLIBM1140Transcoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLInitializer.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLMsgLoader.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLNumber.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLRegisterCleanup.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLString.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLStringTokenizer.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLUCSTranscoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLURL.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLUTF16Transcoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLUTF8Transcoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLUni.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLUri.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMLWin1252Transcoder.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/util/XMemory.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/DTDAttDef.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/DTDAttDefList.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/DTDElementDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/DTDEntityDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/DTDGrammar.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/DTDScanner.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/DTDValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/DTD/XMLDTDDescriptionImpl.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/AllContentModel.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/CMAny.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/CMBinaryOp.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/CMUnaryOp.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/ContentLeafNameTypeVector.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/ContentSpecNode.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/DFAContentModel.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/Grammar.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/GrammarResolver.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/MixedContentModel.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/common/SimpleContentModel.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/AbstractNumericFacetValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/AbstractNumericValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/AbstractStringValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/AnySimpleTypeDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/AnyURIDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/Base64BinaryDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/BooleanDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DatatypeValidatorFactory.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DateDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DateTimeDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DateTimeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DayDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DecimalDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DoubleDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/DurationDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/ENTITYDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/FloatDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/HexBinaryDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/IDDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/IDREFDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/ListDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/MonthDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/MonthDayDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/NCNameDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/NOTATIONDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/NameDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/QNameDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/StringDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/TimeDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/UnionDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/XMLCanRepGroup.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/YearDatatypeValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/datatype/YearMonthDatatypeValidator.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity">
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/FieldActivator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/FieldValueMap.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/IC_Field.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/IC_Key.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/IC_KeyRef.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/IC_Selector.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/IC_Unique.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/IdentityConstraint.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/IdentityConstraintHandler.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/ValueStore.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/ValueStoreCache.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/XPathMatcher.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/XPathMatcherStack.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/XPathSymbols.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/identity/XercesXPath.cpp" />
+</directory>
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/ComplexTypeInfo.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/GeneralAttributeCheck.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/NamespaceScope.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SchemaAttDef.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SchemaAttDefList.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SchemaElementDecl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SchemaGrammar.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SchemaInfo.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SchemaSymbols.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SchemaValidator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/SubstitutionGroupComparator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/TraverseSchema.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XMLSchemaDescriptionImpl.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XSDDOMParser.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XSDErrorReporter.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XSDLocator.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XUtil.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XercesAttGroupInfo.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XercesElementWildcard.cpp" />
+<file path="C:/apache/allinone/src/xerces-c-src_2_7_0/src/xercesc/validators/schema/XercesGroupInfo.cpp" />
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/COMTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/DOMMemTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/DOMTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/DeprecatedDOMCount">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/Normalizer">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/RangeTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/Traversal">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/TypeInfo">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/DOM/TypeInfo/data">
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/EncodingTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/InitTermTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/MemHandlerTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/ParserTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/ThreadTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/UtilTests">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/XSValueTest">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tests/XSerializerTest">
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tools">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tools/IANACharset">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tools/ICUData">
+</directory>
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tools/NLS">
+<directory path="C:/apache/allinone/src/xerces-c-src_2_7_0/tools/NLS/Xlat">
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan">
+<directory path="C:/apache/allinone/src/xml-xalan/c">
+<directory path="C:/apache/allinone/src/xml-xalan/c/src">
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc">
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/DOMServices.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/DOMSupport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/DOMSupportDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/DOMSupportException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/DOMSupportInit.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/TreeWalker.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/XalanDocumentPrefixResolver.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/DOMSupport/XalanNamespacesStack.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Harness">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Harness/XalanDiagnosticMemoryManager.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Harness/XalanFileUtility.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Harness/XalanXMLFileReporter.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge/ICUBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge/ICUBridgeCleanup.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge/ICUBridgeCollationCompareFunctor.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge/ICUBridgeCollationCompareFunctorImpl.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge/ICUFormatNumberFunctor.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge/ICUXalanNumberFormatFactory.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/ICUBridge/ICUXalanNumberFormatProxy.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/NLS">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/NLS/xliff.dtd" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/AttributeListImpl.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/AttributesImpl.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/DOMStringHelper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/DOMStringPrintWriter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/DoubleSupport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/ExecutionContext.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/FormatterListener.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/NamedNodeMapAttributeList.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/NullPrintWriter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/PlatformSupportInit.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/PrefixResolver.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/PrintWriter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/Resettable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/StdBinInputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/StringTokenizer.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/URISupport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/Writer.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XSLException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanBitmap.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanDOMStringAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanDOMStringCache.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanDOMStringHashTable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanDOMStringPool.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanDOMStringReusableAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanDecimalFormatSymbols.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanEncodingPropertyCache.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanFStreamOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanFileOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanICUMessageLoader.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanInMemoryMessageLoader.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanMemoryManagement.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanMemoryManagerDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanMessageLoader.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanNLSMessageLoader.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanNullOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanNumberFormat.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanOutputStreamPrintWriter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanParsedURI.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanReferenceCountedObject.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanSimplePrefixResolver.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanStdOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanToXercesTranscoderWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanTranscodingServices.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanUTF16Transcoder.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/PlatformSupport/XalanXMLChar.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/TestXPath">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/TestXPath/NodeNameTreeWalker.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/TestXPath/TestXPath.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/TestXSLT">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/TestXSLT/process.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils">
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/MsgCreator">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/MsgCreator/ICUResHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/MsgCreator/InMemHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/MsgCreator/MsgCreator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/MsgCreator/MsgFileOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/MsgCreator/NLSHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/MsgCreator/SAX2Handler.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/XalanMsgLib">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/Utils/XalanMsgLib/XalanMsgLib.cpp" />
+</directory>
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/FormatterToDOM.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/FormatterToHTML.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/FormatterToNull.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/FormatterToText.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/FormatterToXML.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/FormatterTreeWalker.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XMLParserLiaison.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XMLSupportException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XMLSupportInit.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XalanHTMLElementsProperties.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XalanUTF16Writer.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XalanUTF8Writer.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XalanXMLSerializerBase.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XMLSupport/XalanXMLSerializerFactory.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/ElementPrefixResolverProxy.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FormatterStringLengthCounter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/Function.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionConcat.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionContains.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionID.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionLang.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionNamespaceURI.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionNormalizeSpace.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionStartsWith.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionString.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionSubstring.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionSubstringAfter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionSubstringBefore.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/FunctionTranslate.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/MutableNodeRefList.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/NodeRefList.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/NodeRefListBase.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XBoolean.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNodeSet.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNodeSetAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNodeSetBase.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNodeSetNodeProxy.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNodeSetNodeProxyAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNodeSetResultTreeFragProxy.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNull.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNumber.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNumberAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XNumberBase.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XObject.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XObjectFactory.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XObjectFactoryDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XObjectResultTreeFragProxy.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XObjectResultTreeFragProxyBase.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XObjectResultTreeFragProxyText.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XObjectTypeCallback.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPath.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathConstructionContext.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathConstructionContextDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathEnvSupport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathEnvSupportDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathEvaluator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathExecutionContext.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathExecutionContextDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathExpression.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathFactory.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathFactoryBlock.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathFactoryDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathFunctionTable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathInit.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathParserException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathProcessor.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XPathProcessorImpl.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XSpan.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XString.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringAdapter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringAdapterAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringBase.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringCached.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringCachedAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringReference.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XStringReferenceAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XToken.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XTokenNumberAdapter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XTokenNumberAdapterAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XTokenStringAdapter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XTokenStringAdapterAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XUnknown.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XalanDocumentFragmentNodeRefListBaseProxy.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XalanQName.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XalanQNameByReference.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XalanQNameByValue.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XalanQNameByValueAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPath/XalanXPathException.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPathCAPI">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPathCAPI/XPathCAPI.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XPathCAPI/XPathCAPI.h" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/AVT.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/AVTPart.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/AVTPartSimple.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/AVTPartXPath.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/Constants.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/CountersTable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemApplyImport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemApplyTemplates.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemAttribute.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemAttributeSet.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemCallTemplate.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemChoose.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemComment.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemCopy.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemCopyOf.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemDecimalFormat.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemElement.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemEmpty.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemExtensionCall.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemFallback.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemForEach.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemForwardCompatible.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemIf.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemLiteralResult.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemMessage.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemNumber.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemOtherwise.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemPI.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemParam.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemSort.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemTemplate.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemTemplateElement.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemText.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemTextLiteral.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemUse.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemValueOf.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemVariable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemWhen.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ElemWithParam.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ExtensionFunctionHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ExtensionNSHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionCurrent.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionDocument.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionElementAvailable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionFormatNumber.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionFunctionAvailable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionGenerateID.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionKey.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionSystemProperty.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/FunctionUnparsedEntityURI.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/GenerateEvent.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/KeyTable.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/NamespacesHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/NodeSortKey.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/NodeSorter.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/OutputContextStack.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ProblemListener.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ProblemListenerDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/ResultNamespacesStack.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/SelectionEvent.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/Stylesheet.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/StylesheetConstructionContext.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/StylesheetConstructionContextDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/StylesheetExecutionContext.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/StylesheetExecutionContextDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/StylesheetHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/StylesheetRoot.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/TopLevelArg.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/TraceListener.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/TraceListenerDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/TracerEvent.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/VariablesStack.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XResultTreeFrag.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XResultTreeFragAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTEngineImpl.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTInit.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTInputSource.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTProcessor.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTProcessorEnvSupport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTProcessorEnvSupportDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTProcessorException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XSLTResultTarget.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanAVTAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanAVTPartSimpleAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanAVTPartXPathAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemApplyTemplatesAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemAttributeAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemAttributeSetAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemCallTemplateAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemElementAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemEmptyAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemLiteralResultAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemTemplateAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemTextAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemTextLiteralAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemValueOfAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanElemVariableAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanMatchPatternData.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanMatchPatternDataAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanNumberingResourceBundle.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanSourceTreeDocumentAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanSourceTreeDocumentFragmentAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XSLT/XalanSpaceNodeTester.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanAttr.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanCDataSection.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanCharacterData.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanComment.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanDOMException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanDOMImplementation.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanDOMInit.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanDOMString.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanDocument.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanDocumentFragment.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanDocumentType.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanElement.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanEmptyNamedNodeMap.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanEntity.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanEntityReference.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanNamedNodeMap.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanNode.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanNodeList.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanNodeListDummy.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanNodeListSurrogate.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanNotation.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanProcessingInstruction.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanDOM/XalanText.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanEXSLT">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanEXSLT/XalanEXSLTCommon.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanEXSLT/XalanEXSLTDateTime.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanEXSLT/XalanEXSLTDynamic.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanEXSLT/XalanEXSLTMath.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanEXSLT/XalanEXSLTSet.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanEXSLT/XalanEXSLTString.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExe">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExe/XalanExe.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions/FunctionDifference.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions/FunctionDistinct.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions/FunctionEvaluate.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions/FunctionHasSameNodes.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions/FunctionIntersection.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions/FunctionNodeSet.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanExtensions/XalanExtensions.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/FormatterToSourceTree.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeAttr.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeAttrNS.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeAttributeAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeAttributeNSAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeComment.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeCommentAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeContentHandler.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeDOMSupport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeDocument.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeDocumentFragment.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElement.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementA.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementAAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementANS.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementANSAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementNA.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementNAAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementNANS.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeElementNANSAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeHelper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeInit.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeParserLiaison.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeProcessingInstruction.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeProcessingInstructionAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeText.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeTextAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeTextIWS.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanSourceTree/XalanSourceTreeTextIWSAllocator.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanCAPI.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanCAPI.h" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanCompiledStylesheetDefault.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanDefaultDocumentBuilder.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanDefaultParsedSource.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanParsedSource.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanSourceTreeWrapperParsedSource.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanTransformer.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanTransformerOutputStream.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XalanTransformerProblemListener.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XercesDOMParsedSource.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XalanTransformer/XercesDOMWrapperParsedSource.cpp" />
+</directory>
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison">
+<directory path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated">
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/FormatterToDeprecatedXercesDOM.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesAttrBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesAttributeBridgeAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesBridgeHelper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesBridgeNavigator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesCDATASectionBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesCommentBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesDOMImplementationBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesDOM_NodeHack.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesDocumentBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesDocumentFragmentBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesDocumentTypeBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesElementBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesElementBridgeAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesEntityBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesEntityReferenceBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesNamedNodeMapBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesNodeListBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesNotationBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesProcessingInstructionBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesTextBridge.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesTextBridgeAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesToXalanNodeMap.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/Deprecated/XercesTreeWalker.cpp" />
+</directory>
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/FormatterToXercesDOM.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesAttrWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesAttrWrapperAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesCDATASectionWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesCommentWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDOMException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDOMFormatterWalker.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDOMImplementationWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDOMSupport.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDOMWalker.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDOMWrapperException.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDocumentTypeWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesDocumentWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesElementWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesElementWrapperAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesEntityReferenceWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesEntityWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesLiaisonXalanDOMStringPool.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesNamedNodeMapAttributeList.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesNamedNodeMapWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesNodeListWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesNotationWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesParserLiaison.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesProcessingInstructionWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesTextWrapper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesTextWrapperAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesWrapperHelper.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesWrapperNavigator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesWrapperNavigatorAllocator.cpp" />
+<file path="C:/apache/allinone/src/xml-xalan/c/src/xalanc/XercesParserLiaison/XercesWrapperToXalanNodeMap.cpp" />
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+</directory>
+<file path="C:/apache/allinone/generate-makefile.sh" />
+</project>

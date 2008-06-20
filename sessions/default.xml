@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE SESSION SYSTEM "session.dtd">
+
+<SESSION name="default">
+  <FILES>
+      <FILE filename="C:\covera\trunk\src\cvrwidgets\cvripedit.cpp" isCurrent="true"/>
+      <FILE filename="C:\covera\trunk\src\cvrwidgets\cvripedit.h"/>
+  </FILES>
+
+  <PROPERTIES>
+  </PROPERTIES>
+</SESSION>

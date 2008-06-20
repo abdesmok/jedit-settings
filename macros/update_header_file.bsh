@@ -1,0 +1,20 @@
+String fname = buffer.getName();
+String macro_var = "__" + fname.toUpperCase().replace('.', '_').replace('-', '_') + "__";
+
+textArea.goToBufferStart(false);
+textArea.goToNextLine(true);
+textArea.goToNextLine(true);
+textArea.delete();
+
+textArea.setSelectedText("#ifndef " + macro_var);
+textArea.insertEnterAndIndent();
+textArea.setSelectedText("#define " + macro_var);
+
+textArea.insertEnterAndIndent();
+textArea.goToBufferEnd(false);
+textArea.goToPrevLine(true);
+textArea.delete();
+
+textArea.setSelectedText("#endif // " + macro_var);
+textArea.insertEnterAndIndent();
+

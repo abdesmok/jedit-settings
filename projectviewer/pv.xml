@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<projects name="All Projects" >
+<group name="covera" >
+<project name="covera 2.0.x" file="covera_2.0.x.xml" root="e:\projects\covera\covera\branches\2.0.x"  />
+<project name="covera 2.1.x" file="covera_2.1.x.xml" root="E:\projects\covera\covera\branches\2.1.x"  />
+<project name="covera trunk" file="covera_trunk.xml" root="E:\projects\covera\covera\trunk"  />
+<project name="tag 2.1.1" file="tag_2.1.1.xml" root="E:\projects\covera\covera\tags\2.1.1"  />
+</group>
+<project name="Qt 4.4.0" file="Qt_4.3.0.xml" root="E:\qt\win32-g++\4.4.0\src"  />
+<project name="jedit" file="jedit.xml" root="E:\projects\jedit"  />
+<project name="kde" file="kde.xml" root="E:\kde\src"  />
+</projects>

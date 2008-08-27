@@ -7,5 +7,6 @@
 <!-- <MODE NAME="foo" FILE="foo.xml" FILE_NAME_GLOB="*.foo" /> -->
 
 <MODE NAME="c++" FILE="mycplusplus.xml" FILE_NAME_GLOB="*.{cc,cpp,hh,hpp,cxx,h}" />
+<MODE NAME="cfg" FILE="abdesmok_cfg.xml" FILE_NAME_GLOB="*.{cfg}" />
 
 </MODES>

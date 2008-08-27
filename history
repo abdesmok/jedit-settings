@@ -1,14 +1,14 @@
 [vfs.browser.path]
+E:\\projects\\covera\\covera\\trunk\\src\\project\\io\\report
+C:\\Program Files\\Java\\jre1.6.0_03\\bin
+E:\\projects\\jedit\\home\\.jedit\\pluginset
+E:\\projects\\jedit\\home\\.jedit
+E:\\projects\\jedit\\home\\.jedit\\macros
+E:\\projects\\jedit\\home\\.jedit\\jars
 E:\\projects\\covera\\covera\\trunk\\src\\project\\io
 E:\\projects\\covera\\covera\\trunk\\src\\project\\io\\support
 E:\\projects\\covera\\covera\\trunk\\deleme
 E:\\projects\\covera\\covera\\trunk\\deleme\\src
-E:\\projects\\covera\\covera\\trunk
-E:\\projects\\covera\\covera\\trunk\\src
-E:\\projects\\covera\\covera\\trunk\\src\\cvrlib
-E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui
-E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\dockwidget
-E:\\projects\\covera\\covera\\trunk\\buildconf
 [sftp.host]
 192.168.17.2:22
 192.168.17.2
@@ -111,16 +111,16 @@ svn update
 deleme.txt
 qserial.h
 [action]
+plugin-manager
+version-check
+select-marker
+expand-all-folds
+document-home
+document-end
+close-buffer
 save
 delete
 select-next-line
-prev-line
-undo
-home
-backspace
-prev-char
-close-all
-tabify_empty_untabified_lines
 [gatchan-highlight.expression]
 \[a-zA-Z_;,\]  +
 \[a-zA-Z_;\]  +

@@ -1,13 +1,44 @@
 if (buffer.getPath() != "") {
-  long lastModified = buffer.getLastModified();
+  long lastModified;
+  long newLastModified;
+  long restoredLastModified;
+  
+  lastModified = buffer.getLastModified();
+  
   buffer.save(view, null, true);
   
   if (JOptionPane.showConfirmDialog(null, "Buffer saved, restore last modified date " + lastModified + "?",
                                     "Save and restore last modified",
                                     JOptionPane.YES_NO_OPTION,
-                                    JOptionPane.QUESTION_MESSAGE) == YES_OPTION)
+                                    JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION)
   {
-    buffer.setLastModified(lastModified);
+    newLastModified = buffer.getLastModified();
+    
+    while (true) {
+      File file = new File(buffer.getPath());
+      file.setLastModified(lastModified);
+      //buffer.setLastModified(lastModified);
+      
+      restoredLastModified = file.lastModified();
+      restoredLastModified = buffer.getLastModified();
+      
+      if (restoredLastModified != lastModified) {
+        if (JOptionPane.showConfirmDialog(null, "Last modified date not restored, retry?",
+                                          "Save and restore last modified",
+                                          JOptionPane.YES_NO_OPTION,
+                                          JOptionPane.QUESTION_MESSAGE) != JOptionPane.YES_OPTION)
+        {
+          break;
+        }
+      }
+      else {
+        break;
+      }
+    }
   }
+  
+  //JOptionPane.showMessageDialog(null,
+  //                              "lastModified=" + lastModified + " newLastModified=" + newLastModified + " restoredLastModified=" + restoredLastModified,
+  //                              "Info", JOptionPane.INFORMATION_MESSAGE);
 }
 

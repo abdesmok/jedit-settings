@@ -1,0 +1,5 @@
+if (buffer.getPath() != "") {
+  File file = new File(buffer.getPath());
+  file.setLastModified(0); // (00:00:00 GMT, January 1, 1970)
+}
+

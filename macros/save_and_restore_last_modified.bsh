@@ -1,0 +1,13 @@
+if (buffer.getPath() != "") {
+  long lastModified = buffer.getLastModified();
+  buffer.save(view, null, true);
+  
+  if (JOptionPane.showConfirmDialog(null, "Buffer saved, restore last modified date " + lastModified + "?",
+                                    "Save and restore last modified",
+                                    JOptionPane.YES_NO_OPTION,
+                                    JOptionPane.QUESTION_MESSAGE) == YES_OPTION)
+  {
+    buffer.setLastModified(lastModified);
+  }
+}
+

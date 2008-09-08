@@ -1,13 +1,13 @@
 <pluginset>
     <plugin name="Latest Version Check" jar="LatestVersion.jar" />
     <plugin name="BufferTabs" jar="BufferTabs.jar" />
-    <plugin name="Class Browser" jar="ClassBrowser.jar" />
-    <plugin name="Class Wizard" jar="ClassWizard.jar" />
     <plugin name="Comment Folder" jar="CommentFolder.jar" />
     <plugin name="Common Controls" jar="CommonControls.jar" />
     <plugin name="Console" jar="Console.jar" />
     <plugin name="CtagsSideKick" jar="CtagsSideKick.jar" />
     <plugin name="ErrorList" jar="ErrorList.jar" />
+    <plugin name="Fast Open" jar="FastOpen.jar" />
+    <plugin name="FoldViewer" jar="FoldViewer.jar" />
     <plugin name="FTP" jar="FTP.jar" />
     <plugin name="GdbPlugin" jar="GdbPlugin.jar" />
     <plugin name="Highlight" jar="Highlight.jar" />
@@ -24,5 +24,4 @@
     <plugin name="VoxSpell" jar="VoxSpell.jar" />
     <plugin name="WhiteSpace" jar="WhiteSpace.jar" />
     <plugin name="XercesPlugin" jar="XercesPlugin.jar" />
-    <plugin name="Xrefactory" jar="Xrefactory.jar" />
  </pluginset>

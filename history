@@ -1,14 +1,23 @@
 [vfs.browser.path]
-E:\\projects\\covera\\covera\\trunk\\src\\project\\io\\report
-C:\\Program Files\\Java\\jre1.6.0_03\\bin
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\dockwidget
 E:\\projects\\jedit\\home\\.jedit\\pluginset
-E:\\projects\\jedit\\home\\.jedit
-E:\\projects\\jedit\\home\\.jedit\\macros
-E:\\projects\\jedit\\home\\.jedit\\jars
-E:\\projects\\covera\\covera\\trunk\\src\\project\\io
-E:\\projects\\covera\\covera\\trunk\\src\\project\\io\\support
-E:\\projects\\covera\\covera\\trunk\\deleme
-E:\\projects\\covera\\covera\\trunk\\deleme\\src
+C:\\Program Files\\Java\\jre1.6.0_03\\bin
+E:\\projects\\jedit\\home\\backup
+E:\\projects\\jedit\\home
+E:\\projects\\jedit
+E:\\projects
+E:
+E:\\projects\\covera
+E:\\projects\\covera\\covera
+E:\\projects\\covera\\covera\\trunk
+E:\\projects\\covera\\covera\\trunk\\src
+E:\\projects\\covera\\covera\\trunk\\src\\project
+E:\\projects\\covera\\covera\\trunk\\src\\project\\view
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui
+E:\\projects\\covera\\covera\\trunk\\src\\project\\survey
+E:\\projects\\covera\\covera\\trunk\\tests\\tmp
+E:\\projects\\covera\\covera\\trunk\\tests
+E:\\projects\\covera\\covera\\trunk\\src\\project\\view\\image
 [sftp.host]
 192.168.17.2:22
 192.168.17.2
@@ -16,6 +25,7 @@ E:\\projects\\covera\\covera\\trunk\\deleme\\src
 *\[^~#\]
 *
 [helpviewer.search]
+heap
 SearchAndReplace
 reloaded
 xml errors
@@ -25,11 +35,11 @@ undo level
 undoredo
 bsh command
 command
--noserver
 [FindFilePlugin.path]
 E:\\projects\\covera\\covera\\trunk\\manual\\src\\
 E:\\kde\\src\\
 [replace.script]
+_1
 measurementType
 \"stringRefToDouble(attributes.value(\" + _1 + \"))\"
 _1 + _2
@@ -39,11 +49,12 @@ _1 + _2
 \"attributes.value(\" + _1 + \").toString())\"
 \"attributes.value(\" + _1 + \").toString();\"
 \"stringRefToInt(attributes.value(\" + _1 + \").toString())\"
-\"stringRefToInt(attributes.value(\" + _1 + \").toString();\"
 [ftp.user]
 root
 [search.directory]
 E:\\projects\\covera\\covera\\trunk\\src
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\dockwidget\\
+E:\\projects\\covera\\covera\\trunk\\buildconf\\
 E:\\projects\\covera\\covera\\branches\\2.1.x\\src
 E:\\qt\\win32-g++\\4.4.1\\tools\\assistant\\tools\\assistant\\
 sftp://root@192.168.17.2:22/var/trac/covera/
@@ -51,19 +62,22 @@ sftp://root@192.168.17.2:22/var/trac/covera/conf/
 sftp://root@192.168.17.2:22/var/buildmaster/covera/
 sftp://root@192.168.17.2:22/usr/lib/python2.4
 sftp://root@192.168.17.2:22/usr/lib/python2.4/site-packages/
-sftp://root@192.168.17.2:22/usr/lib/python2.4/site-packages/buildbot
-E:\\qt\\win32-g++\\4.4.0\\src\\testlib\\
 [replace]
-qualifiedName()
-measurementType
-)
- {
-QXmlStreamAttributes
-initAttributes()
-;
-<< 4;
-d
-halfR
+_isVertical
+_Isertical
+uncollapsedWidth
+_dockWidgets
+_dockPosition
+dockWidgetInsertIndex
+scrollBarValueBeforeDWResized
+_scrollBarValueBeforeDWResized
+_uncollapsedWidth
+dockRubberBand
+_dockSpace
+oldWidth
+type
+dockWidget
+6
 [console.BeanShell]
 55 + 566 / 45555
 55 + 566 / 45
@@ -76,9 +90,9 @@ System.println(\"kkk\");
 System.io.println(\"kkk\");
 sys.io.println(\"kkk\");
 [console.GDB/MI]
+r
 start
 open ee
-r
 s
 gdb
 k
@@ -97,8 +111,8 @@ mkdir -p /var/www/html/download/builds/snapshots/r1987nn/trunk/coverazone
 svn update
 [search.filter]
 (re)((?!moc_)(?!\[a-z0-9_\]+_moc)(?!\[a-z0-9_\]+_data)(?!\[a-z0-9_\]*outsrc\[a-z0-9_\]*)\[a-z0-9_\]+\\.(cpp|h))
-*.cpp
 *
+*.cpp
 *.py
 *.cfg|*.py
 *.cfg *.py
@@ -110,17 +124,54 @@ svn update
 *.txt
 deleme.txt
 qserial.h
+[fastopen.patterns]
+cvrdockarea
 [action]
-plugin-manager
-version-check
-select-marker
-expand-all-folds
+global-options
+open-file
+next_place
+make/make_exec
+make/make_all
 document-home
 document-end
-close-buffer
+next-line
+plugin-options
+plugin-manager
+buffer-options
+select-prev-word
+prev-line
+fastopenwindow.show
+close-all
 save
+find
+undo
+copy
+prev-char
+end
+home
+error-list-next-error
 delete
+select-next-word
+prev-word
+next-char
+select-next-char
+backspace
+paste
+cut
 select-next-line
+insert-newline-indent
+prev-buffer
+next-page
+next-buffer
+next-word
+select-end
+insert-tab-indent
+prev-page
+fastopen.reindex
+left-docking-area
+toggle-statusbar
+fastopen-float
+fastopen-toggle
 [gatchan-highlight.expression]
 \[a-zA-Z_;,\]  +
 \[a-zA-Z_;\]  +
@@ -133,35 +184,51 @@ select-next-line
 \[a\]  +
 \[\]  +
 [clipboard]
-//
-DATEMODIFIED
-parse
-characters
-_N_M_
-forever
-file.open(QIODevie::WriteOnly);
-file.
-file
-ProjectXmlReader(const QByteArray &byteArray) : QXmlStreamReader(byteArray) {}
+vertical
+uncollapsedWidth
+dockWidgets
+__dockPosition
+uncollapsedWidth(120),\nscrollBarValueBeforeDWResized(0),\n
+#include <QPointer>\n
+QPointer
+  QRubberBand *dockRubberBand;\n  QRubberBand *undockRubberBand;\n
+insertIndex
+_isVertical(_dockPosition < CvrDockSpace::Dock_Top),\n_isCollapsed(false),\n_isEmpty(true),\n
+_scrollBarValueBeforeDWResized
+_uncollapsedWidth
+  bool _isVertical;\n  bool _isLeft;\n  bool _isCollapsed;\n  bool _isEmpty;\n
+oldScrollBarValue
+Pointer<
+  CvrDockWidget *fixedDockWidget;\n  CvrDockWidget *insertDockWidget;\n
+  QScrollBar *scrollBar;\n
+QRubberBand *dockRubberBand;
+rubberBand
+dockPosition
+_dockSpace
 [console.System]
-make
-E:\\projects\\covera\\covera\\trunk
 make exec
+E:\\projects\\covera\\covera\\trunk
+make
+make -f Makefile.vcc_coverazone
+make -f Makefile.coverazone_dynamic_symbols
 $d
 $s
 proc.sh
 ./proc.sh
 .\\proc.sh
-make compile_and_exec
-E:\\projects\\covera\\covera\\branches\\2.1.x
 [find]
-name()
-DATEMODIF
-DATEMODIFIED
-DTAEMODIFE
-parse(
-::parse
-text
-text()
-type
-d->valueType = 
+vertical
+oldWidth
+dockWidgets
+__dockPosition
+insertIndex
+_scrollBarValueBeforeDWResized
+_uncollapsedWidth
+oldScrollBarValue
+rubberBand
+dockPosition
+dockSpace
+oldWidth2
+value
+viewParameterTypeFromString
+rubberBand->resize

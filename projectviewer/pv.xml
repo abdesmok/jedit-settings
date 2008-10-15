@@ -12,4 +12,5 @@
 <project name="Qt 4.4.0" file="Qt_4.3.0.xml" root="E:\qt\win32-g++\4.4.0\src"  />
 <project name="jedit" file="jedit.xml" root="E:\projects\jedit"  />
 <project name="kde" file="kde.xml" root="E:\kde\src"  />
+<project name="myqtlib" file="myqtlib.xml" root="E:\projects\myqtlib"  />
 </projects>

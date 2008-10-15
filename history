@@ -1,29 +1,63 @@
 [vfs.browser.path]
-E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\dockwidget
-E:\\projects\\jedit\\home\\.jedit\\pluginset
-C:\\Program Files\\Java\\jre1.6.0_03\\bin
-E:\\projects\\jedit\\home\\backup
+E:\\qt\\win32-g++\\4.4.3\\src\\gui\\kernel
+E:\\projects\\covera\\covera\\trunk\\src\\maparea
+E:\\qt\\win32-g++\\4.4.3\\src\\corelib\\io
+E:\\projects\\covera\\covera\\trunk\\src\\project\\metadata
+E:\\projects\\covera\\covera\\trunk\\src\\shell
+E:\\projects\\covera\\covera\\trunk\\src
+E:\\projects\\covera\\covera\\trunk
+E:\\projects\\covera\\covera
+E:\\projects\\covera\\covera\\branches
+E:\\projects\\covera\\covera\\branches\\2.1.x
+E:\\projects\\covera\\covera\\branches\\2.1.x\\src
+E:\\projects\\covera\\covera\\branches\\2.1.x\\src\\shell
+E:\\projects\\covera\\covera\\branches\\2.1.x\\\\.
+E:\\projects\\covera\\covera\\branches\\2.1.x\\\\.\\include
+E:\\projects\\covera\\covera\\branches\\2.1.x\\\\.\\include\\..
+E:\\projects\\covera\\covera\\branches\\2.1.x\\\\.\\include\\..\\src
+E:\\projects\\covera\\covera\\branches\\2.1.x\\\\.\\include\\..\\src\\project
+E:\\projects\\covera\\covera\\branches\\2.1.x\\\\.\\include\\..\\src\\project\\object
+E:\\projects\\covera\\covera\\trunk\\src\\coverax\\application
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\system
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\tools
+E:\\projects\\covera\\covera\\trunk\\output\\c_coverazone_symbols_dynamic
+E:\\projects\\covera\\covera\\trunk\\output
+E:\\projects\\covera\\covera\\trunk\\src\\mainwindow
+E:\\projects\\jedit\\home\\.jedit
 E:\\projects\\jedit\\home
 E:\\projects\\jedit
 E:\\projects
+E:\\projects\\covera\\covera\\trunk\\src\\dockwidgets
+E:\\qt\\win32-g++\\4.4.2\\src\\gui\\kernel
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui
+E:\\qt\\win32-g++\\4.4.2\\src\\gui\\widgets
+E:\\projects\\covera\\covera\\trunk\\buildconf
+E:\\projects\\covera\\covera\\trunk\\src\\drawing
+E:\\projects\\covera\\covera\\trunk\\src\\mapview
+E:\\projects\\covera\\covera\\tags\\2.1.1
+E:\\projects\\jedit\\home\\.jedit\\macros
+E:\\projects\\covera\\covera\\trunk\\workshop\\qt\\qmainwindow\\restorestate
+E:\\projects\\covera\\covera\\trunk\\workshop\\qt\\qmainwindow
+E:\\projects\\covera\\covera\\trunk\\workshop\\qt
+E:\\projects\\covera\\covera\\trunk\\workshop
+E:\\projects\\covera\\covera\\trunk\\src\\project
+E:\\projects\\covera\\covera\\trunk\\src\\reusable
+E:\\projects\\covera\\covera\\trunk\\src\\project\\view
+E:\\projects\\covera\\covera\\trunk\\src\\dockwidgets\\viewmode
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\dockwidget
+E:\\projects\\myqtlib
+E:\\projects\\myqtlib\\units
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\global
+E:\\projects\\jedit\\home\\.jedit\\pluginset
+C:\\Program Files\\Java\\jre1.6.0_03\\bin
+E:\\projects\\jedit\\home\\backup
 E:
 E:\\projects\\covera
-E:\\projects\\covera\\covera
-E:\\projects\\covera\\covera\\trunk
-E:\\projects\\covera\\covera\\trunk\\src
-E:\\projects\\covera\\covera\\trunk\\src\\project
-E:\\projects\\covera\\covera\\trunk\\src\\project\\view
-E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui
 E:\\projects\\covera\\covera\\trunk\\src\\project\\survey
 E:\\projects\\covera\\covera\\trunk\\tests\\tmp
 E:\\projects\\covera\\covera\\trunk\\tests
 E:\\projects\\covera\\covera\\trunk\\src\\project\\view\\image
-[sftp.host]
-192.168.17.2:22
-192.168.17.2
-[vfs.browser.filter]
-*\[^~#\]
-*
 [helpviewer.search]
 heap
 SearchAndReplace
@@ -35,11 +69,34 @@ undo level
 undoredo
 bsh command
 command
+[vfs.browser.filter]
+*\[^~#\]
+*
+[sftp.host]
+192.168.17.2:22
+192.168.17.2
 [FindFilePlugin.path]
 E:\\projects\\covera\\covera\\trunk\\manual\\src\\
 E:\\kde\\src\\
 [replace.script]
+MainWindowLightBulb
+_1 + \";\"
+SLOT(
 _1
+data()
+\" \" + _1 + \"(\"
+ _1 + \"(\"
+\"_\" + _1 + \"(data, \"
+_NO_CHANGES(data, 
+\"_\" + _1 + \"data, \"
+\"_\" + _1data, 
+DataMask_
+abstractDockWidgets
+_1 + \"DW\"
+_isEmpty
+\"//{!}_\" + _1 + \"->undock();\"
+\"//{*}_\" + _1 + \"->close();\"
+\"v.insert(\" + _1 + \", OverLayMetaData());\"
 measurementType
 \"stringRefToDouble(attributes.value(\" + _1 + \"))\"
 _1 + _2
@@ -53,8 +110,27 @@ _1 + _2
 root
 [search.directory]
 E:\\projects\\covera\\covera\\trunk\\src
-E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\dockwidget\\
+E:\\projects\\covera\\covera\\trunk\\src\\drawing
+E:\\projects\\covera\\covera\\trunk\\src\\shell
+E:\\projects\\covera\\covera\\trunk\\src\\mainwindow\\
+E:\\projects\\covera\\covera\\trunk\\\\src\\project\\model\\
+E:\\projects\\covera\\covera\\trunk\\src\\maparea
+E:\\projects\\covera\\covera\\trunk\\src\\mainwindow
+E:\\projects\\covera\\covera\\trunk\\src\\mainwondow
+E:\\projects\\covera\\covera\\trunk\\src\\project\\node
+E:\\projects\\covera\\covera\\trunk\\src\\project
+E:\\projects\\covera\\covera\\trunk\\src\\
+E:\\projects\\covera\\covera\\trunk\\src\\ensureChange
+E:\\qt\\win32-g++\\4.4.2\\src\\gui\\
+E:\\qt\\win32-g++\\4.4.2\\src\\gui\\kernel\\
+E:\\projects\\covera\\covera\\trunk\\src\\dockwidgets
 E:\\projects\\covera\\covera\\trunk\\buildconf\\
+E:\\projects\\covera\\covera\\trunk\\src\\maparea\\
+E:\\projects\\covera\\covera\\trunk\\src\\mapview\\
+E:\\projects\\covera\\covera\\trunk\\src\\project\\view\\
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\collapsiblegroupbox\\
+E:\\projects\\covera\\covera\\trunk\\src\\mapwidget
+E:\\projects\\covera\\covera\\trunk\\src\\cvrlib\\gui\\dockwidget\\
 E:\\projects\\covera\\covera\\branches\\2.1.x\\src
 E:\\qt\\win32-g++\\4.4.1\\tools\\assistant\\tools\\assistant\\
 sftp://root@192.168.17.2:22/var/trac/covera/
@@ -62,22 +138,6 @@ sftp://root@192.168.17.2:22/var/trac/covera/conf/
 sftp://root@192.168.17.2:22/var/buildmaster/covera/
 sftp://root@192.168.17.2:22/usr/lib/python2.4
 sftp://root@192.168.17.2:22/usr/lib/python2.4/site-packages/
-[replace]
-_isVertical
-_Isertical
-uncollapsedWidth
-_dockWidgets
-_dockPosition
-dockWidgetInsertIndex
-scrollBarValueBeforeDWResized
-_scrollBarValueBeforeDWResized
-_uncollapsedWidth
-dockRubberBand
-_dockSpace
-oldWidth
-type
-dockWidget
-6
 [console.BeanShell]
 55 + 566 / 45555
 55 + 566 / 45
@@ -89,7 +149,70 @@ a=\"kk\";
 System.println(\"kkk\");
 System.io.println(\"kkk\");
 sys.io.println(\"kkk\");
+[replace]
+-500000, 500000
+-100000, 100000
+-20000, 20000
+10
+10,
+-1000, 1000
+%f
+glScaled(overlay->zoom(), overlay->zoom(), overlay->zoom());
+anchorScene
+anchor
+anvhorScene
+anvhorWin
+QTransform
+setWorldTransform
+1000.
+1000
+500
+100.
+0
+0.5
+GL_TEXTURE_3D
+100
+map3DWidget
+map3dWidget
+backgroundImage
+view
+activeMapIsMaximized
+enableDelete
+selectedSurveyPointsCount
+selectedPointsCount
+enablePaste
+modeAction
+Action
+paint3D
+quint16
+qChecksum
+quint64
+checksum
+checkSum
+                NAME
+EXCEPTION
+cvrMetaData->
+Overlay
+NAME(measurementType)
+NAME(surveyObject)
+qPrintable(measurementTypeName(measurementType))
+qPrintable(surveyObjectName(surveyObject))
+%s
+object
+measurementOwner(%d)
+surveyObjectMeasurements(%d)
+md
+//#include \"application.h\"
+option =
+argList
+CvrInterProcess
+#include \"globaloptions.h\"
+GlobalOptions
+autoSaveTimerId
+CompositionView
 [console.GDB/MI]
+where
+c
 r
 start
 open ee
@@ -97,7 +220,17 @@ s
 gdb
 k
 q
-c
+[search.filter]
+(re)((?!moc_)(?!\[a-z0-9_\]+_moc)(?!\[a-z0-9_\]+_data)(?!\[a-z0-9_\]*outsrc\[a-z0-9_\]*)\[a-z0-9_\]+\\.(cpp|h))
+*.h
+*.cpp
+*.cfg
+*
+*.py
+*.cfg|*.py
+*.cfg *.py
+*.h|*.hpp|*.c|*.cpp
+*.xslt
 [console.ssh]
 /etc/init.d/buildbot restart && /var/svn/covera/hooks/svn_buildbot.py --exclude=\"tags/?.*\" --repository=\"/var/svn/covera\" --revision=\"1981\" --bbserver=\"localhost\" --bbport=9989
 /etc/init.d/buildbot restart && /var/svn/covera/hooks/svn_buildbot.py --exclude=\"tags/?.*\" -- \nrepository=\"/var/svn/covera\" --revision=\"1981\" --bbserver=\"localhost\" --bbport=9 \n989
@@ -109,17 +242,6 @@ mkdir -p /var/www/html/download/builds/snapshots/r1987nn/trunk/coverazone
 /sbin/svn
 /bin/svn
 svn update
-[search.filter]
-(re)((?!moc_)(?!\[a-z0-9_\]+_moc)(?!\[a-z0-9_\]+_data)(?!\[a-z0-9_\]*outsrc\[a-z0-9_\]*)\[a-z0-9_\]+\\.(cpp|h))
-*
-*.cpp
-*.py
-*.cfg|*.py
-*.cfg *.py
-*.h|*.hpp|*.c|*.cpp
-*.xslt
-*.h
-*.cfg
 [FindFilePlugin.filter]
 *.txt
 deleme.txt
@@ -127,53 +249,75 @@ qserial.h
 [fastopen.patterns]
 cvrdockarea
 [action]
-global-options
-open-file
-next_place
-make/make_exec
-make/make_all
-document-home
-document-end
-next-line
-plugin-options
-plugin-manager
-buffer-options
-select-prev-word
-prev-line
-fastopenwindow.show
-close-all
+error-list-clear
 save
-find
-undo
-copy
+next-char
 prev-char
 end
-home
-error-list-next-error
-delete
-select-next-word
-prev-word
-next-char
-select-next-char
-backspace
-paste
-cut
-select-next-line
-insert-newline-indent
-prev-buffer
-next-page
-next-buffer
-next-word
+next-line
+prev-line
+copy
+close-all
+document-end
+quick-search
+make/make_exec
 select-end
-insert-tab-indent
+home
+delete
+backspace
+undo
+make/make_all
+insert-newline-indent
+paste
+prev-word
+select-home
+select-next-char
+select-next-word
+next-word
+select-next-line
+select-prev-word
+select-prev-char
+toggle-rect-select
+cut
+redo
+document-home
 prev-page
-fastopen.reindex
-left-docking-area
-toggle-statusbar
-fastopen-float
-fastopen-toggle
+next-page
+insert-tab-indent
+select-prev-line
+search-in-directory
+next-paragraph
+shift-left
+error-list-next-error
+find
+delete-line
+select-document-end
+prev-paragraph
+select-next-page
+overwrite
+abdesmok/tabify_empty_untabified_lines
+closeall-except-active
+save-all
+select-none
+projectviewer_wrapper_rename
+debugger-go
+select-all
+view-registers
+version-check
+plugin-manager
+run-temp-macro
+stop-recording
+record-temp-macro
+toggle-multi-select
+[macro.rs.LineFilter.regexp]
+com
 [gatchan-highlight.expression]
 \[a-zA-Z_;,\]  +
+ ;| ,|\[^ \] +\\)|\[^ \]{|};
+ ;)| ,|\[^ \] +\\)|\[^ \]{|};
+( ;)| ,|\[^ \] +\\)|\[^ \]{|};
+( ;| ,|\[^ \] +\\)|\[^ \]{|};
+  
 \[a-zA-Z_;\]  +
 \[a-zA-Z_\]  +
 \[a-zA-Z\]  +
@@ -184,51 +328,136 @@ fastopen-toggle
 \[a\]  +
 \[\]  +
 [clipboard]
-vertical
-uncollapsedWidth
-dockWidgets
-__dockPosition
-uncollapsedWidth(120),\nscrollBarValueBeforeDWResized(0),\n
-#include <QPointer>\n
-QPointer
-  QRubberBand *dockRubberBand;\n  QRubberBand *undockRubberBand;\n
-insertIndex
-_isVertical(_dockPosition < CvrDockSpace::Dock_Top),\n_isCollapsed(false),\n_isEmpty(true),\n
-_scrollBarValueBeforeDWResized
-_uncollapsedWidth
-  bool _isVertical;\n  bool _isLeft;\n  bool _isCollapsed;\n  bool _isEmpty;\n
-oldScrollBarValue
-Pointer<
-  CvrDockWidget *fixedDockWidget;\n  CvrDockWidget *insertDockWidget;\n
-  QScrollBar *scrollBar;\n
-QRubberBand *dockRubberBand;
-rubberBand
-dockPosition
-_dockSpace
+CVR_$(echo $target | tr \[a-z\] \[A-Z\])
+updateScrollBars();
+data->anchor3dMapPosition\[0\] = x0;
+data->anchor3dMapPosition\[0\]
+x0
+gluUnProject(anchorWinX, anchorWinY, 0.0, data->threeDModelView, data->threeDProjection, data->threeDViewport, &x, &y, &z);
+gluUnProject(anchorWinX, anchorWinY, anchorWinZ, data->threeDModelView, data->threeDProjection, data->threeDViewport,\n    //             &data->anchor3dMapPosition\[0\], &data->anchor3dMapPosition\[1\], &data->anchor3dMapPosition\[2\]);
+  glCallList(view->gl3DSurface());\n
+  glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);\n
+glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+map3DWidget
+painter.setClipRegion(event->region());
+#include <QtOpenGL/QGLWidget>
+#include \"drawstyle.h\"\n
+QPaintEvent
+#include <QPainter>\n
+painter.setClipRegion(region);
+region
+QPaintEvent *event
+painter
+painter.
+DefaultDrawStyle::drawColorScale
+  drawOptions.zoom = overlay->zoom();\n  drawOptions.angle = overlay->angle();\n  drawOptions.screenSize = mapWidget->size();\n  drawOptions.dockRect = mapWidget->rect().adjusted(-1, -1, 1, 1); // adjusted to hide docked sides\n
+tmpBuffer
+mapBuffer
+    drawOptions.zoom = overlay->zoom();\n    drawOptions.angle = overlay->angle();\n    drawOptions.screenSize = mapWidget->size();\n    drawOptions.dockRect = mapWidget->rect().adjusted(-1, -1, 1, 1); // adjusted to hide docked sides\n    \n    cvrDefaultDrawStyle->drawOSD(painter, drawOptions, &interactiveDrawingData);\n
+  // Draw survey points\n  \n  // Update draw options\n  data->drawOptions.initFrom(data->map);\n  data->drawOptions.viewMatrix = data->viewMatrix.toAffine();\n  \n  // Update interactive drawing data\n  data->interactiveDrawingData.mapWidget = data->mapWidget;\n  data->interactiveDrawingData.graphicNodeUnderMouse = data->graphicNodeUnderMouse;\n  data->interactiveDrawingData.selectedTool = data->mapTool();\n  data->interactiveDrawingData.mousePressPosition = data->mousePressPosition;\n  data->interactiveDrawingData.lastMouseMovePosition = data->lastMouseMovePosition;\n  \n  QPainter painter(this);\n  //cvrDefaultDrawStyle->drawSurveyPoints(painter, data->drawOptions, &data->interactiveDrawingData);\n
+paint3D()
+glPushMatrix();
+glMatrixMode(GL_MODELVIEW);
+  glPopMatrix();\n
+ glPushMatrix();
+widget->
+setAutoFillBackground(false);
+drawInstructions
+paintGL()
+MapGLWidget::
+virtual void paintEvent(QPaintEvent *event);
+data->
+virtual void paintOverlayGL();
+paintOverlayGL () 
+  // Draw survey points\n  \n  // Update draw options\n  drawOptions.initFrom(map);\n  drawOptions.viewMatrix = viewMatrix.toAffine();\n  \n  // Update interactive drawing data\n  interactiveDrawingData.mapWidget = mapWidget;\n  interactiveDrawingData.graphicNodeUnderMouse = graphicNodeUnderMouse;\n  interactiveDrawingData.selectedTool = mapTool();\n  interactiveDrawingData.mousePressPosition = mousePressPosition;\n  interactiveDrawingData.lastMouseMovePosition = lastMouseMovePosition;\n  \n  QPainter painter(map2DWidget);\n  cvrDefaultDrawStyle->drawSurveyPoints(painter, drawOptions, &interactiveDrawingData);\n
+drawOptions
+    // Update draw options\n    drawOptions.initFrom(map);\n    drawOptions.viewMatrix = viewMatrix.toAffine();\n    \n    // Update interactive drawing data\n    interactiveDrawingData.mapWidget = mapWidget;\n    interactiveDrawingData.graphicNodeUnderMouse = graphicNodeUnderMouse;\n    interactiveDrawingData.selectedTool = mapTool();\n    interactiveDrawingData.mousePressPosition = mousePressPosition;\n    interactiveDrawingData.lastMouseMovePosition = lastMouseMovePosition;\n
+    drawOptions.initFrom(map);\n    drawOptions.viewMatrix = viewMatrix.toAffine();\n    \n    // Update interactive drawing data\n    interactiveDrawingData.mapWidget = mapWidget;\n    interactiveDrawingData.graphicNodeUnderMouse = graphicNodeUnderMouse;\n    interactiveDrawingData.selectedTool = mapTool();\n    interactiveDrawingData.mousePressPosition = mousePressPosition;\n    interactiveDrawingData.lastMouseMovePosition = lastMouseMovePosition;\n
+cvrDefaultDrawStyle
+virtual void drawSurveyPoints(QPainter &painter, const DrawStyleOptionsMap &options, InteractiveDrawingData *interactiveData = 0) = 0;
+gluUnProject
+angle
+matrix.rotate(overlay->angle());
+glVertex3d(x - 10, y - 10, z);
+    double anchorWinX = point.x();\n    double anchorWinY = threeDViewport\[3\] - point.y();\n    double anchorWinZ = 0.0;\n    \n    double sceneX, sceneY, sceneZ;\n    map3DWidget->makeCurrent();\n    glReadPixels(qRound(anchorWinX), qRound(anchorWinY), 1, 1, GL_DEPTH_COMPONENT, GL_INT, &anchorWinZ);\n    anchorWinZ *= 100000;\n    gluUnProject(anchorWinX, anchorWinY, anchorWinZ, threeDModelView, threeDProjection, threeDViewport, &sceneX, &sceneY, &sceneZ);\n
+      glColor3f(1, 0, 1);\n      glPointSize(20);\n      glBegin(GL_POINTS);\n      glVertex3d(anchorSceneX, anchorSceneY, anchorSceneZ);\n      glEnd();\n
+anchorWinZ
+sceneZ *= 512;
+sceneZ
+glReadPixels
+GL_DEPTH_COMPONENT
+.arg(
+#include \"maparea_3d_p.h\"
 [console.System]
+make -f Makefile.coverazone
 make exec
 E:\\projects\\covera\\covera\\trunk
 make
-make -f Makefile.vcc_coverazone
 make -f Makefile.coverazone_dynamic_symbols
+make -f Makefile.vcc_coverazone
 $d
 $s
 proc.sh
 ./proc.sh
 .\\proc.sh
 [find]
-vertical
-oldWidth
-dockWidgets
-__dockPosition
-insertIndex
-_scrollBarValueBeforeDWResized
-_uncollapsedWidth
-oldScrollBarValue
-rubberBand
-dockPosition
-dockSpace
-oldWidth2
-value
-viewParameterTypeFromString
-rubberBand->resize
+z
+region
+3D
+->tmpBuffer
+.tmpBuffer
+tmpBuffer
+mapBuffer
+drawOs
+data->
+-100000, 100000
+-20000, 20000
+-1000, 1000
+glColor3f
+0
+-10000, 10000
+%d
+glScaled(zoom, zoom, zoom);
+obj
+anvhor
+win
+::setNextTransformationAnchor
+transformationAnchor
+nchor
+::resetRotation
+::setXRotatio
+QMatrix
+setWorldMatrix
+QMa
+>>>
+1.
+500
+100
+-1
+0.0
+glLineWidth
+xA
+GL_TEXTURE_3D
+1
+GL_TEXTURE_2D
+map3dWidget
+map3dWidget\tmap3dWidget
+mapW
+mapImage
+DATA_CHANGED
+(view)
+_view
+view
+->calculate
+::mapWidget
+glB
+glBegin
+glEnd
+gl
+QGLWidget::
+::painEven
+gl3DSurface
+acyiveMapIsMaximized
+viewsTabBarHeight =
+StateC
+setWindowGeometry

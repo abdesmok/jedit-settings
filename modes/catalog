@@ -2,11 +2,5 @@
 <!DOCTYPE MODES SYSTEM "catalog.dtd">
 
 <MODES>
-
-<!-- Add lines like the following, one for each edit mode you add: -->
-<!-- <MODE NAME="foo" FILE="foo.xml" FILE_NAME_GLOB="*.foo" /> -->
-
-<MODE NAME="c++" FILE="mycplusplus.xml" FILE_NAME_GLOB="*.{cc,cpp,hh,hpp,cxx,h}" />
-<MODE NAME="cfg" FILE="abdesmok_cfg.xml" FILE_NAME_GLOB="*.{cfg}" />
-
+  <MODE NAME="scala" FILE="scala.xml" FILE_NAME_GLOB="*.scala" />
 </MODES>

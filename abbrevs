@@ -2,10 +2,10 @@
 pa|printf("\|\\n", @);
 qp|qPrintable(\|)
 _if|if (\|) {\n\t@\n}\n
-S|STOP("\|");
 _st|struct \|\n{\n\t@;\n}\n
 _lin|#include "\|"\n
 qd|qDebug("\|");
+qc|qCritical("\|");
 /**|/**\n * \|\n */
 ta|toAscii().data()
 qdd|qDebug() << \|;
@@ -30,9 +30,9 @@ ret|return\|;
 [factor]
 [batch]
 [assembly-mcs51]
+[vrml2]
 [groovy]
 [relax-ng-compact]
-[cfg]
 [icon]
 [velocity]
 [patch]
@@ -52,7 +52,9 @@ ret|return\|;
 [pl-sql]
 [htaccess]
 [apacheconf]
+[clojure]
 [io]
+[pure]
 [properties]
 [rhtml]
 [vhdl]
@@ -64,12 +66,15 @@ sig|signal
 [maple]
 [lotos]
 [django]
+[ada]
 [php]
+[yab]
 [lua]
 [makefile]
 [sas]
 [rtf]
 [ptl]
+[gcbasic]
 [xsl]
 fes|<xsl:for-each select="\|">\n</xsl:for-each>
 nc|<xsl:number count="\|"/>
@@ -119,6 +124,7 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [bibtex]
 [modula3]
 [perl]
+[tsp]
 [transact-sql]
 [lisp]
 [smi-mib]
@@ -131,6 +137,7 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [bcel]
 [psp]
 [antlr]
+[cmake]
 [assembly-m68k]
 [omnimark]
 [interlis]
@@ -146,7 +153,9 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [aspect-j]
 [squidconf]
 [rview]
+[jedit-actions]
 [jhtml]
+[stata_ado]
 [embperl]
 [mysql]
 [rd]
@@ -154,12 +163,14 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [zpt]
 [mqsc]
 [prolog]
+[stata_do]
 [assembly-r2000]
 [sdl/pr]
 [hex]
 [swig]
-[rebol]
+[javafx]
 [s+]
+[rebol]
 [dsssl]
 [nqc]
 [forth]
@@ -171,6 +182,7 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [rpm-spec]
 [apdl]
 [myghty]
+[scala]
 [tcl]
 [rcp]
 [template-toolkit]
@@ -183,9 +195,11 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [awk]
 [verilog]
 [erlang]
+[yaml]
+[assembly-ags]
 [shellscript]
-[gettext]
 [jcl]
+[gettext]
 [d]
 [c]
 [coldfusion]
@@ -193,6 +207,7 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [typoscript]
 [scheme]
 [texinfo]
+[assembly-agc]
 [java]
 ne|nextElement()
 Il|SwingUtilities.invokeLater(new Runnable()\n{\n\tpublic void run()\n\t{\n\t\t\|\n\t}\n});
@@ -251,6 +266,8 @@ ogsj|import org.gjt.sp.jedit.
 YY|<$1>\n\|\n</$1>
 Ykeycombo|<keycombo><keycap>$1</keycap><keycap>$2</keycap></keycombo>
 Ykeycap|<keycap>\|</keycap>
+[dot]
+[powershell]
 [cil]
 [postscript]
 [sql-loader]
@@ -270,15 +287,18 @@ Ykeycap|<keycap>\|</keycap>
 [vbscript]
 [povray]
 [jmk]
+[icalendar]
 [slate]
 [shtml]
 [haskell]
 [hlsl]
+[n3]
 [cobol]
 [csv]
 [css]
 [assembly-x86]
+[binsource-agc]
+[javascript]
 [xq]
 [gnuplot]
-[javascript]
 [uscript]

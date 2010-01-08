@@ -1,4 +1,13 @@
 source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
 
-command("make exec");
+File jeditMakefile = new File(app + "/Makefile.jedit");
+
+//JOptionPane.showMessageDialog(null, app + " " + jeditMakefile.getPath() + " " + jeditMakefile.exists());
+
+if (jeditMakefile.exists()) {
+  command("make exec -f Makefile.jedit");
+}
+else {
+  command("make exec");
+}
 

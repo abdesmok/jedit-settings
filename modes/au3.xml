@@ -1,0 +1,2971 @@
+<?xml version="1.0"?>
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+<!-- AutoItScript mode V3.1 by Thorsten Willert
+
+Catalog entry:
+================================================================================
+
+<MODE NAME="autoitscript"	FILE="au3.xml"
+				FILE_NAME_GLOB="*.{au3}"/>
+
+================================================================================
+V3.1
+- added $ to "NoWordSep"erators
+- updated directives
+
+V3.0
+- changed to template version
+
+V2.5
+- updated to AutoIt V3.3.0.0
+
+V2.4
+- added: Excel Management
+
+V2.3 Updated to AutoIt V3.2.13.3
+- added: _GDIPlus_GraphicsFillPolygon
+- added: _GUICtrlTab_ClickTab
+- added: _GUICtrlComboBoxEx_GetUnicode
+- added: _GUICtrlComboBoxEx_SetUnicode
+- added: _Timer_GetIdleTime
+- added: _WinAPI_GetWindowPlacement
+- added: _WinAPI_SetWindowPlacement
+
+V2.2 Updated to AutoIt v3.2.12.0
+
+- added: RunAs
+- added: RunAsWait
+- added: GUISetAccelerators
+- added: StdioClose
+- added: GUICtrlSetDefColor
+- added: GUICtrlSetDefBkColor
+- added: @AutoItUnicode (@Unicode marked as INVALID)
+- removed: RunAsSet (marked as INVALID)
+
+V2.1 (03/30/2008)
+- updated the AutoIt3Wrapper - directives
+
+V2.0
+- updated to the new UDFs
+- added FF.au3
+
+V1.7
+- added: Now %env% and $$strings in strings now highlighted, too.
+	(Options: ExpandEnvStrings, ExpandVarStrings)
+
+V1.65
+- fixed: Added functions from Memory.au3
+
+================================================================================
+-->
+<MODE>
+	<PROPS>
+		<PROPERTY NAME="commentStart" VALUE="#cs" />
+		<PROPERTY NAME="commentEnd" VALUE="#ce" />
+		<PROPERTY NAME="lineComment" VALUE=";" />
+		<PROPERTY NAME="folding" VALUE="indent" />
+		<PROPERTY NAME="wordBreakChars" VALUE=",+-=&lt;&gt;/?^&amp;*" />
+		<PROPERTY NAME="noWordSep" VALUE="_@$" />
+		<!--<PROPERTY NAME="indentNextLines"
+			VALUE="\s*(if|do|else|select|switch|while)(.*)"/>-->
+		<PROPERTY NAME="indentNextLines" VALUE="\s*(\b(if|while|for|else|elseif|do|select|case|func|switch))($|\s.*|\(.*)" />
+		<PROPERTY NAME="unindentThisLine" VALUE="\s*(\b(endif|wend|else|elseif|until|endselect|endfunc|endswitch))($|\s.*|\(.*)" />
+		<!--<PROPERTY NAME="electricKeys" VALUE="\s*(\b(endif|wend|else|elseif|until|endselect|endfunc|endswitch))($|\s.*|\(.*)" />-->
+		<PROPERTY NAME="unindentNextLines" VALUE="\s*(\b(endif|wend|else|elseif|until|endselect|break|endfunc|endswitch))($|\s.*|\(.*)" />
+	</PROPS>
+
+	<RULES IGNORE_CASE="TRUE"
+	HIGHLIGHT_DIGITS="TRUE"
+	DIGIT_RE="(0x\p{XDigit}+[lL]?|\d+(e\d*)?[lLdDfF]?)">
+
+<!-- ########################################################################### -->
+
+		<EOL_SPAN TYPE="COMMENT2">;</EOL_SPAN>
+
+		<SPAN TYPE="COMMENT1" NO_LINE_BREAK="FALSE">
+			<BEGIN>#cs</BEGIN>
+			<END>#ce</END>
+		</SPAN>
+		<SPAN TYPE="COMMENT2" NO_LINE_BREAK="FALSE">
+			<BEGIN>#comments-start</BEGIN>
+			<END>#comments-end</END>
+		</SPAN>
+
+		<!-- "Strings" -->
+		<SPAN TYPE="LITERAL1" DELEGATE="STRING1" NO_LINE_BREAK="TRUE">
+			<BEGIN>"</BEGIN>
+			<END>"</END>
+		</SPAN>
+		<!--<SEQ_REGEXP HASH_CHAR="&quot;" DELEGATE="KEYS" TYPE="LITERAL1">(&quot;)((?!\1).|\1{2})*\1</SEQ_REGEXP>-->
+		<!-- 'Strings' -->
+		<SPAN TYPE="LITERAL2" DELEGATE="STRING2" NO_LINE_BREAK="TRUE">
+			<BEGIN>'</BEGIN>
+			<END>'</END>
+		</SPAN>
+		<!--<SEQ_REGEXP HASH_CHAR="'" TYPE="LITERAL2">(')((?!\1).|\1{2})*\1</SEQ_REGEXP>-->
+
+		 <!-- preprocessor statements -->
+		<EOL_SPAN TYPE="MARKUP" DELEGATE="PP" AT_LINE_START="TRUE">#</EOL_SPAN>
+
+		<!-- Own Functions -->
+		<MARK_PREVIOUS EXCLUDE_MATCH="TRUE" TYPE="FUNCTION" MATCH_TYPE="OPERATOR">(</MARK_PREVIOUS>
+
+		<!-- Objects -->
+		<SEQ_REGEXP HASH_CHAR="." TYPE="FUNCTION">\w*[\.][A-Za-z_]+</SEQ_REGEXP>
+
+		<!-- Comparison operators -->
+		<SEQ TYPE="OPERATOR">&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;=</SEQ>
+		<SEQ TYPE="OPERATOR">-=</SEQ>
+		<SEQ TYPE="OPERATOR">+=</SEQ>
+		<SEQ TYPE="OPERATOR">&amp;=</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;&gt;</SEQ>
+
+		<!-- Arithmetic operators -->
+		<SEQ TYPE="OPERATOR">+</SEQ>
+		<SEQ TYPE="OPERATOR">-</SEQ>
+		<SEQ TYPE="OPERATOR">*</SEQ>
+		<SEQ TYPE="OPERATOR">/</SEQ>
+		<SEQ TYPE="OPERATOR">\</SEQ>
+		<SEQ TYPE="OPERATOR">^</SEQ>
+
+		<SEQ TYPE="OPERATOR">&amp;</SEQ>
+		<SEQ TYPE="OPERATOR">[</SEQ>
+		<SEQ TYPE="OPERATOR">]</SEQ>
+		<SEQ TYPE="OPERATOR">(</SEQ>
+		<SEQ TYPE="OPERATOR">)</SEQ>
+
+		<!-- Variables -->
+		<SEQ_REGEXP HASH_CHAR="$" TYPE="LITERAL3">[$]{1}[\w]+</SEQ_REGEXP>
+		<!-- Marking a typing error with variables -->
+		<SEQ_REGEXP HASH_CHAR="$" TYPE="INVALID">[$]{2,}[\w]+</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="$" TYPE="INVALID">^[ \t]*\$[ \t]*(.*)</SEQ_REGEXP>
+
+		<!-- ;-) -->
+		<SEQ_REGEXP TYPE="INVALID">^[ \t]*[Cc](onst|ONST)\s+[Gg](lobal|LOBAL)</SEQ_REGEXP>
+		<SEQ_REGEXP TYPE="INVALID">^[ \t]*[Cc](onst|ONST)\s+[Ll](ocal|OCAL)</SEQ_REGEXP>
+		<SEQ_REGEXP TYPE="INVALID">^[ \t]*[Es](lse|LSE)\s+[Ii][Fi]</SEQ_REGEXP>
+
+		<IMPORT DELEGATE="SK"/>
+		<IMPORT DELEGATE="MACROS"/>
+
+		<KEYWORDS>
+			<KEYWORD1>ByRef</KEYWORD1>
+			<KEYWORD1>Case</KEYWORD1>
+			<KEYWORD1>Const</KEYWORD1>
+			<KEYWORD1>ContinueCase</KEYWORD1>
+			<KEYWORD1>ContinueLoop</KEYWORD1>
+			<KEYWORD1>Default</KEYWORD1>
+			<KEYWORD1>Dim</KEYWORD1>
+			<KEYWORD1>Do</KEYWORD1>
+			<KEYWORD1>Else</KEYWORD1>
+			<KEYWORD1>ElseIf</KEYWORD1>
+			<KEYWORD1>EndFunc</KEYWORD1>
+			<KEYWORD1>EndIf</KEYWORD1>
+			<KEYWORD1>EndSelect</KEYWORD1>
+			<KEYWORD1>EndSwitch</KEYWORD1>
+			<KEYWORD1>EndWith</KEYWORD1>
+			<KEYWORD1>Enum</KEYWORD1>
+			<KEYWORD1>Exit</KEYWORD1>
+			<KEYWORD1>ExitLoop</KEYWORD1>
+			<KEYWORD1>For</KEYWORD1>
+			<KEYWORD1>Func</KEYWORD1>
+			<KEYWORD1>Global</KEYWORD1>
+			<KEYWORD1>If</KEYWORD1>
+			<KEYWORD1>In</KEYWORD1>
+			<KEYWORD1>Local</KEYWORD1>
+			<KEYWORD1>Next</KEYWORD1>
+			<KEYWORD1>ReDim</KEYWORD1>
+			<KEYWORD1>Return</KEYWORD1>
+			<KEYWORD1>Select</KEYWORD1>
+			<KEYWORD1>Step</KEYWORD1>
+			<KEYWORD1>Switch</KEYWORD1>
+			<KEYWORD1>Then</KEYWORD1>
+			<KEYWORD1>To</KEYWORD1>
+			<KEYWORD1>Until</KEYWORD1>
+			<KEYWORD1>Wend</KEYWORD1>
+			<KEYWORD1>While</KEYWORD1>
+			<KEYWORD1>With</KEYWORD1>
+
+			<!-- Variables -->
+			<MARKUP>global</MARKUP>
+			<MARKUP>local</MARKUP>
+			<MARKUP>dim</MARKUP>
+			<MARKUP>const</MARKUP>
+
+			<!-- Logical Operators -->
+			<OPERATOR>not</OPERATOR>
+			<OPERATOR>or</OPERATOR>
+			<OPERATOR>and</OPERATOR>
+
+			<!-- Constants -->
+			<KEYWORD4>true</KEYWORD4>
+			<KEYWORD4>false</KEYWORD4>
+
+			<!-- Functions -->
+			<KEYWORD2>ACos</KEYWORD2>
+			<KEYWORD2>ASin</KEYWORD2>
+			<KEYWORD2>ATan</KEYWORD2>
+			<KEYWORD2>Abs</KEYWORD2>
+			<KEYWORD2>AdlibDisable</KEYWORD2>
+			<KEYWORD2>AdlibEnable</KEYWORD2>
+			<KEYWORD2>Asc</KEYWORD2>
+			<KEYWORD2>AscW</KEYWORD2>
+			<KEYWORD2>Assign</KEYWORD2>
+			<KEYWORD2>AutoItSetOption</KEYWORD2>
+			<KEYWORD2>AutoItWinGetTitle</KEYWORD2>
+			<KEYWORD2>AutoItWinSetTitle</KEYWORD2>
+			<KEYWORD2>Beep</KEYWORD2>
+			<KEYWORD2>Binary</KEYWORD2>
+			<KEYWORD2>BinaryLen</KEYWORD2>
+			<KEYWORD2>BinaryMid</KEYWORD2>
+			<KEYWORD2>BinaryToString</KEYWORD2>
+			<KEYWORD2>BitAND</KEYWORD2>
+			<KEYWORD2>BitNOT</KEYWORD2>
+			<KEYWORD2>BitOR</KEYWORD2>
+			<KEYWORD2>BitRotate</KEYWORD2>
+			<KEYWORD2>BitShift</KEYWORD2>
+			<KEYWORD2>BitXOR</KEYWORD2>
+			<KEYWORD2>BlockInput</KEYWORD2>
+			<KEYWORD2>Break</KEYWORD2>
+			<KEYWORD2>CDTray</KEYWORD2>
+			<KEYWORD2>Call</KEYWORD2>
+			<KEYWORD2>Ceiling</KEYWORD2>
+			<KEYWORD2>Chr</KEYWORD2>
+			<KEYWORD2>ChrW</KEYWORD2>
+			<KEYWORD2>ClipGet</KEYWORD2>
+			<KEYWORD2>ClipPut</KEYWORD2>
+			<KEYWORD2>ConsoleRead</KEYWORD2>
+			<KEYWORD2>ConsoleWrite</KEYWORD2>
+			<KEYWORD2>ConsoleWriteError</KEYWORD2>
+			<KEYWORD2>ControlClick</KEYWORD2>
+			<KEYWORD2>ControlCommand</KEYWORD2>
+			<KEYWORD2>ControlDisable</KEYWORD2>
+			<KEYWORD2>ControlEnable</KEYWORD2>
+			<KEYWORD2>ControlFocus</KEYWORD2>
+			<KEYWORD2>ControlGetFocus</KEYWORD2>
+			<KEYWORD2>ControlGetHandle</KEYWORD2>
+			<KEYWORD2>ControlGetPos</KEYWORD2>
+			<KEYWORD2>ControlGetText</KEYWORD2>
+			<KEYWORD2>ControlHide</KEYWORD2>
+			<KEYWORD2>ControlListView</KEYWORD2>
+			<KEYWORD2>ControlMove</KEYWORD2>
+			<KEYWORD2>ControlSend</KEYWORD2>
+			<KEYWORD2>ControlSetText</KEYWORD2>
+			<KEYWORD2>ControlShow</KEYWORD2>
+			<KEYWORD2>Cos</KEYWORD2>
+			<KEYWORD2>Dec</KEYWORD2>
+			<KEYWORD2>DirCopy</KEYWORD2>
+			<KEYWORD2>DirCreate</KEYWORD2>
+			<KEYWORD2>DirGetSize</KEYWORD2>
+			<KEYWORD2>DirMove</KEYWORD2>
+			<KEYWORD2>DirRemove</KEYWORD2>
+			<KEYWORD2>DllCall</KEYWORD2>
+			<KEYWORD2>DllClose</KEYWORD2>
+			<KEYWORD2>DllOpen</KEYWORD2>
+			<KEYWORD2>DllStructCreate</KEYWORD2>
+			<KEYWORD2>DllStructGetData</KEYWORD2>
+			<KEYWORD2>DllStructGetPtr</KEYWORD2>
+			<KEYWORD2>DllStructGetSize</KEYWORD2>
+			<KEYWORD2>DllStructSetData</KEYWORD2>
+			<KEYWORD2>DriveGetDrive</KEYWORD2>
+			<KEYWORD2>DriveGetFileSystem</KEYWORD2>
+			<KEYWORD2>DriveGetLabel</KEYWORD2>
+			<KEYWORD2>DriveGetSerial</KEYWORD2>
+			<KEYWORD2>DriveGetType</KEYWORD2>
+			<KEYWORD2>DriveMapAdd</KEYWORD2>
+			<KEYWORD2>DriveMapDel</KEYWORD2>
+			<KEYWORD2>DriveMapGet</KEYWORD2>
+			<KEYWORD2>DriveSetLabel</KEYWORD2>
+			<KEYWORD2>DriveSpaceFree</KEYWORD2>
+			<KEYWORD2>DriveSpaceTotal</KEYWORD2>
+			<KEYWORD2>DriveStatus</KEYWORD2>
+			<KEYWORD2>EnvGet</KEYWORD2>
+			<KEYWORD2>EnvSet</KEYWORD2>
+			<KEYWORD2>EnvUpdate</KEYWORD2>
+			<KEYWORD2>Eval</KEYWORD2>
+			<KEYWORD2>Execute</KEYWORD2>
+			<KEYWORD2>Exp</KEYWORD2>
+			<KEYWORD2>FileChangeDir</KEYWORD2>
+			<KEYWORD2>FileClose</KEYWORD2>
+			<KEYWORD2>FileCopy</KEYWORD2>
+			<KEYWORD2>FileCreateNTFSLink</KEYWORD2>
+			<KEYWORD2>FileCreateShortcut</KEYWORD2>
+			<KEYWORD2>FileDelete</KEYWORD2>
+			<KEYWORD2>FileExists</KEYWORD2>
+			<KEYWORD2>FileFindFirstFile</KEYWORD2>
+			<KEYWORD2>FileFindNextFile</KEYWORD2>
+			<KEYWORD2>FileGetAttrib</KEYWORD2>
+			<KEYWORD2>FileGetLongName</KEYWORD2>
+			<KEYWORD2>FileGetShortName</KEYWORD2>
+			<KEYWORD2>FileGetShortcut</KEYWORD2>
+			<KEYWORD2>FileGetSize</KEYWORD2>
+			<KEYWORD2>FileGetTime</KEYWORD2>
+			<KEYWORD2>FileGetVersion</KEYWORD2>
+			<KEYWORD2>FileInstall</KEYWORD2>
+			<KEYWORD2>FileMove</KEYWORD2>
+			<KEYWORD2>FileOpen</KEYWORD2>
+			<KEYWORD2>FileOpenDialog</KEYWORD2>
+			<KEYWORD2>FileRead</KEYWORD2>
+			<KEYWORD2>FileReadLine</KEYWORD2>
+			<KEYWORD2>FileRecycle</KEYWORD2>
+			<KEYWORD2>FileRecycleEmpty</KEYWORD2>
+			<KEYWORD2>FileSaveDialog</KEYWORD2>
+			<KEYWORD2>FileSelectFolder</KEYWORD2>
+			<KEYWORD2>FileSetAttrib</KEYWORD2>
+			<KEYWORD2>FileSetTime</KEYWORD2>
+			<KEYWORD2>FileWrite</KEYWORD2>
+			<KEYWORD2>FileWriteLine</KEYWORD2>
+			<KEYWORD2>Floor</KEYWORD2>
+			<KEYWORD2>FtpSetProxy</KEYWORD2>
+			<KEYWORD2>GUICreate</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateAvi</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateButton</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateCheckbox</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateCombo</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateContextMenu</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateDate</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateDummy</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateEdit</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateGraphic</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateGroup</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateIcon</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateInput</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateLabel</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateList</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateListView</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateListViewItem</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateMenu</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateMenuItem</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateMonthCal</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateObj</KEYWORD2>
+			<KEYWORD2>GUICtrlCreatePic</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateProgress</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateRadio</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateSlider</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateTab</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateTabItem</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateTreeView</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateTreeViewItem</KEYWORD2>
+			<KEYWORD2>GUICtrlCreateUpdown</KEYWORD2>
+			<KEYWORD2>GUICtrlDelete</KEYWORD2>
+			<KEYWORD2>GUICtrlGetHandle</KEYWORD2>
+			<KEYWORD2>GUICtrlGetState</KEYWORD2>
+			<KEYWORD2>GUICtrlRead</KEYWORD2>
+			<KEYWORD2>GUICtrlRecvMsg</KEYWORD2>
+			<KEYWORD2>GUICtrlRegisterListViewSort</KEYWORD2>
+			<KEYWORD2>GUICtrlSendMsg</KEYWORD2>
+			<KEYWORD2>GUICtrlSendToDummy</KEYWORD2>
+			<KEYWORD2>GUICtrlSetBkColor</KEYWORD2>
+			<KEYWORD2>GUICtrlSetColor</KEYWORD2>
+			<KEYWORD2>GUICtrlSetCursor</KEYWORD2>
+			<KEYWORD2>GUICtrlSetData</KEYWORD2>
+			<KEYWORD2>GUICtrlSetDefBkColor</KEYWORD2>
+			<KEYWORD2>GUICtrlSetDefColor</KEYWORD2>
+			<KEYWORD2>GUICtrlSetFont</KEYWORD2>
+			<KEYWORD2>GUICtrlSetGraphic</KEYWORD2>
+			<KEYWORD2>GUICtrlSetImage</KEYWORD2>
+			<KEYWORD2>GUICtrlSetLimit</KEYWORD2>
+			<KEYWORD2>GUICtrlSetOnEvent</KEYWORD2>
+			<KEYWORD2>GUICtrlSetPos</KEYWORD2>
+			<KEYWORD2>GUICtrlSetResizing</KEYWORD2>
+			<KEYWORD2>GUICtrlSetState</KEYWORD2>
+			<KEYWORD2>GUICtrlSetStyle</KEYWORD2>
+			<KEYWORD2>GUICtrlSetTip</KEYWORD2>
+			<KEYWORD2>GUIDelete</KEYWORD2>
+			<KEYWORD2>GUIGetCursorInfo</KEYWORD2>
+			<KEYWORD2>GUIGetMsg</KEYWORD2>
+			<KEYWORD2>GUIRegisterMsg</KEYWORD2>
+			<KEYWORD2>GUISetAccelerators</KEYWORD2>
+			<KEYWORD2>GUISetBkColor</KEYWORD2>
+			<KEYWORD2>GUISetCoord</KEYWORD2>
+			<KEYWORD2>GUISetCursor</KEYWORD2>
+			<KEYWORD2>GUISetFont</KEYWORD2>
+			<KEYWORD2>GUISetHelp</KEYWORD2>
+			<KEYWORD2>GUISetIcon</KEYWORD2>
+			<KEYWORD2>GUISetOnEvent</KEYWORD2>
+			<KEYWORD2>GUISetState</KEYWORD2>
+			<KEYWORD2>GUIStartGroup</KEYWORD2>
+			<KEYWORD2>GUISwitch</KEYWORD2>
+			<KEYWORD2>HWnd</KEYWORD2>
+			<KEYWORD2>Hex</KEYWORD2>
+			<KEYWORD2>HotKeySet</KEYWORD2>
+			<KEYWORD2>HttpSetProxy</KEYWORD2>
+			<KEYWORD2>InetGet</KEYWORD2>
+			<KEYWORD2>InetGetSize</KEYWORD2>
+			<KEYWORD2>IniDelete</KEYWORD2>
+			<KEYWORD2>IniRead</KEYWORD2>
+			<KEYWORD2>IniReadSection</KEYWORD2>
+			<KEYWORD2>IniReadSectionNames</KEYWORD2>
+			<KEYWORD2>IniRenameSection</KEYWORD2>
+			<KEYWORD2>IniWrite</KEYWORD2>
+			<KEYWORD2>IniWriteSection</KEYWORD2>
+			<KEYWORD2>InputBox</KEYWORD2>
+			<KEYWORD2>Int</KEYWORD2>
+			<KEYWORD2>IsAdmin</KEYWORD2>
+			<KEYWORD2>IsArray</KEYWORD2>
+			<KEYWORD2>IsBinary</KEYWORD2>
+			<KEYWORD2>IsBool</KEYWORD2>
+			<KEYWORD2>IsDeclared</KEYWORD2>
+			<KEYWORD2>IsDllStruct</KEYWORD2>
+			<KEYWORD2>IsFloat</KEYWORD2>
+			<KEYWORD2>IsHWnd</KEYWORD2>
+			<KEYWORD2>IsInt</KEYWORD2>
+			<KEYWORD2>IsKeyword</KEYWORD2>
+			<KEYWORD2>IsNumber</KEYWORD2>
+			<KEYWORD2>IsObj</KEYWORD2>
+			<KEYWORD2>IsString</KEYWORD2>
+			<KEYWORD2>Log</KEYWORD2>
+			<KEYWORD2>MemGetStats</KEYWORD2>
+			<KEYWORD2>Mod</KEYWORD2>
+			<KEYWORD2>MouseClick</KEYWORD2>
+			<KEYWORD2>MouseClickDrag</KEYWORD2>
+			<KEYWORD2>MouseDown</KEYWORD2>
+			<KEYWORD2>MouseGetCursor</KEYWORD2>
+			<KEYWORD2>MouseGetPos</KEYWORD2>
+			<KEYWORD2>MouseMove</KEYWORD2>
+			<KEYWORD2>MouseUp</KEYWORD2>
+			<KEYWORD2>MouseWheel</KEYWORD2>
+			<KEYWORD2>MsgBox</KEYWORD2>
+			<KEYWORD2>Number</KEYWORD2>
+			<KEYWORD2>ObjCreate</KEYWORD2>
+			<KEYWORD2>ObjEvent</KEYWORD2>
+			<KEYWORD2>ObjGet</KEYWORD2>
+			<KEYWORD2>ObjName</KEYWORD2>
+			<KEYWORD2>Opt</KEYWORD2>
+			<KEYWORD2>Ping</KEYWORD2>
+			<KEYWORD2>PixelChecksum</KEYWORD2>
+			<KEYWORD2>PixelGetColor</KEYWORD2>
+			<KEYWORD2>PixelSearch</KEYWORD2>
+			<KEYWORD2>ProcessClose</KEYWORD2>
+			<KEYWORD2>ProcessExists</KEYWORD2>
+			<KEYWORD2>ProcessList</KEYWORD2>
+			<KEYWORD2>ProcessSetPriority</KEYWORD2>
+			<KEYWORD2>ProcessWait</KEYWORD2>
+			<KEYWORD2>ProcessWaitClose</KEYWORD2>
+			<KEYWORD2>ProgressOff</KEYWORD2>
+			<KEYWORD2>ProgressOn</KEYWORD2>
+			<KEYWORD2>ProgressSet</KEYWORD2>
+			<KEYWORD2>Random</KEYWORD2>
+			<KEYWORD2>RegDelete</KEYWORD2>
+			<KEYWORD2>RegEnumKey</KEYWORD2>
+			<KEYWORD2>RegEnumVal</KEYWORD2>
+			<KEYWORD2>RegRead</KEYWORD2>
+			<KEYWORD2>RegWrite</KEYWORD2>
+			<KEYWORD2>Round</KEYWORD2>
+			<KEYWORD2>Run</KEYWORD2>
+			<KEYWORD2>RunAs</KEYWORD2>
+			<INVALID>RunAsSet</INVALID>
+			<KEYWORD2>RunAsWait</KEYWORD2>
+			<KEYWORD2>RunWait</KEYWORD2>
+			<KEYWORD2>SRandom</KEYWORD2>
+			<KEYWORD2>Send</KEYWORD2>
+			<KEYWORD2>SetError</KEYWORD2>
+			<KEYWORD2>SetExtended</KEYWORD2>
+			<KEYWORD2>ShellExecute</KEYWORD2>
+			<KEYWORD2>ShellExecuteWait</KEYWORD2>
+			<KEYWORD2>Shutdown</KEYWORD2>
+			<KEYWORD2>Sin</KEYWORD2>
+			<KEYWORD2>Sleep</KEYWORD2>
+			<KEYWORD2>SoundPlay</KEYWORD2>
+			<KEYWORD2>SoundSetWaveVolume</KEYWORD2>
+			<KEYWORD2>SplashImageOn</KEYWORD2>
+			<KEYWORD2>SplashOff</KEYWORD2>
+			<KEYWORD2>SplashTextOn</KEYWORD2>
+			<KEYWORD2>Sqrt</KEYWORD2>
+			<KEYWORD2>StatusbarGetText</KEYWORD2>
+			<KEYWORD2>StderrRead</KEYWORD2>
+			<KEYWORD2>StdinWrite</KEYWORD2>
+			<KEYWORD2>StdioClose</KEYWORD2>
+			<KEYWORD2>StdoutRead</KEYWORD2>
+			<KEYWORD2>String</KEYWORD2>
+			<KEYWORD2>StringAddCR</KEYWORD2>
+			<KEYWORD2>StringCompare</KEYWORD2>
+			<KEYWORD2>StringFormat</KEYWORD2>
+			<KEYWORD2>StringFromASCIIArray</KEYWORD2>
+			<KEYWORD2>StringInStr</KEYWORD2>
+			<KEYWORD2>StringIsASCII</KEYWORD2>
+			<KEYWORD2>StringIsAlNum</KEYWORD2>
+			<KEYWORD2>StringIsAlpha</KEYWORD2>
+			<KEYWORD2>StringIsDigit</KEYWORD2>
+			<KEYWORD2>StringIsFloat</KEYWORD2>
+			<KEYWORD2>StringIsInt</KEYWORD2>
+			<KEYWORD2>StringIsLower</KEYWORD2>
+			<KEYWORD2>StringIsSpace</KEYWORD2>
+			<KEYWORD2>StringIsUpper</KEYWORD2>
+			<KEYWORD2>StringIsXDigit</KEYWORD2>
+			<KEYWORD2>StringLeft</KEYWORD2>
+			<KEYWORD2>StringLen</KEYWORD2>
+			<KEYWORD2>StringLower</KEYWORD2>
+			<KEYWORD2>StringMid</KEYWORD2>
+			<KEYWORD2>StringRegExp</KEYWORD2>
+			<KEYWORD2>StringRegExpReplace</KEYWORD2>
+			<KEYWORD2>StringReplace</KEYWORD2>
+			<KEYWORD2>StringRight</KEYWORD2>
+			<KEYWORD2>StringSplit</KEYWORD2>
+			<KEYWORD2>StringStripCR</KEYWORD2>
+			<KEYWORD2>StringStripWS</KEYWORD2>
+			<KEYWORD2>StringToASCIIArray</KEYWORD2>
+			<KEYWORD2>StringToBinary</KEYWORD2>
+			<KEYWORD2>StringTrimLeft</KEYWORD2>
+			<KEYWORD2>StringTrimRight</KEYWORD2>
+			<KEYWORD2>StringUpper</KEYWORD2>
+			<KEYWORD2>TCPAccept</KEYWORD2>
+			<KEYWORD2>TCPCloseSocket</KEYWORD2>
+			<KEYWORD2>TCPConnect</KEYWORD2>
+			<KEYWORD2>TCPListen</KEYWORD2>
+			<KEYWORD2>TCPNameToIP</KEYWORD2>
+			<KEYWORD2>TCPRecv</KEYWORD2>
+			<KEYWORD2>TCPSend</KEYWORD2>
+			<KEYWORD2>TCPShutdown</KEYWORD2>
+			<KEYWORD2>TCPStartup</KEYWORD2>
+			<KEYWORD2>Tan</KEYWORD2>
+			<KEYWORD2>TimerDiff</KEYWORD2>
+			<KEYWORD2>TimerInit</KEYWORD2>
+			<KEYWORD2>ToolTip</KEYWORD2>
+			<KEYWORD2>TrayCreateItem</KEYWORD2>
+			<KEYWORD2>TrayCreateMenu</KEYWORD2>
+			<KEYWORD2>TrayGetMsg</KEYWORD2>
+			<KEYWORD2>TrayItemDelete</KEYWORD2>
+			<KEYWORD2>TrayItemGetHandle</KEYWORD2>
+			<KEYWORD2>TrayItemGetState</KEYWORD2>
+			<KEYWORD2>TrayItemGetText</KEYWORD2>
+			<KEYWORD2>TrayItemSetOnEvent</KEYWORD2>
+			<KEYWORD2>TrayItemSetState</KEYWORD2>
+			<KEYWORD2>TrayItemSetText</KEYWORD2>
+			<KEYWORD2>TraySetClick</KEYWORD2>
+			<KEYWORD2>TraySetIcon</KEYWORD2>
+			<KEYWORD2>TraySetOnEvent</KEYWORD2>
+			<KEYWORD2>TraySetPauseIcon</KEYWORD2>
+			<KEYWORD2>TraySetState</KEYWORD2>
+			<KEYWORD2>TraySetToolTip</KEYWORD2>
+			<KEYWORD2>TrayTip</KEYWORD2>
+			<KEYWORD2>UBound</KEYWORD2>
+			<KEYWORD2>UDPBind</KEYWORD2>
+			<KEYWORD2>UDPCloseSocket</KEYWORD2>
+			<KEYWORD2>UDPOpen</KEYWORD2>
+			<KEYWORD2>UDPRecv</KEYWORD2>
+			<KEYWORD2>UDPSend</KEYWORD2>
+			<KEYWORD2>WinActivate</KEYWORD2>
+			<KEYWORD2>WinActive</KEYWORD2>
+			<KEYWORD2>WinClose</KEYWORD2>
+			<KEYWORD2>WinExists</KEYWORD2>
+			<KEYWORD2>WinFlash</KEYWORD2>
+			<KEYWORD2>WinGetCaretPos</KEYWORD2>
+			<KEYWORD2>WinGetClassList</KEYWORD2>
+			<KEYWORD2>WinGetClientSize</KEYWORD2>
+			<KEYWORD2>WinGetHandle</KEYWORD2>
+			<KEYWORD2>WinGetPos</KEYWORD2>
+			<KEYWORD2>WinGetProcess</KEYWORD2>
+			<KEYWORD2>WinGetState</KEYWORD2>
+			<KEYWORD2>WinGetText</KEYWORD2>
+			<KEYWORD2>WinGetTitle</KEYWORD2>
+			<KEYWORD2>WinKill</KEYWORD2>
+			<KEYWORD2>WinList</KEYWORD2>
+			<KEYWORD2>WinMenuSelectItem</KEYWORD2>
+			<KEYWORD2>WinMinimizeAll</KEYWORD2>
+			<KEYWORD2>WinMinimizeAllUndo</KEYWORD2>
+			<KEYWORD2>WinMove</KEYWORD2>
+			<KEYWORD2>WinSetOnTop</KEYWORD2>
+			<KEYWORD2>WinSetState</KEYWORD2>
+			<KEYWORD2>WinSetTitle</KEYWORD2>
+			<KEYWORD2>WinSetTrans</KEYWORD2>
+			<KEYWORD2>WinWait</KEYWORD2>
+			<KEYWORD2>WinWaitActive</KEYWORD2>
+			<KEYWORD2>WinWaitClose</KEYWORD2>
+			<KEYWORD2>WinWaitNotActive</KEYWORD2>
+
+			<!-- UDFs -->
+<!-- Array.au3 -->
+<KEYWORD3>_ArrayAdd</KEYWORD3>
+<KEYWORD3>_ArrayBinarySearch</KEYWORD3>
+<KEYWORD3>_ArrayCombinations</KEYWORD3>
+<KEYWORD3>_ArrayConcatenate</KEYWORD3>
+<KEYWORD3>_ArrayCreate</KEYWORD3>
+<KEYWORD3>_ArrayDelete</KEYWORD3>
+<KEYWORD3>_ArrayDisplay</KEYWORD3>
+<KEYWORD3>_ArrayFindAll</KEYWORD3>
+<KEYWORD3>_ArrayInsert</KEYWORD3>
+<KEYWORD3>_ArrayMax</KEYWORD3>
+<KEYWORD3>_ArrayMaxIndex</KEYWORD3>
+<KEYWORD3>_ArrayMin</KEYWORD3>
+<KEYWORD3>_ArrayMinIndex</KEYWORD3>
+<KEYWORD3>_ArrayPermute</KEYWORD3>
+<KEYWORD3>_ArrayPop</KEYWORD3>
+<KEYWORD3>_ArrayPush</KEYWORD3>
+<KEYWORD3>_ArrayReverse</KEYWORD3>
+<KEYWORD3>_ArraySearch</KEYWORD3>
+<KEYWORD3>_ArraySort</KEYWORD3>
+<KEYWORD3>_ArraySwap</KEYWORD3>
+<KEYWORD3>_ArrayToClip</KEYWORD3>
+<KEYWORD3>_ArrayToString</KEYWORD3>
+<KEYWORD3>_ArrayTrim</KEYWORD3>
+<KEYWORD3>_ArrayUnique</KEYWORD3>
+<KEYWORD3>_Array_ExeterInternal</KEYWORD3>
+<KEYWORD3>_Array_Combinations</KEYWORD3>
+<KEYWORD3>_Array_GetNext</KEYWORD3>
+<!-- Clipboard.au3 -->
+<KEYWORD3>_ClipBoard_ChangeChain</KEYWORD3>
+<KEYWORD3>_ClipBoard_Close</KEYWORD3>
+<KEYWORD3>_ClipBoard_CountFormats</KEYWORD3>
+<KEYWORD3>_ClipBoard_Empty</KEYWORD3>
+<KEYWORD3>_ClipBoard_EnumFormats</KEYWORD3>
+<KEYWORD3>_ClipBoard_FormatStr</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetData</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetDataEx</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetFormatName</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetOpenWindow</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetOwner</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetPriorityFormat</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetSequenceNumber</KEYWORD3>
+<KEYWORD3>_ClipBoard_GetViewer</KEYWORD3>
+<KEYWORD3>_ClipBoard_IsFormatAvailable</KEYWORD3>
+<KEYWORD3>_ClipBoard_Open</KEYWORD3>
+<KEYWORD3>_ClipBoard_RegisterFormat</KEYWORD3>
+<KEYWORD3>_ClipBoard_SetData</KEYWORD3>
+<KEYWORD3>_ClipBoard_SetDataEx</KEYWORD3>
+<KEYWORD3>_ClipBoard_SetViewer</KEYWORD3>
+<!-- Color.au3 -->
+<KEYWORD3>_ColorConvertHSLtoRGB</KEYWORD3>
+<KEYWORD3>_ColorConvertRGBtoHSL</KEYWORD3>
+<KEYWORD3>_ColorGetBlue</KEYWORD3>
+<KEYWORD3>_ColorGetGreen</KEYWORD3>
+<KEYWORD3>_ColorGetRed</KEYWORD3>
+<!-- Date.au3 -->
+<KEYWORD3>_DateAdd</KEYWORD3>
+<KEYWORD3>_DateDayOfWeek</KEYWORD3>
+<KEYWORD3>_DateDaysInMonth</KEYWORD3>
+<KEYWORD3>_DateDiff</KEYWORD3>
+<KEYWORD3>_DateIsLeapYear</KEYWORD3>
+<KEYWORD3>_DateIsMonth</KEYWORD3>
+<KEYWORD3>_DateIsValid</KEYWORD3>
+<KEYWORD3>_DateIsYear</KEYWORD3>
+<KEYWORD3>_DateLastWeekdayNum</KEYWORD3>
+<KEYWORD3>_DateLastMonthNum</KEYWORD3>
+<KEYWORD3>_DateLastMonthYear</KEYWORD3>
+<KEYWORD3>_DateMonthOfYear</KEYWORD3>
+<KEYWORD3>_DateNextWeekdayNum</KEYWORD3>
+<KEYWORD3>_DateNextMonthNum</KEYWORD3>
+<KEYWORD3>_DateNextMonthYear</KEYWORD3>
+<KEYWORD3>_DateTimeFormat</KEYWORD3>
+<KEYWORD3>_DateTimeSplit</KEYWORD3>
+<KEYWORD3>_DateToDayOfWeek</KEYWORD3>
+<KEYWORD3>_DateToDayOfWeekISO</KEYWORD3>
+<KEYWORD3>_DateToDayValue</KEYWORD3>
+<KEYWORD3>_DateToMonth</KEYWORD3>
+<KEYWORD3>_DayValueToDate</KEYWORD3>
+<KEYWORD3>_Date_JulianDayNo</KEYWORD3>
+<KEYWORD3>_JulianToDate</KEYWORD3>
+<KEYWORD3>_Now</KEYWORD3>
+<KEYWORD3>_NowCalc</KEYWORD3>
+<KEYWORD3>_NowCalcDate</KEYWORD3>
+<KEYWORD3>_NowDate</KEYWORD3>
+<KEYWORD3>_NowTime</KEYWORD3>
+<KEYWORD3>_SetDate</KEYWORD3>
+<KEYWORD3>_SetTime</KEYWORD3>
+<KEYWORD3>_TicksToTime</KEYWORD3>
+<KEYWORD3>_TimeToTicks</KEYWORD3>
+<KEYWORD3>_WeekNumberISO</KEYWORD3>
+<KEYWORD3>_WeekNumber</KEYWORD3>
+<KEYWORD3>_Date_Time_CloneSystemTime</KEYWORD3>
+<KEYWORD3>_Date_Time_CompareFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_DOSDateTimeToFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_DOSDateToArray</KEYWORD3>
+<KEYWORD3>_Date_Time_DOSDateTimeToArray</KEYWORD3>
+<KEYWORD3>_Date_Time_DOSDateTimeToStr</KEYWORD3>
+<KEYWORD3>_Date_Time_DOSDateToStr</KEYWORD3>
+<KEYWORD3>_Date_Time_DOSTimeToArray</KEYWORD3>
+<KEYWORD3>_Date_Time_DOSTimeToStr</KEYWORD3>
+<KEYWORD3>_Date_Time_EncodeFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_EncodeSystemTime</KEYWORD3>
+<KEYWORD3>_Date_Time_FileTimeToArray</KEYWORD3>
+<KEYWORD3>_Date_Time_FileTimeToStr</KEYWORD3>
+<KEYWORD3>_Date_Time_FileTimeToDOSDateTime</KEYWORD3>
+<KEYWORD3>_Date_Time_FileTimeToLocalFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_FileTimeToSystemTime</KEYWORD3>
+<KEYWORD3>_Date_Time_GetFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_GetLocalTime</KEYWORD3>
+<KEYWORD3>_Date_Time_GetSystemTime</KEYWORD3>
+<KEYWORD3>_Date_Time_GetSystemTimeAdjustment</KEYWORD3>
+<KEYWORD3>_Date_Time_GetSystemTimeAsFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_GetSystemTimes</KEYWORD3>
+<KEYWORD3>_Date_Time_GetTickCount</KEYWORD3>
+<KEYWORD3>_Date_Time_GetTimeZoneInformation</KEYWORD3>
+<KEYWORD3>_Date_Time_LocalFileTimeToFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_SetFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_SetLocalTime</KEYWORD3>
+<KEYWORD3>_Date_Time_SetSystemTime</KEYWORD3>
+<KEYWORD3>_Date_Time_SetSystemTimeAdjustment</KEYWORD3>
+<KEYWORD3>_Date_Time_SetTimeZoneInformation</KEYWORD3>
+<KEYWORD3>_Date_Time_SystemTimeToArray</KEYWORD3>
+<KEYWORD3>_Date_Time_SystemTimeToDateStr</KEYWORD3>
+<KEYWORD3>_Date_Time_SystemTimeToDateTimeStr</KEYWORD3>
+<KEYWORD3>_Date_Time_SystemTimeToFileTime</KEYWORD3>
+<KEYWORD3>_Date_Time_SystemTimeToTimeStr</KEYWORD3>
+<KEYWORD3>_Date_Time_SystemTimeToTzSpecificLocalTime</KEYWORD3>
+<KEYWORD3>_Date_Time_TzSpecificLocalTimeToSystemTime</KEYWORD3>
+<!-- Debug.au3 -->
+<KEYWORD3>_DebugBugReportEnv</KEYWORD3>
+<KEYWORD3>_DebugOut</KEYWORD3>
+<KEYWORD3>_DebugSetup</KEYWORD3>
+<!-- EventLog.au3 -->
+<KEYWORD3>_EventLog__Backup</KEYWORD3>
+<KEYWORD3>_EventLog__Clear</KEYWORD3>
+<KEYWORD3>_EventLog__Close</KEYWORD3>
+<KEYWORD3>_EventLog__Count</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeCategory</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeComputer</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeData</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeDate</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeDesc</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeEventID</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeSource</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeStrings</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeTime</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeTypeStr</KEYWORD3>
+<KEYWORD3>_EventLog__DecodeUserName</KEYWORD3>
+<KEYWORD3>_EventLog__DeregisterSource</KEYWORD3>
+<KEYWORD3>_EventLog__Full</KEYWORD3>
+<KEYWORD3>_EventLog__Notify</KEYWORD3>
+<KEYWORD3>_EventLog__Oldest</KEYWORD3>
+<KEYWORD3>_EventLog__Open</KEYWORD3>
+<KEYWORD3>_EventLog__OpenBackup</KEYWORD3>
+<KEYWORD3>_EventLog__Read</KEYWORD3>
+<KEYWORD3>_EventLog__RegisterSource</KEYWORD3>
+<KEYWORD3>_EventLog__Report</KEYWORD3>
+<!-- Excel.au3 -->
+<KEYWORD3>_ExcelBookNew</KEYWORD3>
+<KEYWORD3>_ExcelBookOpen</KEYWORD3>
+<KEYWORD3>_ExcelBookAttach</KEYWORD3>
+<KEYWORD3>_ExcelBookSave</KEYWORD3>
+<KEYWORD3>_ExcelBookSaveAs</KEYWORD3>
+<KEYWORD3>_ExcelBookClose</KEYWORD3>
+<KEYWORD3>_ExcelWriteCell</KEYWORD3>
+<KEYWORD3>_ExcelWriteFormula</KEYWORD3>
+<KEYWORD3>_ExcelWriteArray</KEYWORD3>
+<KEYWORD3>_ExcelWriteSheetFromArray</KEYWORD3>
+<KEYWORD3>_ExcelHyperlinkInsert</KEYWORD3>
+<KEYWORD3>_ExcelNumberFormat</KEYWORD3>
+<KEYWORD3>_ExcelReadCell</KEYWORD3>
+<KEYWORD3>_ExcelReadArray</KEYWORD3>
+<KEYWORD3>_ExcelReadSheetToArray</KEYWORD3>
+<KEYWORD3>_ExcelRowDelete</KEYWORD3>
+<KEYWORD3>_ExcelColumnDelete</KEYWORD3>
+<KEYWORD3>_ExcelRowInsert</KEYWORD3>
+<KEYWORD3>_ExcelColumnInsert</KEYWORD3>
+<KEYWORD3>_ExcelSheetAddNew</KEYWORD3>
+<KEYWORD3>_ExcelSheetDelete</KEYWORD3>
+<KEYWORD3>_ExcelSheetNameGet</KEYWORD3>
+<KEYWORD3>_ExcelSheetNameSet</KEYWORD3>
+<KEYWORD3>_ExcelSheetList</KEYWORD3>
+<KEYWORD3>_ExcelSheetActivate</KEYWORD3>
+<KEYWORD3>_ExcelSheetMove</KEYWORD3>
+<KEYWORD3>_ExcelHorizontalAlignSet</KEYWORD3>
+<KEYWORD3>_ExcelFontSetProperties</KEYWORD3>
+<!-- FF.au3 -->
+<KEYWORD3>_FFAction</KEYWORD3>
+<KEYWORD3>_FFClick</KEYWORD3>
+<KEYWORD3>_FFClickImage</KEYWORD3>
+<KEYWORD3>_FFClickImageBySize</KEYWORD3>
+<KEYWORD3>_FFClickLink</KEYWORD3>
+<KEYWORD3>_FFFrameSelected</KEYWORD3>
+<KEYWORD3>_FFFrameLeave</KEYWORD3>
+<KEYWORD3>_FFFrameEnter</KEYWORD3>
+<KEYWORD3>_FFGetLength</KEYWORD3>
+<KEYWORD3>_FFGetLinks</KEYWORD3>
+<KEYWORD3>_FFConnect</KEYWORD3>
+<KEYWORD3>_FFDisConnect</KEYWORD3>
+<KEYWORD3>_FFFormCheckBox</KEYWORD3>
+<KEYWORD3>_FFFormRadioButton</KEYWORD3>
+<KEYWORD3>_FFFormReset</KEYWORD3>
+<KEYWORD3>_FFFormSubmit</KEYWORD3>
+<KEYWORD3>_FFGetValueById</KEYWORD3>
+<KEYWORD3>_FFGetValueByName</KEYWORD3>
+<KEYWORD3>_FFKeyPress</KEYWORD3>
+<KEYWORD3>_FFLoadWait</KEYWORD3>
+<KEYWORD3>_FFOpenURL</KEYWORD3>
+<KEYWORD3>_FFQuit</KEYWORD3>
+<KEYWORD3>_FFReadHTML</KEYWORD3>
+<KEYWORD3>_FFReadText</KEYWORD3>
+<KEYWORD3>_FFSearch</KEYWORD3>
+<KEYWORD3>_FFSetGet</KEYWORD3>
+<KEYWORD3>_FFSetValueById</KEYWORD3>
+<KEYWORD3>_FFSetValueByName</KEYWORD3>
+<KEYWORD3>_FFStart</KEYWORD3>
+<KEYWORD3>_FFTabAdd</KEYWORD3>
+<KEYWORD3>_FFTabClose</KEYWORD3>
+<KEYWORD3>_FFTabCloseAll</KEYWORD3>
+<KEYWORD3>_FFTabExists</KEYWORD3>
+<KEYWORD3>_FFTabLength</KEYWORD3>
+<KEYWORD3>_FFTabSelect</KEYWORD3>
+<KEYWORD3>_FFTabSelected</KEYWORD3>
+<KEYWORD3>_FFTableWriteToArray</KEYWORD3>
+<!-- File.au3 -->
+<KEYWORD3>_FileCountLines</KEYWORD3>
+<KEYWORD3>_FileCreate</KEYWORD3>
+<KEYWORD3>_FileListToArray</KEYWORD3>
+<KEYWORD3>_FilePrint</KEYWORD3>
+<KEYWORD3>_FileReadToArray</KEYWORD3>
+<KEYWORD3>_FileWriteFromArray</KEYWORD3>
+<KEYWORD3>_FileWriteLog</KEYWORD3>
+<KEYWORD3>_FileWriteToLine</KEYWORD3>
+<KEYWORD3>_PathFull</KEYWORD3>
+<KEYWORD3>_PathGetRelative</KEYWORD3>
+<KEYWORD3>_PathMake</KEYWORD3>
+<KEYWORD3>_PathSplit</KEYWORD3>
+<KEYWORD3>_ReplaceStringInFile</KEYWORD3>
+<KEYWORD3>_TempFile</KEYWORD3>
+<!-- GDIPlus.au3 -->
+<KEYWORD3>_GDIPlus_ArrowCapCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapGetFillState</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapGetHeight</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapGetMiddleInset</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapGetWidth</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapSetFillState</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapSetHeight</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapSetMiddleInset</KEYWORD3>
+<KEYWORD3>_GDIPlus_ArrowCapSetWidth</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapCloneArea</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapCreateFromFile</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapCreateFromGraphics</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapCreateFromHBITMAP</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapCreateHBITMAPFromBitmap</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapLockBits</KEYWORD3>
+<KEYWORD3>_GDIPlus_BitmapUnlockBits</KEYWORD3>
+<KEYWORD3>_GDIPlus_BrushClone</KEYWORD3>
+<KEYWORD3>_GDIPlus_BrushCreateSolid</KEYWORD3>
+<KEYWORD3>_GDIPlus_BrushDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_BrushGetType</KEYWORD3>
+<KEYWORD3>_GDIPlus_CustomLineCapDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_Decoders</KEYWORD3>
+<KEYWORD3>_GDIPlus_DecodersGetCount</KEYWORD3>
+<KEYWORD3>_GDIPlus_DecodersGetSize</KEYWORD3>
+<KEYWORD3>_GDIPlus_DrawImagePoints</KEYWORD3>
+<KEYWORD3>_GDIPlus_Encoders</KEYWORD3>
+<KEYWORD3>_GDIPlus_EncodersGetCLSID</KEYWORD3>
+<KEYWORD3>_GDIPlus_EncodersGetCount</KEYWORD3>
+<KEYWORD3>_GDIPlus_EncodersGetParamList</KEYWORD3>
+<KEYWORD3>_GDIPlus_EncodersGetParamListSize</KEYWORD3>
+<KEYWORD3>_GDIPlus_EncodersGetSize</KEYWORD3>
+<KEYWORD3>_GDIPlus_FontCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_FontDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_FontFamilyCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_FontFamilyDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsClear</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsCreateFromHDC</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsCreateFromHWND</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawArc</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawBezier</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawClosedCurve</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawCurve</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawEllipse</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawImage</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawImageRect</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawImageRectRect</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawLine</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawPie</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawPolygon</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawRect</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawString</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsDrawStringEx</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsFillClosedCurve</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsFillEllipse</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsFillPie</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsFillPolygon</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsFillRect</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsGetDC</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsGetSmoothingMode</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsMeasureString</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsReleaseDC</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsSetTransform</KEYWORD3>
+<KEYWORD3>_GDIPlus_GraphicsSetSmoothingMode</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetFlags</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetGraphicsContext</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetHeight</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetHorizontalResolution</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetPixelFormat</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetRawFormat</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetType</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetVerticalResolution</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageGetWidth</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageLoadFromFile</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageSaveToFile</KEYWORD3>
+<KEYWORD3>_GDIPlus_ImageSaveToFileEx</KEYWORD3>
+<KEYWORD3>_GDIPlus_MatrixCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_MatrixDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_MatrixRotate</KEYWORD3>
+<KEYWORD3>_GDIPlus_MatrixScale</KEYWORD3>
+<KEYWORD3>_GDIPlus_MatrixTranslate</KEYWORD3>
+<KEYWORD3>_GDIPlus_ParamAdd</KEYWORD3>
+<KEYWORD3>_GDIPlus_ParamInit</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenGetAlignment</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenGetColor</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenGetCustomEndCap</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenGetDashCap</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenGetDashStyle</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenGetEndCap</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenGetWidth</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenSetAlignment</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenSetColor</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenSetDashCap</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenSetCustomEndCap</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenSetDashStyle</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenSetEndCap</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenSetWidth</KEYWORD3>
+<KEYWORD3>_GDIPlus_RectFCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_Shutdown</KEYWORD3>
+<KEYWORD3>_GDIPlus_Startup</KEYWORD3>
+<KEYWORD3>_GDIPlus_StringFormatCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_StringFormatDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_StringFormatSetAlign</KEYWORD3>
+<KEYWORD3>_GDIPlus_BrushDefCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_BrushDefDispose</KEYWORD3>
+<KEYWORD3>_GDIPlus_ExtractFileExt</KEYWORD3>
+<KEYWORD3>_GDIPlus_LastDelimiter</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenDefCreate</KEYWORD3>
+<KEYWORD3>_GDIPlus_PenDefDispose</KEYWORD3>
+<!-- GuiAVI.au3 -->
+<KEYWORD3>_GUICtrlAVI_Close</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_IsPlaying</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_Open</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_OpenEx</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_Play</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_Seek</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_Show</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_Stop</KEYWORD3>
+<KEYWORD3>_GUICtrlAVI_ValidateClassName</KEYWORD3>
+<!-- GuiButton.au3 -->
+<KEYWORD3>_GUICtrlButton_Click</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_Enable</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetCheck</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetFocus</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetIdealSize</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetImage</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetNote</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetNoteLength</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetSplitInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetState</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetText</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_GetTextMargin</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetCheck</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetDontClick</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetDropDownState</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetFocus</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetImage</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetNote</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetShield</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetSize</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetSplitInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetState</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetText</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_SetTextMargin</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_Show</KEYWORD3>
+<KEYWORD3>_GUICtrlButton_ValidateClassName</KEYWORD3>
+<!-- GuiComboBox.au3 -->
+<KEYWORD3>_GUICtrlComboBox_AddDir</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_AddString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_AutoComplete</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_BeginUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_DeleteString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_EndUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_FindString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_FindStringExact</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetComboBoxInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetCount</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetCueBanner</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetDroppedControlRect</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetDroppedControlRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetDroppedState</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetDroppedWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetEditSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetEditText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetExtendedUI</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetHorizontalExtent</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetItemHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetLBText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetLBTextLen</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetList</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetListArray</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetLocale</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetLocaleCountry</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetLocaleLang</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetLocalePrimLang</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetLocaleSubLang</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetMinVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_GetTopIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_InitStorage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_InsertString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_LimitText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_ReplaceEditSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_ResetContent</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SelectString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetCueBanner</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetDroppedWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetEditSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetEditText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetExtendedUI</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetHorizontalExtent</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetItemHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetLocale</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetMinVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_SetTopIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_ShowDropDown</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_ValidateClassName</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBox_IsPressed</KEYWORD3>
+<!-- GuiComboBoxEx.au3 -->
+<KEYWORD3>_GUICtrlComboBoxEx_AddDir</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_AddString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_BeginUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_CreateSolidBitMap</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_DeleteString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_EndUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_FindStringExact</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetComboBoxInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetComboControl</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetCount</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetDroppedControlRect</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetDroppedControlRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetDroppedState</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetDroppedWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetEditControl</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetEditSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetEditText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetExtendedStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetExtendedUI</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemEx</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemIndent</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemOverlayImage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemSelectedImage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetItemTextLen</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetList</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetListArray</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetLocale</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetLocaleCountry</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetLocaleLang</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetLocalePrimLang</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetLocaleSubLang</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetMinVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetTopIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_GetUnicode</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_HasEditChanged</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_InitStorage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_InsertString</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_LimitText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_ReplaceEditSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_ResetContent</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetDroppedWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetEditSel</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetEditText</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetExtendedStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetExtendedUI</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItemEx</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItemHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItemIndent</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItemOverlayImage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetItemSelectedImage</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetMinVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetTopIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_SetUnicode</KEYWORD3>
+<KEYWORD3>_GUICtrlComboBoxEx_ShowDropDown</KEYWORD3>
+<!-- GuiDateTimePicker.au3 -->
+<KEYWORD3>_GUICtrlDTP_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_GetMCColor</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_GetMCFont</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_GetMonthCal</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_GetRange</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_GetRangeEx</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_GetSystemTime</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_GetSystemTimeEx</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_SetFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_SetMCColor</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_SetMCFont</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_SetRange</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_SetRangeEx</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_SetSystemTime</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_SetSystemTimeEx</KEYWORD3>
+<KEYWORD3>_GUICtrlDTP_ValidateClassName</KEYWORD3>
+<!-- GuiEdit.au3 -->
+<KEYWORD3>_GUICtrlEdit_AppendText</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_BeginUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_CanUndo</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_CharFromPos</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_EmptyUndoBuffer</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_EndUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_FmtLines</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_Find</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_FindText</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetFirstVisibleLine</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetHandle</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetIMEStatus</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetLimitText</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetLine</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetLineCount</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetMargins</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetModify</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetPasswordChar</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetRECT</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetRECTEx</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetSel</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetText</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetTextLen</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetThumb</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_GetWordBreakProc</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_HideBalloonTip</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_InsertText</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_LineFromChar</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_LineIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_LineLength</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_LineScroll</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_PosFromChar</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_ReplaceSel</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_Scroll</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetHandle</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetIMEStatus</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetLimitText</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetMargins</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetModify</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetPasswordChar</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetReadOnly</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetRECT</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetRECTNP</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetRectNPEx</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetSel</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetTabStops</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetText</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_SetWordBreakProc</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_ShowBalloonTip</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_Undo</KEYWORD3>
+<KEYWORD3>_GUICtrlEdit_ValidateClassName</KEYWORD3>
+<!-- GuiHeader.au3 -->
+<KEYWORD3>_GUICtrlHeader_AddItem</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_ClearFilter</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_ClearFilterAll</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_CreateDragImage</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_DeleteItem</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_EditFilter</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetBitmapMargin</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemAlign</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemBitmap</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemCount</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemDisplay</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemFlags</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemOrder</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemRect</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetItemWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetOrderArray</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_HitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_InsertItem</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_Layout</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_OrderToIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetBitmapMargin</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetFilterChangeTimeout</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetHotDivider</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemAlign</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemBitmap</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemDisplay</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemFlags</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemOrder</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetItemWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetOrderArray</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlHeader_ValidateClassName</KEYWORD3>
+<!-- GuiImageList.au3 -->
+<KEYWORD3>_GUIImageList_Add</KEYWORD3>
+<KEYWORD3>_GUIImageList_AddMasked</KEYWORD3>
+<KEYWORD3>_GUIImageList_AddBitmap</KEYWORD3>
+<KEYWORD3>_GUIImageList_AddIcon</KEYWORD3>
+<KEYWORD3>_GUIImageList_BeginDrag</KEYWORD3>
+<KEYWORD3>_GUIImageList_Copy</KEYWORD3>
+<KEYWORD3>_GUIImageList_Create</KEYWORD3>
+<KEYWORD3>_GUIImageList_Destroy</KEYWORD3>
+<KEYWORD3>_GUIImageList_DestroyIcon</KEYWORD3>
+<KEYWORD3>_GUIImageList_DragEnter</KEYWORD3>
+<KEYWORD3>_GUIImageList_DragLeave</KEYWORD3>
+<KEYWORD3>_GUIImageList_DragMove</KEYWORD3>
+<KEYWORD3>_GUIImageList_DragShowNolock</KEYWORD3>
+<KEYWORD3>_GUIImageList_Draw</KEYWORD3>
+<KEYWORD3>_GUIImageList_DrawEx</KEYWORD3>
+<KEYWORD3>_GUIImageList_Duplicate</KEYWORD3>
+<KEYWORD3>_GUIImageList_EndDrag</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetBkColor</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetIcon</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetIconHeight</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetIconSize</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetIconSizeEx</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetIconWidth</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetImageCount</KEYWORD3>
+<KEYWORD3>_GUIImageList_GetImageInfoEx</KEYWORD3>
+<KEYWORD3>_GUIImageList_Merge</KEYWORD3>
+<KEYWORD3>_GUIImageList_Remove</KEYWORD3>
+<KEYWORD3>_GUIImageList_Replace</KEYWORD3>
+<KEYWORD3>_GUIImageList_ReplaceIcon</KEYWORD3>
+<KEYWORD3>_GUIImageList_SetBkColor</KEYWORD3>
+<KEYWORD3>_GUIImageList_SetDragCursorImage</KEYWORD3>
+<KEYWORD3>_GUIImageList_SetIconSize</KEYWORD3>
+<KEYWORD3>_GUIImageList_SetImageCount</KEYWORD3>
+<KEYWORD3>_GUIImageList_SetOverlayImage</KEYWORD3>
+<KEYWORD3>_GUIImageList_Swap</KEYWORD3>
+<!-- GuiIPAddress.au3 -->
+<KEYWORD3>_GUICtrlIpAddress_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_ClearAddress</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_Get</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_GetArray</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_GetEx</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_IsBlank</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_Set</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_SetArray</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_SetEx</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_SetFocus</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_SetFont</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_SetRange</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_ShowHide</KEYWORD3>
+<KEYWORD3>_GUICtrlIpAddress_ValidateClassName</KEYWORD3>
+<!-- GuiListBox.au3 -->
+<KEYWORD3>_GUICtrlListBox_AddFile</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_AddString</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_BeginUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_ClickItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_DeleteString</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_Dir</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_EndUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_FindString</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_FindInText</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetAnchorIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetCaretIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetCount</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetHorizontalExtent</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetItemData</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetItemHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetItemRect</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetItemRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetListBoxInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetLocale</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetLocaleCountry</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetLocaleLang</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetLocalePrimLang</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetLocaleSubLang</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetSel</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetSelCount</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetSelItems</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetSelItemsText</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetText</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetTextLen</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_GetTopIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_InitStorage</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_InsertString</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_ItemFromPoint</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_ReplaceString</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_ResetContent</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SelectString</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SelItemRange</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SelItemRangeEx</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetAnchorIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetCaretIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetColumnWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetHorizontalExtent</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetItemData</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetItemHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetLocale</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetSel</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetTabStops</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SetTopIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_Sort</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_SwapString</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_UpdateHScroll</KEYWORD3>
+<KEYWORD3>_GUICtrlListBox_ValidateClassName</KEYWORD3>
+<!-- GuiListView.au3 -->
+<KEYWORD3>_GUICtrlListView_AddArray</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_AddColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_AddItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_AddSubItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_ApproximateViewHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_ApproximateViewRect</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_ApproximateViewWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_Arrange</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_ArrayDelete</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_BeginUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_CancelEditLabel</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_ClickItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_CopyItems</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_CreateDragImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_CreateSolidBitMap</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_DeleteAllItems</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_DeleteColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_DeleteItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_DeleteItemsSelected</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_Draw</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_DrawDragImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_EditLabel</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_EnableGroupView</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_EndUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_EnsureVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_FindInText</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_FindItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_FindNearest</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_FindParam</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_FindText</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetBkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetBkImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetCallbackMask</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetColumnCount</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetColumnOrder</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetColumnOrderArray</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetColumnWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetCounterPage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetEditControl</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetEmptyText</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetExtendedListViewStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetFocusedGroup</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetGroupCount</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetGroupInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetGroupInfoByIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetGroupRect</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetGroupState</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetGroupViewEnabled</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetHeader</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetHotCursor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetHotItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetHoverTime</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetInsertMark</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetInsertMarkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetInsertMarkRect</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetISearchString</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemCount</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemCut</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemDropHilited</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemEx</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemFocused</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemGroupID</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemIndent</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemOverlayImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemPosition</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemPositionX</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemPositionY</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemRect</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemSelected</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemSpacing</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemSpacingX</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemSpacingY</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemState</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemStateImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemTextArray</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetItemTextString</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetNextItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetNumberOfWorkAreas</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetOrigin</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetOriginX</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetOriginY</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetOutlineColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetSelectedColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetSelectedCount</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetSelectedIndices</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetSelectionMark</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetStringWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetSubItemRect</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetTextBkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetTextColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetTopIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetView</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetViewDetails</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetViewLarge</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetViewList</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetViewSmall</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetViewTile</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_GetViewRect</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_HideColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_HitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_IndexToOverlayImageMask</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_IndexToStateImageMask</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_InsertColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_InsertGroup</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_InsertItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_InsertMarkHitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_IsItemVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_JustifyColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_MapIDToIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_MapIndexToID</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_MoveGroup</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_OverlayImageMaskToIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_RedrawItems</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_RegisterSortCallBack</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_RemoveAllGroups</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_RemoveGroup</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_ReverseColorOrder</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_Scroll</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetBkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetBkImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetCallBackMask</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetColumnOrder</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetColumnOrderArray</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetColumnWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetExtendedListViewStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetGroupInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetHotCursor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetHotItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetHoverTime</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetIconSpacing</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetInfoTip</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetInsertMark</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetInsertMarkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemCount</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemCut</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemDropHilited</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemEx</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemFocused</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemGroupID</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemIndent</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemOverlayImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemPosition</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemPosition32</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemSelected</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemState</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemStateImage</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetOutlineColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetSelectedColumn</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetSelectionMark</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetTextBkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetTextColor</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetView</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SetWorkAreas</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SimpleSort</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_Sort</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SortItems</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_StateImageMaskToIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_SubItemHitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_UnRegisterSortCallBack</KEYWORD3>
+<KEYWORD3>_GUICtrlListView_ValidateClassName</KEYWORD3>
+<!-- GuiMenu.au3 -->
+<KEYWORD3>_GUICtrlMenu_AddMenuItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_AppendMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_CheckMenuItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_CheckRadioItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_CreateMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_CreatePopup</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_DeleteMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_DestroyMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_DrawMenuBar</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_DrawMenuBarEx</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_EnableMenuItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_EndMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_FindItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_FindParent</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemBmp</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemBmpChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemBmpUnchecked</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemCount</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemData</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemDefault</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemDisabled</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemEnabled</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemGrayed</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemHighlighted</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemID</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemRect</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemState</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemStateEx</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemSubMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetItemType</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuBackground</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuBarInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuContextHelpID</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuData</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuDefaultItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetMenuStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_GetSystemMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_InsertMenuItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_InsertMenuItemEx</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_IsMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_LoadMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_MapAccelerator</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_MenuItemFromPoint</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_RemoveMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemBitmaps</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemBmp</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemBmpChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemBmpUnchecked</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemData</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemDefault</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemDisabled</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemEnabled</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemGrayed</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemHighlighted</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemID</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemState</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemSubMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetItemType</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenu</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenuBackground</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenuContextHelpID</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenuData</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenuDefaultItem</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenuHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenuInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_SetMenuStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlMenu_TrackPopupMenu</KEYWORD3>
+<!-- GuiMonthCal.au3 -->
+<KEYWORD3>_GUICtrlMonthCal_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetCalendarBorder</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetCalendarCount</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetColor</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetColorArray</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetCurSelStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetFirstDOW</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetFirstDOWStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMaxSelCount</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMaxTodayWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMinReqHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMinReqRect</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMinReqRectArray</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMinReqWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMonthDelta</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMonthRange</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMonthRangeMax</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMonthRangeMaxStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMonthRangeMin</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMonthRangeMinStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetMonthRangeSpan</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetRange</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetRangeMax</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetRangeMaxStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetRangeMin</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetRangeMinStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetSelRange</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetSelRangeMax</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetSelRangeMaxStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetSelRangeMin</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetSelRangeMinStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetToday</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetTodayStr</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_HitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_Resize</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetCalendarBorder</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetColor</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetDayState</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetFirstDOW</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetMaxSelCount</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetMonthDelta</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetRange</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetSelRange</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetToday</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlMonthCal_ValidateClassName</KEYWORD3>
+<!-- GuiReBar.au3 -->
+<KEYWORD3>_GUICtrlRebar_AddBand</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_AddToolBarBand</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_BeginDrag</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_DeleteBand</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_DragMove</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_EndDrag</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandBackColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandBorders</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandBordersEx</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandChildHandle</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandChildSize</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandCount</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandForeColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandHeaderSize</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandID</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandIdealSize</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandLParam</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandLength</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandMargins</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandMarginsEx</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleBreak</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleChildEdge</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleFixedBMP</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleFixedSize</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleGripperAlways</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleHidden</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleHideTitle</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleNoGripper</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleNoVert</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleTopAlign</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleUseChevron</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandStyleVariableHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandRect</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBandText</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBarHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBarInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetBKColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetColorScheme</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetColorSchemeEx</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetRowCount</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetRowHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetTextColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_HitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_IDToIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_MaximizeBand</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_MinimizeBand</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_MoveBand</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandBackColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandForeColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandHeaderSize</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandID</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandIdealSize</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandLength</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandLParam</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleBreak</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleChildEdge</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleFixedBMP</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleFixedSize</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleGripperAlways</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleHidden</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleHideTitle</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleNoGripper</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleNoVert</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleTopAlign</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleUseChevron</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandStyleVariableHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBandText</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBKColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetBarInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetColorScheme</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetTextColor</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_ShowBand</KEYWORD3>
+<KEYWORD3>_GUICtrlRebar_ValidateClassName</KEYWORD3>
+<!-- GuiScrollBars.au3 -->
+<KEYWORD3>_GUIScrollBars_EnableScrollBar</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollBarInfoEx</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollBarRect</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollBarRGState</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollBarXYLineButton</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollBarXYThumbTop</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollBarXYThumbBottom</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollInfo</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollInfoEx</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollInfoPage</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollInfoPos</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollInfoMin</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollInfoMax</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollInfoTrackPos</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollPos</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_GetScrollRange</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_Init</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_ScrollWindow</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_SetScrollInfo</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_SetScrollInfoMin</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_SetScrollInfoMax</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_SetScrollInfoPage</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_SetScrollInfoPos</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_SetScrollRange</KEYWORD3>
+<KEYWORD3>_GUIScrollBars_ShowScrollBar</KEYWORD3>
+<!-- GuiSlider.au3 -->
+<KEYWORD3>_GUICtrlSlider_ClearSel</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_ClearTics</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetBuddy</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetChannelRect</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetChannelRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetLineSize</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetLogicalTics</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetNumTics</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetPageSize</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetPos</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetRange</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetRangeMax</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetRangeMin</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetSel</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetSelEnd</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetSelStart</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetThumbLength</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetThumbRect</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetThumbRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetTic</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetTicPos</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetBuddy</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetLineSize</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetPageSize</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetPos</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetRange</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetRangeMax</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetRangeMin</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetSel</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetSelEnd</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetSelStart</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetThumbLength</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetTic</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetTicFreq</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetTipSide</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlSlider_ValidateClassName</KEYWORD3>
+<!-- GuiStatusBar.au3 -->
+<KEYWORD3>_GUICtrlStatusBar_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_EmbedControl</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetBorders</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetBordersHorz</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetBordersRect</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetBordersVert</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetCount</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetIcon</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetParts</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetRect</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetText</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetTextFlags</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetTextLength</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetTextLengthEx</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetTipText</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_GetWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_IsSimple</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_Resize</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetBkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetIcon</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetMinHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetParts</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetSimple</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetText</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetTipText</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_ShowHide</KEYWORD3>
+<KEYWORD3>_GUICtrlStatusBar_ValidateClassName</KEYWORD3>
+<!-- GuiTab.au3 -->
+<KEYWORD3>_GUICtrlTab_AdjustRect</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_ClickTab</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_DeleteAllItems</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_DeleteItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_DeselectAll</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_FindTab</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetCurFocus</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetDisplayRect</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetDisplayRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetExtendedStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItemCount</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItemRect</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItemRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItemState</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetRowCount</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_HighlightItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_HitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_InsertItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_RemoveImage</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetCurFocus</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetCurSel</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetExtendedStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetItemImage</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetItemSize</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetItemState</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetItemText</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetMinTabWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetPadding</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlTab_ValidateClassName</KEYWORD3>
+<!-- GuiToolbar.au3 -->
+<KEYWORD3>_GUICtrlToolbar_AddBitmap</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_AddButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_AddButtonSep</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_AddString</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_AutoSize</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_ButtonCount</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_ButtonStructSize</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_CheckButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_ClickAccel</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_ClickButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_ClickIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_CommandToIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_Customize</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_DeleteButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_EnableButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_FindToolbar</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetAnchorHighlight</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetBitmapFlags</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonBitmap</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonInfoEx</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonParam</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonRect</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonSize</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonState</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetButtonText</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetColorScheme</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetDisabledImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetExtendedStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetHotImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetHotItem</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetInsertMark</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetInsertMarkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetMaxSize</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetMetrics</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetPadding</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetRows</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetString</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleAltDrag</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleCustomErase</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleFlat</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleRegisterDrop</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleTransparent</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetStyleWrapable</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetTextRows</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_HideButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_HighlightButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_HitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_IndexToCommand</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_InsertButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_InsertMarkHitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_IsButtonChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_IsButtonEnabled</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_IsButtonHidden</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_IsButtonHighlighted</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_IsButtonIndeterminate</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_IsButtonPressed</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_LoadBitmap</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_LoadImages</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_MapAccelerator</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_MoveButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_PressButton</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetAnchorHighlight</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetBitmapSize</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonBitMap</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonInfo</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonInfoEx</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonParam</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonSize</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonState</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonText</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetButtonWidth</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetCmdID</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetColorScheme</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetDisabledImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetDrawTextFlags</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetExtendedStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetHotImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetHotItem</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetIndent</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetIndeterminate</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetInsertMark</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetInsertMarkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetMaxTextRows</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetMetrics</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetPadding</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetParent</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetRows</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyle</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleAltDrag</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleCustomErase</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleEx</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleFlat</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleList</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleRegisterDrop</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleTransparent</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetStyleWrapable</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_SetWindowTheme</KEYWORD3>
+<KEYWORD3>_GUICtrlToolbar_ValidateClassName</KEYWORD3>
+<!-- GuiToolTip.au3 -->
+<KEYWORD3>_GUIToolTip_Activate</KEYWORD3>
+<KEYWORD3>_GUIToolTip_AddTool</KEYWORD3>
+<KEYWORD3>_GUIToolTip_AdjustRect</KEYWORD3>
+<KEYWORD3>_GUIToolTip_BitsToTTF</KEYWORD3>
+<KEYWORD3>_GUIToolTip_Create</KEYWORD3>
+<KEYWORD3>_GUIToolTip_DelTool</KEYWORD3>
+<KEYWORD3>_GUIToolTip_Destroy</KEYWORD3>
+<KEYWORD3>_GUIToolTip_EnumTools</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetBubbleHeight</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetBubbleSize</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetBubbleWidth</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetCurrentTool</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetDelayTime</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetMargin</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetMarginEx</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetMaxTipWidth</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetText</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetTipBkColor</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetTipTextColor</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetTitleBitMap</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetTitleText</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetToolCount</KEYWORD3>
+<KEYWORD3>_GUIToolTip_GetToolInfo</KEYWORD3>
+<KEYWORD3>_GUIToolTip_HitTest</KEYWORD3>
+<KEYWORD3>_GUIToolTip_NewToolRect</KEYWORD3>
+<KEYWORD3>_GUIToolTip_Pop</KEYWORD3>
+<KEYWORD3>_GUIToolTip_PopUp</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetDelayTime</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetMargin</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetMaxTipWidth</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetTipBkColor</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetTipTextColor</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetTitle</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetToolInfo</KEYWORD3>
+<KEYWORD3>_GUIToolTip_SetWindowTheme</KEYWORD3>
+<KEYWORD3>_GUIToolTip_ToolExists</KEYWORD3>
+<KEYWORD3>_GUIToolTip_ToolToArray</KEYWORD3>
+<KEYWORD3>_GUIToolTip_TrackActivate</KEYWORD3>
+<KEYWORD3>_GUIToolTip_TrackPosition</KEYWORD3>
+<KEYWORD3>_GUIToolTip_TTFToBits</KEYWORD3>
+<KEYWORD3>_GUIToolTip_Update</KEYWORD3>
+<KEYWORD3>_GUIToolTip_UpdateTipText</KEYWORD3>
+<!-- GuiTreeView.au3 -->
+<KEYWORD3>_GUICtrlTreeView_Add</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_AddChild</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_AddChildFirst</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_AddFirst</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_AddItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_BeginUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_ClickItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_Create</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_CreateDragImage</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_CreateSolidBitMap</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_DebugPrint</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_Delete</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_DeleteAll</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_DeleteChildren</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_Destroy</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_DisplayRect</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_DisplayRectEx</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_EditText</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_EndEdit</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_EndUpdate</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_EnsureVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_Expand</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_ExpandItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_ExpandedOnce</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_FindItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_FindItemEx</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetBkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetBold</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetChildCount</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetChildren</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetCount</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetCut</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetDropTarget</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetEditControl</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetExpanded</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetFirstChild</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetFirstItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetFirstVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetFocused</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetImageListIconHandle</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetIndent</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetInsertMarkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetISearchString</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetItemByIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetItemHandle</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetLastChild</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetLineColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetNext</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetNextChild</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetNextSibling</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetNextVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetNormalImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetOverlayImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetParentHandle</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetParentParam</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetPrev</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetPrevChild</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetPrevSibling</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetPrevVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetScrollTime</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetSelected</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetSelectedImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetSelection</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetSiblingCount</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetState</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetStateImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetStateImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetText</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetTextColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetTree</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetVisible</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_GetVisibleCount</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_HitTest</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_HitTestEx</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_HitTestItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_Index</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_InsertItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_IsFirstItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_IsParent</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_Level</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_MapAccIDToItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_MapItemToAccID</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_ReverseColorOder</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SelectItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SelectItemByIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetBkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetBold</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetChecked</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetCheckedByIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetChildren</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetCut</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetDropTarget</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetFocused</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetIcon</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetIndent</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetInsertMark</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetInsertMarkColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetItem</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetItemHeight</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetItemParam</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetLineColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetNormalImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetOverlayImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetScrollTime</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetSelected</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetSelectedImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetState</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetStateImageIndex</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetStateImageList</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetText</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetTextColor</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetToolTips</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_SetUnicodeFormat</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_Sort</KEYWORD3>
+<KEYWORD3>_GUICtrlTreeView_ValidateClassName</KEYWORD3>
+<!-- IE.au3 -->
+<KEYWORD3>_IECreate</KEYWORD3>
+<KEYWORD3>_IECreateEmbedded</KEYWORD3>
+<KEYWORD3>_IENavigate</KEYWORD3>
+<KEYWORD3>_IEAttach</KEYWORD3>
+<KEYWORD3>_IELoadWait</KEYWORD3>
+<KEYWORD3>_IELoadWaitTimeout</KEYWORD3>
+<KEYWORD3>_IEIsFrameSet</KEYWORD3>
+<KEYWORD3>_IEFrameGetCollection</KEYWORD3>
+<KEYWORD3>_IEFrameGetObjByName</KEYWORD3>
+<KEYWORD3>_IELinkClickByText</KEYWORD3>
+<KEYWORD3>_IELinkClickByIndex</KEYWORD3>
+<KEYWORD3>_IELinkGetCollection</KEYWORD3>
+<KEYWORD3>_IEImgClick</KEYWORD3>
+<KEYWORD3>_IEImgGetCollection</KEYWORD3>
+<KEYWORD3>_IEFormGetCollection</KEYWORD3>
+<KEYWORD3>_IEFormGetObjByName</KEYWORD3>
+<KEYWORD3>_IEFormElementGetCollection</KEYWORD3>
+<KEYWORD3>_IEFormElementGetObjByName</KEYWORD3>
+<KEYWORD3>_IEFormElementGetValue</KEYWORD3>
+<KEYWORD3>_IEFormElementSetValue</KEYWORD3>
+<KEYWORD3>_IEFormElementOptionSelect</KEYWORD3>
+<KEYWORD3>_IEFormElementCheckboxSelect</KEYWORD3>
+<KEYWORD3>_IEFormElementRadioSelect</KEYWORD3>
+<KEYWORD3>_IEFormImageClick</KEYWORD3>
+<KEYWORD3>_IEFormSubmit</KEYWORD3>
+<KEYWORD3>_IEFormReset</KEYWORD3>
+<KEYWORD3>_IETableGetCollection</KEYWORD3>
+<KEYWORD3>_IETableWriteToArray</KEYWORD3>
+<KEYWORD3>_IEBodyReadHTML</KEYWORD3>
+<KEYWORD3>_IEBodyReadText</KEYWORD3>
+<KEYWORD3>_IEBodyWriteHTML</KEYWORD3>
+<KEYWORD3>_IEDocReadHTML</KEYWORD3>
+<KEYWORD3>_IEDocWriteHTML</KEYWORD3>
+<KEYWORD3>_IEDocInsertText</KEYWORD3>
+<KEYWORD3>_IEDocInsertHTML</KEYWORD3>
+<KEYWORD3>_IEHeadInsertEventScript</KEYWORD3>
+<KEYWORD3>_IEDocGetObj</KEYWORD3>
+<KEYWORD3>_IETagNameGetCollection</KEYWORD3>
+<KEYWORD3>_IETagNameAllGetCollection</KEYWORD3>
+<KEYWORD3>_IEGetObjByName</KEYWORD3>
+<KEYWORD3>_IEGetObjById</KEYWORD3>
+<KEYWORD3>_IEAction</KEYWORD3>
+<KEYWORD3>_IEPropertyGet</KEYWORD3>
+<KEYWORD3>_IEPropertySet</KEYWORD3>
+<KEYWORD3>_IEErrorNotify</KEYWORD3>
+<KEYWORD3>_IEErrorHandlerRegister</KEYWORD3>
+<KEYWORD3>_IEErrorHandlerDeRegister</KEYWORD3>
+<KEYWORD3>_IEQuit</KEYWORD3>
+<KEYWORD3>_IE_Introduction</KEYWORD3>
+<KEYWORD3>_IE_Example</KEYWORD3>
+<KEYWORD3>_IE_VersionInfo</KEYWORD3>
+<!-- Inet.au3 -->
+<KEYWORD3>_GetIP</KEYWORD3>
+<KEYWORD3>_INetExplorerCapable</KEYWORD3>
+<KEYWORD3>_INetGetSource</KEYWORD3>
+<KEYWORD3>_INetMail</KEYWORD3>
+<KEYWORD3>_INetSmtpMail</KEYWORD3>
+<KEYWORD3>_SmtpTrace</KEYWORD3>
+<KEYWORD3>_SmtpSend</KEYWORD3>
+<KEYWORD3>_TCPIpToName</KEYWORD3>
+<!-- Math.au3 -->
+<KEYWORD3>_ATan2</KEYWORD3>
+<KEYWORD3>_Degree</KEYWORD3>
+<KEYWORD3>_MathCheckDiv</KEYWORD3>
+<KEYWORD3>_Max</KEYWORD3>
+<KEYWORD3>_Min</KEYWORD3>
+<KEYWORD3>_Radian</KEYWORD3>
+<!-- Memory.au3 -->
+<KEYWORD3>_MemFree</KEYWORD3>
+<KEYWORD3>_MemGlobalAlloc</KEYWORD3>
+<KEYWORD3>_MemGlobalFree</KEYWORD3>
+<KEYWORD3>_MemGlobalLock</KEYWORD3>
+<KEYWORD3>_MemGlobalSize</KEYWORD3>
+<KEYWORD3>_MemGlobalUnlock</KEYWORD3>
+<KEYWORD3>_MemInit</KEYWORD3>
+<KEYWORD3>_MemMsgBox</KEYWORD3>
+<KEYWORD3>_MemMoveMemory</KEYWORD3>
+<KEYWORD3>_MemRead</KEYWORD3>
+<KEYWORD3>_MemShowError</KEYWORD3>
+<KEYWORD3>_MemWrite</KEYWORD3>
+<KEYWORD3>_MemVirtualAlloc</KEYWORD3>
+<KEYWORD3>_MemVirtualAllocEx</KEYWORD3>
+<KEYWORD3>_MemVirtualFree</KEYWORD3>
+<KEYWORD3>_MemVirtualFreeEx</KEYWORD3>
+<!-- Misc.au3 -->
+<KEYWORD3>_ChooseColor</KEYWORD3>
+<KEYWORD3>_ChooseFont</KEYWORD3>
+<KEYWORD3>_ClipPutFile</KEYWORD3>
+<KEYWORD3>_Iif</KEYWORD3>
+<KEYWORD3>_MouseTrap</KEYWORD3>
+<KEYWORD3>_Singleton</KEYWORD3>
+<KEYWORD3>_IsPressed</KEYWORD3>
+<KEYWORD3>_VersionCompare</KEYWORD3>
+<KEYWORD3>_MISC_GetDC</KEYWORD3>
+<KEYWORD3>_MISC_GetDeviceCaps</KEYWORD3>
+<KEYWORD3>_MISC_ReleaseDC</KEYWORD3>
+<!-- NamedPipes.au3 -->
+<KEYWORD3>_NamedPipes_CallNamedPipe</KEYWORD3>
+<KEYWORD3>_NamedPipes_ConnectNamedPipe</KEYWORD3>
+<KEYWORD3>_NamedPipes_CreateNamedPipe</KEYWORD3>
+<KEYWORD3>_NamedPipes_CreatePipe</KEYWORD3>
+<KEYWORD3>_NamedPipes_DisconnectNamedPipe</KEYWORD3>
+<KEYWORD3>_NamedPipes_GetNamedPipeHandleState</KEYWORD3>
+<KEYWORD3>_NamedPipes_GetNamedPipeInfo</KEYWORD3>
+<KEYWORD3>_NamedPipes_PeekNamedPipe</KEYWORD3>
+<KEYWORD3>_NamedPipes_SetNamedPipeHandleState</KEYWORD3>
+<KEYWORD3>_NamedPipes_TransactNamedPipe</KEYWORD3>
+<KEYWORD3>_NamedPipes_WaitNamedPipe</KEYWORD3>
+<!-- NetShare.au3 -->
+<KEYWORD3>_Net_Share_APIBufferFree</KEYWORD3>
+<KEYWORD3>_Net_Share_ConnectionEnum</KEYWORD3>
+<KEYWORD3>_Net_Share_FileClose</KEYWORD3>
+<KEYWORD3>_Net_Share_FileEnum</KEYWORD3>
+<KEYWORD3>_Net_Share_FileGetInfo</KEYWORD3>
+<KEYWORD3>_Net_Share_PermStr</KEYWORD3>
+<KEYWORD3>_Net_Share_ResourceStr</KEYWORD3>
+<KEYWORD3>_Net_Share_SessionDel</KEYWORD3>
+<KEYWORD3>_Net_Share_SessionEnum</KEYWORD3>
+<KEYWORD3>_Net_Share_SessionGetInfo</KEYWORD3>
+<KEYWORD3>_Net_Share_ShareAdd</KEYWORD3>
+<KEYWORD3>_Net_Share_ShareCheck</KEYWORD3>
+<KEYWORD3>_Net_Share_ShareDel</KEYWORD3>
+<KEYWORD3>_Net_Share_ShareEnum</KEYWORD3>
+<KEYWORD3>_Net_Share_ShareGetInfo</KEYWORD3>
+<KEYWORD3>_Net_Share_ShareSetInfo</KEYWORD3>
+<KEYWORD3>_Net_Share_StatisticsGetSvr</KEYWORD3>
+<KEYWORD3>_Net_Share_StatisticsGetWrk</KEYWORD3>
+<KEYWORD3>_Str_Set_Char</KEYWORD3>
+<!-- Process.au3 -->
+<KEYWORD3>_ProcessGetName</KEYWORD3>
+<KEYWORD3>_ProcessGetPriority</KEYWORD3>
+<KEYWORD3>_RunDOS</KEYWORD3>
+<!-- ScreenCapture.au3 -->
+<KEYWORD3>_ScreenCapture_Capture</KEYWORD3>
+<KEYWORD3>_ScreenCapture_CaptureWnd</KEYWORD3>
+<KEYWORD3>_ScreenCapture_SaveImage</KEYWORD3>
+<KEYWORD3>_ScreenCapture_SetBMPFormat</KEYWORD3>
+<KEYWORD3>_ScreenCapture_SetJPGQuality</KEYWORD3>
+<KEYWORD3>_ScreenCapture_SetTIFColorDepth</KEYWORD3>
+<KEYWORD3>_ScreenCapture_SetTIFCompression</KEYWORD3>
+<!-- Security.au3 -->
+<KEYWORD3>_Security__AdjustTokenPrivileges</KEYWORD3>
+<KEYWORD3>_Security__GetAccountSid</KEYWORD3>
+<KEYWORD3>_Security__GetLengthSid</KEYWORD3>
+<KEYWORD3>_Security__GetTokenInformation</KEYWORD3>
+<KEYWORD3>_Security__ImpersonateSelf</KEYWORD3>
+<KEYWORD3>_Security__IsValidSid</KEYWORD3>
+<KEYWORD3>_Security__LookupAccountName</KEYWORD3>
+<KEYWORD3>_Security__LookupAccountSid</KEYWORD3>
+<KEYWORD3>_Security__LookupPrivilegeValue</KEYWORD3>
+<KEYWORD3>_Security__OpenProcessToken</KEYWORD3>
+<KEYWORD3>_Security__OpenThreadToken</KEYWORD3>
+<KEYWORD3>_Security__OpenThreadTokenEx</KEYWORD3>
+<KEYWORD3>_Security__SetPrivilege</KEYWORD3>
+<KEYWORD3>_Security__SidToStringSid</KEYWORD3>
+<KEYWORD3>_Security__SidTypeStr</KEYWORD3>
+<KEYWORD3>_Security__StringSidToSid</KEYWORD3>
+<!-- SendMessage.au3 -->
+<KEYWORD3>_SendMessage</KEYWORD3>
+<KEYWORD3>_SendMessageA</KEYWORD3>
+<!-- Sound.au3 -->
+<KEYWORD3>_SoundOpen</KEYWORD3>
+<KEYWORD3>_SoundClose</KEYWORD3>
+<KEYWORD3>_SoundPlay</KEYWORD3>
+<KEYWORD3>_SoundStop</KEYWORD3>
+<KEYWORD3>_SoundPause</KEYWORD3>
+<KEYWORD3>_SoundResume</KEYWORD3>
+<KEYWORD3>_SoundLength</KEYWORD3>
+<KEYWORD3>_SoundSeek</KEYWORD3>
+<KEYWORD3>_SoundStatus</KEYWORD3>
+<KEYWORD3>_SoundPos</KEYWORD3>
+<!-- SQLite.au3 -->
+<KEYWORD3>_SQLite_Startup</KEYWORD3>
+<KEYWORD3>_SQLite_Shutdown</KEYWORD3>
+<KEYWORD3>_SQLite_Open</KEYWORD3>
+<KEYWORD3>_SQLite_GetTable</KEYWORD3>
+<KEYWORD3>_SQLite_Exec</KEYWORD3>
+<KEYWORD3>_SQLite_LibVersion</KEYWORD3>
+<KEYWORD3>_SQLite_LastInsertRowID</KEYWORD3>
+<KEYWORD3>_SQLite_Changes</KEYWORD3>
+<KEYWORD3>_SQLite_TotalChanges</KEYWORD3>
+<KEYWORD3>_SQLite_ErrCode</KEYWORD3>
+<KEYWORD3>_SQLite_ErrMsg</KEYWORD3>
+<KEYWORD3>_SQLite_Display2DResult</KEYWORD3>
+<KEYWORD3>_SQLite_GetTable2d</KEYWORD3>
+<KEYWORD3>_SQLite_SetTimeout</KEYWORD3>
+<KEYWORD3>_SQLite_Query</KEYWORD3>
+<KEYWORD3>_SQLite_FetchData</KEYWORD3>
+<KEYWORD3>_SQLite_Close</KEYWORD3>
+<KEYWORD3>_SQLite_SaveMode</KEYWORD3>
+<KEYWORD3>_SQLite_QueryFinalize</KEYWORD3>
+<KEYWORD3>_SQLite_QueryReset</KEYWORD3>
+<KEYWORD3>_SQLite_FetchNames</KEYWORD3>
+<KEYWORD3>_SQLite_QuerySingleRow</KEYWORD3>
+<KEYWORD3>_SQLite_SQLiteExe</KEYWORD3>
+<KEYWORD3>_SQLite_Encode</KEYWORD3>
+<KEYWORD3>_SQLite_Escape</KEYWORD3>
+<!-- String.au3 -->
+<KEYWORD3>_HexToString</KEYWORD3>
+<KEYWORD3>_StringAddThousandsSep</KEYWORD3>
+<KEYWORD3>_StringBetween</KEYWORD3>
+<KEYWORD3>_StringEncrypt</KEYWORD3>
+<KEYWORD3>_StringExplode</KEYWORD3>
+<KEYWORD3>_StringInsert</KEYWORD3>
+<KEYWORD3>_StringProper</KEYWORD3>
+<KEYWORD3>_StringRepeat</KEYWORD3>
+<KEYWORD3>_StringReverse</KEYWORD3>
+<KEYWORD3>_StringToHex</KEYWORD3>
+<!-- Timers.au3 -->
+<KEYWORD3>_Timer_Diff</KEYWORD3>
+<KEYWORD3>_Timer_GetIdleTime</KEYWORD3>
+<KEYWORD3>_Timer_GetTimerID</KEYWORD3>
+<KEYWORD3>_Timer_Init</KEYWORD3>
+<KEYWORD3>_Timer_KillAllTimers</KEYWORD3>
+<KEYWORD3>_Timer_KillTimer</KEYWORD3>
+<KEYWORD3>_Timer_QueryPerformanceCounter</KEYWORD3>
+<KEYWORD3>_Timer_QueryPerformanceFrequency</KEYWORD3>
+<KEYWORD3>_Timer_SetTimer</KEYWORD3>
+<!-- UDFGlobalID.au3 -->
+<KEYWORD3>_UDF_GetNextGlobalID</KEYWORD3>
+<KEYWORD3>_UDF_FreeGlobalID</KEYWORD3>
+<!-- Visa.au3 -->
+<KEYWORD3>_viExecCommand</KEYWORD3>
+<KEYWORD3>_viOpen</KEYWORD3>
+<KEYWORD3>_viClose</KEYWORD3>
+<KEYWORD3>_viFindGpib</KEYWORD3>
+<KEYWORD3>_viOpenDefaultRM</KEYWORD3>
+<KEYWORD3>_viPrintf</KEYWORD3>
+<KEYWORD3>_viQueryf</KEYWORD3>
+<KEYWORD3>_viSetTimeout</KEYWORD3>
+<KEYWORD3>_viSetAttribute</KEYWORD3>
+<KEYWORD3>_viGTL</KEYWORD3>
+<KEYWORD3>_viGpibBusReset</KEYWORD3>
+<KEYWORD3>_viGpibControlREN</KEYWORD3>
+<KEYWORD3>_viInteractiveControl</KEYWORD3>
+<!-- WinAPI.au3 -->
+<KEYWORD3>_WinAPI_AttachConsole</KEYWORD3>
+<KEYWORD3>_WinAPI_AttachThreadInput</KEYWORD3>
+<KEYWORD3>_WinAPI_Beep</KEYWORD3>
+<KEYWORD3>_WinAPI_BitBlt</KEYWORD3>
+<KEYWORD3>_WinAPI_CallNextHookEx</KEYWORD3>
+<KEYWORD3>_WinAPI_CallWindowProc</KEYWORD3>
+<KEYWORD3>_WinAPI_Check</KEYWORD3>
+<KEYWORD3>_WinAPI_ClientToScreen</KEYWORD3>
+<KEYWORD3>_WinAPI_CloseHandle</KEYWORD3>
+<KEYWORD3>_WinAPI_CombineRgn</KEYWORD3>
+<KEYWORD3>_WinAPI_CommDlgExtendedError</KEYWORD3>
+<KEYWORD3>_WinAPI_CopyIcon</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateBitmap</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateCompatibleBitmap</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateCompatibleDC</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateEvent</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateFile</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateFont</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateFontIndirect</KEYWORD3>
+<KEYWORD3>_WinAPI_CreatePen</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateProcess</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateRectRgn</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateRoundRectRgn</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateSolidBitmap</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateSolidBrush</KEYWORD3>
+<KEYWORD3>_WinAPI_CreateWindowEx</KEYWORD3>
+<KEYWORD3>_WinAPI_DefWindowProc</KEYWORD3>
+<KEYWORD3>_WinAPI_DeleteDC</KEYWORD3>
+<KEYWORD3>_WinAPI_DeleteObject</KEYWORD3>
+<KEYWORD3>_WinAPI_DestroyIcon</KEYWORD3>
+<KEYWORD3>_WinAPI_DestroyWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_DrawEdge</KEYWORD3>
+<KEYWORD3>_WinAPI_DrawFrameControl</KEYWORD3>
+<KEYWORD3>_WinAPI_DrawIcon</KEYWORD3>
+<KEYWORD3>_WinAPI_DrawIconEx</KEYWORD3>
+<KEYWORD3>_WinAPI_DrawLine</KEYWORD3>
+<KEYWORD3>_WinAPI_DrawText</KEYWORD3>
+<KEYWORD3>_WinAPI_EnableWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_EnumDisplayDevices</KEYWORD3>
+<KEYWORD3>_WinAPI_EnumWindows</KEYWORD3>
+<KEYWORD3>_WinAPI_EnumWindowsAdd</KEYWORD3>
+<KEYWORD3>_WinAPI_EnumWindowsChild</KEYWORD3>
+<KEYWORD3>_WinAPI_EnumWindowsInit</KEYWORD3>
+<KEYWORD3>_WinAPI_EnumWindowsPopup</KEYWORD3>
+<KEYWORD3>_WinAPI_EnumWindowsTop</KEYWORD3>
+<KEYWORD3>_WinAPI_ExpandEnvironmentStrings</KEYWORD3>
+<KEYWORD3>_WinAPI_ExtractIconEx</KEYWORD3>
+<KEYWORD3>_WinAPI_FatalAppExit</KEYWORD3>
+<KEYWORD3>_WinAPI_FillRect</KEYWORD3>
+<KEYWORD3>_WinAPI_FindExecutable</KEYWORD3>
+<KEYWORD3>_WinAPI_FindWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_FlashWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_FlashWindowEx</KEYWORD3>
+<KEYWORD3>_WinAPI_FloatToInt</KEYWORD3>
+<KEYWORD3>_WinAPI_FlushFileBuffers</KEYWORD3>
+<KEYWORD3>_WinAPI_FormatMessage</KEYWORD3>
+<KEYWORD3>_WinAPI_FrameRect</KEYWORD3>
+<KEYWORD3>_WinAPI_FreeLibrary</KEYWORD3>
+<KEYWORD3>_WinAPI_GetAncestor</KEYWORD3>
+<KEYWORD3>_WinAPI_GetAsyncKeyState</KEYWORD3>
+<KEYWORD3>_WinAPI_GetBkMode</KEYWORD3>
+<KEYWORD3>_WinAPI_GetClassName</KEYWORD3>
+<KEYWORD3>_WinAPI_GetClientHeight</KEYWORD3>
+<KEYWORD3>_WinAPI_GetClientWidth</KEYWORD3>
+<KEYWORD3>_WinAPI_GetClientRect</KEYWORD3>
+<KEYWORD3>_WinAPI_GetCurrentProcess</KEYWORD3>
+<KEYWORD3>_WinAPI_GetCurrentProcessID</KEYWORD3>
+<KEYWORD3>_WinAPI_GetCurrentThread</KEYWORD3>
+<KEYWORD3>_WinAPI_GetCurrentThreadId</KEYWORD3>
+<KEYWORD3>_WinAPI_GetCursorInfo</KEYWORD3>
+<KEYWORD3>_WinAPI_GetDC</KEYWORD3>
+<KEYWORD3>_WinAPI_GetDesktopWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_GetDeviceCaps</KEYWORD3>
+<KEYWORD3>_WinAPI_GetDIBits</KEYWORD3>
+<KEYWORD3>_WinAPI_GetDlgCtrlID</KEYWORD3>
+<KEYWORD3>_WinAPI_GetDlgItem</KEYWORD3>
+<KEYWORD3>_WinAPI_GetFocus</KEYWORD3>
+<KEYWORD3>_WinAPI_GetForegroundWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_GetIconInfo</KEYWORD3>
+<KEYWORD3>_WinAPI_GetFileSizeEx</KEYWORD3>
+<KEYWORD3>_WinAPI_GetLastError</KEYWORD3>
+<KEYWORD3>_WinAPI_GetLastErrorMessage</KEYWORD3>
+<KEYWORD3>_WinAPI_GetModuleHandle</KEYWORD3>
+<KEYWORD3>_WinAPI_GetMousePos</KEYWORD3>
+<KEYWORD3>_WinAPI_GetMousePosX</KEYWORD3>
+<KEYWORD3>_WinAPI_GetMousePosY</KEYWORD3>
+<KEYWORD3>_WinAPI_GetObject</KEYWORD3>
+<KEYWORD3>_WinAPI_GetOpenFileName</KEYWORD3>
+<KEYWORD3>_WinAPI_GetOverlappedResult</KEYWORD3>
+<KEYWORD3>_WinAPI_GetParent</KEYWORD3>
+<KEYWORD3>_WinAPI_GetProcessAffinityMask</KEYWORD3>
+<KEYWORD3>_WinAPI_GetSaveFileName</KEYWORD3>
+<KEYWORD3>_WinAPI_GetStockObject</KEYWORD3>
+<KEYWORD3>_WinAPI_GetStdHandle</KEYWORD3>
+<KEYWORD3>_WinAPI_GetSysColor</KEYWORD3>
+<KEYWORD3>_WinAPI_GetSysColorBrush</KEYWORD3>
+<KEYWORD3>_WinAPI_GetSystemMetrics</KEYWORD3>
+<KEYWORD3>_WinAPI_GetTextExtentPoint32</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowDC</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowHeight</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowLong</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowPlacement</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowRect</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowRgn</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowText</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowThreadProcessId</KEYWORD3>
+<KEYWORD3>_WinAPI_GetWindowWidth</KEYWORD3>
+<KEYWORD3>_WinAPI_GetXYFromPoint</KEYWORD3>
+<KEYWORD3>_WinAPI_GlobalMemStatus</KEYWORD3>
+<KEYWORD3>_WinAPI_GUIDFromString</KEYWORD3>
+<KEYWORD3>_WinAPI_GUIDFromStringEx</KEYWORD3>
+<KEYWORD3>_WinAPI_HiWord</KEYWORD3>
+<KEYWORD3>_WinAPI_InProcess</KEYWORD3>
+<KEYWORD3>_WinAPI_IntToFloat</KEYWORD3>
+<KEYWORD3>_WinAPI_IsClassName</KEYWORD3>
+<KEYWORD3>_WinAPI_IsWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_IsWindowVisible</KEYWORD3>
+<KEYWORD3>_WinAPI_InvalidateRect</KEYWORD3>
+<KEYWORD3>_WinAPI_LineTo</KEYWORD3>
+<KEYWORD3>_WinAPI_LoadBitmap</KEYWORD3>
+<KEYWORD3>_WinAPI_LoadImage</KEYWORD3>
+<KEYWORD3>_WinAPI_LoadLibrary</KEYWORD3>
+<KEYWORD3>_WinAPI_LoadLibraryEx</KEYWORD3>
+<KEYWORD3>_WinAPI_LoadShell32Icon</KEYWORD3>
+<KEYWORD3>_WinAPI_LoadString</KEYWORD3>
+<KEYWORD3>_WinAPI_LocalFree</KEYWORD3>
+<KEYWORD3>_WinAPI_LoWord</KEYWORD3>
+<KEYWORD3>_WinAPI_MakeDWord</KEYWORD3>
+<KEYWORD3>_WinAPI_MAKELANGID</KEYWORD3>
+<KEYWORD3>_WinAPI_MAKELCID</KEYWORD3>
+<KEYWORD3>_WinAPI_MakeLong</KEYWORD3>
+<KEYWORD3>_WinAPI_MessageBeep</KEYWORD3>
+<KEYWORD3>_WinAPI_MsgBox</KEYWORD3>
+<KEYWORD3>_WinAPI_Mouse_Event</KEYWORD3>
+<KEYWORD3>_WinAPI_MoveTo</KEYWORD3>
+<KEYWORD3>_WinAPI_MoveWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_MulDiv</KEYWORD3>
+<KEYWORD3>_WinAPI_MultiByteToWideChar</KEYWORD3>
+<KEYWORD3>_WinAPI_MultiByteToWideCharEx</KEYWORD3>
+<KEYWORD3>_WinAPI_OpenProcess</KEYWORD3>
+<KEYWORD3>_WinAPI_ParseFileDialogPath</KEYWORD3>
+<KEYWORD3>_WinAPI_PointFromRect</KEYWORD3>
+<KEYWORD3>_WinAPI_PostMessage</KEYWORD3>
+<KEYWORD3>_WinAPI_PrimaryLangId</KEYWORD3>
+<KEYWORD3>_WinAPI_PtInRect</KEYWORD3>
+<KEYWORD3>_WinAPI_ReadFile</KEYWORD3>
+<KEYWORD3>_WinAPI_ReadProcessMemory</KEYWORD3>
+<KEYWORD3>_WinAPI_RectIsEmpty</KEYWORD3>
+<KEYWORD3>_WinAPI_RedrawWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_RegisterWindowMessage</KEYWORD3>
+<KEYWORD3>_WinAPI_ReleaseCapture</KEYWORD3>
+<KEYWORD3>_WinAPI_ReleaseDC</KEYWORD3>
+<KEYWORD3>_WinAPI_ScreenToClient</KEYWORD3>
+<KEYWORD3>_WinAPI_SelectObject</KEYWORD3>
+<KEYWORD3>_WinAPI_SetBkColor</KEYWORD3>
+<KEYWORD3>_WinAPI_SetBkMode</KEYWORD3>
+<KEYWORD3>_WinAPI_SetCapture</KEYWORD3>
+<KEYWORD3>_WinAPI_SetCursor</KEYWORD3>
+<KEYWORD3>_WinAPI_SetDefaultPrinter</KEYWORD3>
+<KEYWORD3>_WinAPI_SetDIBits</KEYWORD3>
+<KEYWORD3>_WinAPI_SetEndOfFile</KEYWORD3>
+<KEYWORD3>_WinAPI_SetEvent</KEYWORD3>
+<KEYWORD3>_WinAPI_SetFilePointer</KEYWORD3>
+<KEYWORD3>_WinAPI_SetFocus</KEYWORD3>
+<KEYWORD3>_WinAPI_SetFont</KEYWORD3>
+<KEYWORD3>_WinAPI_SetHandleInformation</KEYWORD3>
+<KEYWORD3>_WinAPI_SetLastError</KEYWORD3>
+<KEYWORD3>_WinAPI_SetParent</KEYWORD3>
+<KEYWORD3>_WinAPI_SetProcessAffinityMask</KEYWORD3>
+<KEYWORD3>_WinAPI_SetSysColors</KEYWORD3>
+<KEYWORD3>_WinAPI_SetTextColor</KEYWORD3>
+<KEYWORD3>_WinAPI_SetWindowLong</KEYWORD3>
+<KEYWORD3>_WinAPI_SetWindowPlacement</KEYWORD3>
+<KEYWORD3>_WinAPI_SetWindowPos</KEYWORD3>
+<KEYWORD3>_WinAPI_SetWindowRgn</KEYWORD3>
+<KEYWORD3>_WinAPI_SetWindowsHookEx</KEYWORD3>
+<KEYWORD3>_WinAPI_SetWindowText</KEYWORD3>
+<KEYWORD3>_WinAPI_ShowCursor</KEYWORD3>
+<KEYWORD3>_WinAPI_ShowError</KEYWORD3>
+<KEYWORD3>_WinAPI_ShowMsg</KEYWORD3>
+<KEYWORD3>_WinAPI_ShowWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_StringFromGUID</KEYWORD3>
+<KEYWORD3>_WinAPI_SubLangId</KEYWORD3>
+<KEYWORD3>_WinAPI_SystemParametersInfo</KEYWORD3>
+<KEYWORD3>_WinAPI_TwipsPerPixelX</KEYWORD3>
+<KEYWORD3>_WinAPI_TwipsPerPixelY</KEYWORD3>
+<KEYWORD3>_WinAPI_UnhookWindowsHookEx</KEYWORD3>
+<KEYWORD3>_WinAPI_UpdateLayeredWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_UpdateWindow</KEYWORD3>
+<KEYWORD3>_WinAPI_WaitForInputIdle</KEYWORD3>
+<KEYWORD3>_WinAPI_WaitForMultipleObjects</KEYWORD3>
+<KEYWORD3>_WinAPI_WaitForSingleObject</KEYWORD3>
+<KEYWORD3>_WinAPI_WideCharToMultiByte</KEYWORD3>
+<KEYWORD3>_WinAPI_WindowFromPoint</KEYWORD3>
+<KEYWORD3>_WinAPI_WriteConsole</KEYWORD3>
+<KEYWORD3>_WinAPI_WriteFile</KEYWORD3>
+<KEYWORD3>_WinAPI_WriteProcessMemory</KEYWORD3>
+<KEYWORD3>_WinAPI_ValidateClassName</KEYWORD3>
+<!-- WinNet.au3 -->
+<KEYWORD3>_WinNet_AddConnection</KEYWORD3>
+<KEYWORD3>_WinNet_AddConnection2</KEYWORD3>
+<KEYWORD3>_WinNet_AddConnection3</KEYWORD3>
+<KEYWORD3>_WinNet_CancelConnection</KEYWORD3>
+<KEYWORD3>_WinNet_CancelConnection2</KEYWORD3>
+<KEYWORD3>_WinNet_CloseEnum</KEYWORD3>
+<KEYWORD3>_WinNet_ConnectionDialog</KEYWORD3>
+<KEYWORD3>_WinNet_ConnectionDialog1</KEYWORD3>
+<KEYWORD3>_WinNet_DisconnectDialog</KEYWORD3>
+<KEYWORD3>_WinNet_DisconnectDialog1</KEYWORD3>
+<KEYWORD3>_WinNet_EnumResource</KEYWORD3>
+<KEYWORD3>_WinNet_GetConnection</KEYWORD3>
+<KEYWORD3>_WinNet_GetConnectionPerformance</KEYWORD3>
+<KEYWORD3>_WinNet_GetLastError</KEYWORD3>
+<KEYWORD3>_WinNet_GetNetworkInformation</KEYWORD3>
+<KEYWORD3>_WinNet_GetProviderName</KEYWORD3>
+<KEYWORD3>_WinNet_GetResourceInformation</KEYWORD3>
+<KEYWORD3>_WinNet_GetResourceParent</KEYWORD3>
+<KEYWORD3>_WinNet_GetUniversalName</KEYWORD3>
+<KEYWORD3>_WinNet_GetUser</KEYWORD3>
+<KEYWORD3>_WinNet_NETRESOURCEToArray</KEYWORD3>
+<KEYWORD3>_WinNet_OpenEnum</KEYWORD3>
+<KEYWORD3>_WinNet_RestoreConnection</KEYWORD3>
+<KEYWORD3>_WinNet_UseConnection</KEYWORD3>
+<!-- Word.au3 -->
+<KEYWORD3>_WordCreate</KEYWORD3>
+<KEYWORD3>_WordAttach</KEYWORD3>
+<KEYWORD3>_WordQuit</KEYWORD3>
+<KEYWORD3>_WordDocAdd</KEYWORD3>
+<KEYWORD3>_WordDocOpen</KEYWORD3>
+<KEYWORD3>_WordDocSave</KEYWORD3>
+<KEYWORD3>_WordDocSaveAs</KEYWORD3>
+<KEYWORD3>_WordDocClose</KEYWORD3>
+<KEYWORD3>_WordDocGetCollection</KEYWORD3>
+<KEYWORD3>_WordDocFindReplace</KEYWORD3>
+<KEYWORD3>_WordDocPrint</KEYWORD3>
+<KEYWORD3>_WordDocPropertyGet</KEYWORD3>
+<KEYWORD3>_WordDocPropertySet</KEYWORD3>
+<KEYWORD3>_WordDocLinkGetCollection</KEYWORD3>
+<KEYWORD3>_WordDocAddLink</KEYWORD3>
+<KEYWORD3>_WordDocAddPicture</KEYWORD3>
+<KEYWORD3>_WordErrorHandlerRegister</KEYWORD3>
+<KEYWORD3>_WordErrorHandlerDeRegister</KEYWORD3>
+<KEYWORD3>_WordErrorNotify</KEYWORD3>
+<KEYWORD3>_WordMacroRun</KEYWORD3>
+<KEYWORD3>_WordPropertyGet</KEYWORD3>
+<KEYWORD3>_WordPropertySet</KEYWORD3>
+<KEYWORD3>_Word_VersionInfo</KEYWORD3>
+<!-- END UDFs -->
+
+		</KEYWORDS>
+	</RULES>
+
+	<RULES SET="STRING1" DEFAULT="LITERAL1">
+		<IMPORT DELEGATE="SK"/>
+		<IMPORT DELEGATE="STRINGS"/>
+		<IMPORT DELEGATE="MACROS"/>
+	</RULES>
+
+	<RULES SET="STRING2" DEFAULT="LITERAL2">
+		<IMPORT DELEGATE="SK"/>
+		<IMPORT DELEGATE="STRINGS"/>
+		<IMPORT DELEGATE="MACROS"/>
+	</RULES>
+
+	<RULES SET="STRINGS">
+		<!-- Expand ENVs -->
+		<SEQ_REGEXP HASH_CHAR="%" TYPE="LITERAL4">(\%)\w+(\1)</SEQ_REGEXP>
+		<!-- Expand Variables -->
+		<SEQ_REGEXP HASH_CHAR="$" TYPE="LITERAL4">(\$)\w+(\1)</SEQ_REGEXP>
+		<!-- Expand Macros -->
+		<MARK_PREVIOUS EXCLUDE_MATCH="FALSE" TYPE="LITERAL3">@</MARK_PREVIOUS>
+	</RULES>
+
+	<RULES SET="MACROS">
+		<KEYWORDS>
+			<!-- Macros -->
+			<INVALID>@Unicode</INVALID>
+			<LITERAL3>@AppDataCommonDir</LITERAL3>
+			<LITERAL3>@AppDataDir</LITERAL3>
+			<LITERAL3>@AutoItExe</LITERAL3>
+			<LITERAL3>@AutoItPID</LITERAL3>
+			<LITERAL3>@AutoItUnicode</LITERAL3>
+			<LITERAL3>@AutoItVersion</LITERAL3>
+			<LITERAL3>@COM_EventObj</LITERAL3>
+			<LITERAL3>@CPUARCH</LITERAL3>
+			<LITERAL3>@CR</LITERAL3>
+			<LITERAL3>@CRLF</LITERAL3>
+			<LITERAL3>@ComSpec</LITERAL3>
+			<LITERAL3>@CommonFilesDir</LITERAL3>
+			<LITERAL3>@Compiled</LITERAL3>
+			<LITERAL3>@ComputerName</LITERAL3>
+			<LITERAL3>@DesktopCommonDir</LITERAL3>
+			<LITERAL3>@DesktopDepth</LITERAL3>
+			<LITERAL3>@DesktopDir</LITERAL3>
+			<LITERAL3>@DesktopHeight</LITERAL3>
+			<LITERAL3>@DesktopRefresh</LITERAL3>
+			<LITERAL3>@DesktopWidth</LITERAL3>
+			<LITERAL3>@DocumentsCommonDir</LITERAL3>
+			<LITERAL3>@FavoritesCommonDir</LITERAL3>
+			<LITERAL3>@FavoritesDir</LITERAL3>
+			<LITERAL3>@GUI_CtrlHandle</LITERAL3>
+			<LITERAL3>@GUI_CtrlId</LITERAL3>
+			<LITERAL3>@GUI_DragFile</LITERAL3>
+			<LITERAL3>@GUI_DragId</LITERAL3>
+			<LITERAL3>@GUI_DropId</LITERAL3>
+			<LITERAL3>@GUI_WinHandle</LITERAL3>
+			<LITERAL3>@HOUR</LITERAL3>
+			<LITERAL3>@HomeDrive</LITERAL3>
+			<LITERAL3>@HomePath</LITERAL3>
+			<LITERAL3>@HomeShare</LITERAL3>
+			<LITERAL3>@HotKeyPressed</LITERAL3>
+			<LITERAL3>@IPAddress1</LITERAL3>
+			<LITERAL3>@IPAddress2</LITERAL3>
+			<LITERAL3>@IPAddress3</LITERAL3>
+			<LITERAL3>@IPAddress4</LITERAL3>
+			<LITERAL3>@InetGetActive</LITERAL3>
+			<LITERAL3>@InetGetBytesRead</LITERAL3>
+			<LITERAL3>@KBLayout</LITERAL3>
+			<LITERAL3>@LF</LITERAL3>
+			<LITERAL3>@LogonDNSDomain</LITERAL3>
+			<LITERAL3>@LogonDomain</LITERAL3>
+			<LITERAL3>@LogonServer</LITERAL3>
+			<LITERAL3>@MDAY</LITERAL3>
+			<LITERAL3>@MIN</LITERAL3>
+			<LITERAL3>@MON</LITERAL3>
+			<LITERAL3>@MSEC</LITERAL3>
+			<LITERAL3>@MyDocumentsDir</LITERAL3>
+			<LITERAL3>@NumParams</LITERAL3>
+			<LITERAL3>@OSBuild</LITERAL3>
+			<LITERAL3>@OSLang</LITERAL3>
+			<LITERAL3>@OSServicePack</LITERAL3>
+			<LITERAL3>@OSTYPE</LITERAL3>
+			<LITERAL3>@OSVersion</LITERAL3>
+			<LITERAL3>@ProcessorArch</LITERAL3>
+			<LITERAL3>@ProgramFilesDir</LITERAL3>
+			<LITERAL3>@ProgramsCommonDir</LITERAL3>
+			<LITERAL3>@ProgramsDir</LITERAL3>
+			<LITERAL3>@SEC</LITERAL3>
+			<LITERAL3>@SW_DISABLE</LITERAL3>
+			<LITERAL3>@SW_ENABLE</LITERAL3>
+			<LITERAL3>@SW_HIDE</LITERAL3>
+			<LITERAL3>@SW_LOCK</LITERAL3>
+			<LITERAL3>@SW_MAXIMIZE</LITERAL3>
+			<LITERAL3>@SW_MINIMIZE</LITERAL3>
+			<LITERAL3>@SW_RESTORE</LITERAL3>
+			<LITERAL3>@SW_SHOW</LITERAL3>
+			<LITERAL3>@SW_SHOWDEFAULT</LITERAL3>
+			<LITERAL3>@SW_SHOWMAXIMIZED</LITERAL3>
+			<LITERAL3>@SW_SHOWMINIMIZED</LITERAL3>
+			<LITERAL3>@SW_SHOWMINNOACTIVE</LITERAL3>
+			<LITERAL3>@SW_SHOWNA</LITERAL3>
+			<LITERAL3>@SW_SHOWNOACTIVATE</LITERAL3>
+			<LITERAL3>@SW_SHOWNORMAL</LITERAL3>
+			<LITERAL3>@SW_UNLOCK</LITERAL3>
+			<LITERAL3>@ScriptDir</LITERAL3>
+			<LITERAL3>@ScriptFullPath</LITERAL3>
+			<LITERAL3>@ScriptLineNumber</LITERAL3>
+			<LITERAL3>@ScriptName</LITERAL3>
+			<LITERAL3>@StartMenuCommonDir</LITERAL3>
+			<LITERAL3>@StartMenuDir</LITERAL3>
+			<LITERAL3>@StartupCommonDir</LITERAL3>
+			<LITERAL3>@StartupDir</LITERAL3>
+			<LITERAL3>@SystemDir</LITERAL3>
+			<LITERAL3>@TAB</LITERAL3>
+			<LITERAL3>@TRAY_ID</LITERAL3>
+			<LITERAL3>@TempDir</LITERAL3>
+			<LITERAL3>@TrayIconFlashing</LITERAL3>
+			<LITERAL3>@TrayIconVisible</LITERAL3>
+			<LITERAL3>@UserName</LITERAL3>
+			<LITERAL3>@UserProfileDir</LITERAL3>
+			<LITERAL3>@WDAY</LITERAL3>
+			<LITERAL3>@WindowsDir</LITERAL3>
+			<LITERAL3>@WorkingDir</LITERAL3>
+			<LITERAL3>@YDAY</LITERAL3>
+			<LITERAL3>@YEAR</LITERAL3>
+			<LITERAL3>@error</LITERAL3>
+			<LITERAL3>@exitCode</LITERAL3>
+			<LITERAL3>@exitMethod</LITERAL3>
+			<LITERAL3>@extended</LITERAL3>
+		</KEYWORDS>
+	</RULES>
+
+	<RULES SET="SK">
+		<!-- Keycodes -->
+		<SEQ TYPE="MARKUP">{!}</SEQ>
+		<SEQ TYPE="MARKUP">{#}</SEQ>
+		<SEQ TYPE="MARKUP">{+}</SEQ>
+		<SEQ TYPE="MARKUP">{^}</SEQ>
+		<SEQ TYPE="MARKUP">{altdown}</SEQ>
+		<SEQ TYPE="MARKUP">{altup}</SEQ>
+		<SEQ TYPE="MARKUP">{alt}</SEQ>
+		<SEQ TYPE="MARKUP">{appskey}</SEQ>
+		<SEQ TYPE="MARKUP">{asc}</SEQ>
+		<SEQ TYPE="MARKUP">{backspace}</SEQ>
+		<SEQ TYPE="MARKUP">{break}</SEQ>
+		<SEQ TYPE="MARKUP">{browser_back}</SEQ>
+		<SEQ TYPE="MARKUP">{browser_favorites}</SEQ>
+		<SEQ TYPE="MARKUP">{browser_forward}</SEQ>
+		<SEQ TYPE="MARKUP">{browser_home}</SEQ>
+		<SEQ TYPE="MARKUP">{browser_refresh}</SEQ>
+		<SEQ TYPE="MARKUP">{browser_search}</SEQ>
+		<SEQ TYPE="MARKUP">{browser_stop}</SEQ>
+		<SEQ TYPE="MARKUP">{bs}</SEQ>
+		<SEQ TYPE="MARKUP">{capslock}</SEQ>
+		<SEQ TYPE="MARKUP">{ctrldown}</SEQ>
+		<SEQ TYPE="MARKUP">{ctrlup}</SEQ>
+		<SEQ TYPE="MARKUP">{delete}</SEQ>
+		<SEQ TYPE="MARKUP">{del}</SEQ>
+		<SEQ TYPE="MARKUP">{down}</SEQ>
+		<SEQ TYPE="MARKUP">{end}</SEQ>
+		<SEQ TYPE="MARKUP">{enter}</SEQ>
+		<SEQ TYPE="MARKUP">{escape}</SEQ>
+		<SEQ TYPE="MARKUP">{esc}</SEQ>
+		<SEQ TYPE="MARKUP">{f10}</SEQ>
+		<SEQ TYPE="MARKUP">{f11}</SEQ>
+		<SEQ TYPE="MARKUP">{f12}</SEQ>
+		<SEQ TYPE="MARKUP">{f1}</SEQ>
+		<SEQ TYPE="MARKUP">{f2}</SEQ>
+		<SEQ TYPE="MARKUP">{f3}</SEQ>
+		<SEQ TYPE="MARKUP">{f4}</SEQ>
+		<SEQ TYPE="MARKUP">{f5}</SEQ>
+		<SEQ TYPE="MARKUP">{f6}</SEQ>
+		<SEQ TYPE="MARKUP">{f7}</SEQ>
+		<SEQ TYPE="MARKUP">{f8}</SEQ>
+		<SEQ TYPE="MARKUP">{f9}</SEQ>
+		<SEQ TYPE="MARKUP">{home}</SEQ>
+		<SEQ TYPE="MARKUP">{insert}</SEQ>
+		<SEQ TYPE="MARKUP">{ins}</SEQ>
+		<SEQ TYPE="MARKUP">{lalt}</SEQ>
+		<SEQ TYPE="MARKUP">{launch_app1}</SEQ>
+		<SEQ TYPE="MARKUP">{launch_app2}</SEQ>
+		<SEQ TYPE="MARKUP">{launch_mail}</SEQ>
+		<SEQ TYPE="MARKUP">{launch_media}</SEQ>
+		<SEQ TYPE="MARKUP">{lctrl}</SEQ>
+		<SEQ TYPE="MARKUP">{left}</SEQ>
+		<SEQ TYPE="MARKUP">{lshift}</SEQ>
+		<SEQ TYPE="MARKUP">{lwindown}</SEQ>
+		<SEQ TYPE="MARKUP">{lwinup}</SEQ>
+		<SEQ TYPE="MARKUP">{lwin}</SEQ>
+		<SEQ TYPE="MARKUP">{media_next}</SEQ>
+		<SEQ TYPE="MARKUP">{media_play_pause}</SEQ>
+		<SEQ TYPE="MARKUP">{media_prev}</SEQ>
+		<SEQ TYPE="MARKUP">{media_stop}</SEQ>
+		<SEQ TYPE="MARKUP">{numlock}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad0}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad1}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad2}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad3}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad4}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad5}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad6}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad7}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad8}</SEQ>
+		<SEQ TYPE="MARKUP">{numpad9}</SEQ>
+		<SEQ TYPE="MARKUP">{numpadadd}</SEQ>
+		<SEQ TYPE="MARKUP">{numpaddiv}</SEQ>
+		<SEQ TYPE="MARKUP">{numpaddot}</SEQ>
+		<SEQ TYPE="MARKUP">{numpadenter}</SEQ>
+		<SEQ TYPE="MARKUP">{numpadmult}</SEQ>
+		<SEQ TYPE="MARKUP">{numpadsub}</SEQ>
+		<SEQ TYPE="MARKUP">{pause}</SEQ>
+		<SEQ TYPE="MARKUP">{pgdn}</SEQ>
+		<SEQ TYPE="MARKUP">{pgup}</SEQ>
+		<SEQ TYPE="MARKUP">{printscreen}</SEQ>
+		<SEQ TYPE="MARKUP">{ralt}</SEQ>
+		<SEQ TYPE="MARKUP">{rctrl}</SEQ>
+		<SEQ TYPE="MARKUP">{right}</SEQ>
+		<SEQ TYPE="MARKUP">{rshift}</SEQ>
+		<SEQ TYPE="MARKUP">{rwindown}</SEQ>
+		<SEQ TYPE="MARKUP">{rwinup}</SEQ>
+		<SEQ TYPE="MARKUP">{rwin}</SEQ>
+		<SEQ TYPE="MARKUP">{scrolllock}</SEQ>
+		<SEQ TYPE="MARKUP">{shiftdown}</SEQ>
+		<SEQ TYPE="MARKUP">{shiftup}</SEQ>
+		<SEQ TYPE="MARKUP">{sleep}</SEQ>
+		<SEQ TYPE="MARKUP">{space}</SEQ>
+		<SEQ TYPE="MARKUP">{tab}</SEQ>
+		<SEQ TYPE="MARKUP">{up}</SEQ>
+		<SEQ TYPE="MARKUP">{volume_down}</SEQ>
+		<SEQ TYPE="MARKUP">{volume_mute}</SEQ>
+		<SEQ TYPE="MARKUP">{volume_up}</SEQ>
+		<SEQ TYPE="MARKUP">{{}</SEQ>
+		<SEQ TYPE="MARKUP">{}}</SEQ>
+	</RULES>
+
+	<RULES SET="PP" IGNORE_CASE="TRUE"
+		HIGHLIGHT_DIGITS="TRUE"
+		DEFAULT="COMMENT2"
+		DIGIT_RE="(0x\p{XDigit}+[lL]?|\d+(e\d*)?[lLdDfF]?)">
+
+		<SEQ_REGEXP HASH_CHAR="&quot;" TYPE="LITERAL2">(&quot;)((?!\1).|\1{2})*\1</SEQ_REGEXP>
+
+		<SEQ_REGEXP HASH_CHAR="&lt;" TYPE="LITERAL1">(&lt;)(.*&gt;)</SEQ_REGEXP>
+
+		<EOL_SPAN TYPE="COMMENT2">;</EOL_SPAN>
+
+		<!-- Directives -->
+		<KEYWORDS>
+			<MARKUP>Include</MARKUP>
+			<MARKUP>Include-Once</MARKUP>
+			<MARKUP>NoTrayIcon</MARKUP>
+			<MARKUP>RequireAdmin</MARKUP>
+			<MARKUP>NoTrayIcon</MARKUP>
+			<MARKUP>RequireAdmin</MARKUP>
+			<MARKUP>region</MARKUP>
+			<MARKUP>endregion</MARKUP>
+			<MARKUP>ce</MARKUP>
+			<MARKUP>cs</MARKUP>
+			<MARKUP>comments-end</MARKUP>
+			<MARKUP>comments-start</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Add_Constants</MARKUP>
+			<MARKUP>AutoIt3Wrapper_UseAnsi</MARKUP>
+			<MARKUP>AutoIt3Wrapper_UseX64</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Version</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Run_Debug_Mode</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Icon</MARKUP>
+			<MARKUP>AutoIt3Wrapper_OutFile</MARKUP>
+			<MARKUP>AutoIt3Wrapper_OutFile_Type</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Compression</MARKUP>
+			<MARKUP>AutoIt3Wrapper_UseUpx</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Change2CUI</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_Comment</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_Description</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_Fileversion</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_FileVersion_AutoIncrement</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_Language</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_LegalCopyright</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_SaveSource</MARKUP>
+			<MARKUP>AutoIt3Wrapper_res_requestedExecutionLevel</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_Field</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_Icon_Add</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Res_File_Add</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Run_Tidy</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Tidy_Stop_OnError</MARKUP>
+			<MARKUP>Tidy_Parameters</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Run_Obfuscator</MARKUP>
+			<MARKUP>obfuscator_parameters</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Run_AU3Check</MARKUP>
+			<MARKUP>AutoIt3Wrapper_AU3Check_Parameters</MARKUP>
+			<MARKUP>AutoIt3Wrapper_AU3Check_Dat</MARKUP>
+			<MARKUP>AutoIt3Wrapper_AU3Check_Stop_OnWarning</MARKUP>
+			<MARKUP>AutoIt3Wrapper_AU3Check_Parameters</MARKUP>
+			<MARKUP>AutoIt3Wrapper_PlugIn_Funcs</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Run_cvsWrapper</MARKUP>
+			<MARKUP>AutoIt3Wrapper_cvsWrapper_Parameters</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Run_Before</MARKUP>
+			<MARKUP>AutoIt3Wrapper_Run_After</MARKUP>
+			<MARKUP>Obfuscator_off</MARKUP>
+			<MARKUP>Obfuscator_on</MARKUP>
+			<MARKUP>Obfuscator_Ignore_Funcs</MARKUP>
+			<MARKUP>Obfuscator_Ignore_Variables</MARKUP>
+			<MARKUP>Obfuscator_Parameters</MARKUP>
+			<MARKUP>forceref</MARKUP>
+			<MARKUP>Tidy_Parameters</MARKUP>
+		</KEYWORDS>
+	</RULES>
+</MODE>

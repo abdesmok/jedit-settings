@@ -1,36 +1,11 @@
-import projectviewer.ProjectManager;
-import projectviewer.vpt.VPTProject;
-
-Object[] getProjects() {
-  java.util.List l = new ArrayList();
-
-  pm = ProjectManager.getInstance();
-  Iterator it = pm.getProjects();
-  while (it.hasNext()) {
-    VPTProject prj = (VPTProject) it.next();
-    if (pm.isLoaded(prj.getName())) {
-      l.add(prj);
-    }
-  }
-  return l.toArray();
-}
-
-String getActiveProject() {
-  JList l = new JList(getProjects());
-
-  for(int i = 0; i < l.getModel().getSize(); i++) {
-    String app = l.getModel().getElementAt(i).getRootPath();
-    if (app != null && bfp.startsWith(app, 0)) {
-      return app;
-    }
-  }
-  return null;
-}
+import projectviewer.*;
+import projectviewer.vpt.*;
+import java.util;
 
 boolean goToActiveProject(String questionIfNull) {
   if (app == null) {
     if (Macros.confirm(view,
-                       bfp + " " + questionIfNull,
+                       questionIfNull,
                        JOptionPane.YES_NO_OPTION,
                        JOptionPane.WARNING_MESSAGE) != JOptionPane.YES_OPTION) {
       return false;
@@ -42,11 +17,10 @@ boolean goToActiveProject(String questionIfNull) {
   return true;
 }
 
-if (	jEdit.getPlugin("projectviewer.ProjectPlugin", true) == null) {
+if (jEdit.getPlugin("projectviewer.ProjectPlugin", true) == null) {
   Macros.error(view, "ProjectViewer non installé");
   return 0;
 }
 
-String bfp = view.getBuffer().getPath();
-String app = getActiveProject();
+String app = ProjectViewer.getActiveProject(view).getNodePath();
 

@@ -1,16 +1,27 @@
 source(jEdit.getSettingsDirectory() + "/macros/make/project_path.bsh");
 
 void command(String cmd) {
-  if (goToActiveProject("pas de projet actif, lancer make quand même?")) {
-    runCommandInConsole(view, "System", cmd);
-  }
-  
-  if (! textArea.getDisplayManager().isLineVisible(textArea.getCaretLine()))
-  {
-    textArea.getDisplayManager().expandFold(textArea.getCaretLine(), true);
-  }
-  
-  textArea.scrollToCaret(true);
-  textArea.requestFocus();
+    if (goToActiveProject("pas de projet actif, lancer make quand même?")) {
+        runCommandInConsole(view, "System", cmd);
+    }
+    
+    if (! textArea.getDisplayManager().isLineVisible(textArea.getCaretLine()))
+    {
+        textArea.getDisplayManager().expandFold(textArea.getCaretLine(), true);
+    }
+    
+    textArea.scrollToCaret(true);
+    textArea.requestFocus();
+}
+
+void make(String what) {
+    File jeditMakefile = new File(app + "/Makefile.jedit");
+    
+    if (jeditMakefile.exists()) {
+        command("make " + what + " -f Makefile.jedit");
+    }
+    else {
+        command("make " + what);
+    }
 }
 

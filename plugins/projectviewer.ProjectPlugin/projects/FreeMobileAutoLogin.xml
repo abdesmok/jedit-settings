@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="D:\Projects\FreeMobileAutoLogin">
+<property name="projectviewer.folder_tree_state" value="1011100000000000001100000000000000000" />
+<property name="projectviewer.import.filterid" value="projectviewer.importer.GlobFilter" />
+<open-file path="D:\Projects\FreeMobileAutoLogin\firefox\chrome\content\freemobileautologin.js" />
+<directory path="D:\Projects\FreeMobileAutoLogin\chrome">
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\20121005_1634_54.avi" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\FreeMobileAutoLogin.zip" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\freemobileautologin-128x128.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\freemobileautologin-16x16.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\freemobileautologin-48x48.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\freemobileautologin.js" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\manifest.json" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\options.css" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\options.html" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome\options.js" />
+</directory>
+<directory path="D:\Projects\FreeMobileAutoLogin\firefox">
+<directory path="D:\Projects\FreeMobileAutoLogin\firefox\chrome">
+<directory path="D:\Projects\FreeMobileAutoLogin\firefox\chrome\content">
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\chrome\content\freemobileautologin.js" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\chrome\content\freemobileautologin.xul" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\chrome\content\options.xul" />
+</directory>
+<directory path="D:\Projects\FreeMobileAutoLogin\firefox\chrome\skin">
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\chrome\skin\freemobileautologin.png" />
+</directory>
+</directory>
+<directory path="D:\Projects\FreeMobileAutoLogin\firefox\defaults">
+<directory path="D:\Projects\FreeMobileAutoLogin\firefox\defaults\preferences">
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\defaults\preferences\debug.js" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\defaults\preferences\preferences.js" />
+</directory>
+</directory>
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\FreeMobileAutoLogin.xpi" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\FreeMobileAutoLogin@abdesmok.com" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\Makefile" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\chrome.manifest" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\freemobileautologin.avi" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\install.rdf" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\options.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\firefox\page.png" />
+</directory>
+<directory path="D:\Projects\FreeMobileAutoLogin\opera">
+<directory path="D:\Projects\FreeMobileAutoLogin\opera\includes">
+<file path="D:\Projects\FreeMobileAutoLogin\opera\includes\injectedScript.js" />
+</directory>
+<file path="D:\Projects\FreeMobileAutoLogin\opera\FreeMobileAutoLogin.oex" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\Makefile" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\background.js" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\capture1.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\capture2.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\capture3.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\config.xml" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\freemobileautologin-128x128.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\freemobileautologin-64x64.png" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\index.html" />
+<file path="D:\Projects\FreeMobileAutoLogin\opera\options.html" />
+</directory>
+<file path="D:\Projects\FreeMobileAutoLogin\chrome.crx" />
+<file path="D:\Projects\FreeMobileAutoLogin\chrome.pem" />
+<file path="D:\Projects\FreeMobileAutoLogin\deleme.html" />
+<file path="D:\Projects\FreeMobileAutoLogin\deleme.js" />
+<file path="D:\Projects\FreeMobileAutoLogin\delme.js" />
+</project>

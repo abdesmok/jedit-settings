@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="D:\Projects\bash">
+<property name="projectviewer.folder_tree_state" value="110000" />
+<property name="projectviewer.import.filterid" value="projectviewer.gui.ImportDialog$AllFilesFilter" />
+<directory path="D:\Projects\bash\home">
+<file path="D:\Projects\bash\home\.bash_history" />
+<file path="D:\Projects\bash\home\.bash_profile" />
+<file path="D:\Projects\bash\home\.bashrc" />
+<file path="D:\Projects\bash\home\.inputrc" />
+</directory>
+</project>

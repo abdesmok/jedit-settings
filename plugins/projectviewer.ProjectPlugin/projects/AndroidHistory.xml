@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="D:\Projects\AndroidHistory">
+<property name="projectviewer.folder_tree_state" value="10001111000000000000000" />
+<property name="projectviewer.import.filterid" value="projectviewer.importer.GlobFilter" />
+<open-file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\Config.java" />
+<directory path="D:\Projects\AndroidHistory\bin">
+<directory path="D:\Projects\AndroidHistory\bin\res">
+<directory path="D:\Projects\AndroidHistory\bin\res\drawable-hdpi">
+<file path="D:\Projects\AndroidHistory\bin\res\drawable-hdpi\ic_launcher.png" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\bin\res\drawable-ldpi">
+<file path="D:\Projects\AndroidHistory\bin\res\drawable-ldpi\ic_launcher.png" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\bin\res\drawable-mdpi">
+<file path="D:\Projects\AndroidHistory\bin\res\drawable-mdpi\ic_launcher.png" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\bin\res\drawable-xhdpi">
+<file path="D:\Projects\AndroidHistory\bin\res\drawable-xhdpi\ic_launcher.png" />
+</directory>
+</directory>
+<file path="D:\Projects\AndroidHistory\bin\AndroidHistory.apk" />
+<file path="D:\Projects\AndroidHistory\bin\AndroidManifest.xml" />
+<file path="D:\Projects\AndroidHistory\bin\classes.dex" />
+<file path="D:\Projects\AndroidHistory\bin\jarlist.cache" />
+<file path="D:\Projects\AndroidHistory\bin\resources.ap_" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\gen">
+<directory path="D:\Projects\AndroidHistory\gen\com">
+<directory path="D:\Projects\AndroidHistory\gen\com\netcap">
+<directory path="D:\Projects\AndroidHistory\gen\com\netcap\androidcrl">
+<file path="D:\Projects\AndroidHistory\gen\com\netcap\androidcrl\BuildConfig.java" />
+<file path="D:\Projects\AndroidHistory\gen\com\netcap\androidcrl\R.java" />
+</directory>
+</directory>
+</directory>
+</directory>
+<directory path="D:\Projects\AndroidHistory\res">
+<directory path="D:\Projects\AndroidHistory\res\drawable-hdpi">
+<file path="D:\Projects\AndroidHistory\res\drawable-hdpi\ic_launcher.png" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\res\drawable-ldpi">
+<file path="D:\Projects\AndroidHistory\res\drawable-ldpi\ic_launcher.png" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\res\drawable-mdpi">
+<file path="D:\Projects\AndroidHistory\res\drawable-mdpi\ic_launcher.png" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\res\drawable-xhdpi">
+<file path="D:\Projects\AndroidHistory\res\drawable-xhdpi\ic_launcher.png" />
+</directory>
+<directory path="D:\Projects\AndroidHistory\res\values">
+<file path="D:\Projects\AndroidHistory\res\values\strings.xml" />
+<file path="D:\Projects\AndroidHistory\res\values\styles.xml" />
+</directory>
+</directory>
+<directory path="D:\Projects\AndroidHistory\src">
+<directory path="D:\Projects\AndroidHistory\src\com">
+<directory path="D:\Projects\AndroidHistory\src\com\netcap">
+<directory path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl">
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\Config.java" />
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\Contacts.java" />
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\History.java" />
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\Internet.java" />
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\Location.java" />
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\Receiver.java" />
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\SmsContent.java" />
+<file path="D:\Projects\AndroidHistory\src\com\netcap\androidcrl\Timer.java" />
+</directory>
+</directory>
+</directory>
+</directory>
+<file path="D:\Projects\AndroidHistory\.classpath" />
+<file path="D:\Projects\AndroidHistory\.gitignore" />
+<file path="D:\Projects\AndroidHistory\.project" />
+<file path="D:\Projects\AndroidHistory\AndroidManifest.xml" />
+<file path="D:\Projects\AndroidHistory\ic_launcher-web.png" />
+<file path="D:\Projects\AndroidHistory\proguard-project.txt" />
+<file path="D:\Projects\AndroidHistory\project.properties" />
+</project>

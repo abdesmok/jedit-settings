@@ -1,33 +1,23 @@
 [global]
-pa|printf("\|\\n", @);
-qp|qPrintable(\|)
-_if|if (\|) {\n\t@\n}\n
-_st|struct \|\n{\n\t@;\n}\n
-_lin|#include "\|"\n
-qd|qDebug("\|");
-qc|qCritical("\|");
-/**|/**\n * \|\n */
-ta|toAscii().data()
-qdd|qDebug() << \|;
-n_|name().toAscii().data()
-cpr|cvrprintf("\|\\n");
-_lib|#include <stdlib.h>\n
-_el|else {\n\t\|}
-_ei|else if (\|) {\n\t@\n}
-pr|printf("\|\\n");
-_str|#include <string.h>\n
-_wh|while(\|) {\n\t@\n}
-_fo|for (\|; @; @) {\n\t@\n}
-qw|qWarning("\|");
-_io|#include <stdio.h>\n
-_in|#include <\|>\n
-ret|return\|;
 [c++]
+_io|#include <stdio.h>\n
+_fo|for (\|; @; @) {\n\t@\n}
+_in|#include <\|>\n
+_lin|#include "\|"\n
+_st|struct \|\n{\n\t@;\n}\n
+_if|if (\|) {\n\t@\n}\n
+_wh|while(\|) {\n\t@\n}
+/**|/**\n * \|\n */
+_el|else {\n\t\|}
+_str|#include <string.h>\n
+_lib|#include <stdlib.h>\n
+_ei|else if (\|) {\n\t@\n}
 [sqr]
 [nsis2]
 [asp]
 [latex]
 [factor]
+[cfscript]
 [batch]
 [assembly-mcs51]
 [vrml2]
@@ -38,36 +28,51 @@ ret|return\|;
 [patch]
 [beanshell]
 [pl1]
+[fortran90]
 [pyrex]
 [inno-setup]
 [inform]
 [netrexx]
 [eiffel]
 [fortran]
+[pl-sql9]
 [chill]
+[json]
+[macroscheduler]
 [smalltalk]
 [idl]
+[haxe]
 [pvwave]
+[smarty]
 [ada95]
 [pl-sql]
-[htaccess]
+[vala]
 [apacheconf]
+[htaccess]
 [clojure]
 [io]
 [pure]
+[sbt]
 [properties]
+[metapost]
 [rhtml]
+[powerdynamo]
 [vhdl]
 slv|std_logic_vector( x downto y )
 sl|std_logic
 var|variable
 sig|signal
-[powerdynamo]
+[logs]
 [maple]
 [lotos]
 [django]
 [ada]
 [php]
+l|echo '<pre>' . __FILE__ . ':' . __LINE__ . ': \|</pre>';
+bt|echo '<pre>'; debug_print_backtrace();\| echo '</pre>';
+vd|echo "<pre>"; var_dump($\|); echo "\\n</pre>";
+prer|print '<pre>' . print_r(\|, TRUE) . '</pre>';
+dp|dprint(\|);
 [yab]
 [lua]
 [makefile]
@@ -105,7 +110,7 @@ atsm|<xsl:apply-templates select="\|" mode=""/>
 x|<?xml version="1.0"?>\|
 tdoe|<xsl:text disable-output-escaping="\|"></xsl:text>
 xe|<?xml vesion="1.0" encoding="\|"?>
-t|<xsl:text>\|</xsl:text>
+_t|<xsl:text>\|</xsl:text>
 ctnwp|<xsl:call-template name="\|">\n\t<xsl:with-param name="" select=""/>\n</xsl:call-template>
 s|<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">\n\|\n</xsl:stylesheet>
 o|<xsl:otherwise>\n\|\n</xsl:otherwise>
@@ -122,6 +127,7 @@ tn|<xsl:template name="\|">\n</xsl:template>
 tm|<xsl:template match="\|">\n</xsl:template>
 [moin]
 [bibtex]
+[hxml]
 [modula3]
 [perl]
 [tsp]
@@ -131,16 +137,22 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [actionscript]
 [pop11]
 [progress]
+[jamon]
 [ini]
 [html]
+_amo|<span class="amo">\|</span>
+[go]
 [sgml]
 [bcel]
 [psp]
 [antlr]
 [cmake]
+[ant]
 [assembly-m68k]
 [omnimark]
 [interlis]
+[mxml]
+[avro]
 [cvs-commit]
 [lilypond]
 [jsp]
@@ -153,28 +165,27 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [aspect-j]
 [squidconf]
 [rview]
-[jedit-actions]
 [jhtml]
-[stata_ado]
+[jedit-actions]
+[gradle]
 [embperl]
 [mysql]
 [rd]
-[objective-c]
 [zpt]
+[objective-c]
 [mqsc]
+[lex]
 [prolog]
-[stata_do]
 [assembly-r2000]
 [sdl/pr]
 [hex]
 [swig]
 [javafx]
-[s+]
 [rebol]
+[s+]
 [dsssl]
-[nqc]
 [forth]
-[tpl]
+[nqc]
 [s#]
 [fhtml]
 [occam]
@@ -182,31 +193,40 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [rpm-spec]
 [apdl]
 [myghty]
+[cplex-lp]
 [scala]
 [tcl]
 [rcp]
 [template-toolkit]
+[sip]
 [python]
 [i4gl]
 [clips]
+[roff]
 [rest]
+[stata]
 [twiki]
 [text]
 [awk]
 [verilog]
+[outline]
 [erlang]
 [yaml]
 [assembly-ags]
 [shellscript]
-[jcl]
 [gettext]
+[jcl]
+[jflex]
 [d]
 [c]
 [coldfusion]
 [b]
+[maven]
 [typoscript]
 [scheme]
+[dart]
 [texinfo]
+[slax]
 [assembly-agc]
 [java]
 ne|nextElement()
@@ -267,8 +287,10 @@ YY|<$1>\n\|\n</$1>
 Ykeycombo|<keycombo><keycap>$1</keycap><keycap>$2</keycap></keycombo>
 Ykeycap|<keycap>\|</keycap>
 [dot]
-[powershell]
+[rakefile]
 [cil]
+[powershell]
+[logtalk]
 [postscript]
 [sql-loader]
 [redcode]
@@ -276,29 +298,36 @@ Ykeycap|<keycap>\|</keycap>
 [renderman-rib]
 [doxygen]
 [javacc]
-[ruby]
 [pike]
+[ruby]
 [applescript]
-[c#]
-[pascal]
 [ml]
+[pascal]
+[c#]
 [bbj]
 [freemarker]
+[coffeescript]
 [vbscript]
+[url]
+[visualbasic]
 [povray]
 [jmk]
 [icalendar]
 [slate]
+[tld]
 [shtml]
 [haskell]
+[gsp]
 [hlsl]
 [n3]
+[plaintex]
 [cobol]
 [csv]
 [css]
 [assembly-x86]
 [binsource-agc]
 [javascript]
-[xq]
-[gnuplot]
+cl|console.log(\|);
 [uscript]
+[gnuplot]
+[xq]

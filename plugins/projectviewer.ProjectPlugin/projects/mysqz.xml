@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="D:\Projects\mysqz">
+<property name="projectviewer.folder_tree_state" value="1101000000000000000110000000000000000000100000000000000000000000100000001010100000000000000000000000000000000" />
+<property name="projectviewer.import.filterid" value="projectviewer.importer.GlobFilter" />
+<property name="projectviewer.import_files.filterid" value="projectviewer.importer.GlobFilter" />
+<open-file path="D:\Projects\mysqz\classes\applicationResources\PdfInvoiceResource.php" />
+<directory path="D:\Projects\mysqz\admin">
+<directory path="D:\Projects\mysqz\admin\cron">
+<file path="D:\Projects\mysqz\admin\cron\cleanAPC.php" />
+<file path="D:\Projects\mysqz\admin\cron\cleanSessions.php" />
+<file path="D:\Projects\mysqz\admin\cron\reduceStats.php" />
+<file path="D:\Projects\mysqz\admin\cron\update_subscriptions.php" />
+</directory>
+<directory path="D:\Projects\mysqz\admin\translations">
+<file path="D:\Projects\mysqz\admin\translations\de.po" />
+<file path="D:\Projects\mysqz\admin\translations\en.po" />
+<file path="D:\Projects\mysqz\admin\translations\es.po" />
+<file path="D:\Projects\mysqz\admin\translations\fr.po" />
+</directory>
+<file path="D:\Projects\mysqz\admin\apc.php" />
+<file path="D:\Projects\mysqz\admin\clean.php" />
+<file path="D:\Projects\mysqz\admin\createLogin.php" />
+<file path="D:\Projects\mysqz\admin\ensureIndex.php" />
+<file path="D:\Projects\mysqz\admin\index.html" />
+<file path="D:\Projects\mysqz\admin\info.php" />
+<file path="D:\Projects\mysqz\admin\minify.php" />
+<file path="D:\Projects\mysqz\admin\php.sh" />
+<file path="D:\Projects\mysqz\admin\populate.php" />
+<file path="D:\Projects\mysqz\admin\translate.php" />
+</directory>
+<directory path="D:\Projects\mysqz\apache">
+<file path="D:\Projects\mysqz\apache\digest" />
+<file path="D:\Projects\mysqz\apache\httpd.conf" />
+<file path="D:\Projects\mysqz\apache\mysqz-admin.conf" />
+<file path="D:\Projects\mysqz\apache\mysqz-prod.conf" />
+<file path="D:\Projects\mysqz\apache\mysqz-test.conf" />
+</directory>
+<directory path="D:\Projects\mysqz\classes">
+<directory path="D:\Projects\mysqz\classes\applicationResources">
+<file path="D:\Projects\mysqz\classes\applicationResources\ApplicationResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\CounterResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\DebugResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\HostResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\LoginResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\LogoutResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\MyAccountResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\MyAccountResource.php.old" />
+<file path="D:\Projects\mysqz\classes\applicationResources\MyAccountSecureResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\PasswordResetResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\PayResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\PdfInvoiceResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\RedirectResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\SignupResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\SiteResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\TrafficResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\TutorialResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\UpdateSubscriptionResource.php" />
+<file path="D:\Projects\mysqz\classes\applicationResources\WebRpcResource.php" />
+</directory>
+<directory path="D:\Projects\mysqz\classes\userResources">
+<file path="D:\Projects\mysqz\classes\userResources\FileResource.php" />
+<file path="D:\Projects\mysqz\classes\userResources\PageBlockResource.php" />
+<file path="D:\Projects\mysqz\classes\userResources\PageEditResource.php" />
+<file path="D:\Projects\mysqz\classes\userResources\PageResource.php" />
+<file path="D:\Projects\mysqz\classes\userResources\PageZoneResource.php" />
+<file path="D:\Projects\mysqz\classes\userResources\UserResource.php" />
+</directory>
+<file path="D:\Projects\mysqz\classes\Form.php" />
+<file path="D:\Projects\mysqz\classes\GenericResource.php" />
+<file path="D:\Projects\mysqz\classes\History.php" />
+<file path="D:\Projects\mysqz\classes\HtmlTemplate.php" />
+<file path="D:\Projects\mysqz\classes\Log.php" />
+<file path="D:\Projects\mysqz\classes\Minify.php" />
+<file path="D:\Projects\mysqz\classes\Mysqz.php" />
+<file path="D:\Projects\mysqz\classes\MysqzAccount.php" />
+<file path="D:\Projects\mysqz\classes\MysqzException.php" />
+<file path="D:\Projects\mysqz\classes\MysqzRpc.php" />
+<file path="D:\Projects\mysqz\classes\PayPalCaller.php" />
+<file path="D:\Projects\mysqz\classes\Response.php" />
+<file path="D:\Projects\mysqz\classes\Statistics.php" />
+<file path="D:\Projects\mysqz\classes\Theme.php" />
+<file path="D:\Projects\mysqz\classes\TranslationTool.php" />
+<file path="D:\Projects\mysqz\classes\classes.zip" />
+</directory>
+<directory path="D:\Projects\mysqz\docs">
+<directory path="D:\Projects\mysqz\docs\LOGO">
+<file path="D:\Projects\mysqz\docs\LOGO\MYSQZ.ai" />
+<file path="D:\Projects\mysqz\docs\LOGO\MYSQZ.jpeg" />
+<file path="D:\Projects\mysqz\docs\LOGO\MYSQZ.png" />
+<file path="D:\Projects\mysqz\docs\LOGO\MYSQZ_BW.ai" />
+<file path="D:\Projects\mysqz\docs\LOGO\MYSQZ_BW.jpg" />
+<file path="D:\Projects\mysqz\docs\LOGO\MYSQZ_BW.png" />
+<file path="D:\Projects\mysqz\docs\LOGO\tt0142m_.ttf" />
+<file path="D:\Projects\mysqz\docs\LOGO\tt0144m_.ttf" />
+</directory>
+<directory path="D:\Projects\mysqz\docs\goDaddy">
+<file path="D:\Projects\mysqz\docs\goDaddy\WSAPIQuickStart.pdf" />
+<file path="D:\Projects\mysqz\docs\goDaddy\WWDAPI_WebServicev2.pdf" />
+</directory>
+<file path="D:\Projects\mysqz\docs\ADMIN" />
+<file path="D:\Projects\mysqz\docs\ARCHTECTURE" />
+<file path="D:\Projects\mysqz\docs\DATA" />
+<file path="D:\Projects\mysqz\docs\INSTALL" />
+<file path="D:\Projects\mysqz\docs\TEMPLATE" />
+<file path="D:\Projects\mysqz\docs\TODO" />
+</directory>
+<directory path="D:\Projects\mysqz\includes">
+<directory path="D:\Projects\mysqz\includes\QueryPath-2.0.1">
+<directory path="D:\Projects\mysqz\includes\QueryPath-2.0.1\Extension">
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\Extension\QPDB.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\Extension\QPList.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\Extension\QPTPL.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\Extension\QPXML.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\Extension\QPXSL.php" />
+</directory>
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\COPYING-LGPL.txt" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\COPYING-MIT.txt" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\CssEventHandler.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\CssParser.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\INSTALL" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\LGPL-2.1.txt" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\MysqzQueryPathExtension.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\QueryPath.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\QueryPathExtension.php" />
+<file path="D:\Projects\mysqz\includes\QueryPath-2.0.1\README" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf">
+<directory path="D:\Projects\mysqz\includes\html2pdf\_mypdf">
+<file path="D:\Projects\mysqz\includes\html2pdf\_mypdf\mypdf.class.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_mypdf\tcpdf_config_html2pdf.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf">
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\cache">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\cache\chapter_demo_1.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\cache\chapter_demo_2.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\cache\table_data_demo.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\cache\utf8test.txt" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config">
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config\lang">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config\lang\bra.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config\lang\eng.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config\lang\ger.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config\lang\ita.php" />
+</directory>
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config\tcpdf_config.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\config\tcpdf_config_alt.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\doc">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\doc\read_me.txt" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\examples">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\examples\read_me.txt" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts">
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\AUTHORS" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\BUGS" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\LICENSE" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\NEWS" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\README" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\langcover.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\status.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavu-fonts-ttf-2.30\unicover.txt" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freefont-20090104">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freefont-20090104\AUTHORS" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freefont-20090104\COPYING" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freefont-20090104\CREDITS" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freefont-20090104\ChangeLog" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freefont-20090104\INSTALL" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freefont-20090104\README" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils">
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1250.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1251.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1252.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1253.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1254.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1255.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1257.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp1258.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\cp874.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-1.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-11.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-15.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-16.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-2.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-4.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-5.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-7.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\iso-8859-9.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\koi8-r.map" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\enc\koi8-u.map" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\src">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\src\pfm2afm-src.tar.gz" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\src\readme.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\src\ttf2ufm-src.tar.gz" />
+</directory>
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\README.TXT" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\makeallttffonts.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\makefont.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\pfm2afm" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\pfm2afm.exe" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\ttf2ufm" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\utils\ttf2ufm.exe" />
+</directory>
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\README.TXT" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\ZarBold.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\ZarBold.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\almohanad.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\almohanad.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\almohanad.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\arialunicid0.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\courier.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusans.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusans.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusans.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansb.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansb.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansb.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansbi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansbi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansbi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensed.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensed.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensed.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedb.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedb.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedb.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedbi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedbi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedbi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusanscondensedi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmono.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmono.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmono.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonob.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonob.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonob.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonobi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonobi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonobi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonoi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonoi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavusansmonoi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserif.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserif.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserif.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifb.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifb.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifb.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifbi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifbi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifbi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensed.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensed.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensed.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedb.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedb.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedb.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedbi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedbi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedbi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifcondensedi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\dejavuserifi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemono.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemono.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemono.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonob.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonob.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonob.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonobi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonobi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonobi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonoi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonoi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freemonoi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesans.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesans.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesans.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansb.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansb.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansb.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansbi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansbi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansbi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freesansi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserif.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserif.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserif.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifb.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifb.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifb.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifbi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifbi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifbi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifi.ctg.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\freeserifi.z" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\helvetica.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\helveticab.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\helveticabi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\helveticai.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\hysmyeongjostdmedium.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\kozgopromedium.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\kozminproregular.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\msungstdlight.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\stsongstdlight.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\symbol.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\times.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\timesb.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\timesbi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\timesi.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\uni2cid_ac15.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\uni2cid_ag15.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\uni2cid_aj16.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\uni2cid_ak12.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\zapfdingbats.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\fonts\zarbold.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\images">
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\images\read_me.txt" />
+</directory>
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\2dbarcodes.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\CHANGELOG.TXT" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\LICENSE.TXT" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\README.TXT" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\barcodes.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\htmlcolors.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\tcpdf.crt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\tcpdf.fdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\tcpdf.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_tcpdf\unicode_data.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\exemples">
+<directory path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf">
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\about.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\billet.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\bookmark.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\draw.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple00.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple01.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple02.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple03.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple04.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple05.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple06.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple07.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple08.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple09.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple10.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple11.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple12.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\exemple13.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\formulaire.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\js1.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\js2.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\js3.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\qrcode.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\radius.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\regle.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\sapin.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\tigre.pdf" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\pdf\utf8.pdf" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\exemples\res">
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\about.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\bas_page.png" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\draw.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple00.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple01.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple02.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple03.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple04.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple05.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple06.css" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple06.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple07a.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple07b.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple08.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple09.png.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple10.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple10a.gif" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple10b.jpg" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple10c.gif" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple11.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple12.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\exemple13.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\formulaire.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\logo.gif" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\logo.png" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\off.png" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\puce.gif" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\puce2.gif" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\regle.png" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\res\tcpdf_logo.jpg" />
+</directory>
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\about.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\billet.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\bookmark.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\draw.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple00.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple01.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple02.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple03.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple04.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple05.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple06.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple07.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple08.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple09.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple10.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple11.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple12.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\exemple13.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\formulaire.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\js1.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\js2.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\js3.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\qrcode.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\radius.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\regle.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\sapin.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\tigre.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\exemples\utf8.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\langues">
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\ca.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\da.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\de.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\en.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\es.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\fr.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\it.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\nl.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\pt.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\langues\tr.txt" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\html2pdf\qrcode">
+<file path="D:\Projects\mysqz\includes\html2pdf\qrcode\qrcode.class.php" />
+</directory>
+<file path="D:\Projects\mysqz\includes\html2pdf\_LGPL.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_lisez_moi.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\_read_me.txt" />
+<file path="D:\Projects\mysqz\includes\html2pdf\html2pdf.class.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\parsingHTML.class.php" />
+<file path="D:\Projects\mysqz\includes\html2pdf\styleHTML.class.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0">
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone">
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier">
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema">
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Builder">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Builder\ConfigSchema.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Builder\Xml.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Interchange">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Interchange\Directive.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Interchange\Id.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.AllowedClasses.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.AllowedFrameTargets.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.AllowedRel.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.AllowedRev.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.ClassUseCDATA.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.DefaultImageAlt.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.DefaultInvalidImage.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.DefaultInvalidImageAlt.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.DefaultTextDir.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.EnableID.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.ForbiddenClasses.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.IDBlacklist.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.IDBlacklistRegexp.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.IDPrefix.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Attr.IDPrefixLocal.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.AutoParagraph.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.Custom.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.DisplayLinkURI.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.Linkify.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.PurifierLinkify.DocURL.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.PurifierLinkify.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.RemoveEmpty.RemoveNbsp.Exceptions.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.RemoveEmpty.RemoveNbsp.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\AutoFormat.RemoveEmpty.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\CSS.AllowImportant.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\CSS.AllowTricky.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\CSS.AllowedProperties.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\CSS.DefinitionRev.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\CSS.MaxImgLength.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\CSS.Proprietary.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Cache.DefinitionImpl.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Cache.SerializerPath.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.AggressivelyFixLt.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.CollectErrors.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.ColorKeywords.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.ConvertDocumentToFragment.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.DirectLexLineNumberSyncInterval.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.Encoding.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.EscapeInvalidChildren.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.EscapeInvalidTags.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.EscapeNonASCIICharacters.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.HiddenElements.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.Language.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.LexerImpl.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.MaintainLineNumbers.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.RemoveInvalidImg.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Core.RemoveScriptContents.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Filter.Custom.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Filter.ExtractStyleBlocks.Escaping.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Filter.ExtractStyleBlocks.Scope.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Filter.ExtractStyleBlocks.TidyImpl.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Filter.ExtractStyleBlocks.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Filter.YouTube.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.Allowed.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.AllowedAttributes.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.AllowedElements.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.AllowedModules.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.Attr.Name.UseCDATA.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.BlockWrapper.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.CoreModules.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.CustomDoctype.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.DefinitionID.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.DefinitionRev.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.Doctype.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.ForbiddenAttributes.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.ForbiddenElements.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.MaxImgLength.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.Parent.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.Proprietary.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.SafeEmbed.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.SafeObject.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.Strict.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.TidyAdd.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.TidyLevel.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.TidyRemove.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.Trusted.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\HTML.XHTML.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Output.CommentScriptContents.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Output.Newline.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Output.SortAttr.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Output.TidyFormat.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\Test.ForceNoIconv.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.AllowedSchemes.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.Base.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.DefaultScheme.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.DefinitionID.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.DefinitionRev.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.Disable.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.DisableExternal.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.DisableExternalResources.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.DisableResources.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.Host.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.HostBlacklist.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.MakeAbsolute.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.Munge.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.MungeResources.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.MungeSecretKey.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\URI.OverrideAllowedSchemes.txt" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema\info.ini" />
+</directory>
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Exception.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Interchange.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\InterchangeBuilder.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\Validator.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\ValidatorAtom.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\ConfigSchema\schema.ser" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache">
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache\Serializer">
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache\Serializer\CSS">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache\Serializer\CSS\4.0.0,801ad73acbcf9d3127e1d01768d26453,1.ser" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache\Serializer\HTML">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache\Serializer\HTML\4.0.0,ddc9b993d7fc8d4a185e8dbf5b9a0996,1.ser" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache\Serializer\URI">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\DefinitionCache\Serializer\URI\4.0.0,05c766101e813c246917b022f97b5e6e,1.ser" />
+</directory>
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\EntityLookup">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\EntityLookup\entities.ser" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Filter">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Filter\ExtractStyleBlocks.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Filter\YouTube.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Language">
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Language\classes">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Language\classes\en-x-test.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Language\messages">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Language\messages\en-x-test.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Language\messages\en-x-testmini.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Language\messages\en.php" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Lexer">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Lexer\PEARSax3.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Lexer\PH5P.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Printer">
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Printer\CSSDefinition.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Printer\ConfigForm.css" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Printer\ConfigForm.js" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Printer\ConfigForm.php" />
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Printer\HTMLDefinition.php" />
+</directory>
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\standalone\HTMLPurifier\Printer.php" />
+</directory>
+</directory>
+<file path="D:\Projects\mysqz\includes\htmlpurifier-4.0.0\HTMLPurifier.standalone.php" />
+</directory>
+<directory path="D:\Projects\mysqz\includes\minify">
+<file path="D:\Projects\mysqz\includes\minify\Minify_CSS_Compressor.php" />
+<file path="D:\Projects\mysqz\includes\minify\jsmin.php" />
+</directory>
+<file path="D:\Projects\mysqz\includes\config.php" />
+<file path="D:\Projects\mysqz\includes\utilities.php" />
+</directory>
+<directory path="D:\Projects\mysqz\main">
+<file path="D:\Projects\mysqz\main\main.php" />
+<file path="D:\Projects\mysqz\main\paypal_ipn_handler.php" />
+</directory>
+<directory path="D:\Projects\mysqz\static">
+<directory path="D:\Projects\mysqz\static\concat">
+<file path="D:\Projects\mysqz\static\concat\README" />
+</directory>
+<directory path="D:\Projects\mysqz\static\css">
+<directory path="D:\Projects\mysqz\static\css\button-background">
+<file path="D:\Projects\mysqz\static\css\button-background\active-left-round.png" />
+<file path="D:\Projects\mysqz\static\css\button-background\default-left-round.png" />
+<file path="D:\Projects\mysqz\static\css\button-background\default.png" />
+<file path="D:\Projects\mysqz\static\css\button-background\hover-left-round.png" />
+<file path="D:\Projects\mysqz\static\css\button-background\whole-right.png" />
+<file path="D:\Projects\mysqz\static\css\button-background\whole.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\css\common">
+<directory path="D:\Projects\mysqz\static\css\common\images">
+<file path="D:\Projects\mysqz\static\css\common\images\button-background.gif" />
+<file path="D:\Projects\mysqz\static\css\common\images\button-background.png" />
+<file path="D:\Projects\mysqz\static\css\common\images\de.gif" />
+<file path="D:\Projects\mysqz\static\css\common\images\de.png" />
+<file path="D:\Projects\mysqz\static\css\common\images\en.gif" />
+<file path="D:\Projects\mysqz\static\css\common\images\en.png" />
+<file path="D:\Projects\mysqz\static\css\common\images\es.gif" />
+<file path="D:\Projects\mysqz\static\css\common\images\es.png" />
+<file path="D:\Projects\mysqz\static\css\common\images\fr.gif" />
+<file path="D:\Projects\mysqz\static\css\common\images\fr.png" />
+</directory>
+<file path="D:\Projects\mysqz\static\css\common\common.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\css\custom">
+<directory path="D:\Projects\mysqz\static\css\custom\images">
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_flat_10_000000_40x100.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_glass_65_ffffff_1x400.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-icons_222222_256x240.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-icons_228ef1_256x240.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-icons_ef8c08_256x240.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-icons_ffd27a_256x240.png" />
+<file path="D:\Projects\mysqz\static\css\custom\images\ui-icons_ffffff_256x240.png" />
+</directory>
+<file path="D:\Projects\mysqz\static\css\custom\jquery-ui-1.7.2.custom.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\css\editor-images">
+<directory path="D:\Projects\mysqz\static\css\editor-images\frame">
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\east.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\north-east.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\north-west.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\north.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\south-east.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\south-west.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\south.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\frame\west.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\css\editor-images\palette">
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\background-shadow.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\east.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\north-east.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\north-west.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\north.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\south-east.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\south-west.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\south.png" />
+<file path="D:\Projects\mysqz\static\css\editor-images\palette\west.png" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\static\css\frame-border">
+<file path="D:\Projects\mysqz\static\css\frame-border\east.png" />
+<file path="D:\Projects\mysqz\static\css\frame-border\north-east.png" />
+<file path="D:\Projects\mysqz\static\css\frame-border\north-west.png" />
+<file path="D:\Projects\mysqz\static\css\frame-border\north.png" />
+<file path="D:\Projects\mysqz\static\css\frame-border\south-east.png" />
+<file path="D:\Projects\mysqz\static\css\frame-border\south-west.png" />
+<file path="D:\Projects\mysqz\static\css\frame-border\south.png" />
+<file path="D:\Projects\mysqz\static\css\frame-border\west.png" />
+</directory>
+<file path="D:\Projects\mysqz\static\css\button-background.gif" />
+<file path="D:\Projects\mysqz\static\css\button-background.png" />
+<file path="D:\Projects\mysqz\static\css\editor-ie6.css" />
+<file path="D:\Projects\mysqz\static\css\editor.css" />
+<file path="D:\Projects\mysqz\static\css\myaccount.css" />
+<file path="D:\Projects\mysqz\static\css\traffic.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\images">
+<directory path="D:\Projects\mysqz\static\images\mime-types">
+<directory path="D:\Projects\mysqz\static\images\mime-types\application">
+<file path="D:\Projects\mysqz\static\images\mime-types\application\pdf_128x128.png" />
+<file path="D:\Projects\mysqz\static\images\mime-types\application\pdf_64x64.png" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\static\images\new">
+<file path="D:\Projects\mysqz\static\images\new\align-center.png" />
+<file path="D:\Projects\mysqz\static\images\new\align-justify.png" />
+<file path="D:\Projects\mysqz\static\images\new\align-left.png" />
+<file path="D:\Projects\mysqz\static\images\new\align-right.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\images\old">
+<file path="D:\Projects\mysqz\static\images\old\align-center.png" />
+<file path="D:\Projects\mysqz\static\images\old\align-justify.png" />
+<file path="D:\Projects\mysqz\static\images\old\align-left.png" />
+<file path="D:\Projects\mysqz\static\images\old\align-right.png" />
+<file path="D:\Projects\mysqz\static\images\old\text-bold.png" />
+<file path="D:\Projects\mysqz\static\images\old\text-italic.png" />
+<file path="D:\Projects\mysqz\static\images\old\text-underline.png" />
+</directory>
+<file path="D:\Projects\mysqz\static\images\100x100.png" />
+<file path="D:\Projects\mysqz\static\images\48x48.png" />
+<file path="D:\Projects\mysqz\static\images\64x64.png" />
+<file path="D:\Projects\mysqz\static\images\80x80.png" />
+<file path="D:\Projects\mysqz\static\images\96x96.png" />
+<file path="D:\Projects\mysqz\static\images\align-center.gif" />
+<file path="D:\Projects\mysqz\static\images\align-center.png" />
+<file path="D:\Projects\mysqz\static\images\align-justify.gif" />
+<file path="D:\Projects\mysqz\static\images\align-justify.png" />
+<file path="D:\Projects\mysqz\static\images\align-left.gif" />
+<file path="D:\Projects\mysqz\static\images\align-left.png" />
+<file path="D:\Projects\mysqz\static\images\align-right.gif" />
+<file path="D:\Projects\mysqz\static\images\align-right.png" />
+<file path="D:\Projects\mysqz\static\images\hilite-color.gif" />
+<file path="D:\Projects\mysqz\static\images\hilite-color.png" />
+<file path="D:\Projects\mysqz\static\images\icons.png" />
+<file path="D:\Projects\mysqz\static\images\link.gif" />
+<file path="D:\Projects\mysqz\static\images\link.png" />
+<file path="D:\Projects\mysqz\static\images\loader.gif" />
+<file path="D:\Projects\mysqz\static\images\logo.png" />
+<file path="D:\Projects\mysqz\static\images\mysqz-logo.gif" />
+<file path="D:\Projects\mysqz\static\images\mysqz-logo.png" />
+<file path="D:\Projects\mysqz\static\images\ordered-list.gif" />
+<file path="D:\Projects\mysqz\static\images\ordered-list.png" />
+<file path="D:\Projects\mysqz\static\images\text-bold.png" />
+<file path="D:\Projects\mysqz\static\images\text-color.gif" />
+<file path="D:\Projects\mysqz\static\images\text-color.png" />
+<file path="D:\Projects\mysqz\static\images\text-italics.png" />
+<file path="D:\Projects\mysqz\static\images\text-underlined.png" />
+<file path="D:\Projects\mysqz\static\images\unlink.gif" />
+<file path="D:\Projects\mysqz\static\images\unlink.png" />
+<file path="D:\Projects\mysqz\static\images\unordered-list.gif" />
+<file path="D:\Projects\mysqz\static\images\unordered-list.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\js">
+<directory path="D:\Projects\mysqz\static\js\lib">
+<file path="D:\Projects\mysqz\static\js\lib\jquery-1.3.2.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery-1.4.2.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery-ui-1.7.2.custom.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery-ui-1.8.2.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.belatedPNG.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.bgiframe.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.canonical.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.editable.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.mysqz.translations.js.php" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.mysqz.utilities.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.palette.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.pngfix.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.tButton.js" />
+<file path="D:\Projects\mysqz\static\js\lib\jquery.wrapSelection.js" />
+</directory>
+<file path="D:\Projects\mysqz\static\js\editor.js" />
+<file path="D:\Projects\mysqz\static\js\fileManager.js" />
+<file path="D:\Projects\mysqz\static\js\logbar.js" />
+<file path="D:\Projects\mysqz\static\js\login.js" />
+<file path="D:\Projects\mysqz\static\js\pageOptions.js" />
+<file path="D:\Projects\mysqz\static\js\pageWizard.js" />
+<file path="D:\Projects\mysqz\static\js\reset.js" />
+<file path="D:\Projects\mysqz\static\js\signup.js" />
+<file path="D:\Projects\mysqz\static\js\siteOptions.js" />
+<file path="D:\Projects\mysqz\static\js\toolbar.js" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar">
+<directory path="D:\Projects\mysqz\static\sidebar\boxes">
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\beige">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\e.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\n.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\ne.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\nw.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\s.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\se.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\style.css" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\sw.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\beige\w.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\blue">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\blue\background.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\blue\block.conf" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\blue\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\blue\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\flashvideo">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\flashvideo\asterix.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\flashvideo\icon-tv.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\flashvideo\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\flashvideo\play.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\flashvideo\player.swf" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\flashvideo\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\guarantee">
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\old">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\old\background-body.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\old\background-bottom.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\old\background-top.jpg" />
+</directory>
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\background-body.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\background-bottom.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\background-top-old.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\background-top.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\block.conf" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\guarantee\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\signature">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\signature\block.conf" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\success">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\success\TestimonialBottom.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\success\TestimonialMiddle.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\success\TestimonialTop.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\success\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\success\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\testimonial">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\testimonial\body.gif" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\testimonial\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\testimonial\style.css" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\testimonial\top.old.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\testimonial\top.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\boxes\version">
+<file path="D:\Projects\mysqz\static\sidebar\boxes\version\background-top.gif" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\version\background-top.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\version\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\boxes\version\style.css" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\columns">
+<directory path="D:\Projects\mysqz\static\sidebar\columns\four-cols">
+<file path="D:\Projects\mysqz\static\sidebar\columns\four-cols\icon.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\columns\two-cols">
+<file path="D:\Projects\mysqz\static\sidebar\columns\two-cols\icon.png" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\ecommerce">
+<directory path="D:\Projects\mysqz\static\sidebar\ecommerce\addToCart">
+<file path="D:\Projects\mysqz\static\sidebar\ecommerce\addToCart\block.conf" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\ecommerce\paypal">
+<file path="D:\Projects\mysqz\static\sidebar\ecommerce\paypal\buy_now.png" />
+<file path="D:\Projects\mysqz\static\sidebar\ecommerce\paypal\icon.png" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists">
+<directory path="D:\Projects\mysqz\static\sidebar\lists\arrow">
+<file path="D:\Projects\mysqz\static\sidebar\lists\arrow\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\arrow\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\arrow\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists\bullet1">
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet1\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet1\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet1\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists\bullet2">
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet2\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet2\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet2\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists\bullet3">
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet3\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet3\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet3\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists\bullet4">
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet4\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet4\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\bullet4\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists\check">
+<file path="D:\Projects\mysqz\static\sidebar\lists\check\background.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\check\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\check\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\check\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists\exclamation">
+<file path="D:\Projects\mysqz\static\sidebar\lists\exclamation\background.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\exclamation\block.conf" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\exclamation\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\exclamation\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\exclamation\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\lists\new">
+<file path="D:\Projects\mysqz\static\sidebar\lists\new\background.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\new\background.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\new\block.conf" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\new\bullet.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\new\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\lists\new\style.css" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\social-networks">
+<directory path="D:\Projects\mysqz\static\sidebar\social-networks\facebook">
+<file path="D:\Projects\mysqz\static\sidebar\social-networks\facebook\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\social-networks\facebook\image.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\social-networks\twitter">
+<file path="D:\Projects\mysqz\static\sidebar\social-networks\twitter\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\social-networks\twitter\image.png" />
+</directory>
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\text">
+<directory path="D:\Projects\mysqz\static\sidebar\text\image">
+<file path="D:\Projects\mysqz\static\sidebar\text\image\icon.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\text\image-paragraph">
+<file path="D:\Projects\mysqz\static\sidebar\text\image-paragraph\icon.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\text\paragraph">
+<file path="D:\Projects\mysqz\static\sidebar\text\paragraph\icon.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\text\title">
+<file path="D:\Projects\mysqz\static\sidebar\text\title\icon.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\text\title-paragraph">
+<file path="D:\Projects\mysqz\static\sidebar\text\title-paragraph\icon.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\sidebar\text\yellow-block">
+<file path="D:\Projects\mysqz\static\sidebar\text\yellow-block\TestimonialBottom.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\text\yellow-block\TestimonialMiddle.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\text\yellow-block\TestimonialTop.jpg" />
+<file path="D:\Projects\mysqz\static\sidebar\text\yellow-block\icon.png" />
+<file path="D:\Projects\mysqz\static\sidebar\text\yellow-block\style.css" />
+</directory>
+</directory>
+<file path="D:\Projects\mysqz\static\sidebar\README" />
+<file path="D:\Projects\mysqz\static\sidebar\sections.ini" />
+<file path="D:\Projects\mysqz\static\sidebar\sidebar.js" />
+<file path="D:\Projects\mysqz\static\sidebar\test.php" />
+</directory>
+<directory path="D:\Projects\mysqz\static\swf">
+<file path="D:\Projects\mysqz\static\swf\player-viral.swf" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates">
+<directory path="D:\Projects\mysqz\static\templates\adwords">
+<directory path="D:\Projects\mysqz\static\templates\adwords\files">
+<file path="D:\Projects\mysqz\static\templates\adwords\files\bastabl.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\bouton2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\clickjs.js" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\flechetab.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\flechetxt.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\flechetxt.jpg.old" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\fondtab.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\fondtxt.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\footer.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\ga.js" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\hauttab2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\header.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\puce.jpg" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\puce.jpg.old" />
+<file path="D:\Projects\mysqz\static\templates\adwords\files\videos.jpg" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\adwords\translations">
+<file path="D:\Projects\mysqz\static\templates\adwords\translations\fr.po" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\adwords\main.html" />
+<file path="D:\Projects\mysqz\static\templates\adwords\main.html.php" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\blue">
+<directory path="D:\Projects\mysqz\static\templates\blue\images">
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-block1-body.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-block1-bottom.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-block1-top.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-block1.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-block2-body.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-block2-bottom.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-block2-top.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bg-header.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\book-form.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\bottom-corn-vente.gif" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\btm-conf.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\displays.gif" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\envoyer-videos.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\fb_share.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\img-vente.gif" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\in-share.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\list-style-vente.gif" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\sep-vert.gif" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\sep.gif" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\shadow.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\submit-form.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\submit-form1.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\top-conf.png" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\top-corn-vente.gif" />
+<file path="D:\Projects\mysqz\static\templates\blue\images\tw-share.png" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\blue\main.html" />
+<file path="D:\Projects\mysqz\static\templates\blue\main.html.php" />
+<file path="D:\Projects\mysqz\static\templates\blue\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\earthling">
+<directory path="D:\Projects\mysqz\static\templates\earthling\images">
+<file path="D:\Projects\mysqz\static\templates\earthling\images\img1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\earthling\images\img2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\earthling\images\img3.gif" />
+<file path="D:\Projects\mysqz\static\templates\earthling\images\img4.gif" />
+<file path="D:\Projects\mysqz\static\templates\earthling\images\img5.jpg" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\earthling\default.css" />
+<file path="D:\Projects\mysqz\static\templates\earthling\earthling.zip" />
+<file path="D:\Projects\mysqz\static\templates\earthling\license.txt" />
+<file path="D:\Projects\mysqz\static\templates\earthling\main.html" />
+<file path="D:\Projects\mysqz\static\templates\earthling\main.html.php" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\freshscent">
+<directory path="D:\Projects\mysqz\static\templates\freshscent\images">
+<file path="D:\Projects\mysqz\static\templates\freshscent\images\img01.jpg" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\images\img03.jpg" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\images\img04.jpg" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\images\img05.jpg" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\images\img06.jpg" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\images\img07.jpg" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\images\img08.jpg" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\freshscent\freshscent.zip" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\license.txt" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\main.html" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\main.html.php" />
+<file path="D:\Projects\mysqz\static\templates\freshscent\style.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\keywordElite">
+<directory path="D:\Projects\mysqz\static\templates\keywordElite\files">
+<directory path="D:\Projects\mysqz\static\templates\keywordElite\files\optin-keyword-explosion_data">
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\optin-keyword-explosion_data\ke_explosion_small.jpg" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\10a.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\11.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\22.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\33.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\4a.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\7a.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\8a.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\9a.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\BradSignatureBlacksmall.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\DropPopOver.js" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\KE_box.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\TestimonialBottom.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\TestimonialMiddle.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\TestimonialTop.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\arrow.png" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\arrow_red_left.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\arrow_red_right.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\asterix.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\bg_00.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\bg_top1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\bg_top2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\buyertraffic1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\click.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\free-weight-loss-resources.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\ga.js" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\guarantee_01.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\guarantee_02.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\guarantee_04.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\header1_white.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\header1_yellow.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_buybtn.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_check.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_con2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_con3.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_con5.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_con6.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_guarbox1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_guarbox2.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_guarbox3.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_li1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_new.png" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_support.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_test1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_usrtest_box.gif" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_usrtest_h.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\img_videshadow.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\optin-keyword-explosion.html" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\optin-keyword-explosion_002.html" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\proof_authorize_thumb.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\proof_clickbank2_thumb.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\proof_clickbank3_thumb.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\proof_clickbank_thumb.jpg" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\shadow.js" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\siteopt.js" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\files\vid.jpg" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\keywordElite\ke20.css" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\main.html" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\main.html.php" />
+<file path="D:\Projects\mysqz\static\templates\keywordElite\original.html.old" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\mysqz">
+<directory path="D:\Projects\mysqz\static\templates\mysqz\front-images">
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\arrow.gif" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\bottom_lcd_box.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\gallery_bg.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\hr.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\img_gallery-posta.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\img_gallery.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\img_gallery2.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\img_gallery3.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\input_login.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\input_select.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\logo.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\main-container_bg.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\screenshoot1.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\screenshoot111.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\screenshoot2.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\screenshoot3.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\separator.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\testimonials_1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\testimonials_2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\testimonials_3.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\testimonials_separated.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\textimonial_box.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front-images\work_box.jpg" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\mysqz\images">
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\arrow.gif" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\bottom_lcd_box.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\box-corners.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\box-horizontal.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\button-background.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\footer-ruler.gif" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\gallery_bg.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\hr.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\img_gallery.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\input_login.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\input_select.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\lcd.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\lcd_img1.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\lcd_left.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\lcd_right.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\logo.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\menu-background.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\menu_hover.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\photo1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\photo2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\photo3.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\quote.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\screenshoot1.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\screenshoot2.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\screenshoot3.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\separator.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\testimonials_1.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\testimonials_2.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\testimonials_3.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\testimonials_separated.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\textimonial_box.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\tv.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\video.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\work_box.jpg" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\work_box.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\workbox_icon_computer.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\workbox_icon_disk.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\workbox_icon_megaphone.png" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\images\workbox_icon_star.png" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\mysqz\inc">
+<file path="D:\Projects\mysqz\static\templates\mysqz\inc\footer-links.html" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\inc\menu.html" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\mysqz\application.css" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\error.html" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\error.html.php" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front.html" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\front.html.php" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\home05.psd" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\main.html" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\main.html.php" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\metadata" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\select.js" />
+<file path="D:\Projects\mysqz\static\templates\mysqz\template.css" />
+</directory>
+<directory path="D:\Projects\mysqz\static\templates\simple">
+<directory path="D:\Projects\mysqz\static\templates\simple\images">
+<file path="D:\Projects\mysqz\static\templates\simple\images\bg-all.gif" />
+<file path="D:\Projects\mysqz\static\templates\simple\images\bg-content-vid.png" />
+<file path="D:\Projects\mysqz\static\templates\simple\images\bg-footer-vid.png" />
+<file path="D:\Projects\mysqz\static\templates\simple\images\sides.gif" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\simple\main.html" />
+<file path="D:\Projects\mysqz\static\templates\simple\main.html.php" />
+<file path="D:\Projects\mysqz\static\templates\simple\style.css" />
+</directory>
+<file path="D:\Projects\mysqz\static\templates\Adwords.php" />
+<file path="D:\Projects\mysqz\static\templates\Blue.php" />
+<file path="D:\Projects\mysqz\static\templates\Freshscent.php" />
+</directory>
+<file path="D:\Projects\mysqz\static\index.html" />
+</directory>
+<file path="D:\Projects\mysqz\.buildpath" />
+<file path="D:\Projects\mysqz\.project" />
+<file path="D:\Projects\mysqz\create-certificate.sh" />
+<file path="C:\Windows\System32\drivers\etc\hosts" />
+<file path="D:\Projects\mysqz\http-access.log" />
+<file path="D:\Projects\mysqz\http-error.log" />
+<file path="C:\wamp\bin\apache\Apache2.2.11\conf\httpd.conf" />
+<file path="D:\Projects\mysqz\magic.mgc" />
+<file path="D:\Projects\mysqz\mail.log" />
+<file path="D:\Projects\mysqz\mysqz.crt" />
+<file path="D:\Projects\mysqz\mysqz.key" />
+<file path="D:\Projects\mysqz\mysqz.log" />
+<file path="C:\wamp\bin\apache\Apache2.2.11\bin\php.ini" />
+<file path="D:\Projects\mysqz\release.zip" />
+<file path="D:\Projects\mysqz\vhosts.conf" />
+</project>

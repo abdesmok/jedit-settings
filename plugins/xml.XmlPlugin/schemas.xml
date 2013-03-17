@@ -1,0 +1,3 @@
+<?xml version="1.0" ?>
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+<include rules="jeditresource:/XML.jar!/xml/dtds/schemas.xml" /></locatingRules>

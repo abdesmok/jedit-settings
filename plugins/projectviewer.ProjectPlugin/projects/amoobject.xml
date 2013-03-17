@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="D:\Projects\amoobject">
+<property name="projectviewer.folder_tree_state" value="1100000000000000000000000000000000000" />
+<property name="projectviewer.import.filterid" value="projectviewer.importer.GlobFilter" />
+<property name="console.compile" value="make" />
+<open-file path="D:\Projects\amoobject\tests\varianttest.cpp" />
+<directory path="D:\Projects\amoobject\tests">
+<file path="D:\Projects\amoobject\tests\Makefile.g++" />
+<file path="D:\Projects\amoobject\tests\Makefile.msvc" />
+<file path="D:\Projects\amoobject\tests\amooobject.h" />
+<file path="D:\Projects\amoobject\tests\amovariant.cpp" />
+<file path="D:\Projects\amoobject\tests\amovariant.cxx" />
+<file path="D:\Projects\amoobject\tests\amovariant.h" />
+<file path="D:\Projects\amoobject\tests\call-this-determination.cpp" />
+<file path="D:\Projects\amoobject\tests\callback_storage.cpp" />
+<file path="D:\Projects\amoobject\tests\compiler.h" />
+<file path="D:\Projects\amoobject\tests\delme.cpp" />
+<file path="D:\Projects\amoobject\tests\fun-util.h" />
+<file path="D:\Projects\amoobject\tests\gccfedora64.txt" />
+<file path="D:\Projects\amoobject\tests\gccmacosx.txt" />
+<file path="D:\Projects\amoobject\tests\gccwin32.txt" />
+<file path="D:\Projects\amoobject\tests\graph.dot" />
+<file path="D:\Projects\amoobject\tests\graph.gml" />
+<file path="D:\Projects\amoobject\tests\graph.graphml" />
+<file path="D:\Projects\amoobject\tests\os-macros.txt" />
+<file path="D:\Projects\amoobject\tests\pointer-to-memeber_functions.cpp" />
+<file path="D:\Projects\amoobject\tests\rappel.txt" />
+<file path="D:\Projects\amoobject\tests\sizeof-pod.cpp" />
+<file path="D:\Projects\amoobject\tests\template-resolution.cpp" />
+<file path="D:\Projects\amoobject\tests\test.h" />
+<file path="D:\Projects\amoobject\tests\test1.cpp" />
+<file path="D:\Projects\amoobject\tests\test1.cxx" />
+<file path="D:\Projects\amoobject\tests\test2.cpp" />
+<file path="D:\Projects\amoobject\tests\varianttest.cpp" />
+</directory>
+<file path="D:\Projects\amoobject\.gitignore" />
+<file path="D:\Projects\amoobject\COPYING" />
+<file path="D:\Projects\amoobject\COPYING.LESSER" />
+<file path="D:\Projects\amoobject\Makefile" />
+<file path="D:\Projects\amoobject\amoobject.h" />
+<file path="D:\Projects\amoobject\amoobjectgraph.cpp" />
+<file path="D:\Projects\amoobject\amoobjectgraph.h" />
+<file path="D:\Projects\amoobject\test.dot" />
+</project>

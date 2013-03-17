@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="D:\Projects\pixeltool">
+<property name="projectviewer.folder_tree_state" value="110001000000000000" />
+<property name="projectviewer.import.filterid" value="projectviewer.importer.GlobFilter" />
+<open-file path="D:\Projects\pixeltool\src\window.h" />
+<open-file path="D:\Projects\pixeltool\Makefile" />
+<open-file path="D:\Projects\pixeltool\src\window.cpp" />
+<open-file path="D:\Projects\pixeltool\src\resizehandler.h" />
+<open-file path="D:\Projects\pixeltool\src\resizehandler.cpp" />
+<open-file path="D:\Projects\pixeltool\pixeltool.pro" />
+<directory path="D:\Projects\pixeltool\debug">
+<file path="D:\Projects\pixeltool\debug\moc_resizehandler.cpp" />
+<file path="D:\Projects\pixeltool\debug\moc_window.cpp" />
+<file path="D:\Projects\pixeltool\debug\pixeltool.exe" />
+</directory>
+<directory path="D:\Projects\pixeltool\src">
+<file path="D:\Projects\pixeltool\src\applicationinfo.h" />
+<file path="D:\Projects\pixeltool\src\main.cpp" />
+<file path="D:\Projects\pixeltool\src\resizehandler.cpp" />
+<file path="D:\Projects\pixeltool\src\resizehandler.h" />
+<file path="D:\Projects\pixeltool\src\window.cpp" />
+<file path="D:\Projects\pixeltool\src\window.h" />
+</directory>
+<file path="D:\Projects\pixeltool\Makefile" />
+<file path="D:\Projects\pixeltool\Makefile.Debug" />
+<file path="D:\Projects\pixeltool\Makefile.Release" />
+<file path="D:\Projects\pixeltool\Makefile.jedit" />
+<file path="D:\Projects\pixeltool\old_config.rar" />
+<file path="D:\Projects\pixeltool\pixeltool.pro" />
+</project>

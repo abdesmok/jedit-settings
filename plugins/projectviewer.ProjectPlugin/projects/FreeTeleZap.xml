@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project path="D:\Projects\FreeTeleZap">
+<property name="projectviewer.folder_tree_state" value="111100000000011000000000000000000000011100000000000000000000" />
+<property name="projectviewer.import.filterid" value="projectviewer.importer.GlobFilter" />
+<open-file path="D:\Projects\FreeTeleZap\firefox\chrome\content\tvfreebox.js" />
+<open-file path="D:\Projects\FreeTeleZap\firefox\chrome\content\tvfreebox.xul" />
+<directory path="D:\Projects\FreeTeleZap\firefox">
+<directory path="D:\Projects\FreeTeleZap\firefox\chrome">
+<directory path="D:\Projects\FreeTeleZap\firefox\chrome\content">
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\configkeys.xul" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\freetelezap.js" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\freetelezap.xul" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\logo.js" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\options.xul" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\tvfreebox.js" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\tvfreebox.xul" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\tvfreebox_configkeys.js" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\content\tvfreebox_options.js" />
+</directory>
+<directory path="D:\Projects\FreeTeleZap\firefox\chrome\skin">
+<directory path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global">
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\add.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\browser.css" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\delete.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\drive--exclamation.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\drive-upload.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\drive.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\icon.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\icon16.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\icon24.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\information-frame.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\key--exclamation.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\key.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\global\tick-circle-frame.png" />
+</directory>
+<directory path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v5">
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v5\face.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v5\icon.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v5\icon16.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v5\icon24.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v5\option.png" />
+</directory>
+<directory path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v6">
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v6\face.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v6\icon.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v6\icon16.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v6\icon24.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\v6\option.png" />
+</directory>
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\freetelezap.png" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome\skin\telecommande.png" />
+</directory>
+</directory>
+<directory path="D:\Projects\FreeTeleZap\firefox\defaults">
+<directory path="D:\Projects\FreeTeleZap\firefox\defaults\preferences">
+<file path="D:\Projects\FreeTeleZap\firefox\defaults\preferences\debug.js" />
+<file path="D:\Projects\FreeTeleZap\firefox\defaults\preferences\preferences.js" />
+</directory>
+</directory>
+<file path="D:\Projects\FreeTeleZap\firefox\FreeTeleZap@abdesmok.com" />
+<file path="D:\Projects\FreeTeleZap\firefox\Makefile" />
+<file path="D:\Projects\FreeTeleZap\firefox\chrome.manifest" />
+<file path="D:\Projects\FreeTeleZap\firefox\install.rdf" />
+</directory>
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com">
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome">
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\content">
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\content\configkeys.xul" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\content\options.xul" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\content\tvfreebox.js" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\content\tvfreebox.xul" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\content\tvfreebox_configkeys.js" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\content\tvfreebox_options.js" />
+</directory>
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\locale">
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\locale\fr">
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\locale\fr\phrases.dtd" />
+</directory>
+</directory>
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin">
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global">
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\add.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\browser.css" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\delete.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\drive--exclamation.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\drive-upload.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\drive.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\icon.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\icon16.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\icon24.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\information-frame.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\key--exclamation.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\key.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\global\tick-circle-frame.png" />
+</directory>
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v5">
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v5\face.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v5\icon.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v5\icon16.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v5\icon24.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v5\option.png" />
+</directory>
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v6">
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v6\face.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v6\icon.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v6\icon16.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v6\icon24.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome\skin\v6\option.png" />
+</directory>
+</directory>
+</directory>
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\defaults">
+<directory path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\defaults\preferences">
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\defaults\preferences\pref.js" />
+</directory>
+</directory>
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\chrome.manifest" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\icon.png" />
+<file path="D:\Projects\FreeTeleZap\tvfreebox@ssofast.com\install.rdf" />
+</directory>
+<file path="D:\Projects\FreeTeleZap\logo-50x90.png" />
+<file path="D:\Projects\FreeTeleZap\logo.png" />
+<file path="D:\Projects\FreeTeleZap\logo.svg" />
+<file path="D:\Projects\FreeTeleZap\telecommande-photo.png" />
+<file path="D:\Projects\FreeTeleZap\telecommande-simple.svg" />
+<file path="D:\Projects\FreeTeleZap\telecommande.png" />
+<file path="D:\Projects\FreeTeleZap\telecommande.svg" />
+<file path="D:\Projects\FreeTeleZap\telecommande.xcf" />
+</project>

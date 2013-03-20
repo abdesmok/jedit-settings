@@ -5,6 +5,7 @@
 <property name="projectviewer.import.filterid" value="projectviewer.importer.GlobFilter" />
 <property name="console.compile" value="make" />
 <open-file path="D:\Projects\amoobject\tests\varianttest.cpp" />
+<open-file path="D:\Projects\amoobject\amoobject.h" />
 <directory path="D:\Projects\amoobject\tests">
 <file path="D:\Projects\amoobject\tests\Makefile.g++" />
 <file path="D:\Projects\amoobject\tests\Makefile.msvc" />

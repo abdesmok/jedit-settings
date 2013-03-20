@@ -7,16 +7,20 @@
 <property name="projectviewer.import.filefilter_id" value="projectviewer.importer.GlobFilter" />
 <property name="java.optionalBuildpath" value="" />
 <property name="projectviewer.import.dirglob" value="CVS .*" />
-<property name="projectviewer.folder_tree_state" value="1000000000000000000000000000000000000000000" />
+<property name="projectviewer.folder_tree_state" value="100000000000000000000000000000000000000000000" />
 <property name="projectviewer.import.keep_tree" value="true" />
 <property name="java.useJavaClasspath" value="true" />
-<property name="projectviewer.import.filterid" value="projectviewer.importer.CompositeImporterFileFilter" />
 <property name="projectviewer.import.add_hidden" value="false" />
+<property name="projectviewer.import.filterid" value="projectviewer.importer.CompositeImporterFileFilter" />
 <property name="projectviewer.import.traverse_dirs" value="true" />
 <property name="java.optionalClasspath" value="" />
 <open-file path="D:\Projects\amolib\Makefile.jedit" />
+<open-file path="D:\Projects\amolib\amotest.cpp" />
+<open-file path="D:\Projects\amolib\amotest.h" />
+<open-file path="D:\Projects\amolib\amotestmacros.h" />
+<open-file path="D:\Projects\amolib\amoobject-test.cpp" />
 <open-file path="D:\Projects\amolib\amovariant.h" />
-<open-file path="D:\Projects\amolib\amovariant-test.cpp" />
+<open-file path="D:\Projects\amolib\amoobject.h" />
 <directory path="D:\Projects\amolib\amolib">
 <file path="D:\Projects\amolib\amolib\amolib.pro" />
 </directory>
@@ -114,11 +118,6 @@
 <file path="D:\Projects\amolib\COPYING" />
 <file path="D:\Projects\amolib\COPYING.LESSER" />
 <file path="D:\Projects\amolib\Makefile.jedit" />
-<file path="D:\Projects\amolib\Test.cpp" />
-<file path="D:\Projects\amolib\Test.h" />
-<file path="D:\Projects\amolib\TestMacros.h" />
-<file path="D:\Projects\amolib\TestParamsObject.cpp" />
-<file path="D:\Projects\amolib\TestParamsObject.h" />
 <file path="D:\Projects\amolib\amoargs.h" />
 <file path="D:\Projects\amolib\amobase64.cpp" />
 <file path="D:\Projects\amolib\amobytearray.cpp" />
@@ -134,9 +133,16 @@
 <file path="D:\Projects\amolib\amoglobal.h" />
 <file path="D:\Projects\amolib\amoio.cpp" />
 <file path="D:\Projects\amolib\amoio.h" />
+<file path="D:\Projects\amolib\amoobject-test.cpp" />
 <file path="D:\Projects\amolib\amoobject.h" />
+<file path="D:\Projects\amolib\amotest.cpp" />
+<file path="D:\Projects\amolib\amotest.h" />
+<file path="D:\Projects\amolib\amotestmacros.h" />
+<file path="D:\Projects\amolib\amotestparams-test.cpp" />
 <file path="D:\Projects\amolib\amotestparams.cpp" />
 <file path="D:\Projects\amolib\amotestparams.h" />
+<file path="D:\Projects\amolib\amotestparamsobject.cpp" />
+<file path="D:\Projects\amolib\amotestparamsobject.h" />
 <file path="D:\Projects\amolib\amotests.cpp" />
 <file path="D:\Projects\amolib\amotestwidget.h" />
 <file path="D:\Projects\amolib\amovariant-test.cpp" />

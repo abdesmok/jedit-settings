@@ -61,11 +61,11 @@ D:\\Projects\\FreeMobileAutoLogin\\defaults\\preferences
 C:\\Users\\Abdeslam\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\abdesmok.default\\extensions\\gmailnoads@mywebber.com\\chrome\\content
 C:\\Users\\Abdeslam\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\abdesmok.default\\extensions\\gmailnoads@mywebber.com\\chrome
 C:\\Users\\Abdeslam\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\abdesmok.default\\extensions\\gmailnoads@mywebber.com\\chrome\\skin
-[vfs.browser.filter]
-*
 [sftp.host]
 10.8.0.1:22
 10.8.0.1
+[vfs.browser.filter]
+*
 [infoviewer]
 jeditresource:/InfoViewer.jar!/index.html
 [replace.script]
@@ -119,6 +119,35 @@ D:\\Projects\\dbf\\website\\drupal-6.15\\includes\\
 D:\\Projects\\guide\\drupal-6.19\\sites\\all\\modules\\guide\\modules\\guide_voyages\\
 D:\\Projects\\guide\\drupal-6.19\\sites\\all\\modules\\guide\\modules\\guide_fidelisation\\
 D:\\Projects\\guide\\drupal-6.19\\sites\\all\\modules\\guide\\modules\\guide_flotte\\
+[console.compile.project]
+make
+[console.BeanShell]
+TaskManager.instance
+File.separator
+System.getProperty(\"user.home\")
+System.getProperty(\"line.separator\")
+df
+ls
+k
+g++ -Wall varianttest.cpp amovariant.cpp
+for (int i = 0; i < 10; ++i) print(i);
+help
+clang
+wait(2000);
+print(buffer.getStringProperty(\"encoding\"));
+buffer.setStringProperty(\"encoding\", \"UTF-8\");
+print(buffer.getStringProperty(\"mode\"));
+print(a);
+a=\"kkkk\"
+a=0
+print a;
+print a
+a=buffer.getStringProperty(\"mode\");
+buffer.getStringProperty(\"mode\");
+buffer.getStringProperty();
+ls();
+pwd();
+pwd
 [replace]
 CXXFLAGS
     
@@ -180,35 +209,6 @@ Slot
 &
 internalDescription
 not-philog
-[console.BeanShell]
-TaskManager.instance
-File.separator
-System.getProperty(\"user.home\")
-System.getProperty(\"line.separator\")
-df
-ls
-k
-g++ -Wall varianttest.cpp amovariant.cpp
-for (int i = 0; i < 10; ++i) print(i);
-help
-clang
-wait(2000);
-print(buffer.getStringProperty(\"encoding\"));
-buffer.setStringProperty(\"encoding\", \"UTF-8\");
-print(buffer.getStringProperty(\"mode\"));
-print(a);
-a=\"kkkk\"
-a=0
-print a;
-print a
-a=buffer.getStringProperty(\"mode\");
-buffer.getStringProperty(\"mode\");
-buffer.getStringProperty();
-ls();
-pwd();
-pwd
-[console.compile.project]
-make
 [search.filter]
 *.cpp
 *
@@ -225,42 +225,45 @@ cv-docx*.xsl
 [ftp.host]
 lacroixaroline.free.fr:21
 [action]
+combined-options
+save
+undo
+next-line
+backspace
+prev-word
+prev-char
+paste
+insert-newline-indent
+next-char
+copy
+select-end
+home
+prev-line
+end
+select-next-word
+select-prev-word
+quick-search
+document-home
+next-word
+delete-line
+make/make_all
+delete
+new-file
+select-next-line
+make/make_exec
+redo
+select-prev-char
+next-page
 plugin-options
 debugger-toggle-breakpoint
 plugin-manager
-make/make_exec
-make/make_all
-save
-backspace
-select-prev-word
-prev-word
-prev-char
-next-line
 debugger-panel
 debugger-breakpoints-toggle
-end
-prev-line
-document-home
-insert-newline-indent
-next-char
-next-word
-select-next-word
-home
-paste
-copy
-select-end
-undo
-delete-line
-delete
-combined-options
-quick-search
 select-home
 prev-page
-next-page
 close-all
 document-end
 make/make_clean
-select-next-line
 next-paragraph
 open-file
 find
@@ -272,11 +275,8 @@ error-list-next-error
 cut
 insert-tab-indent
 select-prev-line
-select-prev-char
-new-file
 help
 add-marker-shortcut
-redo
 select-all
 about
 goto-line
@@ -291,6 +291,15 @@ HistoryLOG
 \\n
 \\r\\n
 [clipboard]
+Variant variant(::wxStr(value));
+p->addPossibleValue(ip, std::string(begin, c - begin));
+p->addPossibleValue(ip, wxString::FromUTF8(begin, c - begin));
+addPossibleValue
+FromUTF8
+#ifdef USE_WX
+#TEST = amovariant
+    template<typename T>\n    operator T&() { return this->value<T>(); }\n
+return this->to<T>();
 void setInt(int &i) { i = 4567; }
 _WIN32_WINNT
 TEST = amovariant
@@ -342,23 +351,18 @@ org.gjt.sp.util.TaskManager
 TaskManager
 java.lang.NoSuchFieldError: instance
 File.separator
-System.getProperty(\"user.home\")
-System.getProperty(\"line.separator\")
-java.lang.NoSuchFieldError: instance\n\tat console.SystemShell.<init>(SystemShell.java:99)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\n\tat org.gjt.sp.jedit.bsh.Reflect.constructObject(Reflect.java:620)\n\tat org.gjt.sp.jedit.bsh.BSHAllocationExpression.constructObject(BSHAllocationExpression.java:123)\n\tat org.gjt.sp.jedit.bsh.BSHAllocationExpression.objectAllocation(BSHAllocationExpression.java:114)\n\tat org.gjt.sp.jedit.bsh.BSHAllocationExpression.eval(BSHAllocationExpression.java:62)\n\tat org.gjt.sp.jedit.bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:102)\n\tat org.gjt.sp.jedit.bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:47)\n\tat org.gjt.sp.jedit.bsh.Interpreter.eval(Interpreter.java:644)\n\tat org.gjt.sp.jedit.bsh.Interpreter.eval(Interpreter.java:738)\n\tat org.gjt.sp.jedit.bsh.Interpreter.eval(Interpreter.java:727)\n\tat org.gjt.sp.jedit.BeanShellFacade._eval(BeanShellFacade.java:148)\n\tat org.gjt.sp.jedit.BeanShellFacade.eval(BeanShellFacade.java:113)\n\tat org.gjt.sp.jedit.BeanShell.eval(BeanShell.java:377)\n\tat org.gjt.sp.jedit.ServiceManager$Descriptor.getInstance(ServiceManager.java:328)\n\tat org.gjt.sp.jedit.ServiceManager.getService(ServiceManager.java:254)\n\tat console.Shell.getShell(Shell.java:129)\n\tat console.Console.<init>(Console.java:128)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\n\tat org.gjt.sp.jedit.bsh.Reflect.constructObject(Reflect.java:620)\n\tat org.gjt.sp.jedit.bsh.BSHAllocationExpression.constructObject(BSHAllocationExpression.java:123)\n\tat org.gjt.sp.jedit.bsh.BSHAllocationExpression.objectAllocation(BSHAllocationExpression.java:114)\n\tat org.gjt.sp.jedit.bsh.BSHAllocationExpression.eval(BSHAllocationExpression.java:62)\n\tat org.gjt.sp.jedit.bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:102)\n\tat org.gjt.sp.jedit.bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:47)\n\tat org.gjt.sp.jedit.bsh.Interpreter.eval(Interpreter.java:644)\n\tat org.gjt.sp.jedit.bsh.Interpreter.eval(Interpreter.java:738)\n\tat org.gjt.sp.jedit.bsh.Interpreter.eval(Interpreter.java:727)\n\tat org.gjt.sp.jedit.BeanShellFacade._eval(BeanShellFacade.java:148)\n\tat org.gjt.sp.jedit.BeanShellFacade.eval(BeanShellFacade.java:113)\n\tat org.gjt.sp.jedit.BeanShell.eval(BeanShell.java:377)\n\tat org.gjt.sp.jedit.gui.DockableWindowFactory$Window.createDockableWindow(DockableWindowFactory.java:467)\n\tat org.gjt.sp.jedit.gui.DockableWindowManagerImpl.showDockableWindow(DockableWindowManagerImpl.java:355)\n\tat org.gjt.sp.jedit.gui.DockableWindowManagerImpl.setDockingLayout(DockableWindowManagerImpl.java:220)\n\tat org.gjt.sp.jedit.jEdit$DockingLayoutSetter.run(jEdit.java:4642)\n\tat java.awt.event.InvocationEvent.dispatch(Unknown Source)\n\tat java.awt.EventQueue.dispatchEventImpl(Unknown Source)\n\tat java.awt.EventQueue.access$000(Unknown Source)\n\tat java.awt.EventQueue$3.run(Unknown Source)\n\tat java.awt.EventQueue$3.run(Unknown Source)\n\tat java.security.AccessController.doPrivileged(Native Method)\n\tat java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)\n\tat java.awt.EventQueue.dispatchEvent(Unknown Source)\n\tat java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)\n\tat java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)\n\tat java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)\n\tat java.awt.EventDispatchThread.pumpEvents(Unknown Source)\n\tat java.awt.EventDispatchThread.pumpEvents(Unknown Source)\n\tat java.awt.EventDispatchThread.run(Unknown Source)\n
-#ifdef USE_WX
-ip->possibleValues.Append(possibleValue);
-            #endif\n
-if (! init || ! config.HasEntry(wxStr(ip->name))) {
-   
-variant.convert(ip->value.type());
 [console.System]
+make all -f Makefile.jedit
+D:\\Projects\\amolib
+make exec -f Makefile.jedit
+q
+s
+n
+r
 b main
 gdb test.exe
+$d
 which gdb
-q
-make exec -f Makefile.jedit
-D:\\Projects\\amolib
-make all -f Makefile.jedit
 ls
 make clean -f Makefile.jedit
 make compile_and_exec -f Makefile.jedit
@@ -369,7 +373,6 @@ make
  g++ -Wall amovariant-test.cpp amovariant.cpp
  g++ -Wall amovariant-test.cpp
  g++ -Wall amotestparams.cpp main.cpp
-$d
 echo $PATH
 D:\\Projects\\amoobject
 g++ -std=c++11 main.cpp
@@ -434,6 +437,8 @@ document.write(a)
 a.push(10)
 a=\[\]
 [find]
+addPossibleValue
+FromUTF8
 exec
 CXXOPTS
   
@@ -492,5 +497,3 @@ static int
 data.
 AmoVariant
 U
-Objec
-amo::obje

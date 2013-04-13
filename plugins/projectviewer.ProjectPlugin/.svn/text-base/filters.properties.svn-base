@@ -1,6 +1,0 @@
-#Filtered view configuration
-#Mon Jan 26 14:17:15 CET 2009
-filter.1.glob=*src/shell/*
-filter.0.glob=*src/project/*
-filter.1.name=shell
-filter.0.name=project

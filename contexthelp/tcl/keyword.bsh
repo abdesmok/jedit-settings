@@ -1,4 +1,0 @@
-// get the html zip from http://www.activestate.com/Products/ActiveTcl/ or http://sourceforge.net/projects/tcl/
-// uncompress file in <user.home>.jedit\contexthelp\tcl
-// set template to call
-template="keyword_directory.bsh";

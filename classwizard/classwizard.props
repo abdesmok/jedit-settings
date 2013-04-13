@@ -1,9 +1,0 @@
-#Classwizard property file
-#Mon Nov 13 10:42:21 CET 2006
-classwizard.author=Your Name (your_email@users.sourceforge.net)
-classwizard.php.classpanel=classwizard.PHPCWClassPanel
-classwizard.wizards=java,php
-classwizard.licenses=GPL,LGPL,Mozilla_PL,PHP_License
-classwizard.php.methodpanel=classwizard.PHPCWMethodPanel
-classwizard.java.methodpanel=classwizard.JavaCWMethodPanel
-classwizard.java.classpanel=classwizard.JavaCWClassPanel

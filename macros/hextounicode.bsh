@@ -1,0 +1,3 @@
+selection = textArea.getSelectedText().replaceAll("[^0-9a-fA-F]", "");
+textArea.replaceSelection(new String(Character.toChars(Integer.parseInt(selection, 16))));
+

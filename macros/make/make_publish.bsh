@@ -1,0 +1,11 @@
+source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
+
+File jeditMakefile = new File(app + "/Makefile.jedit");
+
+if (jeditMakefile.exists()) {
+    command("make publish -f Makefile.jedit");
+}
+else {
+    command("make publish");
+}
+

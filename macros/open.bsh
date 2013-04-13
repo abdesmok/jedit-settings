@@ -1,0 +1,17 @@
+void open()
+{
+    void run()
+    {
+        view = jEdit.getLastView();
+        
+        
+    }
+    
+    if(jEdit.getLastView() == null)
+        VFSManager.runInAWTThread(this);
+    else
+        run();
+}
+
+open();
+

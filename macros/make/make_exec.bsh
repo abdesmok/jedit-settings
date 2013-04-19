@@ -1,4 +1,4 @@
-source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
+source(jEdit.getSettingsDirectory() + "/macros/make/amo-make.bsh");
 
-make("exec");
+amoMake("exec");
 

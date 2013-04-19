@@ -1,11 +1,15 @@
 [global]
 [c++]
+df_|amo::info("DEBUG") << __FUNCTION__\|;
 _io|#include <stdio.h>\n
+i_|amo::info() << \|;
 _fo|for (\|; @; @) {\n\t@\n}
 _in|#include <\|>\n
 _lin|#include "\|"\n
+w_|amo::warning() << \|;
 _st|struct \|\n{\n\t@;\n}\n
 _if|if (\|) {\n\t@\n}\n
+e_|amo::error() << \|;
 _wh|while(\|) {\n\t@\n}
 /**|/**\n * \|\n */
 _el|else {\n\t\|}
@@ -17,7 +21,6 @@ _ei|else if (\|) {\n\t@\n}
 [asp]
 [latex]
 [factor]
-[cfscript]
 [batch]
 [assembly-mcs51]
 [vrml2]
@@ -52,7 +55,6 @@ _ei|else if (\|) {\n\t@\n}
 [clojure]
 [io]
 [pure]
-[sbt]
 [properties]
 [metapost]
 [rhtml]
@@ -137,7 +139,6 @@ tm|<xsl:template match="\|">\n</xsl:template>
 [actionscript]
 [pop11]
 [progress]
-[jamon]
 [ini]
 [html]
 _amo|<span class="amo">\|</span>

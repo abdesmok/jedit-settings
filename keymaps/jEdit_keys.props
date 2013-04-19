@@ -1,5 +1,5 @@
 #jEdit's keymap jEdit
-#Mon Apr 01 19:15:26 CEST 2013
+#Fri Apr 19 10:43:17 CEST 2013
 end.shortcut2=A+x
 select-end.shortcut2=AS+x
 prev-line.shortcut2=A+i
@@ -42,6 +42,7 @@ next-marker.shortcut=C+e C+PERIOD
 delete-end-line.shortcut=CS+DELETE
 print.shortcut=C+p
 toggle-rect-select.shortcut2=A+r
+make/make_sync.shortcut=S+F5
 clear-register.shortcut=C+r C+l
 replace-and-find-next.shortcut=C+e C+g
 save.shortcut=C+s
@@ -62,8 +63,8 @@ toggle-dual-diff.shortcut=CS+d
 xmlindenter.indent.shortcut=CS+i
 split-horizontal.shortcut=C+2
 next-paragraph.shortcut=C+DOWN
-document-home.shortcut=C+HOME
 make/make_configure.shortcut=C+F7
+document-home.shortcut=C+HOME
 next-page.shortcut2=A+a
 cut-append-string-register.shortcut=C+r C+u
 cut.shortcut2=S+DELETE
@@ -112,6 +113,7 @@ toggle-dock-areas.shortcut=F12
 toggle-rect-select.shortcut=A+BACK_SLASH
 save-all.shortcut=C+e C+s
 exit.shortcut=C+q
+last-action.shortcut=C+SPACE
 delete.shortcut2=A+d
 scroll-and-center=C+l
 select-paragraph.shortcut=C+e p
@@ -132,7 +134,6 @@ delete.shortcut=DELETE
 make/make_publish.shortcut=C+F5
 undo.shortcut=C+z
 select-all.shortcut=C+a
-completion-complete.shortcut=C+SPACE
 expand-all-folds.shortcut=C+e x
 select-word.shortcut=C+e w
 scroll-down-page.shortcut=A+SLASH

@@ -1,5 +1,5 @@
 #jEdit's keymap jEdit
-#Fri Apr 19 10:43:17 CEST 2013
+#Thu Apr 25 14:01:49 CEST 2013
 end.shortcut2=A+x
 select-end.shortcut2=AS+x
 prev-line.shortcut2=A+i
@@ -63,8 +63,8 @@ toggle-dual-diff.shortcut=CS+d
 xmlindenter.indent.shortcut=CS+i
 split-horizontal.shortcut=C+2
 next-paragraph.shortcut=C+DOWN
-make/make_configure.shortcut=C+F7
 document-home.shortcut=C+HOME
+make/make_configure.shortcut=C+F7
 next-page.shortcut2=A+a
 cut-append-string-register.shortcut=C+r C+u
 cut.shortcut2=S+DELETE
@@ -112,7 +112,6 @@ select-prev-line.shortcut=S+UP
 toggle-dock-areas.shortcut=F12
 toggle-rect-select.shortcut=A+BACK_SLASH
 save-all.shortcut=C+e C+s
-exit.shortcut=C+q
 last-action.shortcut=C+SPACE
 delete.shortcut2=A+d
 scroll-and-center=C+l
@@ -178,6 +177,7 @@ redo.shortcut2=C+y
 select-next-page.shortcut=S+PAGE_DOWN
 open-file.shortcut=C+o
 overwrite.shortcut=INSERT
+fastopenwindow.show.shortcut=CS+o
 show-context-menu.shortcut=CONTEXT_MENU
 stop-recording.shortcut=C+m C+s
 line-comment.shortcut=C+e C+k

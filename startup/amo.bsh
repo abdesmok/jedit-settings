@@ -1,2 +1,3 @@
 source(jEdit.getSettingsDirectory() + "/macros/make/make.bsh");
+amoMakeInstallProjectListener(null);
 

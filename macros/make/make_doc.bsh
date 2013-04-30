@@ -1,4 +1,3 @@
-source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
-
+source(jEdit.getSettingsDirectory() + "/macros/make/make.bsh");
 make("doc");
 

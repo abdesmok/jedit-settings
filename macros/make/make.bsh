@@ -1,4 +1,5 @@
 import org.gjt.sp.jedit.*;
+import org.jedit.core.*;
 import projectviewer.*;
 import projectviewer.vpt.*;
 import projectviewer.event.*;
@@ -9,25 +10,15 @@ import java.awt.*;
 import java.awt.event.*;
 import java.swing.*;
 
-void amoMakeInfo(View view, String message) {
-    if (view != null)
-        ConsolePlugin.getConsole(view).getOutput().print(new Color(50, 150, 100), message);
-}
-
-void amoMakeMessage(View view, String message) {
+void amoMakeMessage(String message) {
+    View view = jEdit.getActiveView();
     if (view != null)
         ConsolePlugin.getConsole(view).getOutput().print(new Color(50, 10, 200), message);
 }
 
-void amoMakeInfo(String message) {
-    amoMakeInfo(view, message);
-}
-
-void amoMakeMessage(String message) {
-    amoMakeMessage(view, message);
-}
-
 String amoFindProjectDirectory() {
+    View view = jEdit.getActiveView();
+    
     if (jEdit.getPlugin("projectviewer.ProjectPlugin", true) == null) {
         Macros.error(view, "ProjectViewer not installed");
         return null;
@@ -64,6 +55,10 @@ File amoMakeFile(String directory) {
 }
 
 File amoFindMakeFile() {
+    
+    View view = jEdit.getActiveView();
+    Buffer buffer = (view == null) ? null : view.getBuffer();
+    
     if (buffer != null) {
         File directory = new File(buffer.getDirectory());
         File makefile = null;
@@ -81,7 +76,7 @@ File amoFindMakeFile() {
         }
         
         if (makefile != null) {
-            amoMakeMessage("Using " + makefile + " found in current buffer path");
+            //amoMakeMessage("Using " + makefile + " found in current buffer path");
         }
         else {
             String path = amoFindProjectDirectory();
@@ -91,13 +86,13 @@ File amoFindMakeFile() {
                 makefile = amoMakeFile(path);
                 
                 if (makefile != null) {
-                    amoMakeMessage("Using " + makefile + " found in project directory");
+                    //amoMakeMessage("Using " + makefile + " found in project directory");
                 }
             }
         }
         
         if (makefile == null) {
-            amoMakeMessage("Makefile not found");
+            //amoMakeMessage("Makefile not found");
         }
         
         return makefile;
@@ -107,21 +102,26 @@ File amoFindMakeFile() {
 }
 
 Container amoMakeContainer() {
-    if (jEdit.getPlugin("console.ConsolePlugin", true) == null) {
-        Macros.error(view, "ConsolePlugin not installed");
-        return null;
+    View view = jEdit.getActiveView();
+    
+    if (view != null) {
+        JMenuBar menuBar = view.getJMenuBar();
+        if (menuBar != null) {
+            
+            for (int i = 0; i < menuBar.getComponentCount(); ++i) {
+                JComponent component = menuBar.getComponent(i);
+                if (component instanceof Box.Filler) {
+                    return menuBar;
+                }
+            }
+            
+            menuBar.add(Box.createHorizontalGlue());
+            
+            return menuBar;
+        }
     }
     
-    Container container = ConsolePlugin.getConsole(view);
-    
-    if (container != null)
-        container = container.getComponent(0);
-        
-    if (container == null) {
-        Macros.error(view, "Container not found");
-    }
-    
-    return container;
+    return null;
 }
 
 void amoMakeRemoveComponents() {
@@ -141,6 +141,10 @@ void amoMakeRemoveComponents() {
 }
 
 JComboBox amoMakeComboBox(String name, boolean create) {
+    return (JComboBox) amoMakeComponent(name, create, Class.forName("javax.swing.JComboBox"));
+}
+
+JComponent amoMakeComponent(String name, boolean create, Class type) {
     Container container = amoMakeContainer();
     
     if (container == null)
@@ -148,69 +152,85 @@ JComboBox amoMakeComboBox(String name, boolean create) {
         
     int index = 0;
     
-    JComboBox comboBox = null;
+    JComponent component = null;
     
-    for (int i = 0; i < container.getComponentCount(); ) {
-        JComponent component = container.getComponent(i);
-        String componentName = component.getName();
+    for (int i = 0; i < container.getComponentCount(); ++i) {
+        JComponent existingComponent = container.getComponent(i);
+        String existingComponentName = existingComponent.getName();
         
-        //amoMakeMessage(component.getClass().getName() + " " + component.getName());
+        //amoMakeMessage("component " + i + " " + existingComponent.getClass().getName() + " " + (existingComponentName == null ? "null" : existingComponentName));
         
-        if (component instanceof JComboBox) {
-            if (componentName != null && componentName.equals(name)) {
-                if (comboBox == null) {
-                    comboBox = (JComboBox) component;
+        if (existingComponent.getClass().equals(type)) {
+            if (existingComponentName != null && existingComponentName.equals(name)) {
+                if (component == null) {
+                    component = existingComponent;
                 }
                 else {
-                    container.remove(component);
+                    container.remove(existingComponent);
                     continue;
                 }
             }
-            else if (componentName != null && componentName.startsWith("AmoMake_")) {
-                index = i + 1;
-            }
         }
-        else if (component instanceof Box.Filler && index == 0) {
-            index = i + 1;
-        }
-        ++i;
     }
     
-    if (comboBox != null || ! create)
-        return comboBox;
+    if (component != null || ! create)
+        return component;
         
-    comboBox = new JComboBox();
+    component = (JComponent) type.newInstance();
     
-    comboBox.setName(name);
+    if (component != null) {
+        component.setName(name);
+        
+        container.add(component);
+    }
     
-    container.add(comboBox, index);
-    
-    comboBox.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            jEdit.setProperty("macro.amo.make.value." + cname, comboBox.getSelectedItem());
-            //amoMakeMessage(amoMakeArgs());
-        }
-    });
-    
-    return comboBox;
+    return component;
 }
 
 void amoMakeUpdateComponents() {
+    amoMakeUpdateComponents(null);
+}
+
+void amoMakeUpdateComponents(File makefile) {
     amoMakeRemoveComponents();
     
-    File makefile = amoFindMakeFile();
+    if (makefile == null)
+        makefile = amoFindMakeFile();
+    //amoMakeMessage("makefile: " + (makefile == null ? "null" : makefile.getPath()));
     
     if (makefile != null) {
+        String makefilePath = makefile.getPath().replace(makefile.separator, "/");
+        
+        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
+        
+        if (label != null) {
+            label.setText(makefilePath + " ");
+            
+            label.addMouseListener(new MouseListener() {
+                void mouseClicked(MouseEvent event) {
+                    //FileOpenerService.open(makefilePath, );
+                    jEdit.openFile(jEdit.getActiveView(), makefilePath);
+                }
+                invoke(name, args) {
+                    print("Method: " + name + " invoked!");
+                }
+            });
+        }
+        
         ArrayList args = new ArrayList();
         
         args.add("make");
         args.add("args");
         args.add("-s");
         args.add("-f");
-        args.add(makefile.getPath());
+        args.add(makefilePath);
         
         ProcessBuilder pb = new ProcessBuilder(args);
-        pb.redirectErrorStream(true);
+        
+        //amoMakeMessage(args.toString());
+        
+        //pb.redirectErrorStream(true);
+        
         Process proc = pb.start();
         
         InputStream is = proc.getInputStream();
@@ -218,11 +238,11 @@ void amoMakeUpdateComponents() {
         BufferedReader br = new BufferedReader(isr);
         
         String line;
-        int exit = -1;
         
         while ((line = br.readLine()) != null) {
             int index = line.indexOf('=');
             
+            //amoMakeMessage(line);
             if (index > 0) {
                 JComboBox comboBox = amoMakeComboBox("AmoMake_" + line.substring(0, index), true);
                 comboBox.addItem(line);
@@ -234,50 +254,28 @@ void amoMakeUpdateComponents() {
     
     Container container = amoMakeContainer();
     
-    for (int i = 0; i < container.getComponentCount(); ++i) {
-        JComponent component = container.getComponent(i);
-        String componentName = component.getName();
-        
-        if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
-            JComboBox comboBox = (JComboBox) component;
-            String value = jEdit.getProperty("macro.amo.make.value." + componentName, null);
-            if (value != null)
-                comboBox.setSelectedItem(value);
+    if (container != null) {
+        for (int i = 0; i < container.getComponentCount(); ++i) {
+            JComponent component = container.getComponent(i);
+            String componentName = component.getName();
+            
+            if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
+                JComboBox comboBox = (JComboBox) component;
+                String value = jEdit.getProperty("macro.amo.make.value." + componentName, null);
+                //amoMakeMessage("macro.amo.make.value." + componentName + "-------------->" + jEdit.getProperty("macro.amo.make.value." + componentName, "null"));
+                if (value != null)
+                    comboBox.setSelectedItem(value);
+                
+                comboBox.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        jEdit.setProperty("macro.amo.make.value." + componentName, comboBox.getSelectedItem());
+                        //amoMakeMessage("macro.amo.make.value." + componentName + "<--------------" + comboBox.getSelectedItem());
+                        //amoMakeMessage(amoMakeArgs());
+                    }
+                });
+            }
         }
     }
-}
-
-void amoMakeInstallProjectListener(View view) {
-    if (jEdit.getPlugin("projectviewer.ProjectPlugin", true) != null) {
-        EditBus.addToBus(
-            new EBComponent() {
-                public void handleMessage(EBMessage message) {
-                    amoMakeMessage(message.toString());
-                    if (message instanceof NodeSelectionUpdate) {
-                        static String previousMakefile = null;
-                        
-                        File makefile = amoFindMakeFile();
-                        String currentMakefile = makefile ? makefile.getAbsolutePath() : null;
-                        
-                        amoMakeMessage(view, message.toString());
-                        amoMakeMessage(view, "previousMakefile " + (previousMakefile ? previousMakefile : "null"));
-                        amoMakeMessage(view, "currentMakefile " + (currentMakefile ? currentMakefile : "null"));
-                        
-                        if (previousMakefile == null || currentMakefile == null || ! previousMakefile.equals(currentMakefile)) {
-                            previousMakefile = currentMakefile;
-                            amoMakeMessage(message.toString() + " " + (currentMakefile ? currentMakefile : "null"));
-                            //amoMakeUpdateComponents();
-                        }
-                    }
-                }
-            }
-        );
-        amoMakeMessage(view, "New listener added to jEdit EditBus");
-    }
-}
-
-void amoMakeInstallProjectListener() {
-    amoMakeInstallProjectListener(view);
 }
 
 String amoMakeArgs() {
@@ -318,5 +316,70 @@ void amoMake(String what) {
         textArea.scrollToCaret(true);
         textArea.requestFocus();
     }
+}
+
+void amoMakeStartListener() {
+    EBComponent component = new EBComponent() {
+        {
+            lastMakefile = null;
+        }
+        public void finalize() {
+        }
+        public void handleMessage(EBMessage message) {
+            //amoMakeMessage(message.toString() + "\n  " + message.paramString());
+            
+            if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
+                //amoMakeMessage("AMO UPDATE COMPONENTS " + message);
+                File makefile = amoFindMakeFile();
+                
+                //amoMakeMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
+                
+                if (makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
+                    lastMakefile = makefile;
+                    amoMakeUpdateComponents();
+                }
+            }
+            else if (message instanceof ViewerUpdate || message instanceof BufferChanging) {
+                class Message extends EBMessage {
+                    public Message() {
+                        super(new EBComponent() {});
+                    }
+                    public String paramString() { return "AMO-UPDATE-PARAM"; }
+                };
+                
+                Message message = new Message();
+                
+                EditBus.sendAsync(message);
+            }
+            else if (message instanceof BufferUpdate) {
+                BufferUpdate bufferUpdate = (BufferUpdate) message;
+                if (lastMakefile != null && bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
+                    amoMakeUpdateComponents();
+                }
+            }
+            else if (message.paramString().equals("AMO-QUIT-PARAM")) {
+                amoMakeMessage("AMO REMOVE FROM BUS " + component);
+                EditBus.removeFromBus(component);
+            }
+        }
+        
+        File lastMakefile;
+    };
+    
+    amoMakeMessage("AMO ADD TO BUS " + component);
+    EditBus.addToBus(component);
+}
+
+void amoMakeStopListener() {
+    class Message extends EBMessage {
+        public Message() {
+            super(new EBComponent() {});
+        }
+        public String paramString() { return "AMO-QUIT-PARAM"; }
+    };
+    
+    Message message = new Message();
+    
+    EditBus.send(message);
 }
 

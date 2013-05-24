@@ -328,6 +328,8 @@ void amoMakeStartListener() {
         public void handleMessage(EBMessage message) {
             //amoMakeMessage(message.toString() + "\n  " + message.paramString());
             
+            boolean update = false;
+            
             if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
                 //amoMakeMessage("AMO UPDATE COMPONENTS " + message);
                 File makefile = amoFindMakeFile();
@@ -336,7 +338,7 @@ void amoMakeStartListener() {
                 
                 if (makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
                     lastMakefile = makefile;
-                    amoMakeUpdateComponents();
+                    update = true;
                 }
             }
             else if (message instanceof ViewerUpdate || message instanceof BufferChanging) {
@@ -353,17 +355,28 @@ void amoMakeStartListener() {
             }
             else if (message instanceof BufferUpdate) {
                 BufferUpdate bufferUpdate = (BufferUpdate) message;
-                if (lastMakefile != null && bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
-                    amoMakeUpdateComponents();
+                if (bufferUpdate.getWhat() == BufferUpdate.SAVED && lastMakefile != null) {
+                    if (bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
+                        update = true;
+                    }
+                    else {
+                        amoMakeMessage("---------SAVED " + bufferUpdate.getBuffer().getPath());
+                    }
                 }
             }
             else if (message.paramString().equals("AMO-QUIT-PARAM")) {
                 amoMakeMessage("AMO REMOVE FROM BUS " + component);
                 EditBus.removeFromBus(component);
             }
+            
+            if (update) {
+                if (
+                amoMakeUpdateComponents(lastMakefile);
+            }
         }
         
         File lastMakefile;
+        String saveDuplicationPath;
     };
     
     amoMakeMessage("AMO ADD TO BUS " + component);

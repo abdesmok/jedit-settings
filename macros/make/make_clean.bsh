@@ -1,3 +1,4 @@
-source(jEdit.getSettingsDirectory() + "/macros/make/make.bsh");
+sourceRelative("../../amo-scripts/make.bsh");
+
 amoMake("clean");
 

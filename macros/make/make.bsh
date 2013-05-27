@@ -73,6 +73,8 @@ File amoFindMakeFile() {
             if (path == null) break;
             
             directory = new File(path);
+            
+            //--amoMakeMessage(path);
         }
         
         if (makefile != null) {
@@ -131,9 +133,11 @@ void amoMakeRemoveComponents() {
         return;
         
     for (int i = 0; i < container.getComponentCount(); ) {
+        //amoMakeMessage(i + " -> " + container.getComponent(i).getClass().getName());
+        
         String name = container.getComponent(i).getName();
         
-        if (name != null && name.startsWith("AmoMake_"))
+        if (name != null && name.startsWith("AmoMake"))
             container.remove(i);
         else
             ++i;
@@ -251,6 +255,13 @@ void amoMakeUpdateComponents(File makefile) {
             }
         }
     }
+    else {
+        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
+        
+        if (label != null) {
+            label.setText("Makefile not found ");
+        }
+    }
     
     Container container = amoMakeContainer();
     
@@ -332,9 +343,11 @@ void amoMakeStartListener() {
                 //amoMakeMessage("AMO UPDATE COMPONENTS " + message);
                 File makefile = amoFindMakeFile();
                 
+                JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
+                
                 //amoMakeMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
                 
-                if (makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
+                if (label == null || makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
                     lastMakefile = makefile;
                     amoMakeUpdateComponents();
                 }

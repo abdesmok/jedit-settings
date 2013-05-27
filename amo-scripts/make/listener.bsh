@@ -26,9 +26,11 @@ void amoMakeStartListener() {
                 //amoMakeMessage("AMO UPDATE COMPONENTS " + message);
                 File makefile = amoFindMakeFile();
                 
+                JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
+                
                 //amoMakeMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
                 
-                if (makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
+                if (label == null || makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
                     lastMakefile = makefile;
                     updateComponents = true;
                 }

@@ -137,6 +137,13 @@ void amoMakeUpdateComponents(File makefile) {
             }
         }
     }
+    else {
+        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
+        
+        if (label != null) {
+            label.setText("Makefile not found ");
+        }
+    }
     
     Container container = amoMakeContainer();
     

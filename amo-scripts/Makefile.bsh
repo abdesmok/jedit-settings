@@ -1,0 +1,21 @@
+make(what) {
+    if (what == "args") {
+        return "arg1=value1\narg1=value2\narg1=value3";
+    }
+    else if (what == "sync-path") {
+    }
+    else if (what == "exec") {
+        runArgument.amoMakeMessage("Run: restart listener");
+        runArgument.amoMakeStopListener();
+        //runArgument.includedFiles.clear();
+        runArgument.amoMakeStartListener();
+    }
+    else if (what == "clean") {
+        runArgument.amoMakeMessage("Clean: stop listener");
+        runArgument.amoMakeStopListener();
+    }
+    else {
+        runArgument.amoMakeMessage("Nothing to do for " + what);
+    }
+}
+

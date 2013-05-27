@@ -1,0 +1,9 @@
+import org.gjt.sp.jedit.*;
+import console.*;
+
+void amoMakeMessage(String message) {
+    View view = jEdit.getActiveView();
+    if (view != null)
+        ConsolePlugin.getConsole(view).getOutput().print(new Color(50, 10, 200), message);
+}
+

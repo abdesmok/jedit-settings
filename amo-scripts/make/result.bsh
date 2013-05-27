@@ -1,0 +1,49 @@
+sourceRelative("../utils.bsh");
+
+includeOnce("log.bsh");
+includeOnce("find.bsh");
+includeOnce("gui.bsh");
+
+BufferedReader amoMakeResult(String what) {
+    return amoMakeResult(what, null);
+}
+
+BufferedReader amoMakeResult(String what, File makefile) {
+    if (makefile == null)
+        makefile = amoFindMakeFile();
+    
+    if (makefile != null && makefile.exists()) {
+        if (makefile.getName().endsWith(".bsh")) {
+            Object context = run(makefile.getPath(), this);
+            
+            if (Arrays.asList(context.methods).contains("make")) {
+                return new BufferedReader(new StringReader(context.make(what)));
+            }
+        }
+        else {
+            String makefilePath = makefile.getPath().replace(makefile.separator, "/");
+            
+            ArrayList args = new ArrayList();
+            
+            args.add("make");
+            args.add(what);
+            args.add("-s");
+            for (String arg : amoMakeArgList()) {
+                args.add(arg);
+            }
+            args.add("-f");
+            args.add(makefilePath);
+            
+            ProcessBuilder pb = new ProcessBuilder(args);
+            
+            //amoMakeMessage(args.toString());
+            
+            //pb.redirectErrorStream(true);
+            
+            return new BufferedReader(new InputStreamReader(pb.start().getInputStream()));
+        }
+    }
+    
+    return null;
+}
+

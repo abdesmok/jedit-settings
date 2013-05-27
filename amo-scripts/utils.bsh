@@ -1,0 +1,20 @@
+if (! Arrays.asList(this.methods).contains("includeOnce")) {
+    
+    includeOnce(file) {
+        this.caller.includeFile = file;
+        
+        if (this.caller.includedFiles == void) {
+            this.caller.includedFiles = new Vector();
+        }
+        
+        this.dir = dirname(getSourceFileInfo());
+        this.path = pathToFile(dir + File.separator + file).getAbsolutePath();
+        
+        if (! this.caller.includedFiles.contains(this.path)) {
+            this.caller.includedFiles.add(this.path);
+            
+            return this.interpreter.source(path, this.caller.namespace);
+        }
+    }
+}
+

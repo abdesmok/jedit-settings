@@ -1,0 +1,36 @@
+sourceRelative("utils.bsh");
+
+includeOnce("make/find.bsh");
+includeOnce("make/gui.bsh");
+
+void amoMake(String what) {
+    File makefile = amoFindMakeFile();
+    
+    if (makefile != null) {
+        if (makefile.getName().endsWith(".bsh")) {
+            Object context = run(makefile.getPath(), this);
+            
+            if (Arrays.asList(context.methods).contains("make")) {
+                context.make(what);
+            }
+        }
+        else {
+            // go to directory
+            runCommandInConsole(view, "System", makefile.getParent());
+            
+            // run make
+            runCommandInConsole(view, "System", "make -f " + makefile.getName() + " " + what + amoMakeArgs());
+            
+            // Set focus on text area
+            if (! textArea.getDisplayManager().isLineVisible(textArea.getCaretLine())) {
+                textArea.getDisplayManager().expandFold(textArea.getCaretLine(), true);
+            }
+            textArea.scrollToCaret(true);
+            textArea.requestFocus();
+        }
+    }
+    else {
+        amoMakeMessage("Makefile not found");
+    }
+}
+

@@ -1,0 +1,97 @@
+import org.gjt.sp.jedit.*;
+import projectviewer.*;
+import projectviewer.vpt.*;
+import projectviewer.event.*;
+
+sourceRelative("../utils.bsh");
+
+includeOnce("log.bsh");
+
+String amoFindProjectDirectory() {
+    View view = jEdit.getActiveView();
+    
+    if (jEdit.getPlugin("projectviewer.ProjectPlugin", true) == null) {
+        Macros.error(view, "ProjectViewer not installed");
+        return null;
+    }
+    
+    VPTProject project = ProjectViewer.getActiveProject(view);
+    
+    if (project == null) {
+        ProjectViewer viewer = ProjectViewer.getViewer(view);
+        if (viewer != null) {
+            VPTNode selected = viewer.getSelectedNode();
+            if (selected != null) {
+                project = VPTNode.findProjectFor(selected);
+            }
+        }
+    }
+    
+    if (project != null)
+        return project.getNodePath();
+    else
+        return null;
+}
+
+File amoMakeFile(String directory) {
+    File file;
+    
+    file = new File(directory + File.separator + "Makefile.bsh");
+    if (file.exists()) return file;
+    
+    file = new File(directory + File.separator + "Makefile.jedit");
+    if (file.exists()) return file;
+    
+    file = new File(directory + File.separator + "Makefile");
+    if (file.exists()) return file;
+    
+    return null;
+}
+
+File amoFindMakeFile() {
+    
+    View view = jEdit.getActiveView();
+    Buffer buffer = (view == null) ? null : view.getBuffer();
+    
+    if (buffer != null) {
+        File directory = new File(buffer.getDirectory());
+        File makefile = null;
+        
+        while (true) {
+            makefile = amoMakeFile(directory.getPath());
+            
+            if (makefile != null) break;
+            
+            String path = directory.getParent();
+            
+            if (path == null) break;
+            
+            directory = new File(path);
+        }
+        
+        if (makefile != null) {
+            //amoMakeMessage("Using " + makefile + " found in current buffer path");
+        }
+        else {
+            String path = amoFindProjectDirectory();
+            
+            if (path != null) {
+                directory = new File(path);
+                makefile = amoMakeFile(path);
+                
+                if (makefile != null) {
+                    //amoMakeMessage("Using " + makefile + " found in project directory");
+                }
+            }
+        }
+        
+        if (makefile == null) {
+            //amoMakeMessage("Makefile not found");
+        }
+        
+        return makefile;
+    }
+    
+    return null;
+}
+

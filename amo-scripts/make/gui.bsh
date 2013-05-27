@@ -1,0 +1,196 @@
+import org.gjt.sp.jedit.*;
+
+sourceRelative("../utils.bsh");
+
+includeOnce("log.bsh");
+includeOnce("result.bsh");
+
+Container amoMakeContainer() {
+    View view = jEdit.getActiveView();
+    
+    if (view != null) {
+        JMenuBar menuBar = view.getJMenuBar();
+        if (menuBar != null) {
+            
+            for (int i = 0; i < menuBar.getComponentCount(); ++i) {
+                JComponent component = menuBar.getComponent(i);
+                if (component instanceof Box.Filler) {
+                    return menuBar;
+                }
+            }
+            
+            menuBar.add(Box.createHorizontalGlue());
+            
+            return menuBar;
+        }
+    }
+    
+    return null;
+}
+
+void amoMakeRemoveComponents() {
+    Container container = amoMakeContainer();
+    
+    if (container == null)
+        return;
+        
+    for (int i = 0; i < container.getComponentCount(); ) {
+        String name = container.getComponent(i).getName();
+        
+        if (name != null && name.startsWith("AmoMake"))
+            container.remove(i);
+        else
+            ++i;
+    }
+}
+
+JComboBox amoMakeComboBox(String name, boolean create) {
+    return (JComboBox) amoMakeComponent(name, create, Class.forName("javax.swing.JComboBox"));
+}
+
+JComponent amoMakeComponent(String name, boolean create, Class type) {
+    Container container = amoMakeContainer();
+    
+    if (container == null)
+        return null;
+        
+    int index = 0;
+    
+    JComponent component = null;
+    
+    for (int i = 0; i < container.getComponentCount(); ++i) {
+        JComponent existingComponent = container.getComponent(i);
+        String existingComponentName = existingComponent.getName();
+        
+        //amoMakeMessage("component " + i + " " + existingComponent.getClass().getName() + " " + (existingComponentName == null ? "null" : existingComponentName));
+        
+        if (existingComponent.getClass().equals(type)) {
+            if (existingComponentName != null && existingComponentName.equals(name)) {
+                if (component == null) {
+                    component = existingComponent;
+                }
+                else {
+                    container.remove(existingComponent);
+                    continue;
+                }
+            }
+        }
+    }
+    
+    if (component != null || ! create)
+        return component;
+        
+    component = (JComponent) type.newInstance();
+    
+    if (component != null) {
+        component.setName(name);
+        
+        container.add(component);
+    }
+    
+    return component;
+}
+
+void amoMakeUpdateComponents() {
+    amoMakeUpdateComponents(null);
+}
+
+void amoMakeUpdateComponents(File makefile) {
+    amoMakeRemoveComponents();
+    
+    if (makefile == null)
+        makefile = amoFindMakeFile();
+    //amoMakeMessage("makefile: " + (makefile == null ? "null" : makefile.getPath()));
+    
+    if (makefile != null) {
+        String makefilePath = makefile.getPath().replace(makefile.separator, "/");
+        
+        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
+        
+        if (label != null) {
+            label.setText(makefilePath + " ");
+            
+            label.addMouseListener(new MouseListener() {
+                void mouseClicked(MouseEvent event) {
+                    //FileOpenerService.open(makefilePath, );
+                    jEdit.openFile(jEdit.getActiveView(), makefilePath);
+                }
+                invoke(name, args) {
+                    print("Method: " + name + " invoked!");
+                }
+            });
+        }
+        
+        BufferedReader br = amoMakeResult("args", makefile);
+        
+        String line;
+        
+        while ((line = br.readLine()) != null) {
+            int index = line.indexOf('=');
+            
+            //amoMakeMessage(line);
+            if (index > 0) {
+                JComboBox comboBox = amoMakeComboBox("AmoMake_" + line.substring(0, index), true);
+                comboBox.addItem(line);
+                comboBox.setMaximumSize(comboBox.getMinimumSize());
+                comboBox.getParent().validate();
+            }
+        }
+    }
+    
+    Container container = amoMakeContainer();
+    
+    if (container != null) {
+        for (int i = 0; i < container.getComponentCount(); ++i) {
+            JComponent component = container.getComponent(i);
+            String componentName = component.getName();
+            
+            if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
+                JComboBox comboBox = (JComboBox) component;
+                String value = jEdit.getProperty("macro.amo.make.value." + componentName, null);
+                //amoMakeMessage("macro.amo.make.value." + componentName + "-------------->" + jEdit.getProperty("macro.amo.make.value." + componentName, "null"));
+                if (value != null)
+                    comboBox.setSelectedItem(value);
+                
+                comboBox.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        jEdit.setProperty("macro.amo.make.value." + componentName, comboBox.getSelectedItem());
+                        //amoMakeMessage("macro.amo.make.value." + componentName + "<--------------" + comboBox.getSelectedItem());
+                        //amoMakeMessage(amoMakeArgs());
+                    }
+                });
+            }
+        }
+    }
+}
+
+Vector amoMakeArgList() {
+    Container container = amoMakeContainer();
+    
+    Vector args = new Vector();
+    
+    if (container == null)
+        return args;
+        
+    for (int i = 0; i < container.getComponentCount(); ++i) {
+        JComponent component = container.getComponent(i);
+        String componentName = component.getName();
+        
+        if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
+            args.add(((JComboBox) component).getSelectedItem());
+        }
+    }
+    
+    return args;
+}
+
+String amoMakeArgs() {
+    String args = "";
+    
+    for (String arg : amoMakeArgList()) {
+        args += " " + arg;
+    }
+    
+    return args;
+}
+

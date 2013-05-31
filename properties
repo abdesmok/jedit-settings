@@ -1,5 +1,5 @@
 #jEdit properties
-#Tue May 14 09:36:55 CEST 2013
+#Tue May 28 21:32:44 CEST 2013
 --.shortcut=C+SUBTRACT
 ++.shortcut=C+ADD
 <A\ class=tv-chaine-1 title\="A" href\="javascript\:zap('A')">A</A>
@@ -696,7 +696,8 @@ lookandfeel.skin.xtra-scrollbars=false
 lookandfeel.usejeditfont=false
 lookAndFeel=javax.swing.plaf.metal.MetalLookAndFeel
 lucene-search.dock-position=floating
-macro.amo.make.value.AmoMake_CONFIGS=CONFIGS\=one twho rrr ooo
+macro.amo.make.value.AmoMake_arg1=arg1\=value2
+macro.amo.make.value.AmoMake_CONFIGS=CONFIGS\=jjkk
 macro.amo.make.value.AmoMake_-DVERBOSE=-DVERBOSE\=0
 macro.amo.make.value.AmoMake_VERBOSE=VERBOSE\=0
 macro-handler.superscript.glob=
@@ -1521,7 +1522,7 @@ projectviewer.edit_project.width=906
 projectviewer.edit_project.x=294
 projectviewer.edit_project.y=316
 projectviewer.extendedState=0
-projectviewer.filechooser.directory=D\:\\Projects\\Doria\\ExemplePascal
+projectviewer.filechooser.directory=D\:\\Projects\\jedit
 projectviewer.gui.ImportDialog.height=632
 projectviewer.gui.ImportDialog.width=970
 projectviewer.gui.ImportDialog.x=564
@@ -1597,12 +1598,12 @@ search.ext.row.toggle=false
 search.ext.tentativ.toggle=false
 search.ext.wordpart.value=0
 search.ext.wrap.toggle=false
-search.find.value=jjjj
+search.find.value=+ caller.toString
 search.height=504
 search.hypersearch.toggle=true
 search.ignoreCase.toggle=true
-search.regexp.toggle=true
-search.replace.value=JComponent
+search.regexp.toggle=false
+search.replace.value=+ this.caller.toString
 search.show-extended.toggle=false
 search.show-replace.toggle=true
 search.show-settings.toggle=false
@@ -1708,8 +1709,8 @@ sql.resultSet.y=185
 sql.toolbar.server.showTitle=false
 sql.toolbar.showToolBar=false
 status.errorWidget.height=537
-status.errorWidget.width=901
-status.errorWidget.x=633
+status.errorWidget.width=1136
+status.errorWidget.x=398
 status.errorWidget.y=387
 stop-recording.shortcut=F10
 substance.theme=Sahara
@@ -1806,7 +1807,7 @@ vfs.browser.modified.width=165
 vfs.browser.path.tmp=
 vfs.browser.showHiddenFiles=true
 vfs.browser.size.width=32
-vfs.browser.splitter=103
+vfs.browser.splitter=225
 vfs.browser.status.width=134
 vfs.browser.type.width=123
 vfs.browser.useDefaultIcons=false
@@ -1831,7 +1832,7 @@ view.docking.framework=Original
 view.electricBorders=0
 view.eolMarkerColor=\#ff6600
 view.expandOnInput=true
-view.extendedState=7
+view.extendedState=6
 view.font=Courier New
 view.fontsize=14
 view.gutter.bgColor=\#d6d6d4

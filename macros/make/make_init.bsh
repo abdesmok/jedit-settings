@@ -1,4 +1,0 @@
-source(jEdit.getSettingsDirectory() + "/amo-scripts/make.bsh");
-//amoMakeInstallProjectListener();
-amoMakeUpdateComponents();
-

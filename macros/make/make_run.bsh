@@ -1,4 +1,4 @@
 sourceRelative("../../amo-scripts/make.bsh");
 
-amoMake("all");
+amoMake("run");
 

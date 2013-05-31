@@ -1,3 +1,4 @@
-source(jEdit.getSettingsDirectory() + "/amo-scripts/make.bsh");
+sourceRelative("../../amo-scripts/make.bsh");
+
 amoMake("sync");
 

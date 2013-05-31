@@ -1,4 +1,0 @@
-source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
-
-command("bash " + jEdit.getSettingsDirectory() + "/macros/make/remote.sh");
-

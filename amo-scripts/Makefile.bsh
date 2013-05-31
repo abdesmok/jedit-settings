@@ -1,21 +1,32 @@
+path = pathToFile(dirname(getSourceFileInfo())).getAbsolutePath();
+
 make(what) {
+    context = this.caller.global;
+    
     if (what == "args") {
         return "arg1=value1\narg1=value2\narg1=value3";
     }
     else if (what == "sync-path") {
     }
-    else if (what == "exec") {
-        runArgument.amoMakeMessage("Run: restart listener");
-        runArgument.amoMakeStopListener();
-        //runArgument.includedFiles.clear();
-        runArgument.amoMakeStartListener();
+    else if (what == "run") {
+        context.amoMakeMessage("Run: restart listener");
+        context.amoMakeStopListener();
+        context.includedFiles.clear();
+        
+        this.interpreter.source(super.path + "/make.bsh", context.namespace);
+        this.interpreter.source(super.path + "/make/listener.bsh", context.namespace);
+        
+        context.amoMakeStartListener();
     }
     else if (what == "clean") {
-        runArgument.amoMakeMessage("Clean: stop listener");
-        runArgument.amoMakeStopListener();
+        context.amoMakeMessage("Clean: stop listener");
+        context.amoMakeStopListener();
+        context.includedFiles.clear();
     }
     else {
-        runArgument.amoMakeMessage("Nothing to do for " + what);
+        context.amoMakeMessage("Nothing to do for " + what);
     }
+    
+    return "";
 }
 

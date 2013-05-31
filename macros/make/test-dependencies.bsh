@@ -1,4 +1,0 @@
-source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
-
-command("bash ./test-dependencies.sh");
-

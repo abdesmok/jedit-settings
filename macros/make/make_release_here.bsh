@@ -1,9 +1,0 @@
-runCommandInConsole(view, "System", "$d");
-runCommandInConsole(view, "System", "make -f Makefile.Release");
-if(!textArea.getDisplayManager().isLineVisible(textArea.getCaretLine()))
-{
-  textArea.getDisplayManager().expandFold(textArea.getCaretLine(),true);
-}
-textArea.scrollToCaret(true);
-textArea.requestFocus();
-

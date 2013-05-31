@@ -1,4 +1,0 @@
-source(jEdit.getSettingsDirectory() + "/macros/make/command.bsh");
-
-make("compile_and_exec");
-

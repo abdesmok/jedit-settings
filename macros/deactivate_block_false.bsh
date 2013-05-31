@@ -1,0 +1,17 @@
+// This is a temporary macro. First, check over the
+// commands to make sure this is what you intended.
+// Then, to run this macro, switch to the buffer
+// where you would like to execute it and press C+m C+p.
+textArea.insertEnterAndIndent();
+textArea.setSelectedText("#ifndef __LITE__");
+textArea.goToPrevLine(false);
+textArea.goToMatchingBracket();
+textArea.goToPrevLine(false);
+textArea.goToEndOfWhiteSpace(false);
+textArea.insertEnterAndIndent();
+textArea.setSelectedText("#else");
+textArea.insertEnterAndIndent();
+textArea.setSelectedText("return false;");
+textArea.insertEnterAndIndent();
+textArea.setSelectedText("#endif");
+buffer.save(view,null,true);

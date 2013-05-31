@@ -112,8 +112,16 @@ void amoMakeUpdateComponents(File makefile) {
             
             label.addMouseListener(new MouseListener() {
                 void mouseClicked(MouseEvent event) {
-                    //FileOpenerService.open(makefilePath, );
-                    jEdit.openFile(jEdit.getActiveView(), makefilePath);
+                    if (event.getButton() == MouseEvent.BUTTON1) {
+                        //FileOpenerService.open(makefilePath, );
+                        jEdit.openFile(jEdit.getActiveView(), makefilePath);
+                    }
+                    else if (event.getButton() == MouseEvent.BUTTON3) {
+                        String toolTip = label.getToolTipText();
+                        if (toolTip != null && toolTip.startsWith("Sync: ")) {
+                            jEdit.openFile(jEdit.getActiveView(), toolTip.substring(6));
+                        }
+                    }
                 }
                 invoke(name, args) {
                     print("Method: " + name + " invoked!");
@@ -168,6 +176,8 @@ void amoMakeUpdateComponents(File makefile) {
                 });
             }
         }
+        
+        container.repaint();
     }
 }
 

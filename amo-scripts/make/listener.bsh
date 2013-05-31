@@ -1,5 +1,6 @@
 import org.gjt.sp.jedit.*;
 import projectviewer.event.*;
+import java.beans.*;
 
 sourceRelative("../utils.bsh");
 
@@ -14,9 +15,10 @@ void amoMakeStartListener() {
             saveDuplicationPaths = new Vector();
         }
         public void finalize() {
+            amoMakeMessage("FINALIZE " + this);
         }
         public void handleMessage(EBMessage message) {
-            amoMakeMessage(message.toString() + "\n  " + message.paramString());
+            //amoMakeMessage(message.toString() + "\n  " + message.paramString());
             
             boolean updateComponents = false;
             Buffer syncBuffer = null;
@@ -98,18 +100,20 @@ void amoMakeStartListener() {
                     }
                 }
                 
-                syncBuffer = view.getBuffer();
+                View view = jEdit.getActiveView();
+                if (view != null) {
+                    syncBuffer = view.getBuffer();
+                }
             }
             
             if (syncBuffer != null) {
                 View view = jEdit.getActiveView();
                 File bufferFile = new File(syncBuffer.getPath());
                 
-                String status = bufferFile.getName();
+                String savePath = "";
+                String status = "";
                 
                 if (bufferFile.exists()) {
-                    status = bufferFile.getAbsolutePath();
-                    
                     String projectDirPath = lastMakefile.getParentFile().getAbsolutePath() + File.separator;
                     String bufferDirPath = bufferFile.getParentFile().getAbsolutePath() + File.separator;
                     
@@ -119,34 +123,41 @@ void amoMakeStartListener() {
                         
                         for (String saveDuplicationPath : saveDuplicationPaths) {
                             (new File(saveDuplicationPath + bufferDirPath)).mkdirs();
-                            String savePath = saveDuplicationPath + File.separator + bufferPath;
+                            savePath += saveDuplicationPath + File.separator + bufferPath;
                             
                             if (saveDuplication) {
                                 syncBuffer.save(view, savePath, false);
                                 //amoMakeMessage("save to " + savePath);
-                                status += " <-> " + savePath + " w";
+                                status += "written";
                             }
                             else {
                                 File saveFile = new File(savePath);
                                 
                                 if (saveFile.exists()) {
                                     if (saveFile.lastModified() < bufferFile.lastModified()) {
-                                        status += " <-> " + savePath + " *";
+                                        status += "older";
                                     }
                                     else {
-                                        status += " <-> " + savePath + " =";
+                                        status += "same";
                                     }
                                 }
                                 else {
-                                    status += " <-> " + savePath + " ?";
+                                    status += "does not exist";
                                 }
                             }
                         }
                     }
-                    
-                    //if (view != null) view.setUserTitle(status);
-                    if (view != null) view.setTitle(status);
-                    //amoMakeMessage("status : " + status);
+                }
+                
+                JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
+                
+                if (label != null) {
+                    label.setText(savePath + " (" + status + ") ");
+                    label.setToolTipText(
+                        //"Makefile: " + lastMakefile.getPath() + " left click to open\n" +
+                        "Sync: " + savePath + " right click to open"
+                    );
+                    label.repaint();
                 }
             }
         }

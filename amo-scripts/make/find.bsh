@@ -7,7 +7,7 @@ sourceRelative("../utils.bsh");
 
 includeOnce("log.bsh");
 
-String amoFindProjectDirectory() {
+String amoFindProjectDirectory(int index) {
     View view = jEdit.getActiveView();
     
     if (jEdit.getPlugin("projectviewer.ProjectPlugin", true) == null) {
@@ -15,14 +15,32 @@ String amoFindProjectDirectory() {
         return null;
     }
     
-    VPTProject project = ProjectViewer.getActiveProject(view);
+    VPTProject project = null;
     
-    if (project == null) {
+    if (index == -1) {
+        project = ProjectViewer.getActiveProject(view);
+        
+        if (project == null) {
+            ProjectViewer viewer = ProjectViewer.getViewer(view);
+            if (viewer != null) {
+                VPTNode selected = viewer.getSelectedNode();
+                if (selected != null) {
+                    project = VPTNode.findProjectFor(selected);
+                }
+            }
+        }
+    }
+    else {
         ProjectViewer viewer = ProjectViewer.getViewer(view);
+        
         if (viewer != null) {
-            VPTNode selected = viewer.getSelectedNode();
-            if (selected != null) {
-                project = VPTNode.findProjectFor(selected);
+            VPTNode root = viewer.getRoot();
+            try {
+                VPTNode child = (VPTNode) root.getChildAt(index);
+                if (child.isProject())
+                    project = (VPTProject) child;
+            }
+            catch (ArrayIndexOutOfBoundsException) {
             }
         }
     }
@@ -31,6 +49,10 @@ String amoFindProjectDirectory() {
         return project.getNodePath();
     else
         return null;
+}
+
+String amoFindProjectDirectory() {
+    return amoFindProjectDirectory(-1);
 }
 
 File amoMakeFile(String directory) {
@@ -49,13 +71,13 @@ File amoMakeFile(String directory) {
 }
 
 File amoFindMakeFile() {
+    File makefile = null;
     
     View view = jEdit.getActiveView();
     Buffer buffer = (view == null) ? null : view.getBuffer();
     
     if (buffer != null) {
         File directory = new File(buffer.getDirectory());
-        File makefile = null;
         
         while (true) {
             makefile = amoMakeFile(directory.getPath());
@@ -72,8 +94,24 @@ File amoFindMakeFile() {
         if (makefile != null) {
             //amoMakeMessage("Using " + makefile + " found in current buffer path");
         }
-        else {
-            String path = amoFindProjectDirectory();
+    }
+    
+    if (makefile == null) {
+        String path = amoFindProjectDirectory();
+        
+        if (path != null) {
+            directory = new File(path);
+            makefile = amoMakeFile(path);
+            
+            if (makefile != null) {
+                //amoMakeMessage("Using " + makefile + " found in active project directory");
+            }
+        }
+    }
+    
+    if (makefile == null) {
+        for (int i = 0; ; ++i) {
+            String path = amoFindProjectDirectory(i);
             
             if (path != null) {
                 directory = new File(path);
@@ -81,17 +119,19 @@ File amoFindMakeFile() {
                 
                 if (makefile != null) {
                     //amoMakeMessage("Using " + makefile + " found in project directory");
+                    break;
                 }
             }
+            else {
+                break;
+            }
         }
-        
-        if (makefile == null) {
-            //amoMakeMessage("Makefile not found");
-        }
-        
-        return makefile;
     }
     
-    return null;
+    if (makefile == null) {
+        //amoMakeMessage("Makefile not found");
+    }
+    
+    return makefile;
 }
 

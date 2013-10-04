@@ -61,6 +61,10 @@ void amoMakeStartListener() {
                     if (lastMakefile != null) {
                         if (bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
                             updateComponents = true;
+                            
+                            // ! overwrite remote Makefile !
+                            syncBuffer = bufferUpdate.getBuffer();
+                            saveDuplication = true;
                         }
                         else {
                             syncBuffer = bufferUpdate.getBuffer();
@@ -110,39 +114,54 @@ void amoMakeStartListener() {
                 View view = jEdit.getActiveView();
                 File bufferFile = new File(syncBuffer.getPath());
                 
-                String savePath = "";
-                String status = "";
+                Vector duplications = new Vector();
+                Vector statusList = new Vector();
                 
                 if (bufferFile.exists()) {
-                    String projectDirPath = lastMakefile.getParentFile().getAbsolutePath() + File.separator;
-                    String bufferDirPath = bufferFile.getParentFile().getAbsolutePath() + File.separator;
+                    String projectDirPath = lastMakefile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
+                    String bufferDirPath = bufferFile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
                     
-                    if (bufferDirPath != null && bufferDirPath.startsWith(projectDirPath)) {
-                        bufferDirPath = bufferDirPath.substring(projectDirPath.length());
-                        String bufferPath = bufferDirPath + bufferFile.getName();
+                    for (String saveDuplicationPath : saveDuplicationPaths) {
+                        String localPath;
                         
-                        for (String saveDuplicationPath : saveDuplicationPaths) {
-                            (new File(saveDuplicationPath + bufferDirPath)).mkdirs();
-                            savePath += saveDuplicationPath + File.separator + bufferPath;
+                        int position = saveDuplicationPath.indexOf('|');
+                        
+                        if (position != -1) {
+                            localPath = (saveDuplicationPath.substring(0, position).replace(File.separator, "/") + "/").replace("//", "/");
+                            saveDuplicationPath = (saveDuplicationPath.substring(position + 1).replace(File.separator, "/") + "/").replace("//", "/");
+                        }
+                        else {
+                            localPath = projectDirPath;
+                            saveDuplicationPath = (saveDuplicationPath.replace(File.separator, "/") + "/").replace("//", "/");
+                        }
+                        
+                        if (bufferDirPath != null && bufferDirPath.startsWith(localPath)) {
+                            String savePath = saveDuplicationPath + bufferDirPath.substring(localPath.length());
+                            
+                            (new File(savePath)).mkdirs();
+                            
+                            savePath += bufferFile.getName();
+                            
+                            duplications.add(savePath);
                             
                             if (saveDuplication) {
                                 syncBuffer.save(view, savePath, false);
                                 //amoMakeMessage("save to " + savePath);
-                                status += "written";
+                                statusList.add("written");
                             }
                             else {
                                 File saveFile = new File(savePath);
                                 
                                 if (saveFile.exists()) {
                                     if (saveFile.lastModified() < bufferFile.lastModified()) {
-                                        status += "older";
+                                        statusList.add("older");
                                     }
                                     else {
-                                        status += "same";
+                                        statusList.add("same");
                                     }
                                 }
                                 else {
-                                    status += "does not exist";
+                                    statusList.add("does not exist");
                                 }
                             }
                         }
@@ -152,12 +171,40 @@ void amoMakeStartListener() {
                 JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
                 
                 if (label != null) {
-                    label.setText(savePath + " (" + status + ") ");
-                    label.setToolTipText(
-                        //"Makefile: " + lastMakefile.getPath() + " left click to open\n" +
-                        "Sync: " + savePath + " right click to open"
-                    );
+                    String labelText = "";
+                    String toolTip = "<html><b>Makefile:</b> " + lastMakefile.getPath().replace(File.separator, "/");
+                    
+                    if (duplications.isEmpty()) {
+                        toolTip += "<br><i>Left click to open Makefile</i>";
+                        labelText = "no duplication";
+                    }
+                    else {
+                        for (int i = 0; i < duplications.size(); ++i) {
+                            String duplication = duplications.elementAt(i);
+                            String status = statusList.elementAt(i);
+                            
+                            if (! labelText.isEmpty()) labelText += ",";
+                            labelText += status;
+                            
+                            toolTip += "<br><b>Duplication:</b> " + duplication + " (" + status + ")";
+                        }
+                        toolTip += "<br><i>Left click to open Makefile</i>";
+                        toolTip += "<br><i>Right click to open duplications</i>";
+                    }
+                    
+                    toolTip += "</html>";
+                    
+                    label.putClientProperty("duplications", duplications);
+                    label.setText("(" + labelText + ") ");
+                    label.setToolTipText(toolTip);
+                    
                     label.repaint();
+                }
+                
+                JComboBox indentSizeComboBox = (JComboBox) amoMakeComponent("AmoMakeIndentSize", false, Class.forName("javax.swing.JComboBox"));
+                
+                if (indentSizeComboBox != null) {
+                    indentSizeComboBox.setSelectedIndex(syncBuffer.getProperty("indentSize") - 1);
                 }
             }
         }

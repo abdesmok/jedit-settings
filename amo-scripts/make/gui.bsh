@@ -108,7 +108,7 @@ void amoMakeUpdateComponents(File makefile) {
         JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
         
         if (label != null) {
-            label.setText(makefilePath + " ");
+            //label.setText(makefilePath + " ");
             
             label.addMouseListener(new MouseListener() {
                 void mouseClicked(MouseEvent event) {
@@ -117,9 +117,12 @@ void amoMakeUpdateComponents(File makefile) {
                         jEdit.openFile(jEdit.getActiveView(), makefilePath);
                     }
                     else if (event.getButton() == MouseEvent.BUTTON3) {
-                        String toolTip = label.getToolTipText();
-                        if (toolTip != null && toolTip.startsWith("Sync: ")) {
-                            jEdit.openFile(jEdit.getActiveView(), toolTip.substring(6));
+                        Object prop = label.getClientProperty("duplications");
+                        if (prop instanceof Vector) {
+                            Vector duplications = (Vector) prop;
+                            for (String path : duplications) {
+                                jEdit.openFile(jEdit.getActiveView(), path);
+                            }
                         }
                     }
                 }
@@ -151,6 +154,36 @@ void amoMakeUpdateComponents(File makefile) {
         if (label != null) {
             label.setText("Makefile not found ");
         }
+    }
+    
+    {
+        JComboBox indentSizeComboBox = (JComboBox) amoMakeComponent("AmoMakeIndentSize", true, Class.forName("javax.swing.JComboBox"));
+        indentSizeComboBox.setMaximumSize(indentSizeComboBox.getMinimumSize());
+        indentSizeComboBox.getParent().validate();
+        
+        for (int i = 1; i <= 16; ++i) {
+            indentSizeComboBox.addItem("Indent " + i);
+        }
+        
+        indentSizeComboBox.addItemListener(new ItemListener() {
+            void itemStateChanged(ItemEvent event) {
+                View view = jEdit.getActiveView();
+                if (view != null) {
+                    Buffer buffer = view.getBuffer();
+                    
+                    if (buffer != null) {
+                        int indentSize = indentSizeComboBox.getSelectedIndex() + 1;
+                        
+                        buffer.setProperty("tabSize", indentSize);
+                        buffer.setProperty("indentSize", indentSize);
+                    }
+                }
+            }
+            
+            invoke(name, args) {
+                print("Method: " + name + " invoked!");
+            }
+        });
     }
     
     Container container = amoMakeContainer();

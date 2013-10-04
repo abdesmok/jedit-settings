@@ -1,5 +1,5 @@
 #jEdit's keymap jEdit
-#Mon May 27 10:54:21 CEST 2013
+#Thu Sep 19 10:55:42 CEST 2013
 end.shortcut2=A+x
 select-end.shortcut2=AS+x
 prev-line.shortcut2=A+i
@@ -60,6 +60,7 @@ select-next-word.shortcut=CS+RIGHT
 abdesmok/tabify_empty_untabified_lines.shortcut=CS+t
 quick-search-word.shortcut=A+COMMA
 select-next-line.shortcut2=AS+k
+make/make_cancel_run.shortcut=CA+F8
 delete-start-line.shortcut=CS+BACK_SPACE
 prev-char.shortcut=LEFT
 invert-selection.shortcut=C+e i
@@ -113,6 +114,7 @@ prev-bracket.shortcut=C+e C+OPEN_BRACKET
 prev-marker.shortcut=C+e C+COMMA
 complete-word.shortcut=C+b
 add-explicit-fold.shortcut=C+e a
+make/make_cancel_build.shortcut=CA+F7
 collapse-all-folds.shortcut=C+e c
 match-bracket.shortcut2=CAS+EQUALS
 select-prev-line.shortcut=S+UP
@@ -131,6 +133,7 @@ copy-string-register.shortcut=C+r C+c
 prev-paragraph.shortcut=C+UP
 error-list-next-error.shortcut=F6
 prev-page.shortcut=PAGE_UP
+make/make_package.shortcut=C+F8
 scroll-to-current-line.shortcut=C+e C+j
 select-end.shortcut=S+END
 open-path.shortcut=C+e C+o
@@ -141,8 +144,8 @@ delete.shortcut=DELETE
 make/make_publish.shortcut=C+F5
 undo.shortcut=C+z
 select-all.shortcut=C+a
-expand-all-folds.shortcut=C+e x
 select-word.shortcut=C+e w
+expand-all-folds.shortcut=C+e x
 scroll-down-page.shortcut=A+SLASH
 close-all.shortcut=C+e C+w
 select-prev-char.shortcut=S+LEFT

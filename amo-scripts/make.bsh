@@ -3,29 +3,50 @@ sourceRelative("utils.bsh");
 includeOnce("make/find.bsh");
 includeOnce("make/gui.bsh");
 
+import console.*;
+
 void amoMake(String what) {
     File makefile = amoFindMakeFile();
     
     if (makefile != null) {
+        String args = amoMakeArgs();
+        
+        View view = jEdit.getActiveView();
+        
+        if (view != null) {
+            Buffer buffer = view.getBuffer();
+            
+            if (buffer != null && buffer.getPath() != null) {
+                args += " BUFFER=" + buffer.getPath().replace(File.separatorChar, '/');
+            }
+        }
+        
         if (makefile.getName().endsWith(".bsh")) {
-            Object context = run(makefile.getPath(), amoMakeArgs());
+            Object context = run(makefile.getPath(), args);
             if (Arrays.asList(context.methods).contains("make")) {
                 context.make(what);
             }
         }
         else {
-            // go to directory
-            runCommandInConsole(view, "System", makefile.getParent());
-            
-            // run make
-            runCommandInConsole(view, "System", "make -f " + makefile.getName() + " " + what + amoMakeArgs());
-            
-            // Set focus on text area
-            if (! textArea.getDisplayManager().isLineVisible(textArea.getCaretLine())) {
-                textArea.getDisplayManager().expandFold(textArea.getCaretLine(), true);
+            if (view != null) {
+                Console console = ConsolePlugin.getConsole(view);
+                SystemShell shell = ConsolePlugin.getSystemShell();
+                
+                //shell.detach(console);
+                
+                // go to directory
+                console.run(shell, makefile.getParent());
+                
+                // run make
+                console.run(shell, "make -f " + makefile.getName() + " " + what + args);
+                
+                // Set focus on text area
+                if (! textArea.getDisplayManager().isLineVisible(textArea.getCaretLine())) {
+                    textArea.getDisplayManager().expandFold(textArea.getCaretLine(), true);
+                }
+                textArea.scrollToCaret(true);
+                textArea.requestFocus();
             }
-            textArea.scrollToCaret(true);
-            textArea.requestFocus();
         }
     }
     else {

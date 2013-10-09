@@ -3,4 +3,5 @@
 
 <MODES>
   <MODE NAME="scala" FILE="scala.xml" FILE_NAME_GLOB="*.scala" />
+  <MODE NAME="autoit" FILE="au3.xml" FILE_NAME_GLOB="*.au3" />
 </MODES>

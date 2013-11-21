@@ -25,6 +25,7 @@ pluginMgr-Cached.xml.gz
 plugins/CandyFolds/
 plugins/beauty.BeautyPlugin/
 plugins/cswilly.jeditPlugins.spell.SpellCheckPlugin/
+plugins/ctagsinterface.main.CtagsInterfacePlugin
 plugins/ise.plugin.bmp.BufferLocalPlugin/
 plugins/ise.plugin.svn.SVNPlugin/
 plugins/projectbuilder.ProjectBuilderPlugin/
@@ -44,7 +45,6 @@ templates/
 themes/
 updaterPlugin.log
 velocity/
-
 
 keymaps/imported_keysZ.props
 DockableWindowManager/perspective-view0.xml

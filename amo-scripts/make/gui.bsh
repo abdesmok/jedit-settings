@@ -214,7 +214,7 @@ void amoMakeUpdateComponents(File makefile) {
     }
 }
 
-Vector amoMakeArgList() {
+Vector amoGuiMakeArgList() {
     Container container = amoMakeContainer();
     
     Vector args = new Vector();
@@ -234,10 +234,10 @@ Vector amoMakeArgList() {
     return args;
 }
 
-String amoMakeArgs() {
+String amoGuiMakeArgs() {
     String args = "";
     
-    for (String arg : amoMakeArgList()) {
+    for (String arg : amoGuiMakeArgList()) {
         args += " " + arg;
     }
     

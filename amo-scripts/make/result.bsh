@@ -4,6 +4,48 @@ includeOnce("log.bsh");
 includeOnce("find.bsh");
 includeOnce("gui.bsh");
 
+Vector amoMakeArgList(File makefile) {
+    if (makefile == null)
+        makefile = amoFindMakeFile();
+        
+    Vector args = amoGuiMakeArgList();
+    
+    View view = jEdit.getActiveView();
+    
+    if (view != null) {
+        Buffer buffer = view.getBuffer();
+        
+        if (buffer != null && buffer.getPath() != null) {
+            args.add("EDITOR_FILE=" + buffer.getPath().replace(File.separatorChar, '/'));
+        }
+    }
+    
+    if (makefile != null) {
+        args.add("MAKEFILE_FILE=" + makefile.getPath().replace(makefile.separator, "/"));
+        args.add("MAKEFILE_PATH=" + makefile.getParent().replace(makefile.separator, "/"));
+    }
+    
+    return args;
+}
+
+Vector amoMakeArgList() {
+    return amoMakeArgList(null);
+}
+
+String amoMakeArgs(File makefile) {
+    String args = "";
+    
+    for (String arg : amoMakeArgList(makefile)) {
+        args += " " + arg;
+    }
+    
+    return args;
+}
+
+String  amoMakeArgs() {
+    return amoMakeArgs(null);
+}
+
 BufferedReader amoMakeResult(String what) {
     return amoMakeResult(what, null);
 }

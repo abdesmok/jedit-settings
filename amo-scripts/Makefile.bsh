@@ -4,7 +4,7 @@ make(what) {
     context = this.caller.global;
     
     if (what == "args") {
-        return "arg1=value1\narg1=value2\narg1=value3";
+        return "arg1=value1\narg1=value2\narg1=value3\narg2=*\narg2=abc";
     }
     else if (what == "sync-path") {
     }

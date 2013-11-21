@@ -13,10 +13,16 @@ Vector amoMakeArgList(File makefile) {
     View view = jEdit.getActiveView();
     
     if (view != null) {
-        Buffer buffer = view.getBuffer();
+        JEditTextArea textArea = view.getTextArea();
         
-        if (buffer != null && buffer.getPath() != null) {
-            args.add("EDITOR_FILE=" + buffer.getPath().replace(File.separatorChar, '/'));
+        if (textArea != null) {
+            JEditBuffer buffer = textArea.getBuffer();
+            
+            if (buffer != null && buffer.getPath() != null) {
+                args.add("EDITOR_FILE=" + buffer.getPath().replace(File.separatorChar, '/'));
+                args.add("EDITOR_LINE=" + (textArea.getCaretLine() + 1));
+                args.add("EDITOR_COLUMN=" + (textArea.getCaretPosition() - textArea.getLineStartOffset(textArea.getCaretLine()) + 1));
+            }
         }
     }
     

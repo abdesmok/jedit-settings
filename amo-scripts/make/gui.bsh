@@ -142,9 +142,23 @@ void amoMakeUpdateComponents(File makefile) {
             //amoMakeMessage(line);
             if (index > 0) {
                 JComboBox comboBox = amoMakeComboBox("AmoMake_" + line.substring(0, index), true);
-                comboBox.addItem(line);
+                
+                boolean isEditable = comboBox.isEditable();
+                comboBox.setEditable(false);
+                
+                if (line.substring(index + 1).equals("*")) {
+                    amoMakeMessage("ok");
+                    isEditable = true;
+                    comboBox.addItem(line.substring(0, index + 1));
+                }
+                else {
+                    comboBox.addItem(line);
+                }
+                
                 comboBox.setMaximumSize(comboBox.getMinimumSize());
+                comboBox.setMinimumSize(new Dimension(50, comboBox.getMinimumSize().height));
                 comboBox.getParent().validate();
+                comboBox.setEditable(isEditable);
             }
         }
     }

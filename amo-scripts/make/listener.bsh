@@ -214,6 +214,7 @@ void amoMakeStartListener() {
     };
     
     amoMakeMessage("AMO ADD TO BUS " + component);
+    amoMakeUpdateComponents();
     EditBus.addToBus(component);
 }
 

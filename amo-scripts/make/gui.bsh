@@ -11,7 +11,7 @@ Container amoMakeContainer() {
     if (view != null) {
         JMenuBar menuBar = view.getJMenuBar();
         if (menuBar != null) {
-            
+        
             for (int i = 0; i < menuBar.getComponentCount(); ++i) {
                 JComponent component = menuBar.getComponent(i);
                 if (component instanceof Box.Filler) {
@@ -143,22 +143,23 @@ void amoMakeUpdateComponents(File makefile) {
             if (index > 0) {
                 JComboBox comboBox = amoMakeComboBox("AmoMake_" + line.substring(0, index), true);
                 
-                boolean isEditable = comboBox.isEditable();
-                comboBox.setEditable(false);
-                
-                if (line.substring(index + 1).equals("*")) {
-                    amoMakeMessage("ok");
-                    isEditable = true;
-                    comboBox.addItem(line.substring(0, index + 1));
+                if (comboBox != null) {
+                    boolean isEditable = comboBox.isEditable();
+                    comboBox.setEditable(false);
+                    
+                    if (line.substring(index + 1).equals("*")) {
+                        isEditable = true;
+                        comboBox.addItem(line.substring(0, index + 1));
+                    }
+                    else {
+                        comboBox.addItem(line);
+                    }
+                    
+                    comboBox.setMaximumSize(comboBox.getMinimumSize());
+                    comboBox.setMinimumSize(new Dimension(50, comboBox.getMinimumSize().height));
+                    comboBox.getParent().validate();
+                    comboBox.setEditable(isEditable);
                 }
-                else {
-                    comboBox.addItem(line);
-                }
-                
-                comboBox.setMaximumSize(comboBox.getMinimumSize());
-                comboBox.setMinimumSize(new Dimension(50, comboBox.getMinimumSize().height));
-                comboBox.getParent().validate();
-                comboBox.setEditable(isEditable);
             }
         }
     }
@@ -172,32 +173,34 @@ void amoMakeUpdateComponents(File makefile) {
     
     {
         JComboBox indentSizeComboBox = (JComboBox) amoMakeComponent("AmoMakeIndentSize", true, Class.forName("javax.swing.JComboBox"));
-        indentSizeComboBox.setMaximumSize(indentSizeComboBox.getMinimumSize());
-        indentSizeComboBox.getParent().validate();
         
-        for (int i = 1; i <= 16; ++i) {
-            indentSizeComboBox.addItem("Indent " + i);
-        }
-        
-        indentSizeComboBox.addItemListener(new ItemListener() {
-            void itemStateChanged(ItemEvent event) {
-                View view = jEdit.getActiveView();
-                if (view != null) {
-                    Buffer buffer = view.getBuffer();
-                    
-                    if (buffer != null) {
-                        int indentSize = indentSizeComboBox.getSelectedIndex() + 1;
-                        
-                        buffer.setProperty("tabSize", indentSize);
-                        buffer.setProperty("indentSize", indentSize);
-                    }
-                }
+        if (indentSizeComboBox != null) {
+            indentSizeComboBox.setMaximumSize(indentSizeComboBox.getMinimumSize());
+            indentSizeComboBox.getParent().validate();
+            
+            for (int i = 1; i <= 16; ++i) {
+                indentSizeComboBox.addItem("Indent " + i);
             }
             
-            invoke(name, args) {
-                print("Method: " + name + " invoked!");
-            }
-        });
+            indentSizeComboBox.addItemListener(new ItemListener() {
+                void itemStateChanged(ItemEvent event) {
+                    View view = jEdit.getActiveView();
+                    if (view != null) {
+                        Buffer buffer = view.getBuffer();
+                        
+                        if (buffer != null) {
+                            int indentSize = indentSizeComboBox.getSelectedIndex() + 1;
+                            
+                            buffer.setProperty("tabSize", indentSize);
+                            buffer.setProperty("indentSize", indentSize);
+                        }
+                    }
+                }
+                
+                invoke(name, args) {
+                }
+            });
+        }
     }
     
     Container container = amoMakeContainer();
@@ -209,16 +212,44 @@ void amoMakeUpdateComponents(File makefile) {
             
             if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
                 JComboBox comboBox = (JComboBox) component;
-                String value = jEdit.getProperty("macro.amo.make.value." + componentName, null);
-                //amoMakeMessage("macro.amo.make.value." + componentName + "-------------->" + jEdit.getProperty("macro.amo.make.value." + componentName, "null"));
-                if (value != null)
-                    comboBox.setSelectedItem(value);
+                
+                if (makefile != null) {
+                    Properties prop = new Properties();
+                    try {
+                        prop.load(new FileInputStream(makefile.getPath() + ".properties"));
+                        String value = prop.getProperty("make.arg." + componentName, null);
+                        if (value != null)
+                            comboBox.setSelectedItem(value);
+                        //amoMakeMessage("macro.amo.make.value." + componentName + "-------------->" + jEdit.getProperty("macro.amo.make.value." + componentName, "null"));
+                    }
+                    catch (IOException ex) {
+                        //amoMakeMessage(ex.toString());
+                    }
+                }
                 
                 comboBox.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        jEdit.setProperty("macro.amo.make.value." + componentName, comboBox.getSelectedItem());
-                        //amoMakeMessage("macro.amo.make.value." + componentName + "<--------------" + comboBox.getSelectedItem());
-                        //amoMakeMessage(amoMakeArgs());
+                        if (makefile != null) {
+                            Properties prop = new Properties();
+                            try {
+                                prop.load(new FileInputStream(makefile.getPath() + ".properties"));
+                            }
+                            catch (IOException ex) {
+                                //amoMakeMessage(ex.toString());
+                            }
+                            try {
+                                prop.setProperty("make.arg." + componentName, comboBox.getSelectedItem());
+                                prop.store(new FileOutputStream(makefile.getPath() + ".properties"), null);
+                                //amoMakeMessage("macro.amo.make.value." + componentName + "<--------------" + comboBox.getSelectedItem());
+                            }
+                            catch (IOException ex) {
+                                amoMakeMessage(ex.toString());
+                            }
+                        }
+                        
+                        //amoMakeMessage(amoGuiMakeArgList().toString());
+                        
+                        amoMakeUpdateComponents();
                     }
                 });
             }
@@ -228,7 +259,7 @@ void amoMakeUpdateComponents(File makefile) {
     }
 }
 
-Vector amoMakeArgList() {
+Vector amoGuiMakeArgList() {
     Container container = amoMakeContainer();
     
     Vector args = new Vector();
@@ -236,6 +267,8 @@ Vector amoMakeArgList() {
     if (container == null)
         return args;
         
+    amoMakeMessage("count = " + container.getComponentCount());
+    
     for (int i = 0; i < container.getComponentCount(); ++i) {
         JComponent component = container.getComponent(i);
         String componentName = component.getName();
@@ -248,10 +281,10 @@ Vector amoMakeArgList() {
     return args;
 }
 
-String amoMakeArgs() {
+String amoGuiMakeArgs() {
     String args = "";
     
-    for (String arg : amoMakeArgList()) {
+    for (String arg : amoGuiMakeArgList()) {
         args += " " + arg;
     }
     

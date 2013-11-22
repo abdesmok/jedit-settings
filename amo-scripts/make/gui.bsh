@@ -212,16 +212,44 @@ void amoMakeUpdateComponents(File makefile) {
             
             if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
                 JComboBox comboBox = (JComboBox) component;
-                String value = jEdit.getProperty("macro.amo.make.value." + componentName, null);
-                //amoMakeMessage("macro.amo.make.value." + componentName + "-------------->" + jEdit.getProperty("macro.amo.make.value." + componentName, "null"));
-                if (value != null)
-                    comboBox.setSelectedItem(value);
+                
+                if (makefile != null) {
+                    Properties prop = new Properties();
+                    try {
+                        prop.load(new FileInputStream(makefile.getPath() + ".properties"));
+                        String value = prop.getProperty("make.arg." + componentName, null);
+                        if (value != null)
+                            comboBox.setSelectedItem(value);
+                        //amoMakeMessage("macro.amo.make.value." + componentName + "-------------->" + jEdit.getProperty("macro.amo.make.value." + componentName, "null"));
+                    }
+                    catch (IOException ex) {
+                        //amoMakeMessage(ex.toString());
+                    }
+                }
                 
                 comboBox.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        jEdit.setProperty("macro.amo.make.value." + componentName, comboBox.getSelectedItem());
-                        //amoMakeMessage("macro.amo.make.value." + componentName + "<--------------" + comboBox.getSelectedItem());
-                        //amoMakeMessage(amoMakeArgs());
+                        if (makefile != null) {
+                            Properties prop = new Properties();
+                            try {
+                                prop.load(new FileInputStream(makefile.getPath() + ".properties"));
+                            }
+                            catch (IOException ex) {
+                                //amoMakeMessage(ex.toString());
+                            }
+                            try {
+                                prop.setProperty("make.arg." + componentName, comboBox.getSelectedItem());
+                                prop.store(new FileOutputStream(makefile.getPath() + ".properties"), null);
+                                //amoMakeMessage("macro.amo.make.value." + componentName + "<--------------" + comboBox.getSelectedItem());
+                            }
+                            catch (IOException ex) {
+                                amoMakeMessage(ex.toString());
+                            }
+                        }
+                        
+                        //amoMakeMessage(amoGuiMakeArgList().toString());
+                        
+                        amoMakeUpdateComponents();
                     }
                 });
             }
@@ -239,6 +267,8 @@ Vector amoGuiMakeArgList() {
     if (container == null)
         return args;
         
+    amoMakeMessage("count = " + container.getComponentCount());
+    
     for (int i = 0; i < container.getComponentCount(); ++i) {
         JComponent component = container.getComponent(i);
         String componentName = component.getName();

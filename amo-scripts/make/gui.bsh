@@ -96,13 +96,25 @@ void amoMakeUpdateComponents() {
 }
 
 void amoMakeUpdateComponents(File makefile) {
-    amoMakeRemoveComponents();
-    
+    amoMakeUpdateComponents(makefile, true);
+}
+
+void amoMakeUpdateComponents(File makefile, boolean clear) {
     if (makefile == null)
         makefile = amoFindMakeFile();
     //amoMakeMessage("makefile: " + (makefile == null ? "null" : makefile.getPath()));
     
+    if (clear) {
+        amoMakeRemoveComponents();
+    }
+    
     if (makefile != null) {
+        BufferedReader br = amoMakeResult("args", makefile);
+        
+        if (! clear) {
+            amoMakeRemoveComponents();
+        }
+        
         String makefilePath = makefile.getPath().replace(makefile.separator, "/");
         
         JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
@@ -131,8 +143,6 @@ void amoMakeUpdateComponents(File makefile) {
                 }
             });
         }
-        
-        BufferedReader br = amoMakeResult("args", makefile);
         
         String line;
         
@@ -164,6 +174,8 @@ void amoMakeUpdateComponents(File makefile) {
         }
     }
     else {
+        amoMakeRemoveComponents();
+        
         JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
         
         if (label != null) {
@@ -211,6 +223,8 @@ void amoMakeUpdateComponents(File makefile) {
             String componentName = component.getName();
             
             if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
+                String variableName = componentName.substring(8);
+                
                 JComboBox comboBox = (JComboBox) component;
                 
                 if (makefile != null) {
@@ -256,6 +270,9 @@ void amoMakeUpdateComponents(File makefile) {
             }
         }
         
+        if (clear)
+            amoMakeUpdateComponents(makefile, false);
+        
         container.repaint();
     }
 }
@@ -268,8 +285,6 @@ Vector amoGuiMakeArgList() {
     if (container == null)
         return args;
         
-    amoMakeMessage("count = " + container.getComponentCount());
-    
     for (int i = 0; i < container.getComponentCount(); ++i) {
         JComponent component = container.getComponent(i);
         String componentName = component.getName();

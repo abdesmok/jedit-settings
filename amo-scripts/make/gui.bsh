@@ -217,10 +217,10 @@ void amoMakeUpdateComponents(File makefile) {
                     Properties prop = new Properties();
                     try {
                         prop.load(new FileInputStream(makefile.getPath() + ".properties"));
-                        String value = prop.getProperty("make.arg." + componentName, null);
+                        String value = prop.getProperty("make.arg." + variableName, null);
                         if (value != null)
-                            comboBox.setSelectedItem(value);
-                        //amoMakeMessage("macro.amo.make.value." + componentName + "-------------->" + jEdit.getProperty("macro.amo.make.value." + componentName, "null"));
+                            comboBox.setSelectedItem(variableName + "=" + value);
+                        //amoMakeMessage("make.arg." + variableName + "-------------->" + prop.getProperty("make.arg." + variableName, "null"));
                     }
                     catch (IOException ex) {
                         //amoMakeMessage(ex.toString());
@@ -238,9 +238,10 @@ void amoMakeUpdateComponents(File makefile) {
                                 //amoMakeMessage(ex.toString());
                             }
                             try {
-                                prop.setProperty("make.arg." + componentName, comboBox.getSelectedItem());
+                                String value = comboBox.getSelectedItem();
+                                prop.setProperty("make.arg." + variableName, value.substring(value.indexOf('=') + 1));
                                 prop.store(new FileOutputStream(makefile.getPath() + ".properties"), null);
-                                //amoMakeMessage("macro.amo.make.value." + componentName + "<--------------" + comboBox.getSelectedItem());
+                                //amoMakeMessage("make.arg." + componentName + "<--------------" + comboBox.getSelectedItem());
                             }
                             catch (IOException ex) {
                                 amoMakeMessage(ex.toString());

@@ -84,7 +84,8 @@ void amoMakeStartListener() {
                 }
             }
             else if (message.paramString().equals("AMO-QUIT-PARAM")) {
-                amoMakeMessage("AMO REMOVE FROM BUS " + component);
+                //amoMakeMessage("AMO REMOVE FROM BUS " + component);
+                amoMakeMessage("REMOVED FROM BUS");
                 EditBus.removeFromBus(component);
             }
             
@@ -213,7 +214,8 @@ void amoMakeStartListener() {
         Vector saveDuplicationPaths;
     };
     
-    amoMakeMessage("AMO ADD TO BUS " + component);
+    //amoMakeMessage("AMO ADD TO BUS " + component);
+    amoMakeMessage("ADDED TO BUS");
     amoMakeUpdateComponents();
     EditBus.addToBus(component);
 }

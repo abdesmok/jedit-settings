@@ -263,7 +263,7 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                         
                         //amoMakeMessage(amoGuiMakeArgList().toString());
                         
-                        amoMakeUpdateComponents();
+                        amoMakeUpdateComponents(makefile, false);
                     }
                 });
             }

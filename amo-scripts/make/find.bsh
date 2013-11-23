@@ -102,7 +102,7 @@ File amoFindFile(Vector fileNames) {
         }
         
         if (file != null) {
-            //amoMakeMessage("Using " + file + " found in current buffer path");
+            //amoMessage("Using " + file + " found in current buffer path");
         }
     }
     
@@ -114,7 +114,7 @@ File amoFindFile(Vector fileNames) {
             file = amoFirstExistingFile(path, fileNames);
             
             if (file != null) {
-                //amoMakeMessage("Using " + file + " found in active project directory");
+                //amoMessage("Using " + file + " found in active project directory");
             }
         }
     }
@@ -128,7 +128,7 @@ File amoFindFile(Vector fileNames) {
                 file = amoFirstExistingFile(path, fileNames);
                 
                 if (file != null) {
-                    //amoMakeMessage("Using " + file + " found in project directory");
+                    //amoMessage("Using " + file + " found in project directory");
                     break;
                 }
             }
@@ -139,7 +139,7 @@ File amoFindFile(Vector fileNames) {
     }
     
     if (file == null) {
-        //amoMakeMessage("File not found");
+        //amoMessage("File not found");
     }
     
     return file;

@@ -15,22 +15,22 @@ void amoMakeStartListener() {
             saveDuplicationPaths = new Vector();
         }
         public void finalize() {
-            amoMakeMessage("FINALIZE " + this);
+            amoMessage("FINALIZE " + this);
         }
         public void handleMessage(EBMessage message) {
-            //amoMakeMessage(message.toString() + "\n  " + message.paramString());
+            //amoMessage(message.toString() + "\n  " + message.paramString());
             
             boolean updateComponents = false;
             Buffer syncBuffer = null;
             boolean saveDuplication = false;
             
             if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
-                //amoMakeMessage("AMO UPDATE COMPONENTS " + message);
+                //amoMessage("AMO UPDATE COMPONENTS " + message);
                 File makefile = amoFindMakeFile();
                 
                 JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
                 
-                //amoMakeMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
+                //amoMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
                 
                 if (label == null || makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
                     lastMakefile = makefile;
@@ -84,8 +84,8 @@ void amoMakeStartListener() {
                 }
             }
             else if (message.paramString().equals("AMO-QUIT-PARAM")) {
-                //amoMakeMessage("AMO REMOVE FROM BUS " + component);
-                amoMakeMessage("REMOVED FROM BUS");
+                //amoMessage("AMO REMOVE FROM BUS " + component);
+                amoMessage("REMOVED FROM BUS");
                 EditBus.removeFromBus(component);
             }
             
@@ -147,7 +147,7 @@ void amoMakeStartListener() {
                             
                             if (saveDuplication) {
                                 syncBuffer.save(view, savePath, false);
-                                //amoMakeMessage("save to " + savePath);
+                                //amoMessage("save to " + savePath);
                                 statusList.add("written");
                             }
                             else {
@@ -214,8 +214,8 @@ void amoMakeStartListener() {
         Vector saveDuplicationPaths;
     };
     
-    //amoMakeMessage("AMO ADD TO BUS " + component);
-    amoMakeMessage("ADDED TO BUS");
+    //amoMessage("AMO ADD TO BUS " + component);
+    amoMessage("ADDED TO BUS");
     amoMakeUpdateComponents();
     EditBus.addToBus(component);
 }

@@ -9,7 +9,7 @@ make(what) {
     else if (what == "sync-path") {
     }
     else if (what == "run") {
-        context.amoMakeMessage("Run: restart listener");
+        context.amoMessage("Run: restart listener");
         context.amoMakeStopListener();
         context.includedFiles.clear();
         
@@ -19,12 +19,12 @@ make(what) {
         context.amoMakeStartListener();
     }
     else if (what == "clean") {
-        context.amoMakeMessage("Clean: stop listener");
+        context.amoMessage("Clean: stop listener");
         context.amoMakeStopListener();
         context.includedFiles.clear();
     }
     else {
-        context.amoMakeMessage("Nothing to do for " + what);
+        context.amoMessage("Nothing to do for " + what);
     }
     
     return "";

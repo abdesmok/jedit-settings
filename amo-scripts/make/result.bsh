@@ -84,7 +84,7 @@ BufferedReader amoMakeResult(String what, File makefile) {
             
             ProcessBuilder pb = new ProcessBuilder(args);
             
-            //amoMakeMessage(args.toString());
+            //amoMessage(args.toString());
             
             //pb.redirectErrorStream(true);
             

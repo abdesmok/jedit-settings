@@ -26,14 +26,14 @@ void amoMake(String what) {
                 //shell.detach(console);
                 
                 // go to directory
-                amoMakeMessage("\n\namobsh: change directory");
+                amoMessage("\n\namobsh: change directory");
                 console.run(shell, "\"" + makefile.getParent() + "\"");
                 
                 // run make
-                amoMakeMessage("\namobsh: start make");
+                amoMessage("\namobsh: start make");
                 console.run(shell, "make -f " + makefile.getName() + " " + what + args);
                 
-                amoMakeMessage("\n");
+                amoMessage("\n");
                 
                 // Set focus on text area
                 if (! textArea.getDisplayManager().isLineVisible(textArea.getCaretLine())) {
@@ -45,7 +45,7 @@ void amoMake(String what) {
         }
     }
     else {
-        amoMakeMessage("Makefile not found");
+        amoMessage("Makefile not found");
     }
 }
 

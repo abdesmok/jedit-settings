@@ -159,7 +159,6 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                     
                     if (line.substring(index + 1).equals("*")) {
                         isEditable = true;
-                        comboBox.addItem(line.substring(0, index + 1));
                     }
                     else {
                         comboBox.addItem(line);

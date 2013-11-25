@@ -18,6 +18,7 @@ void amoMakeStartListener() {
             amoMessage("FINALIZE " + this);
         }
         public void handleMessage(EBMessage message) {
+            try {
             //amoMessage(message.toString() + "\n  " + message.paramString());
             
             boolean updateComponents = false;
@@ -207,6 +208,15 @@ void amoMakeStartListener() {
                 if (indentSizeComboBox != null) {
                     indentSizeComboBox.setSelectedIndex(syncBuffer.getProperty("indentSize") - 1);
                 }
+            }
+            }
+            catch (Exception ex) {
+                amoMessage("Exception " + ex.toString());
+                amoMessage("Message " + message.toString() + "\n    " + message.paramString());
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                ex.printStackTrace(new PrintStream(stream));
+                amoMessage(stream.toString());
+                //amoMessage(this.callstack.toString());
             }
         }
         

@@ -29,8 +29,6 @@ Container amoMakeContainer() {
 }
 
 void amoMakeRemoveComponents() {
-    amoMessage("REMOVE");
-    
     Container container = amoMakeContainer();
     
     if (container == null)

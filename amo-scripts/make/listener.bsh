@@ -25,6 +25,7 @@ void amoMakeStartListener() {
             boolean updateComponents = false;
             Buffer syncBuffer = null;
             boolean saveDuplication = false;
+            Buffer updateIndentSizeBuffer = null;
             
             if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
                 //amoMessage("AMO UPDATE COMPONENTS " + message);
@@ -53,6 +54,8 @@ void amoMakeStartListener() {
             }
             else if (message instanceof BufferUpdate) {
                 BufferUpdate bufferUpdate = (BufferUpdate) message;
+                //amoMessage(bufferUpdate.getWhat());
+                
                 if (bufferUpdate.getWhat() == BufferUpdate.SAVED) {
                     if (lastMakefile == null) {
                         lastMakefile = amoFindMakeFile();
@@ -85,15 +88,21 @@ void amoMakeStartListener() {
                             properties.load(new FileInputStream(propertiesFile));
                             String value = properties.getProperty("buffer.indentSize");
                             if (value != null) {
-                                int indentSize = Integer.parseInt();
-                                if (indentSize > 0 && indentSize <= 16)
-                                    buffer.setProperty("indentSize", indentSize);
+                                int intValue = Integer.parseInt(value);
+                                if (intValue > 0 && intValue <= 16) buffer.setProperty("indentSize", intValue);
+                            }
+                            value = properties.getProperty("buffer.tabSize");
+                            if (value != null) {
+                                int intValue = Integer.parseInt(value);
+                                if (intValue > 0 && intValue <= 16) buffer.setProperty("tabSize", intValue);
                             }
                         }
                         catch (IOException ex) {
                             //amoMessage(ex.toString());
                         }
                     }
+                    
+                    updateIndentSizeBuffer = buffer;
                 }
             }
             else if (message instanceof EditPaneUpdate) {
@@ -228,12 +237,28 @@ void amoMakeStartListener() {
                     label.repaint();
                 }
                 
+                updateIndentSizeBuffer = syncBuffer;
+            }
+            
+            /*{
+                View view = jEdit.getActiveView();
+                
+                if (view != null) {
+                    Buffer buffer = view.getBuffer();
+                    if (buffer != null) {
+                        amoMessage(" -> " + message + "\n    " + buffer.getProperty("indentSize"));
+                    }
+                }
+            }*/
+            
+            if (updateIndentSizeBuffer != null) {
                 JComboBox indentSizeComboBox = (JComboBox) amoMakeComponent("AmoMakeIndentSize", false, Class.forName("javax.swing.JComboBox"));
                 
                 if (indentSizeComboBox != null) {
-                    indentSizeComboBox.setSelectedIndex(syncBuffer.getProperty("indentSize") - 1);
+                    indentSizeComboBox.setSelectedIndex(updateIndentSizeBuffer.getProperty("indentSize") - 1);
                 }
             }
+            
             }
             catch (Exception ex) {
                 amoMessage("Exception " + ex.toString());

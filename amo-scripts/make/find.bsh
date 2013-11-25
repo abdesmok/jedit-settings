@@ -55,23 +55,33 @@ String amoFindProjectDirectory() {
     return amoFindProjectDirectory(-1);
 }
 
-File amoMakeFile(String directory) {
-    File file;
-    
-    file = new File(directory + File.separator + "Makefile.bsh");
-    if (file.exists()) return file;
-    
-    file = new File(directory + File.separator + "Makefile.jedit");
-    if (file.exists()) return file;
-    
-    file = new File(directory + File.separator + "Makefile");
-    if (file.exists()) return file;
+File amoFirstExistingFile(String directory, Vector fileNames) {
+    for (String fileName : fileNames) {
+        File file = new File(directory + File.separator + fileName);
+        if (file.exists()) return file;
+    }
     
     return null;
 }
 
 File amoFindMakeFile() {
-    File makefile = null;
+    Vector fileNames = new Vector();
+    fileNames.add("Makefile.jedit");
+    fileNames.add("Makefile.bsh");
+    fileNames.add("Makefile");
+    
+    return amoFindFile(fileNames);
+}
+
+File amoFindPropertiesFile() {
+    Vector fileNames = new Vector();
+    fileNames.add("jedit.properties");
+    
+    return amoFindFile(fileNames);
+}
+
+File amoFindFile(Vector fileNames) {
+    File file = null;
     
     View view = jEdit.getActiveView();
     Buffer buffer = (view == null) ? null : view.getBuffer();
@@ -80,9 +90,9 @@ File amoFindMakeFile() {
         File directory = new File(buffer.getDirectory());
         
         while (true) {
-            makefile = amoMakeFile(directory.getPath());
+            file = amoFirstExistingFile(directory.getPath(), fileNames);
             
-            if (makefile != null) break;
+            if (file != null) break;
             
             String path = directory.getParent();
             
@@ -91,34 +101,34 @@ File amoFindMakeFile() {
             directory = new File(path);
         }
         
-        if (makefile != null) {
-            //amoMakeMessage("Using " + makefile + " found in current buffer path");
+        if (file != null) {
+            //amoMessage("Using " + file + " found in current buffer path");
         }
     }
     
-    if (makefile == null) {
+    if (file == null) {
         String path = amoFindProjectDirectory();
         
         if (path != null) {
             directory = new File(path);
-            makefile = amoMakeFile(path);
+            file = amoFirstExistingFile(path, fileNames);
             
-            if (makefile != null) {
-                //amoMakeMessage("Using " + makefile + " found in active project directory");
+            if (file != null) {
+                //amoMessage("Using " + file + " found in active project directory");
             }
         }
     }
     
-    if (makefile == null) {
+    if (file == null) {
         for (int i = 0; ; ++i) {
             String path = amoFindProjectDirectory(i);
             
             if (path != null) {
                 directory = new File(path);
-                makefile = amoMakeFile(path);
+                file = amoFirstExistingFile(path, fileNames);
                 
-                if (makefile != null) {
-                    //amoMakeMessage("Using " + makefile + " found in project directory");
+                if (file != null) {
+                    //amoMessage("Using " + file + " found in project directory");
                     break;
                 }
             }
@@ -128,10 +138,10 @@ File amoFindMakeFile() {
         }
     }
     
-    if (makefile == null) {
-        //amoMakeMessage("Makefile not found");
+    if (file == null) {
+        //amoMessage("File not found");
     }
     
-    return makefile;
+    return file;
 }
 

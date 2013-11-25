@@ -1,6 +1,7 @@
 import org.gjt.sp.jedit.*;
 import projectviewer.event.*;
 import java.beans.*;
+import java.io.*;
 
 sourceRelative("../utils.bsh");
 
@@ -15,22 +16,23 @@ void amoMakeStartListener() {
             saveDuplicationPaths = new Vector();
         }
         public void finalize() {
-            amoMakeMessage("FINALIZE " + this);
+            amoMessage("FINALIZE " + this);
         }
         public void handleMessage(EBMessage message) {
-            //amoMakeMessage(message.toString() + "\n  " + message.paramString());
+            try {
+            //amoMessage(message.toString() + "\n  " + message.paramString());
             
             boolean updateComponents = false;
             Buffer syncBuffer = null;
             boolean saveDuplication = false;
             
             if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
-                //amoMakeMessage("AMO UPDATE COMPONENTS " + message);
+                //amoMessage("AMO UPDATE COMPONENTS " + message);
                 File makefile = amoFindMakeFile();
                 
                 JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
                 
-                //amoMakeMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
+                //amoMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
                 
                 if (label == null || makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
                     lastMakefile = makefile;
@@ -72,6 +74,24 @@ void amoMakeStartListener() {
                         }
                     }
                 }
+                else if (bufferUpdate.getWhat() == BufferUpdate.LOADED) {
+                    File propertiesFile = amoFindPropertiesFile();
+                    Buffer buffer = bufferUpdate.getBuffer();
+                    
+                    if (propertiesFile != null && buffer != null) {
+                        Properties properties = new Properties();
+                        
+                        try {
+                            properties.load(new FileInputStream(propertiesFile));
+                            int indentSize = Integer.parseInt(properties.getProperty("buffer.indentSize"));
+                            if (indentSize > 0 && indentSize <= 16)
+                                buffer.setProperty("indentSize", indentSize);
+                        }
+                        catch (IOException ex) {
+                            //amoMessage(ex.toString());
+                        }
+                    }
+                }
             }
             else if (message instanceof EditPaneUpdate) {
                 EditPaneUpdate editPaneUpdate = (EditPaneUpdate) message;
@@ -83,9 +103,12 @@ void amoMakeStartListener() {
                         syncBuffer = view.getBuffer();
                 }
             }
+            else if (message instanceof PropertiesChanged) {
+                updateComponents = true;
+            }
             else if (message.paramString().equals("AMO-QUIT-PARAM")) {
-                //amoMakeMessage("AMO REMOVE FROM BUS " + component);
-                amoMakeMessage("REMOVED FROM BUS");
+                //amoMessage("AMO REMOVE FROM BUS " + component);
+                amoMessage("REMOVED FROM BUS");
                 EditBus.removeFromBus(component);
             }
             
@@ -111,7 +134,7 @@ void amoMakeStartListener() {
                 }
             }
             
-            if (syncBuffer != null) {
+            if (syncBuffer != null && lastMakefile != null) {
                 View view = jEdit.getActiveView();
                 File bufferFile = new File(syncBuffer.getPath());
                 
@@ -147,7 +170,7 @@ void amoMakeStartListener() {
                             
                             if (saveDuplication) {
                                 syncBuffer.save(view, savePath, false);
-                                //amoMakeMessage("save to " + savePath);
+                                //amoMessage("save to " + savePath);
                                 statusList.add("written");
                             }
                             else {
@@ -208,14 +231,23 @@ void amoMakeStartListener() {
                     indentSizeComboBox.setSelectedIndex(syncBuffer.getProperty("indentSize") - 1);
                 }
             }
+            }
+            catch (Exception ex) {
+                amoMessage("Exception " + ex.toString());
+                amoMessage("Message " + message.toString() + "\n    " + message.paramString());
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                ex.printStackTrace(new PrintStream(stream));
+                amoMessage(stream.toString());
+                //amoMessage(this.callstack.toString());
+            }
         }
         
         File lastMakefile;
         Vector saveDuplicationPaths;
     };
     
-    //amoMakeMessage("AMO ADD TO BUS " + component);
-    amoMakeMessage("ADDED TO BUS");
+    //amoMessage("AMO ADD TO BUS " + component);
+    amoMessage("ADDED TO BUS");
     amoMakeUpdateComponents();
     EditBus.addToBus(component);
 }

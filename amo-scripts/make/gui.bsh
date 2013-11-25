@@ -62,7 +62,7 @@ JComponent amoMakeComponent(String name, boolean create, Class type) {
         JComponent existingComponent = container.getComponent(i);
         String existingComponentName = existingComponent.getName();
         
-        //amoMakeMessage("component " + i + " " + existingComponent.getClass().getName() + " " + (existingComponentName == null ? "null" : existingComponentName));
+        //amoMessage("component " + i + " " + existingComponent.getClass().getName() + " " + (existingComponentName == null ? "null" : existingComponentName));
         
         if (existingComponent.getClass().equals(type)) {
             if (existingComponentName != null && existingComponentName.equals(name)) {
@@ -102,7 +102,7 @@ void amoMakeUpdateComponents(File makefile) {
 void amoMakeUpdateComponents(File makefile, boolean clear) {
     if (makefile == null)
         makefile = amoFindMakeFile();
-    //amoMakeMessage("makefile: " + (makefile == null ? "null" : makefile.getPath()));
+    //amoMessage("makefile: " + (makefile == null ? "null" : makefile.getPath()));
     
     if (clear) {
         amoMakeRemoveComponents();
@@ -149,7 +149,7 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
         while ((line = br.readLine()) != null) {
             int index = line.indexOf('=');
             
-            //amoMakeMessage(line);
+            //amoMessage(line);
             if (index > 0) {
                 JComboBox comboBox = amoMakeComboBox("AmoMake_" + line.substring(0, index), true);
                 
@@ -159,7 +159,6 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                     
                     if (line.substring(index + 1).equals("*")) {
                         isEditable = true;
-                        comboBox.addItem(line.substring(0, index + 1));
                     }
                     else {
                         comboBox.addItem(line);
@@ -230,14 +229,14 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                 if (makefile != null) {
                     Properties prop = new Properties();
                     try {
-                        prop.load(new FileInputStream(makefile.getPath() + ".properties"));
+                        prop.load(new FileInputStream(makefile.getParent() + "/jedit.properties"));
                         String value = prop.getProperty("make.arg." + variableName, null);
                         if (value != null)
                             comboBox.setSelectedItem(variableName + "=" + value);
-                        //amoMakeMessage("make.arg." + variableName + "-------------->" + prop.getProperty("make.arg." + variableName, "null"));
+                        //amoMessage("make.arg." + variableName + "-------------->" + prop.getProperty("make.arg." + variableName, "null"));
                     }
                     catch (IOException ex) {
-                        //amoMakeMessage(ex.toString());
+                        //amoMessage(ex.toString());
                     }
                 }
                 
@@ -246,25 +245,25 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                         if (makefile != null) {
                             Properties prop = new Properties();
                             try {
-                                prop.load(new FileInputStream(makefile.getPath() + ".properties"));
+                                prop.load(new FileInputStream(makefile.getParent() + "/jedit.properties"));
                             }
                             catch (IOException ex) {
-                                //amoMakeMessage(ex.toString());
+                                //amoMessage(ex.toString());
                             }
                             try {
                                 String value = comboBox.getSelectedItem();
                                 prop.setProperty("make.arg." + variableName, value.substring(value.indexOf('=') + 1));
-                                prop.store(new FileOutputStream(makefile.getPath() + ".properties"), null);
-                                //amoMakeMessage("make.arg." + componentName + "<--------------" + comboBox.getSelectedItem());
+                                prop.store(new FileOutputStream(makefile.getParent() + "/jedit.properties"), null);
+                                //amoMessage("make.arg." + componentName + "<--------------" + comboBox.getSelectedItem());
                             }
                             catch (IOException ex) {
-                                amoMakeMessage(ex.toString());
+                                amoMessage(ex.toString());
                             }
                         }
                         
-                        //amoMakeMessage(amoGuiMakeArgList().toString());
+                        //amoMessage(amoGuiMakeArgList().toString());
                         
-                        amoMakeUpdateComponents();
+                        amoMakeUpdateComponents(makefile, false);
                     }
                 });
             }

@@ -1,6 +1,7 @@
 import org.gjt.sp.jedit.*;
 import projectviewer.event.*;
 import java.beans.*;
+import java.io.*;
 
 sourceRelative("../utils.bsh");
 
@@ -70,6 +71,24 @@ void amoMakeStartListener() {
                         else {
                             syncBuffer = bufferUpdate.getBuffer();
                             saveDuplication = true;
+                        }
+                    }
+                }
+                else if (bufferUpdate.getWhat() == BufferUpdate.LOADED) {
+                    File propertiesFile = amoFindPropertiesFile();
+                    Buffer buffer = bufferUpdate.getBuffer();
+                    
+                    if (propertiesFile != null && buffer != null) {
+                        Properties properties = new Properties();
+                        
+                        try {
+                            properties.load(new FileInputStream(propertiesFile));
+                            int indentSize = Integer.parseInt(properties.getProperty("buffer.indentSize"));
+                            if (indentSize > 0 && indentSize <= 16)
+                                buffer.setProperty("indentSize", indentSize);
+                        }
+                        catch (IOException ex) {
+                            //amoMessage(ex.toString());
                         }
                     }
                 }

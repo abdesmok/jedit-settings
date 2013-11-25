@@ -84,6 +84,9 @@ void amoMakeStartListener() {
                         syncBuffer = view.getBuffer();
                 }
             }
+            else if (message instanceof PropertiesChanged) {
+                updateComponents = true;
+            }
             else if (message.paramString().equals("AMO-QUIT-PARAM")) {
                 //amoMessage("AMO REMOVE FROM BUS " + component);
                 amoMessage("REMOVED FROM BUS");

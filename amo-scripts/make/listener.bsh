@@ -83,9 +83,12 @@ void amoMakeStartListener() {
                         
                         try {
                             properties.load(new FileInputStream(propertiesFile));
-                            int indentSize = Integer.parseInt(properties.getProperty("buffer.indentSize"));
-                            if (indentSize > 0 && indentSize <= 16)
-                                buffer.setProperty("indentSize", indentSize);
+                            String value = properties.getProperty("buffer.indentSize");
+                            if (value != null) {
+                                int indentSize = Integer.parseInt();
+                                if (indentSize > 0 && indentSize <= 16)
+                                    buffer.setProperty("indentSize", indentSize);
+                            }
                         }
                         catch (IOException ex) {
                             //amoMessage(ex.toString());

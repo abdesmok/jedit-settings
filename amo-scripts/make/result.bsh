@@ -26,10 +26,10 @@ Vector amoMakeArgList(File makefile) {
         }
     }
     
-    if (makefile != null) {
+    /*if (makefile != null) {
         args.add("MAKEFILE_FILE=" + makefile.getPath().replace(makefile.separator, "/"));
         args.add("MAKEFILE_PATH=" + makefile.getParent().replace(makefile.separator, "/"));
-    }
+    }*/
     
     return args;
 }
@@ -69,18 +69,19 @@ BufferedReader amoMakeResult(String what, File makefile) {
             }
         }
         else {
-            String makefilePath = makefile.getPath().replace(makefile.separator, "/");
-            
             ArrayList args = new ArrayList();
             
             args.add("make");
             args.add(what);
             args.add("-s");
+            args.add("NO_BUILD_TARGETS=1");
             for (String arg : amoMakeArgList()) {
                 args.add(arg);
             }
+            args.add("-C");
+            args.add(makefile.getParent().replace(makefile.separator, "/"));
             args.add("-f");
-            args.add(makefilePath);
+            args.add(makefile.getName());
             
             ProcessBuilder pb = new ProcessBuilder(args);
             

@@ -115,7 +115,7 @@ void amoMakeStartListener() {
                 }
             }
             
-            if (syncBuffer != null) {
+            if (syncBuffer != null && lastMakefile != null) {
                 View view = jEdit.getActiveView();
                 File bufferFile = new File(syncBuffer.getPath());
                 

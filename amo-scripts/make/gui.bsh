@@ -104,6 +104,14 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
         makefile = amoFindMakeFile();
     //amoMessage("makefile: " + (makefile == null ? "null" : makefile.getPath()));
     
+    String labelText;
+    
+    {
+        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
+        if (label != null)
+            labelText = label.getText();
+    }
+    
     if (clear) {
         amoMakeRemoveComponents();
     }
@@ -120,7 +128,8 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
         JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
         
         if (label != null) {
-            //label.setText(makefilePath + " ");
+            if (labelText != null)
+                label.setText(labelText);
             
             label.addMouseListener(new MouseListener() {
                 void mouseClicked(MouseEvent event) {

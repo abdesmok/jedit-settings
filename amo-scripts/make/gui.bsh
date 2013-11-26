@@ -161,7 +161,8 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                         isEditable = true;
                     }
                     else {
-                        comboBox.addItem(line);
+                        //comboBox.addItem(line);
+                        comboBox.addItem(line.substring(line.indexOf('=') + 1));
                     }
                     
                     comboBox.setMaximumSize(comboBox.getMinimumSize());
@@ -226,13 +227,15 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                 
                 JComboBox comboBox = (JComboBox) component;
                 
+                comboBox.setToolTipText(variableName);
+                
                 if (makefile != null) {
                     Properties prop = new Properties();
                     try {
                         prop.load(new FileInputStream(makefile.getParent() + "/jedit.properties"));
                         String value = prop.getProperty("make.arg." + variableName, null);
                         if (value != null)
-                            comboBox.setSelectedItem(variableName + "=" + value);
+                            comboBox.setSelectedItem(/*variableName + "=" +*/ value);
                         //amoMessage("make.arg." + variableName + "-------------->" + prop.getProperty("make.arg." + variableName, "null"));
                     }
                     catch (IOException ex) {
@@ -289,7 +292,12 @@ Vector amoGuiMakeArgList() {
         String componentName = component.getName();
         
         if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
-            args.add(((JComboBox) component).getSelectedItem());
+            String variableName = componentName.substring(8);
+            String value = ((JComboBox) component).getSelectedItem();
+            if (value.startsWith(variableName + "="))
+                args.add(value);
+            else
+                args.add(variableName + "=" + value);
         }
     }
     

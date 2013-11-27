@@ -25,7 +25,6 @@ void amoMakeStartListener() {
             boolean updateComponents = false;
             Buffer syncBuffer = null;
             boolean saveDuplication = false;
-            Buffer updateIndentSizeBuffer = null;
             
             if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
                 //amoMessage("AMO UPDATE COMPONENTS " + message);
@@ -101,8 +100,6 @@ void amoMakeStartListener() {
                             //amoMessage(ex.toString());
                         }
                     }
-                    
-                    updateIndentSizeBuffer = buffer;
                 }
             }
             else if (message instanceof EditPaneUpdate) {
@@ -236,8 +233,6 @@ void amoMakeStartListener() {
                     
                     label.repaint();
                 }
-                
-                updateIndentSizeBuffer = syncBuffer;
             }
             
             /*{
@@ -250,14 +245,6 @@ void amoMakeStartListener() {
                     }
                 }
             }*/
-            
-            if (updateIndentSizeBuffer != null) {
-                JComboBox indentSizeComboBox = (JComboBox) amoMakeComponent("AmoMakeIndentSize", false, Class.forName("javax.swing.JComboBox"));
-                
-                if (indentSizeComboBox != null) {
-                    indentSizeComboBox.setSelectedIndex(updateIndentSizeBuffer.getProperty("indentSize") - 1);
-                }
-            }
             
             }
             catch (Exception ex) {

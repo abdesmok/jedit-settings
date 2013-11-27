@@ -241,38 +241,6 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
     }
     
     if (changed) {
-        JComboBox indentSizeComboBox = (JComboBox) amoMakeComponent("AmoMakeIndentSize", true, Class.forName("javax.swing.JComboBox"));
-        
-        if (indentSizeComboBox != null) {
-            indentSizeComboBox.setMaximumSize(indentSizeComboBox.getMinimumSize());
-            indentSizeComboBox.getParent().validate();
-            
-            for (int i = 1; i <= 16; ++i) {
-                indentSizeComboBox.addItem("Indent " + i);
-            }
-            
-            indentSizeComboBox.addItemListener(new ItemListener() {
-                void itemStateChanged(ItemEvent event) {
-                    View view = jEdit.getActiveView();
-                    if (view != null) {
-                        Buffer buffer = view.getBuffer();
-                        
-                        if (buffer != null) {
-                            int indentSize = indentSizeComboBox.getSelectedIndex() + 1;
-                            
-                            buffer.setProperty("tabSize", indentSize);
-                            buffer.setProperty("indentSize", indentSize);
-                        }
-                    }
-                }
-                
-                invoke(name, args) {
-                }
-            });
-        }
-    }
-    
-    if (changed) {
         Container container = amoMakeContainer();
         
         if (container != null) {

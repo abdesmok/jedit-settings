@@ -1,4 +1,7 @@
 import org.gjt.sp.jedit.*;
+import java.awt.*;
+import java.awt.font.*;
+import javax.swing.*;
 
 sourceRelative("../utils.bsh");
 
@@ -244,11 +247,60 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                         prop.load(new FileInputStream(makefile.getParent() + "/jedit.properties"));
                         String value = prop.getProperty("make.arg." + variableName, null);
                         if (value != null)
-                            comboBox.setSelectedItem(/*variableName + "=" +*/ value);
+                            comboBox.setSelectedItem(value);
                         //amoMessage("make.arg." + variableName + "-------------->" + prop.getProperty("make.arg." + variableName, "null"));
                     }
                     catch (IOException ex) {
                         //amoMessage(ex.toString());
+                    }
+                }
+                
+                int emptyValueIndex = -1;
+                
+                if (! comboBox.isEditable()) {
+                    int count = comboBox.getItemCount();
+                    
+                    if (count == 2) {
+                        String onValue;
+                        if (comboBox.getItemAt(0).isEmpty()) {
+                            emptyValueIndex = 0;
+                            onValue = comboBox.getItemAt(1);
+                        }
+                        else if (comboBox.getItemAt(1).isEmpty()) {
+                            emptyValueIndex = 1;
+                            onValue = comboBox.getItemAt(0);
+                        }
+                        
+                        if (onValue != null && ! onValue.isEmpty()) {
+                            //amoMessage("EMPTY " + onValue);
+                            
+                            class Renderer extends DefaultListCellRenderer {
+                                comboBox.putClientProperty("AmoMakeEmptyValueIndex", emptyValueIndex);
+                                
+                                public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                                    setText(onValue);
+                                    
+                                    Map attributes = getFont().getAttributes();
+                                    attributes.put(TextAttribute.STRIKETHROUGH, value.toString().isEmpty());
+                                    setFont(getFont().deriveFont(attributes));
+                                    
+                                    setBackground(isSelected ? new Color(100, 100, 200, 100) : Color.WHITE);
+                                    
+                                    return this;
+                                }
+                            };
+                            
+                            {
+                                Map attributes = comboBox.getFont().getAttributes();
+                                attributes.put(TextAttribute.STRIKETHROUGH, emptyValueIndex == comboBox.getSelectedIndex());
+                                comboBox.setFont(comboBox.getFont().deriveFont(attributes));
+                            }
+                            
+                            comboBox.setRenderer(new Renderer());
+                        }
+                        else {
+                            emptyValueIndex = -1;
+                        }
                     }
                 }
                 
@@ -263,8 +315,20 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                                 //amoMessage(ex.toString());
                             }
                             try {
-                                String value = comboBox.getSelectedItem();
-                                prop.setProperty("make.arg." + variableName, value.substring(value.indexOf('=') + 1));
+                                String value;
+                                
+                                Map attributes = comboBox.getFont().getAttributes();
+                                attributes.put(TextAttribute.STRIKETHROUGH, emptyValueIndex == comboBox.getSelectedIndex());
+                                comboBox.setFont(comboBox.getFont().deriveFont(attributes));
+                                
+                                if (emptyValueIndex == comboBox.getSelectedIndex())
+                                    value = "";
+                                else
+                                    value = comboBox.getSelectedItem();
+                                    
+                                //amoMessage("CHANGED " + value);
+                                
+                                prop.setProperty("make.arg." + variableName, value);
                                 prop.store(new FileOutputStream(makefile.getParent() + "/jedit.properties"), null);
                                 //amoMessage("make.arg." + componentName + "<--------------" + comboBox.getSelectedItem());
                             }
@@ -301,10 +365,14 @@ Vector amoGuiMakeArgList() {
         String componentName = component.getName();
         
         if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
+            JComboBox comboBox = (JComboBox) component;
+            
             String variableName = componentName.substring(8);
-            String value = ((JComboBox) component).getSelectedItem();
-            if (value.startsWith(variableName + "="))
-                args.add(value);
+            String value = comboBox.getSelectedItem();
+            int index = comboBox.getSelectedIndex();
+            
+            if (index == comboBox.getClientProperty("AmoMakeEmptyValueIndex"))
+                args.add(variableName + "=");
             else
                 args.add(variableName + "=" + value);
         }

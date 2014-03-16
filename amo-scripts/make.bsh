@@ -8,11 +8,13 @@ void amoMake(String what) {
     File makefile = amoFindMakeFile();
     
     if (makefile != null) {
-        String args = amoMakeArgs(makefile);
-        
         if (makefile.getName().endsWith(".bsh")) {
-            Object context = run(makefile.getPath(), args);
+            Object context = run(makefile.getPath());
             if (Arrays.asList(context.methods).contains("make")) {
+                for (String arg : amoMakeArgList(makefile)) {
+                    int index = arg.indexOf('=');
+                    context.namespace.setVariable(arg.substring(0, index), arg.substring(index + 1), false);
+                }
                 context.make(what);
             }
         }
@@ -20,6 +22,7 @@ void amoMake(String what) {
             View view = jEdit.getActiveView();
             
             if (view != null) {
+                String args = amoMakeArgs(makefile);
                 Console console = ConsolePlugin.getConsole(view);
                 SystemShell shell = ConsolePlugin.getSystemShell();
                 

@@ -1,4 +1,5 @@
 import org.gjt.sp.jedit.*;
+import org.gjt.sp.jedit.io.*;
 import projectviewer.event.*;
 import java.beans.*;
 import java.io.*;
@@ -9,76 +10,144 @@ includeOnce("log.bsh");
 includeOnce("gui.bsh");
 includeOnce("result.bsh");
 
+boolean amoListenerVerbose = false;
+boolean amoListenerDiagnose = false;
+
+void amoListenerMessage(String message) {
+    if (amoListenerVerbose) {
+        amoMessage(message);
+    }
+}
+
+EBMessage amoEBMessage(String message) {
+    class AmoEBMessage extends EBMessage {
+        public AmoEBMessage() {
+            super(new EBComponent() {});
+        }
+        
+        public String paramString() {
+            return message;
+        }
+    };
+    
+    return new AmoEBMessage();
+}
+
 void amoMakeStartListener() {
+    File lastMakefile = amoFindMakeFile();
+    Vector lastDuplications = new Vector();
+    
+    boolean updateSent = false;
+    boolean updateMakefileSent = false;
+    boolean updateComponentsSent = false;
+    boolean saving = false;
+    boolean processing = false;
+    
     EBComponent component = new EBComponent() {
-        {
-            lastMakefile = null;
-            saveDuplicationPaths = new Vector();
+        public File getMakefile() {
+            return makefile;
         }
-        public void finalize() {
-            amoMessage("FINALIZE " + this);
+        
+        public void sendUpdate() {
+            amoListenerMessage("* sendUpdate");
+            
+            if (! updateSent) {
+                amoListenerMessage("> UPDATE SENT");
+                
+                updateSent = true;
+                updateSent = true;
+                
+                EditBus.sendAsync(amoEBMessage("UPDATE"));
+            }
         }
+        
+        public void sendUpdateMakefile() {
+            amoListenerMessage("* sendUpdateMakefile");
+            
+            if (! updateMakefileSent) {
+                updateMakefileSent = true;
+                sendUpdate();
+            }
+        }
+        
+        public void sendUpdateComponents() {
+            amoListenerMessage("* sendUpdateComponents");
+            
+            if (! updateComponentsSent) {
+                updateComponentsSent = true;
+                sendUpdate();
+            }
+        }
+        
         public void handleMessage(EBMessage message) {
-            try {
-            //amoMessage(message.toString() + "\n  " + message.paramString());
+            processing = true;
+            
+            if (amoListenerDiagnose) {
+                amoListenerMessage("---> " + message.toString());
+            }
+            
+            //amoListenerMessage("~ThreadID: " + Thread.currentThread().getId());
+            //amoListenerMessage("~EDT? " + SwingUtilities.isEventDispatchThread());
             
             boolean updateComponents = false;
-            Buffer syncBuffer = null;
-            boolean saveDuplication = false;
+            boolean updateLabel = false;
             
-            if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
-                //amoMessage("AMO UPDATE COMPONENTS " + message);
-                File makefile = amoFindMakeFile();
+            Buffer savedBuffer = null;
+            
+            /*if (message instanceof NodeSelectionUpdate) { // project viewer
+                amoListenerMessage("# BufferChanging");
+                sendUpdateMakefile();
+            }
+            else if (message instanceof ViewerUpdate) { // project viewer
+                amoListenerMessage("# ViewerUpdate");
+                sendUpdateMakefile();
+            }
+            else if (message instanceof BufferChanging) { // edit pane
+                amoListenerMessage("# BufferChanging");
+                sendUpdateMakefile();
+            }
+            else*/ if (message instanceof EditPaneUpdate) {
+                EditPaneUpdate editPaneUpdate = (EditPaneUpdate) message;
                 
-                JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
-                
-                //amoMessage((lastMakefile == null ? "null" : lastMakefile.getPath()) + " ?= " + (makefile == null ? "null" : makefile.getPath()));
-                
-                if (label == null || makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
-                    lastMakefile = makefile;
-                    updateComponents = true;
+                if (editPaneUpdate.getWhat() == EditPaneUpdate.BUFFER_CHANGED) {
+                    amoListenerMessage("# EditPaneUpdate BUFFER_CHANGED");
+                    
+                    sendUpdateMakefile();
                 }
             }
-            else if (message instanceof ViewerUpdate || message instanceof BufferChanging) {
-                class Message extends EBMessage {
-                    public Message() {
-                        super(new EBComponent() {});
-                    }
-                    public String paramString() { return "AMO-UPDATE-PARAM"; }
-                };
-                
-                Message message = new Message();
-                
-                EditBus.sendAsync(message);
+            else if (message instanceof PropertiesChanged) {
+                amoListenerMessage("# PropertiesChanged");
+                sendUpdateComponents();
             }
             else if (message instanceof BufferUpdate) {
                 BufferUpdate bufferUpdate = (BufferUpdate) message;
                 //amoMessage(bufferUpdate.getWhat());
                 
                 if (bufferUpdate.getWhat() == BufferUpdate.SAVED) {
-                    if (lastMakefile == null) {
-                        lastMakefile = amoFindMakeFile();
-                        if (lastMakefile != null)
-                            updateComponents = true;
-                    }
+                    amoListenerMessage("# BufferUpdate.SAVED saving? " + saving);
                     
-                    if (lastMakefile != null) {
-                        if (bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
-                            updateComponents = true;
-                            
-                            // ! overwrite remote Makefile !
-                            syncBuffer = bufferUpdate.getBuffer();
-                            saveDuplication = true;
-                        }
-                        else {
-                            syncBuffer = bufferUpdate.getBuffer();
-                            saveDuplication = true;
+                    if (! saving) {
+                        if (lastMakefile != null) {
+                            if (bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
+                                updateComponents = true;
+                                
+                                // ! overwrite remote Makefile !
+                                updateLabel = true;
+                                savedBuffer = bufferUpdate.getBuffer();
+                            }
+                            else {
+                                updateLabel = true;
+                                savedBuffer = bufferUpdate.getBuffer();
+                            }
                         }
                     }
                 }
                 else if (bufferUpdate.getWhat() == BufferUpdate.LOADED) {
+                    amoListenerMessage("# BufferUpdate.LOADED");
+                    
                     File propertiesFile = amoFindPropertiesFile();
                     Buffer buffer = bufferUpdate.getBuffer();
+                    buffer = null;
                     
                     if (propertiesFile != null && buffer != null) {
                         Properties properties = new Properties();
@@ -101,137 +170,219 @@ void amoMakeStartListener() {
                         }
                     }
                 }
-            }
-            else if (message instanceof EditPaneUpdate) {
-                EditPaneUpdate editPaneUpdate = (EditPaneUpdate) message;
-                
-                if (editPaneUpdate.getWhat() == EditPaneUpdate.BUFFER_CHANGED) {
-                    View view = jEdit.getActiveView();
-                    
-                    if (view != null)
-                        syncBuffer = view.getBuffer();
+                else if (bufferUpdate.getWhat() == BufferUpdate.DIRTY_CHANGED) {
+                    updateLabel = true;
                 }
             }
-            else if (message instanceof PropertiesChanged) {
-                updateComponents = true;
-            }
-            else if (message.paramString().equals("AMO-QUIT-PARAM")) {
-                //amoMessage("AMO REMOVE FROM BUS " + component);
-                amoMessage("REMOVED FROM BUS");
-                EditBus.removeFromBus(component);
+            else if (message instanceof AmoEBMessage) {
+                String param = message.paramString();
+                
+                if (param.equals("UPDATE")) {
+                    amoListenerMessage("@ UPDATE RECEIVED");
+                    
+                    updateSent = false;
+                    
+                    if (updateMakefileSent) {
+                        amoListenerMessage("+ updateMakefileSent");
+                        
+                        updateMakefileSent = false;
+                        
+                        File makefile = amoFindMakeFile();
+                        
+                        if (makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
+                            lastMakefile = makefile;
+                            updateComponents = true;
+                        }
+                        else {
+                            updateLabel = true;
+                        }
+                    }
+                    
+                    if (updateComponentsSent) {
+                        amoListenerMessage("+ updateComponentsSent");
+                        
+                        updateComponentsSent = false;
+                        updateComponents = true;
+                    }
+                }
+                else if (param.equals("START")) {
+                    amoListenerMessage("START");
+                    updateComponents = true;
+                }
+                else if (param.equals("QUIT")) {
+                    amoListenerMessage("REMOVED FROM BUS");
+                    EditBus.removeFromBus(component);
+                }
             }
             
+            //return;
+            
             if (updateComponents) {
+                amoListenerMessage("$ updateComponentsSent");
+                
                 amoMakeUpdateComponents(lastMakefile);
                 
-                if (saveDuplicationPaths == null)
-                    saveDuplicationPaths = new Vector();
-                
-                saveDuplicationPaths.clear();
+                lastDuplications.clear();
                 BufferedReader br = amoMakeResult("sync-path", lastMakefile);
                 
                 if (br != null) {
                     String line;
                     while ((line = br.readLine()) != null) {
-                        saveDuplicationPaths.add(line);
+                        lastDuplications.add(line);
                     }
                 }
                 
-                View view = jEdit.getActiveView();
-                if (view != null) {
-                    syncBuffer = view.getBuffer();
-                }
+                updateLabel = true;
             }
             
-            if (syncBuffer != null && lastMakefile != null) {
+            if (updateLabel) {
+                amoListenerMessage("$ updateLabel");
+                
                 View view = jEdit.getActiveView();
-                File bufferFile = new File(syncBuffer.getPath());
+                Buffer currentBuffer = view == null ? null : view.getBuffer();
+                Buffer duplicatedBuffer = savedBuffer == null ? currentBuffer : savedBuffer;
                 
                 Vector duplications = new Vector();
                 Vector statusList = new Vector();
                 
-                if (bufferFile.exists()) {
-                    String projectDirPath = lastMakefile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
-                    String bufferDirPath = bufferFile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
+                if (duplicatedBuffer != null && lastMakefile != null) {
+                    amoListenerMessage("$ duplicatedBuffer " + duplicatedBuffer.getName());
                     
-                    for (String saveDuplicationPath : saveDuplicationPaths) {
-                        String localPath;
+                    File bufferFile = new File(duplicatedBuffer.getPath());
+                    
+                    if (bufferFile.exists()) {
+                        String projectDirPath = lastMakefile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
+                        String bufferDirPath = bufferFile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
                         
-                        int position = saveDuplicationPath.indexOf('|');
-                        
-                        if (position != -1) {
-                            localPath = (saveDuplicationPath.substring(0, position).replace(File.separator, "/") + "/").replace("//", "/");
-                            saveDuplicationPath = (saveDuplicationPath.substring(position + 1).replace(File.separator, "/") + "/").replace("//", "/");
-                        }
-                        else {
-                            localPath = projectDirPath;
-                            saveDuplicationPath = (saveDuplicationPath.replace(File.separator, "/") + "/").replace("//", "/");
+                        if (duplicatedBuffer == savedBuffer) {
+                            saving = true;
                         }
                         
-                        if (bufferDirPath != null && bufferDirPath.startsWith(localPath)) {
-                            String savePath = saveDuplicationPath + bufferDirPath.substring(localPath.length());
+                        for (String saveDuplicationPath : lastDuplications) {
+                            String localPath;
                             
-                            (new File(savePath)).mkdirs();
+                            int position = saveDuplicationPath.indexOf('|');
                             
-                            savePath += bufferFile.getName();
-                            
-                            duplications.add(savePath);
-                            
-                            if (saveDuplication) {
-                                syncBuffer.save(view, savePath, false);
-                                //amoMessage("save to " + savePath);
-                                statusList.add("written");
+                            if (position != -1) {
+                                localPath = (saveDuplicationPath.substring(0, position).replace(File.separator, "/") + "/").replace("//", "/");
+                                saveDuplicationPath = (saveDuplicationPath.substring(position + 1).replace(File.separator, "/") + "/").replace("//", "/");
                             }
                             else {
-                                File saveFile = new File(savePath);
+                                localPath = projectDirPath;
+                                saveDuplicationPath = (saveDuplicationPath.replace(File.separator, "/") + "/").replace("//", "/");
+                            }
+                            
+                            if (bufferDirPath != null && bufferDirPath.startsWith(localPath)) {
+                                String savePath = saveDuplicationPath + bufferDirPath.substring(localPath.length());
                                 
-                                if (saveFile.exists()) {
-                                    if (saveFile.lastModified() < bufferFile.lastModified()) {
-                                        statusList.add("older");
-                                    }
-                                    else {
-                                        statusList.add("same");
-                                    }
+                                (new File(savePath)).mkdirs();
+                                
+                                savePath += bufferFile.getName();
+                                
+                                duplications.add(savePath);
+                                
+                                if (duplicatedBuffer == savedBuffer) {
+                                    amoListenerMessage("$ savedBuffer " + savedBuffer.getName());
+                                    
+                                    duplicatedBuffer.readLock();
+                                    
+                                    duplicatedBuffer.save(view, savePath, false);
+                                    
+                                    duplicatedBuffer.readUnlock();
+                                    
+                                    VFSManager.waitForRequests();
+                                    
+                                    //amoMessage("save to " + savePath);
+                                    statusList.add("<font color=blue>Written</font>");
                                 }
                                 else {
-                                    statusList.add("does not exist");
+                                    File saveFile = new File(savePath);
+                                    
+                                    if (saveFile.exists()) {
+                                        if (saveFile.lastModified() < bufferFile.lastModified()) {
+                                            statusList.add("<font color=red>Older</font>");
+                                        }
+                                        else {
+                                            statusList.add("<font color=green>Same</font>");
+                                        }
+                                    }
+                                    else {
+                                        statusList.add("<font color=gray>Does not exist</font>");
+                                    }
                                 }
                             }
+                        }
+                        
+                        if (duplicatedBuffer == savedBuffer) {
+                            saving = false;
                         }
                     }
                 }
                 
-                JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
-                
-                if (label != null) {
-                    String labelText = "";
-                    String toolTip = "<html><b>Makefile:</b> " + lastMakefile.getPath().replace(File.separator, "/");
+                if (currentBuffer == duplicatedBuffer) {
+                    String labelText = "<html>(";
+                    String toolTip = "<html>";
                     
-                    if (duplications.isEmpty()) {
-                        toolTip += "<br><i>Left click to open Makefile</i>";
-                        labelText = "no duplication";
+                    if (currentBuffer == null) {
+                        labelText += "No Buffer";
                     }
                     else {
-                        for (int i = 0; i < duplications.size(); ++i) {
-                            String duplication = duplications.elementAt(i);
-                            String status = statusList.elementAt(i);
-                            
-                            if (! labelText.isEmpty()) labelText += ",";
-                            labelText += status;
-                            
-                            toolTip += "<br><b>Duplication:</b> " + duplication + " (" + status + ")";
+                        if (currentBuffer.isDirty()) {
+                            labelText += "<b><font color=red>" + currentBuffer.getName() + "</font></b>: ";
                         }
-                        toolTip += "<br><i>Left click to open Makefile</i>";
-                        toolTip += "<br><i>Right click to open duplications</i>";
+                        else {
+                            labelText += "<b>" + currentBuffer.getName() + "</b>: ";
+                        }
                     }
                     
+                    if (lastMakefile == null) {
+                        labelText += "No Makefile";
+                        toolTip += "No Makefile";
+                    }
+                    else {
+                        toolTip += "<b>Makefile:</b> " + lastMakefile.getPath().replace(File.separator, "/");
+                        
+                        if (duplications.isEmpty()) {
+                            labelText += "No duplication";
+                            toolTip += "<br><i>Left click to open Makefile</i>";
+                        }
+                        else {
+                            for (int i = 0; i < duplications.size(); ++i) {
+                                String duplication = duplications.elementAt(i);
+                                String status = statusList.elementAt(i);
+                                
+                                if (i > 0) labelText += ", ";
+                                labelText += status;
+                                
+                                toolTip += "<br><b>Duplication:</b> " + duplication + " (" + status + ")";
+                            }
+                            toolTip += "<br><i>Left click to open Makefile</i>";
+                            toolTip += "<br><i>Right click to open duplications</i>";
+                        }
+                    }
+                    
+                    labelText += ")<span> </span></html>";
                     toolTip += "</html>";
                     
-                    label.putClientProperty("duplications", duplications);
-                    label.setText("(" + labelText + ") ");
-                    label.setToolTipText(toolTip);
+                    JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
                     
-                    label.repaint();
+                    if (label != null) {
+                        //amoMessage("-----------------\n" + labelText + "\n" + toolTip);
+                        //amoMessage(label.toString());
+                        //amoMessage("-----------------");
+                        
+                        label.putClientProperty("duplications", duplications);
+                        label.putClientProperty("text", labelText);
+                        label.setText(labelText);
+                        label.setToolTipText(toolTip);
+                        
+                        Dimension d = label.getPreferredSize();
+                        d.height = 25;
+                        //label.setPreferredSize(d);
+                        label.setMinimumSize(d);
+                        label.setMaximumSize(d);
+                        label.getParent().validate();
+                    }
                 }
             }
             
@@ -241,42 +392,25 @@ void amoMakeStartListener() {
                 if (view != null) {
                     Buffer buffer = view.getBuffer();
                     if (buffer != null) {
-                        amoMessage(" -> " + message + "\n    " + buffer.getProperty("indentSize"));
+                        amoListenerMessage(" -> " + message + "\n    " + buffer.getProperty("indentSize"));
                     }
                 }
             }*/
             
+            if (amoListenerDiagnose) {
+                amoListenerMessage("<---");
             }
-            catch (Exception ex) {
-                amoMessage("Exception " + ex.toString());
-                amoMessage("Message " + message.toString() + "\n    " + message.paramString());
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                ex.printStackTrace(new PrintStream(stream));
-                amoMessage(stream.toString());
-                //amoMessage(this.callstack.toString());
-            }
+            
+            processing = false;
         }
-        
-        File lastMakefile;
-        Vector saveDuplicationPaths;
     };
     
-    //amoMessage("AMO ADD TO BUS " + component);
-    amoMessage("ADDED TO BUS");
-    amoMakeUpdateComponents();
     EditBus.addToBus(component);
+    
+    EditBus.send(amoEBMessage("START"));
 }
 
 void amoMakeStopListener() {
-    class Message extends EBMessage {
-        public Message() {
-            super(new EBComponent() {});
-        }
-        public String paramString() { return "AMO-QUIT-PARAM"; }
-    };
-    
-    Message message = new Message();
-    
-    EditBus.send(message);
+    EditBus.send(amoEBMessage("QUIT"));
 }
 

@@ -1,8 +1,8 @@
 import org.gjt.sp.jedit.*;
 import console.*;
 
-void amoMessage(String message) {
-    //JOptionPane.showMessageDialog(null, message);
+void amoMessage(Object message) {
+    //JOptionPane.showMessageDialog(null, message.toString());
     
     View view = jEdit.getActiveView();
     if (view != null) {
@@ -11,7 +11,7 @@ void amoMessage(String message) {
             if (dockableWindowManager.isDockableWindowDocked("console")) {
                 if (! dockableWindowManager.isDockableWindowVisible("console"))
                     dockableWindowManager.toggleDockableWindow("console");
-                ConsolePlugin.getConsole(view).getOutput().print(new Color(50, 10, 200), message);
+                ConsolePlugin.getConsole(view).getOutput().print(new Color(50, 10, 200), message == null ?  "null" : message.toString());
             }
         }
     }

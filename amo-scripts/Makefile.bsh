@@ -1,26 +1,41 @@
 path = pathToFile(dirname(getSourceFileInfo())).getAbsolutePath();
 
+DIAGNOSE = "";
+VERBOSE = "";
+
 make(what) {
     context = this.caller.global;
     
     if (what == "args") {
-        return "arg1=value1\narg1=value2\narg1=value3\narg2=*\narg2=abc\nbool=1\nbool=0\nVERBOSE=VERBOSE\nVERBOSE=";
+        return
+            "VERBOSE=\n" +
+            "VERBOSE=VERBOSE\n" +
+            "DIAGNOSE=\n" +
+            "DIAGNOSE=DIAGNOSE"
+            ;
     }
     else if (what == "sync-path") {
+        return "D:/tmp/deleme\nD:/tmp/deleme2\nD:/tmp/deleme3\nD:/tmp/deleme4\nD:/tmp/deleme5";
     }
-    else if (what == "run") {
-        context.amoMessage("Run: restart listener");
-        context.amoMakeStopListener();
-        context.includedFiles.clear();
+    else if (what == "build" || what == "run") {
+        context.amoListenerDiagnose = DIAGNOSE.equals("DIAGNOSE");
+        context.amoListenerDebug = VERBOSE.equals("VERBOSE");
         
-        this.interpreter.source(super.path + "/make.bsh", context.namespace);
-        this.interpreter.source(super.path + "/make/listener.bsh", context.namespace);
-        
-        context.amoMakeStartListener();
+        if (what == "run") {
+            context.amoMessage("Run: restart listener");
+            context.amoMakeStopListener();
+            context.includedFiles.clear();
+            
+            this.interpreter.source(super.path + "/make.bsh", context.namespace);
+            this.interpreter.source(super.path + "/make/listener.bsh", context.namespace);
+            
+            context.amoMakeStartListener();
+        }
     }
     else if (what == "clean") {
         context.amoMessage("Clean: stop listener");
         context.amoMakeStopListener();
+        context.amoMakeRemoveComponents();
         context.includedFiles.clear();
     }
     else {

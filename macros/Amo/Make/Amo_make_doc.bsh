@@ -1,0 +1,4 @@
+sourceRelative("../../../amo-scripts/make.bsh");
+
+amoMake("doc");
+

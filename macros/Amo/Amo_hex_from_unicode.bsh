@@ -1,0 +1,10 @@
+String selection = textArea.getSelectedText();
+String hex = "";
+
+for (int i = 0; i < selection.length(); ++i) {
+    hex += String.format("%04X", new Object[] { new Integer(selection.charAt(i)) });
+}
+
+textArea.replaceSelection(hex);
+
+// AAA

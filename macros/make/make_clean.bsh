@@ -1,4 +1,0 @@
-sourceRelative("../../amo-scripts/make.bsh");
-
-amoMake("clean");
-

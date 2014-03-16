@@ -1,4 +1,0 @@
-textArea.goToStartOfWhiteSpace(false);
-textArea.setSelectedText("//--");
-textArea.goToNextLine(false);
-

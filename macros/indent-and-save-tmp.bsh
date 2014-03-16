@@ -1,5 +1,0 @@
-xml.indent.XmlIndenterPlugin.indentXml(view);
-buffer.save(view, buffer.getDirectory() + "/tmp-" + buffer.getName(), false);
-VFSManager.waitForRequests();
-buffer.reload(view);
-

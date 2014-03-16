@@ -1,0 +1,13 @@
+SearchAndReplace.setSearchString("([0-9]+)");
+SearchAndReplace.setReplaceString("_1 + \"\\n\" + (Integer.parseInt(_1) + 1)");
+
+SearchAndReplace.setAutoWrapAround(false);
+SearchAndReplace.setReverseSearch(false);
+SearchAndReplace.setRegexp(true);
+SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
+SearchAndReplace.setBeanShellReplace(true);
+
+SearchAndReplace.find(view);
+SearchAndReplace.replace(view);
+
+textArea.goToStartOfWhiteSpace(false);

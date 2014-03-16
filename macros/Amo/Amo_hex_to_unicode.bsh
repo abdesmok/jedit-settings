@@ -1,0 +1,10 @@
+String selection = textArea.getSelectedText().replaceAll("[^0-9a-fA-F]", "");
+String unicode = "";
+
+for (int i = 0; i < selection.length(); i += 4) {
+    unicode += new String(Character.toChars(Integer.parseInt(selection.substring(i, i + 4), 16)));
+}
+
+textArea.replaceSelection(unicode);
+
+// 004100410041

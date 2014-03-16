@@ -2,6 +2,7 @@ path = pathToFile(dirname(getSourceFileInfo())).getAbsolutePath();
 
 DIAGNOSE = "";
 VERBOSE = "";
+EDITOR_FILE = "";
 
 make(what) {
     context = this.caller.global;
@@ -15,31 +16,36 @@ make(what) {
             ;
     }
     else if (what == "sync-path") {
-        return "D:/tmp/deleme\nD:/tmp/deleme2\nD:/tmp/deleme3\nD:/tmp/deleme4\nD:/tmp/deleme5";
+        return "D:/tmp/deleme"; //\nD:/tmp/deleme2\nD:/tmp/deleme3\nD:/tmp/deleme4\nD:/tmp/deleme5";
     }
     else if (what == "build" || what == "run") {
-        context.amoListenerDiagnose = DIAGNOSE.equals("DIAGNOSE");
-        context.amoListenerDebug = VERBOSE.equals("VERBOSE");
-        
         if (what == "run") {
-            context.amoMessage("Run: restart listener");
+            context.amoMessage("restart listener");
             context.amoMakeStopListener();
             context.includedFiles.clear();
             
             this.interpreter.source(super.path + "/make.bsh", context.namespace);
             this.interpreter.source(super.path + "/make/listener.bsh", context.namespace);
-            
+        }
+        
+        context.amoListenerDiagnose = DIAGNOSE.equals("DIAGNOSE");
+        context.amoListenerVerbose = VERBOSE.equals("VERBOSE");
+        
+        if (what == "run") {
             context.amoMakeStartListener();
         }
     }
+    else if (what == "compile") {
+        context.amoMessage("->" + EDITOR_FILE);
+        context.source(EDITOR_FILE);
+    }
     else if (what == "clean") {
-        context.amoMessage("Clean: stop listener");
+        context.amoMessage("stop listener");
         context.amoMakeStopListener();
-        context.amoMakeRemoveComponents();
         context.includedFiles.clear();
     }
     else {
-        context.amoMessage("Nothing to do for " + what);
+        context.amoMessage("nothing to do for " + what);
     }
     
     return "";

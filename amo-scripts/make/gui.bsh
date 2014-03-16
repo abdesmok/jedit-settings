@@ -2,6 +2,7 @@ import org.gjt.sp.jedit.*;
 import java.awt.*;
 import java.awt.font.*;
 import javax.swing.*;
+import projectviewer.*;
 
 sourceRelative("../utils.bsh");
 
@@ -168,6 +169,8 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                 if (labelText != null)
                     label.setText(labelText);
                 
+                int defaultDismissDelay = ToolTipManager.sharedInstance().getDismissDelay();
+                
                 label.addMouseListener(new MouseListener() {
                     void mouseClicked(MouseEvent event) {
                         if (event.getButton() == MouseEvent.BUTTON1) {
@@ -184,8 +187,17 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                             }
                         }
                     }
+                    
+                    public void mouseEntered(MouseEvent event) {
+                        ToolTipManager.sharedInstance().setDismissDelay(60000 * 60 * 24);
+                    }
+                    
+                    public void mouseExited(MouseEvent event) {
+                        ToolTipManager.sharedInstance().setDismissDelay(defaultDismissDelay);
+                    }
+                    
                     invoke(name, args) {
-                        print("Method: " + name + " invoked!");
+                        //print("Method: " + name + " invoked!");
                     }
                 });
             }
@@ -244,6 +256,10 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
         Container container = amoMakeContainer();
         
         if (container != null) {
+            Dimension d = container.getPreferredSize();
+            d.height = 30;
+            container.setPreferredSize(d);
+            
             for (int i = 0; i < container.getComponentCount(); ++i) {
                 JComponent component = container.getComponent(i);
                 String componentName = component.getName();

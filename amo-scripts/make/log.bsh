@@ -2,8 +2,6 @@ import org.gjt.sp.jedit.*;
 import console.*;
 
 void amoMessage(Object message) {
-    //JOptionPane.showMessageDialog(null, message.toString());
-    
     View view = jEdit.getActiveView();
     if (view != null) {
         DockableWindowManager dockableWindowManager = view.getDockableWindowManager();
@@ -14,6 +12,9 @@ void amoMessage(Object message) {
                 ConsolePlugin.getConsole(view).getOutput().print(new Color(50, 10, 200), message == null ?  "null" : message.toString());
             }
         }
+    }
+    else {
+        //JOptionPane.showMessageDialog(null, message == null ?  "null" : message.toString());
     }
 }
 

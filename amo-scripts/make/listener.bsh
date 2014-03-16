@@ -9,6 +9,7 @@ sourceRelative("../utils.bsh");
 includeOnce("log.bsh");
 includeOnce("gui.bsh");
 includeOnce("result.bsh");
+includeOnce("../customize.bsh");
 
 boolean amoListenerVerbose = false;
 boolean amoListenerDiagnose = false;
@@ -40,8 +41,10 @@ void amoMakeStartListener() {
     boolean updateSent = false;
     boolean updateMakefileSent = false;
     boolean updateComponentsSent = false;
-    boolean saving = false;
     boolean processing = false;
+    
+    HashSet buffersToSave = new HashSet();
+    HashSet savingBuffers = new HashSet();
     
     EBComponent component = new EBComponent() {
         public File getMakefile() {
@@ -82,6 +85,8 @@ void amoMakeStartListener() {
         public void handleMessage(EBMessage message) {
             processing = true;
             
+            //amoMessage("---> " + message.toString());
+            
             if (amoListenerDiagnose) {
                 amoListenerMessage("---> " + message.toString());
             }
@@ -91,8 +96,9 @@ void amoMakeStartListener() {
             
             boolean updateComponents = false;
             boolean updateLabel = false;
+            boolean saveDuplications = false;
             
-            Buffer savedBuffer = null;
+            //Buffer savedBuffer = null;
             
             /*if (message instanceof NodeSelectionUpdate) { // project viewer
                 amoListenerMessage("# BufferChanging");
@@ -124,20 +130,26 @@ void amoMakeStartListener() {
                 //amoMessage(bufferUpdate.getWhat());
                 
                 if (bufferUpdate.getWhat() == BufferUpdate.SAVED) {
-                    amoListenerMessage("# BufferUpdate.SAVED saving? " + saving);
+                    Buffer buffer = bufferUpdate.getBuffer();
                     
-                    if (! saving) {
+                    amoListenerMessage("# BufferUpdate.SAVED " + buffer.getName());
+                    
+                    if (! savingBuffers.contains(buffer)) {
                         if (lastMakefile != null) {
                             if (bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
-                                updateComponents = true;
+                                //updateComponents = true;
                                 
                                 // ! overwrite remote Makefile !
-                                updateLabel = true;
-                                savedBuffer = bufferUpdate.getBuffer();
+                                buffersToSave.add(bufferUpdate.getBuffer());
+                                sendUpdateComponents();
+                                //updateLabel = true;
+                                //savedBuffer = bufferUpdate.getBuffer();
                             }
                             else {
-                                updateLabel = true;
-                                savedBuffer = bufferUpdate.getBuffer();
+                                buffersToSave.add(bufferUpdate.getBuffer());
+                                sendUpdate();
+                                //updateLabel = true;
+                                //savedBuffer = bufferUpdate.getBuffer();
                             }
                         }
                     }
@@ -147,7 +159,6 @@ void amoMakeStartListener() {
                     
                     File propertiesFile = amoFindPropertiesFile();
                     Buffer buffer = bufferUpdate.getBuffer();
-                    buffer = null;
                     
                     if (propertiesFile != null && buffer != null) {
                         Properties properties = new Properties();
@@ -174,7 +185,8 @@ void amoMakeStartListener() {
                     updateLabel = true;
                 }
             }
-            else if (message instanceof AmoEBMessage) {
+            //else if (message instanceof AmoEBMessage) {
+            else if (message.getClass().getName().equals("AmoEBMessage")) {
                 String param = message.paramString();
                 
                 if (param.equals("UPDATE")) {
@@ -204,6 +216,15 @@ void amoMakeStartListener() {
                         updateComponentsSent = false;
                         updateComponents = true;
                     }
+                    
+                    if (! buffersToSave.isEmpty()) {
+                        saveDuplications = true;
+                    }
+                }
+                else if (param.equals("CUSTOMIZE")) {
+                    if (! amoEnableAllCustomizations(true)) {
+                        EditBus.sendAsync(amoEBMessage("CUSTOMIZE"));
+                    }
                 }
                 else if (param.equals("START")) {
                     amoListenerMessage("START");
@@ -212,6 +233,8 @@ void amoMakeStartListener() {
                 else if (param.equals("QUIT")) {
                     amoListenerMessage("REMOVED FROM BUS");
                     EditBus.removeFromBus(component);
+                    
+                    amoMakeRemoveComponents();
                 }
             }
             
@@ -235,153 +258,198 @@ void amoMakeStartListener() {
                 updateLabel = true;
             }
             
-            if (updateLabel) {
-                amoListenerMessage("$ updateLabel");
+            if (updateLabel || saveDuplications) {
+                if (updateLabel) {
+                    amoListenerMessage("$ updateLabel");
+                }
+                if (saveDuplications) {
+                    amoListenerMessage("$ saveDuplications");
+                }
                 
                 View view = jEdit.getActiveView();
                 Buffer currentBuffer = view == null ? null : view.getBuffer();
-                Buffer duplicatedBuffer = savedBuffer == null ? currentBuffer : savedBuffer;
                 
-                Vector duplications = new Vector();
-                Vector statusList = new Vector();
+                HashSet buffers;
                 
-                if (duplicatedBuffer != null && lastMakefile != null) {
-                    amoListenerMessage("$ duplicatedBuffer " + duplicatedBuffer.getName());
+                if (saveDuplications) {
+                    buffers = buffersToSave.clone();
                     
-                    File bufferFile = new File(duplicatedBuffer.getPath());
+                    buffersToSave.clear();
                     
-                    if (bufferFile.exists()) {
-                        String projectDirPath = lastMakefile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
-                        String bufferDirPath = bufferFile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
+                    for (Buffer buffer: buffers) {
+                        savingBuffers.add(buffer);
+                    }
+                }
+                else {
+                    buffers = new HashSet();
+                    
+                    buffers.add(currentBuffer);
+                }
+                
+                for (Buffer duplicatedBuffer: buffers) {
+                    Vector duplications = new Vector();
+                    Vector statusList = new Vector();
+                    
+                    if (duplicatedBuffer != null && lastMakefile != null) {
+                        amoListenerMessage("$ duplicatedBuffer " + duplicatedBuffer.getName());
                         
-                        if (duplicatedBuffer == savedBuffer) {
-                            saving = true;
-                        }
+                        File bufferFile = new File(duplicatedBuffer.getPath());
                         
-                        for (String saveDuplicationPath : lastDuplications) {
-                            String localPath;
+                        if (bufferFile.exists()) {
+                            String projectDirPath = lastMakefile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
+                            String bufferDirPath = bufferFile.getParentFile().getAbsolutePath().replace(File.separator, "/") + "/";
                             
-                            int position = saveDuplicationPath.indexOf('|');
+                            //if (duplicatedBuffer == savedBuffer) {
+                                //savingBuffers.add(savedBuffer);
+                            //}
                             
-                            if (position != -1) {
-                                localPath = (saveDuplicationPath.substring(0, position).replace(File.separator, "/") + "/").replace("//", "/");
-                                saveDuplicationPath = (saveDuplicationPath.substring(position + 1).replace(File.separator, "/") + "/").replace("//", "/");
-                            }
-                            else {
-                                localPath = projectDirPath;
-                                saveDuplicationPath = (saveDuplicationPath.replace(File.separator, "/") + "/").replace("//", "/");
-                            }
-                            
-                            if (bufferDirPath != null && bufferDirPath.startsWith(localPath)) {
-                                String savePath = saveDuplicationPath + bufferDirPath.substring(localPath.length());
+                            for (String saveDuplicationPath : lastDuplications) {
+                                String localPath;
                                 
-                                (new File(savePath)).mkdirs();
+                                int position = saveDuplicationPath.indexOf('|');
                                 
-                                savePath += bufferFile.getName();
-                                
-                                duplications.add(savePath);
-                                
-                                if (duplicatedBuffer == savedBuffer) {
-                                    amoListenerMessage("$ savedBuffer " + savedBuffer.getName());
-                                    
-                                    duplicatedBuffer.readLock();
-                                    
-                                    duplicatedBuffer.save(view, savePath, false);
-                                    
-                                    duplicatedBuffer.readUnlock();
-                                    
-                                    VFSManager.waitForRequests();
-                                    
-                                    //amoMessage("save to " + savePath);
-                                    statusList.add("<font color=blue>Written</font>");
+                                if (position != -1) {
+                                    localPath = (saveDuplicationPath.substring(0, position).replace(File.separator, "/") + "/").replace("//", "/");
+                                    saveDuplicationPath = (saveDuplicationPath.substring(position + 1).replace(File.separator, "/") + "/").replace("//", "/");
                                 }
                                 else {
-                                    File saveFile = new File(savePath);
+                                    localPath = projectDirPath;
+                                    saveDuplicationPath = (saveDuplicationPath.replace(File.separator, "/") + "/").replace("//", "/");
+                                }
+                                
+                                if (bufferDirPath != null && bufferDirPath.startsWith(localPath)) {
+                                    String savePath = saveDuplicationPath + bufferDirPath.substring(localPath.length());
                                     
-                                    if (saveFile.exists()) {
-                                        if (saveFile.lastModified() < bufferFile.lastModified()) {
-                                            statusList.add("<font color=red>Older</font>");
-                                        }
-                                        else {
-                                            statusList.add("<font color=green>Same</font>");
-                                        }
+                                    (new File(savePath)).mkdirs();
+                                    
+                                    savePath += bufferFile.getName();
+                                    
+                                    duplications.add(savePath);
+                                    
+                                    if (saveDuplications) {
+                                        amoListenerMessage("$ saveDuplication " + duplicatedBuffer.getName());
+                                        
+                                        duplicatedBuffer.readLock();
+                                        
+                                        duplicatedBuffer.save(null, savePath, false);
+                                        
+                                        duplicatedBuffer.readUnlock();
+                                        
+                                        VFSManager.waitForRequests();
+                                        
+                                        //amoMessage("save to " + savePath);
+                                        statusList.add("<font color=blue>Written</font>");
                                     }
                                     else {
-                                        statusList.add("<font color=gray>Does not exist</font>");
+                                        File saveFile = new File(savePath);
+                                        
+                                        if (saveFile.exists()) {
+                                            if (saveFile.lastModified() < bufferFile.lastModified()) {
+                                                statusList.add("<font color=red>older</font>");
+                                            }
+                                            else {
+                                                statusList.add("<font color=green>up-to-date</font>");
+                                            }
+                                        }
+                                        else {
+                                            statusList.add("<font color=gray>does not exist</font>");
+                                        }
                                     }
+                                }
+                            }
+                            
+                            //if (duplicatedBuffer == savedBuffer) {
+                            //    savingBuffers.remove(savedBuffer);
+                            //}
+                        }
+                    }
+                    
+                    if (currentBuffer == duplicatedBuffer) {
+                        String labelText = "<html>(";
+                        String toolTip = "<html><table>";
+                        
+                        if (currentBuffer == null) {
+                            labelText += "No Buffer";
+                            toolTip += "<tr><td>No Buffer</tr></td>";
+                        }
+                        else {
+                            if (currentBuffer.isDirty()) {
+                                labelText += "<b><font color=red>" + currentBuffer.getName() + "</font></b>: ";
+                            }
+                            else {
+                                labelText += "<b>" + currentBuffer.getName() + "</b>: ";
+                            }
+                            toolTip +=
+                                "<tr><td><b>Buffer:</b></td><td colspan=2>" +
+                                currentBuffer.getPath().replace(File.separator, "/") + "</tr></td>";
+                        }
+                        
+                        if (lastMakefile == null) {
+                            labelText += "No Makefile";
+                            toolTip += "<tr><td>No Makefile</tr></td>";
+                        }
+                        else {
+                            toolTip +=
+                                "<tr><td><b>Makefile:</b></td><td colspan=2>" +
+                                lastMakefile.getPath().replace(File.separator, "/") + "</tr></td>";
+                            
+                            if (duplications.isEmpty()) {
+                                labelText += "No duplication";
+                                toolTip += "</table><br><i>Left click to open Makefile</i>";
+                            }
+                            else {
+                                for (int i = 0; i < duplications.size(); ++i) {
+                                    String duplication = duplications.elementAt(i);
+                                    String status = statusList.elementAt(i);
+                                    
+                                    if (i > 0) labelText += ", ";
+                                    labelText += status;
+                                    
+                                    toolTip +=
+                                        "<tr><td><b>Duplication:</b></td><td>" +
+                                        duplication +
+                                        "</td><td> (" + status + ")</tr></td>";
+                                }
+                                
+                                toolTip += "</table><br><i>Left click to open Makefile</i>";
+                                
+                                if (duplications.size() > 1) {
+                                    toolTip += "<br><i>Right click to open all duplications</i>";
+                                }
+                                else {
+                                    toolTip += "<br><i>Right click to open duplication</i>";
                                 }
                             }
                         }
                         
-                        if (duplicatedBuffer == savedBuffer) {
-                            saving = false;
+                        labelText += ")<span> </span></html>";
+                        toolTip += "</html>";
+                        
+                        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
+                        
+                        if (label != null) {
+                            //amoMessage("-----------------\n" + labelText + "\n" + toolTip);
+                            //amoMessage(label.toString());
+                            //amoMessage("-----------------");
+                            
+                            label.putClientProperty("duplications", duplications);
+                            label.putClientProperty("text", labelText);
+                            label.setText(labelText);
+                            label.setToolTipText(toolTip);
+                            
+                            Dimension d = label.getPreferredSize();
+                            d.height = 25;
+                            //label.setPreferredSize(d);
+                            label.setMinimumSize(d);
+                            label.setMaximumSize(d);
+                            label.getParent().validate();
                         }
                     }
                 }
                 
-                if (currentBuffer == duplicatedBuffer) {
-                    String labelText = "<html>(";
-                    String toolTip = "<html>";
-                    
-                    if (currentBuffer == null) {
-                        labelText += "No Buffer";
-                    }
-                    else {
-                        if (currentBuffer.isDirty()) {
-                            labelText += "<b><font color=red>" + currentBuffer.getName() + "</font></b>: ";
-                        }
-                        else {
-                            labelText += "<b>" + currentBuffer.getName() + "</b>: ";
-                        }
-                    }
-                    
-                    if (lastMakefile == null) {
-                        labelText += "No Makefile";
-                        toolTip += "No Makefile";
-                    }
-                    else {
-                        toolTip += "<b>Makefile:</b> " + lastMakefile.getPath().replace(File.separator, "/");
-                        
-                        if (duplications.isEmpty()) {
-                            labelText += "No duplication";
-                            toolTip += "<br><i>Left click to open Makefile</i>";
-                        }
-                        else {
-                            for (int i = 0; i < duplications.size(); ++i) {
-                                String duplication = duplications.elementAt(i);
-                                String status = statusList.elementAt(i);
-                                
-                                if (i > 0) labelText += ", ";
-                                labelText += status;
-                                
-                                toolTip += "<br><b>Duplication:</b> " + duplication + " (" + status + ")";
-                            }
-                            toolTip += "<br><i>Left click to open Makefile</i>";
-                            toolTip += "<br><i>Right click to open duplications</i>";
-                        }
-                    }
-                    
-                    labelText += ")<span> </span></html>";
-                    toolTip += "</html>";
-                    
-                    JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
-                    
-                    if (label != null) {
-                        //amoMessage("-----------------\n" + labelText + "\n" + toolTip);
-                        //amoMessage(label.toString());
-                        //amoMessage("-----------------");
-                        
-                        label.putClientProperty("duplications", duplications);
-                        label.putClientProperty("text", labelText);
-                        label.setText(labelText);
-                        label.setToolTipText(toolTip);
-                        
-                        Dimension d = label.getPreferredSize();
-                        d.height = 25;
-                        //label.setPreferredSize(d);
-                        label.setMinimumSize(d);
-                        label.setMaximumSize(d);
-                        label.getParent().validate();
+                if (saveDuplications) {
+                    for (Buffer buffer: buffers) {
+                        savingBuffers.remove(buffer);
                     }
                 }
             }

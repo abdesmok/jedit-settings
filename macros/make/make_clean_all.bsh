@@ -1,4 +1,4 @@
 sourceRelative("../../amo-scripts/make.bsh");
 
-amoMake("clean_all");
+amoMake("distclean");
 

@@ -1,7 +1,0 @@
-textArea.goToEndOfLine(false);
-textArea.goToPrevCharacter(true);
-Registers.copy(textArea,'C');
-textArea.goToNextCharacter(false);
-while (textArea.getLineLength(textArea.getCaretLine()) < 80)
-  Registers.paste(textArea,'C',false);
-

@@ -1,0 +1,18 @@
+sourceRelative("make/listener.bsh");
+sourceRelative("customize.bsh");
+
+amoStartAll() {
+    amoMakeStartListener();
+    if (jEdit.getActiveView() != null) {
+        amoEnableAllCustomizations(true);
+    }
+    else {
+        EditBus.sendAsync(amoEBMessage("CUSTOMIZE"));
+    }
+}
+
+amoStopAll() {
+    amoMakeStopListener();
+    amoEnableAllCustomizations(false);
+}
+

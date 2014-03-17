@@ -49,4 +49,5 @@ velocity/
 keymaps/imported_keysZ.props
 DockableWindowManager/perspective-view0.xml
 
+plugins/projectviewer.ProjectPlugin/config.properties
 */jedit.properties

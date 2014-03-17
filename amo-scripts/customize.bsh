@@ -1,0 +1,85 @@
+import org.gjt.sp.jedit.*;
+import javax.swing.*;
+import projectviewer.*;
+import projectviewer.gui.*;
+
+boolean amoDisplayProjectComboBox(boolean visible) {
+    View view = jEdit.getActiveView();
+    
+    if (view != null) {
+        ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+        
+        if (projectViewer != null) {
+            
+            for (int i = 0; i < projectViewer.getComponentCount(); ++i) {
+                JComponent component = projectViewer.getComponent(i);
+                
+                if (component instanceof ProjectComboBox) {
+                    component.setVisible(visible);
+                    
+                    return true;
+                }
+            }
+        }
+    }
+    
+    return false;
+}
+
+boolean amoEnableProjectsMenu(boolean enable) {
+    View view = jEdit.getActiveView();
+    
+    if (view != null) {
+        ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+        
+        if (projectViewer != null) {
+            JMenuBar menuBar = view.getJMenuBar();
+            
+            if (menuBar != null) {
+                component = menuBar.getComponent(1);
+                
+                if (component != null && component instanceof JMenu) {
+                    JMenu menu = (JMenu) component;
+                    
+                    if (menu.getText().equals("Projects")) {
+                        menuBar.remove(menu);
+                    }
+                }
+                
+                if (enable) {
+                    GroupMenu menu = new GroupMenu("Projects", true, true, new ActionListener() {
+                        public void actionPerformed(ActionEvent event) {
+                            ProjectViewer.setActiveNode(view, (VPTNode) event.getSource());
+                        }
+                    });
+                    
+                    menu.setMnemonic(KeyEvent.VK_P);
+                    
+                    menu.addMenuListener(new MenuListener() {
+                        void menuSelected(MenuEvent event) {
+                            menu.populate(menu, VPTRoot.getInstance(), view);
+                        }
+                        void menuDeselected(MenuEvent event) {
+                        }
+                        void menuCanceled(MenuEvent event) {
+                        }
+                    });
+                    
+                    menuBar.add(menu, 1);
+                }
+                
+                menuBar.doLayout();
+                menuBar.repaint();
+                
+                return true;
+            }
+        }
+    }
+    
+    return false;
+}
+
+boolean amoEnableAllCustomizations(boolean enable) {
+    return amoDisplayProjectComboBox(! enable) && amoEnableProjectsMenu(enable);
+}
+

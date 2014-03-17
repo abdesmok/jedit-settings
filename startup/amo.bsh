@@ -1,4 +1,4 @@
-source(jEdit.getSettingsDirectory() + "/amo-scripts/make/listener.bsh");
+source(jEdit.getSettingsDirectory() + "/amo-scripts/all.bsh");
 
-amoMakeStartListener();
+amoStartAll();
 

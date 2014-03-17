@@ -2,6 +2,7 @@ import org.gjt.sp.jedit.*;
 import java.awt.*;
 import java.awt.font.*;
 import javax.swing.*;
+import projectviewer.*;
 
 sourceRelative("../utils.bsh");
 
@@ -138,7 +139,7 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                 
                 //amoMessage("cur " + currentArgs);
                 
-                Object previousArgs = label.getClientProperty("AMoMakePreviousArgs");
+                Object previousArgs = label.getClientProperty("AmoMakePreviousArgs");
                 
                 changed = previousArgs == null || ! previousArgs.toString().equals(currentArgs);
                 
@@ -168,6 +169,8 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                 if (labelText != null)
                     label.setText(labelText);
                 
+                int defaultDismissDelay = ToolTipManager.sharedInstance().getDismissDelay();
+                
                 label.addMouseListener(new MouseListener() {
                     void mouseClicked(MouseEvent event) {
                         if (event.getButton() == MouseEvent.BUTTON1) {
@@ -184,8 +187,17 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                             }
                         }
                     }
+                    
+                    public void mouseEntered(MouseEvent event) {
+                        ToolTipManager.sharedInstance().setDismissDelay(60000 * 60 * 24);
+                    }
+                    
+                    public void mouseExited(MouseEvent event) {
+                        ToolTipManager.sharedInstance().setDismissDelay(defaultDismissDelay);
+                    }
+                    
                     invoke(name, args) {
-                        print("Method: " + name + " invoked!");
+                        //print("Method: " + name + " invoked!");
                     }
                 });
             }
@@ -214,8 +226,8 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                             comboBox.addItem(line.substring(line.indexOf('=') + 1));
                         }
                         
+                        comboBox.setMinimumSize(new Dimension(50, 24));
                         comboBox.setMaximumSize(comboBox.getMinimumSize());
-                        comboBox.setMinimumSize(new Dimension(50, comboBox.getMinimumSize().height));
                         comboBox.getParent().validate();
                         comboBox.setEditable(isEditable);
                     }
@@ -223,7 +235,7 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
             }
             
             if (label != null) {
-                label.putClientProperty("AMoMakePreviousArgs", currentArgs);
+                label.putClientProperty("AmoMakePreviousArgs", currentArgs);
                 //amoMessage("put " + currentArgs);
             }
         }
@@ -244,6 +256,10 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
         Container container = amoMakeContainer();
         
         if (container != null) {
+            Dimension d = container.getPreferredSize();
+            d.height = 30;
+            container.setPreferredSize(d);
+            
             for (int i = 0; i < container.getComponentCount(); ++i) {
                 JComponent component = container.getComponent(i);
                 String componentName = component.getName();

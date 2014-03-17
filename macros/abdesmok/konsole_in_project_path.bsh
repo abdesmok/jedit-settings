@@ -1,6 +1,0 @@
-source(jEdit.getSettingsDirectory() + "/macros/make/project_path.bsh");
-
-if (goToActiveProject(" n'appartient à aucun projet, lancer make quand même?")) {
-  runCommandInConsole(view, "System", "konsole");
-}
-

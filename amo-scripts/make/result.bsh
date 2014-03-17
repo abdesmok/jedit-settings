@@ -42,7 +42,7 @@ String amoMakeArgs(File makefile) {
     String args = "";
     
     for (String arg : amoMakeArgList(makefile)) {
-        args += " " + arg;
+        args += " \"" + arg + "\"";
     }
     
     return args;

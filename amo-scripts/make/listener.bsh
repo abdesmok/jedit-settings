@@ -11,23 +11,52 @@ includeOnce("result.bsh");
 
 void amoMakeStartListener() {
     EBComponent component = new EBComponent() {
-        {
-            lastMakefile = null;
-            saveDuplicationPaths = new Vector();
+        class AmoUpdateComponentsMessage extends EBMessage {
+            public AmoUpdateComponentsMessage() {
+                super(null);
+            }
+        }
+        class AmoSynchBufferMessage extends EBMessage {
+            public AmoSynchBufferMessage() {
+                super(null);
+            }
+        }
+        public void sendUpdateComponents() {
+            if (! updateComponentsSent) {
+                updateComponentsSent = true;
+                //**amoMessage("---SEND AMO-UPDATE-COMPONENTS---");
+                EditBus.sendAsync(new AmoUpdateComponentsMessage());
+            }
+        }
+        public void sendSynchBuffer() {
+            if (! synchBufferSent && ! updateComponentsSent) {
+                synchBufferSent = true;
+               //** amoMessage("---SEND AMO-SYNCH-BUFFER---");
+                EditBus.sendAsync(new AmoSynchBufferMessage());
+            }
         }
         public void finalize() {
             amoMessage("FINALIZE " + this);
         }
         public void handleMessage(EBMessage message) {
-            try {
-            //amoMessage(message.toString() + "\n  " + message.paramString());
+            //try {
+            //**amoMessage(message.toString() + "\n  " + message.paramString());
             
             boolean updateComponents = false;
             Buffer syncBuffer = null;
             boolean saveDuplication = false;
             
-            if (message instanceof NodeSelectionUpdate || message.paramString().equals("AMO-UPDATE-PARAM")) {
-                //amoMessage("AMO UPDATE COMPONENTS " + message);
+            if (message instanceof AmoUpdateComponentsMessage) {
+                //**amoMessage("---AMO-UPDATE-COMPONENTS---");
+                updateComponents = true;
+            }
+            else if (message instanceof AmoSynchBufferMessage) {
+                //**amoMessage("---AMO-SYNCH-BUFFER---");
+                View view = jEdit.getActiveView();
+                if (view != null)
+                    syncBuffer = view.getBuffer();
+            }
+            else if (message instanceof NodeSelectionUpdate) {
                 File makefile = amoFindMakeFile();
                 
                 JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
@@ -36,20 +65,11 @@ void amoMakeStartListener() {
                 
                 if (label == null || makefile != null && ! makefile.equals(lastMakefile) || makefile == null && lastMakefile != null) {
                     lastMakefile = makefile;
-                    updateComponents = true;
+                    sendUpdateComponents();
                 }
             }
             else if (message instanceof ViewerUpdate || message instanceof BufferChanging) {
-                class Message extends EBMessage {
-                    public Message() {
-                        super(new EBComponent() {});
-                    }
-                    public String paramString() { return "AMO-UPDATE-PARAM"; }
-                };
-                
-                Message message = new Message();
-                
-                EditBus.sendAsync(message);
+                sendUpdateComponents();
             }
             else if (message instanceof BufferUpdate) {
                 BufferUpdate bufferUpdate = (BufferUpdate) message;
@@ -58,13 +78,14 @@ void amoMakeStartListener() {
                 if (bufferUpdate.getWhat() == BufferUpdate.SAVED) {
                     if (lastMakefile == null) {
                         lastMakefile = amoFindMakeFile();
-                        if (lastMakefile != null)
-                            updateComponents = true;
+                        if (lastMakefile != null) {
+                            sendUpdateComponents();
+                        }
                     }
                     
                     if (lastMakefile != null) {
                         if (bufferUpdate.getBuffer().getPath().equals(lastMakefile.getPath())) {
-                            updateComponents = true;
+                            sendUpdateComponents();
                             
                             // ! overwrite remote Makefile !
                             syncBuffer = bufferUpdate.getBuffer();
@@ -106,26 +127,23 @@ void amoMakeStartListener() {
                 EditPaneUpdate editPaneUpdate = (EditPaneUpdate) message;
                 
                 if (editPaneUpdate.getWhat() == EditPaneUpdate.BUFFER_CHANGED) {
-                    View view = jEdit.getActiveView();
-                    
-                    if (view != null)
-                        syncBuffer = view.getBuffer();
+                    sendSynchBuffer();
                 }
             }
             else if (message instanceof PropertiesChanged) {
-                updateComponents = true;
+                sendUpdateComponents();
             }
             else if (message.paramString().equals("AMO-QUIT-PARAM")) {
                 //amoMessage("AMO REMOVE FROM BUS " + component);
-                amoMessage("REMOVED FROM BUS");
+                //amoMessage("REMOVED FROM BUS");
                 EditBus.removeFromBus(component);
             }
             
             if (updateComponents) {
-                amoMakeUpdateComponents(lastMakefile);
+                //**amoMessage("---UPDATE COMPONENTS---");
+                updateComponentsSent = false;
                 
-                if (saveDuplicationPaths == null)
-                    saveDuplicationPaths = new Vector();
+                amoMakeUpdateComponents(lastMakefile);
                 
                 saveDuplicationPaths.clear();
                 BufferedReader br = amoMakeResult("sync-path", lastMakefile);
@@ -144,6 +162,9 @@ void amoMakeStartListener() {
             }
             
             if (syncBuffer != null && lastMakefile != null) {
+                //**amoMessage("---SYNCH BUFFER---");
+                synchBufferSent = false;
+                
                 View view = jEdit.getActiveView();
                 File bufferFile = new File(syncBuffer.getPath());
                 
@@ -227,11 +248,15 @@ void amoMakeStartListener() {
                     
                     toolTip += "</html>";
                     
+                    //**amoMessage("---UPDATE LABEL---");
+                    
                     label.putClientProperty("duplications", duplications);
-                    label.setText("(" + labelText + ") ");
+                    if (label.getText() != "(" + labelText + ") ") {
+                        label.setText("(" + labelText + ") ");
+                    }
                     label.setToolTipText(toolTip);
                     
-                    label.repaint();
+                    //label.repaint();
                 }
             }
             
@@ -246,7 +271,7 @@ void amoMakeStartListener() {
                 }
             }*/
             
-            }
+            /*}
             catch (Exception ex) {
                 amoMessage("Exception " + ex.toString());
                 amoMessage("Message " + message.toString() + "\n    " + message.paramString());
@@ -254,11 +279,13 @@ void amoMakeStartListener() {
                 ex.printStackTrace(new PrintStream(stream));
                 amoMessage(stream.toString());
                 //amoMessage(this.callstack.toString());
-            }
+            }*/
         }
         
-        File lastMakefile;
-        Vector saveDuplicationPaths;
+        File lastMakefile = null;
+        Vector saveDuplicationPaths = new Vector();
+        boolean synchBufferSent = false;
+        boolean updateComponentsSent = false;
     };
     
     //amoMessage("AMO ADD TO BUS " + component);

@@ -1,5 +1,5 @@
 #jEdit properties
-#Mon Mar 17 00:09:37 CET 2014
+#Sun Mar 30 21:38:35 CEST 2014
 --.shortcut=C+SUBTRACT
 ++.shortcut=C+ADD
 20num.shortcut=C+NUMPAD2 C+NUMPAD0
@@ -28,6 +28,8 @@ activator.width=478
 activator.x=273
 activator.y=142
 alignaspl.shortcut=C+NUMPAD5
+amo.customize.enable-projects-menu=true
+amo.customize.hide-project-combo-box=true
 appearance.continuousLayout=true
 assistant-activate-identifier.shortcut=C+q C+a
 assistant-activate-keyword.shortcut=C+q C+s
@@ -168,10 +170,10 @@ color-chooser.height=415
 color-chooser.width=419
 color-chooser.x=302
 color-chooser.y=176
-Combined\ Options.height=913
+Combined\ Options.height=914
 Combined\ Options.width=1242
-Combined\ Options.x=238
-Combined\ Options.y=77
+Combined\ Options.x=166
+Combined\ Options.y=86
 commando.diff.algorithm=default
 commando.diff.binary=false
 commando.diff.blankLines=false
@@ -529,7 +531,7 @@ gfxview.width=297
 gfxview.x=249
 gfxview.y=195
 git.path=C\:\\Program Files\\Git\\bin\\git.exe
-Global\ Options.last=docking
+Global\ Options.last=shortcuts
 Global\ Options.splitter=262
 goto80.shortcut=C+NUMPAD8
 goto-line.shortcut=C+l
@@ -740,20 +742,6 @@ lookandfeel.skin.xtra-scrollbars=true
 lookandfeel.usejeditfont=true
 lookAndFeel=javax.swing.plaf.metal.MetalLookAndFeel
 lucene-search.dock-position=floating
-macro.amo.make.value.AmoMake_ARCH=ARCH\=64
-macro.amo.make.value.AmoMake_arg1=arg1\=value3
-macro.amo.make.value.AmoMake_arg2=arg2\=
-macro.amo.make.value.AmoMake_BUILD_TOOL=BUILD_TOOL\=MVS2012x86SLN
-macro.amo.make.value.AmoMake_BUILD=BUILD\=AUT2EXE
-macro.amo.make.value.AmoMake_CONFIGS=CONFIGS\=gnustep
-macro.amo.make.value.AmoMake_CONFIGURATION=CONFIGURATION\=Release
-macro.amo.make.value.AmoMake_-DVERBOSE=-DVERBOSE\=0
-macro.amo.make.value.AmoMake_FILTER=FILTER\=0
-macro.amo.make.value.AmoMake_REMOTE_HOST=REMOTE_HOST\=app3dmac
-macro.amo.make.value.AmoMake_RUN=RUN\=EXE
-macro.amo.make.value.AmoMake_VALIDATE_BUFFER=VALIDATE_BUFFER\=0
-macro.amo.make.value.AmoMake_VERBOSE=VERBOSE\=1
-macro.amo.make.value.void=C\=osxsync
 macro-handler.superscript.glob=
 make/make_all.icon=22x22/hypersearch-results-single.png
 make/make_all.shortcut=F7
@@ -1208,7 +1196,7 @@ options.dbterminal.autoReconnect=false
 options.dbterminal.rememberPasswords=false
 options.debugger.gdb_path=C\:/MinGW/bin/gdb.exe
 options.debugger.type_macro_map.size=0
-options.docking.autoLoadModeLayout=true
+options.docking.autoLoadModeLayout=false
 options.docking.autoSaveModeLayout=false
 options.FindFilePlugin.archiveFilter=*.{zip,tar,tgz,jar}
 options.FindFilePlugin.hidePath=false
@@ -1493,8 +1481,8 @@ phpproject-panel.dock-position=floating
 plain-view.extendedState=0
 plain-view.height=896
 plain-view.width=1428
-plain-view.x=290
-plain-view.y=82
+plain-view.x=105
+plain-view.y=42
 plugin.Clipper.clipLibraryDirectory.0=
 plugin.Clipper.lastClipLibrary=Coding Standard
 plugin.columnruler.ColumnRulerPlugin.activate=startup
@@ -1509,8 +1497,8 @@ plugin.net.jakubholy.jedit.autocomplete.TextAutocompletePlugin.minWordToRemember
 plugin.org.jedit.plugins.columnruler.ColumnRulerPlugin.activate=startup
 plugin.ScriptEnginePlugin.jar.disabled=true
 plugin.Tags.jar.disabled=true
-Plugin\ Options.last=projectviewer.optiongroup.main_options
-Plugin\ Options.splitter=223
+Plugin\ Options.last=sidekick
+Plugin\ Options.splitter=247
 plugin-blacklist.Accents.jar=true
 plugin-blacklist.ActionHooks.jar=true
 plugin-blacklist.Android.jar=true
@@ -1802,12 +1790,12 @@ search.ext.row.toggle=false
 search.ext.tentativ.toggle=false
 search.ext.wordpart.value=0
 search.ext.wrap.toggle=false
-search.find.value=D\\
+search.find.value=main.au3
 search.height=480
 search.hypersearch.toggle=true
 search.ignoreCase.toggle=false
 search.regexp.toggle=false
-search.replace.value=
+search.replace.value=launcher.au3
 search.show-extended.toggle=false
 search.show-replace.toggle=true
 search.show-settings.toggle=false
@@ -1849,7 +1837,7 @@ sidekick.scrollToVisible=true
 sidekick.showFilter=true
 sidekick.showStatusWindow=true
 sidekick.showToolTips=true
-sidekick.splitter.location=897
+sidekick.splitter.location=894
 sidekick-complete.shortcut=C+SPACE
 sidekick-tree.auto-expand-tree-depth=1
 sidekick-tree.dock-position=right
@@ -1965,10 +1953,10 @@ tasklist.single-click-selection=true
 tasklist.width=463
 tasklist.x=195
 tasklist.y=210
-task-monitor.dock-position=floating
+task-monitor.dock-position=bottom
 task-monitor.extendedState=0
 task-monitor.height=490
-task-monitor.width=469
+task-monitor.width=601
 task-monitor.x=50
 task-monitor.y=50
 templates-tree.dock-position=floating
@@ -2005,8 +1993,8 @@ updater.values.updateSourceName=Latest Official release
 useMD5forDirtyCalculation=false
 vfs.browser.dialog.height=816
 vfs.browser.dialog.width=1508
-vfs.browser.dialog.x=8
-vfs.browser.dialog.y=8
+vfs.browser.dialog.x=68
+vfs.browser.dialog.y=126
 vfs.browser.doubleClickClose=true
 vfs.browser.extendedState=0
 vfs.browser.height=484
@@ -2037,7 +2025,7 @@ view.docking.framework=Original
 view.electricBorders=0
 view.eolMarkerColor=\#ff6600
 view.expandOnInput=true
-view.extendedState=6
+view.extendedState=0
 view.font=Courier New
 view.fontsize=13
 view.gutter.bgColor=\#d6d6d4
@@ -2054,7 +2042,7 @@ view.gutter.selectionAreaBgColor=\#ebebeb
 view.gutter.selectionAreaEnabled=false
 view.gutter.selectionAreaWidth=12
 view.gutter.structureHighlightColor=\#000066
-view.height=854
+view.height=761
 view.lineHighlightColor=\#ccffcc
 view.middleMousePaste=true
 view.search.hypersearch.toggle=false
@@ -2093,9 +2081,9 @@ view.style.operator=color\:\#003399 style\:b
 view.thickCaret=false
 view.toolbar.floatable=false
 view.toolbar=
-view.width=1106
-view.x=187
-view.y=463
+view.width=919
+view.x=380
+view.y=124
 view-markers.dock-position=floating
 view-markers.extendedState=0
 view-markers.height=244

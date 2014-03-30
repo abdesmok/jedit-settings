@@ -4,13 +4,23 @@ includeOnce("log.bsh");
 includeOnce("find.bsh");
 includeOnce("gui.bsh");
 
+Vector amoMakeArgList() {
+    return amoMakeArgList(null, null);
+}
+
 Vector amoMakeArgList(File makefile) {
-    if (makefile == null)
-        makefile = amoFindMakeFile();
-        
-    Vector args = amoGuiMakeArgList();
+    return amoMakeArgList(null, makefile);
+}
+
+Vector amoMakeArgList(View view, File makefile) {
+    if (view == null) {
+        view = jEdit.getActiveView();
+    }
     
-    View view = jEdit.getActiveView();
+    if (makefile == null)
+        makefile = amoFindMakeFile(view);
+        
+    Vector args = amoGuiMakeArgList(view);
     
     if (view != null) {
         JEditTextArea textArea = view.getTextArea();
@@ -34,31 +44,35 @@ Vector amoMakeArgList(File makefile) {
     return args;
 }
 
-Vector amoMakeArgList() {
-    return amoMakeArgList(null);
+String  amoMakeArgs() {
+    return amoMakeArgs(null, null);
 }
 
 String amoMakeArgs(File makefile) {
+    return amoMakeArgs(null, makefile);
+}
+
+String amoMakeArgs(View view, File makefile) {
     String args = "";
     
-    for (String arg : amoMakeArgList(makefile)) {
+    for (String arg : amoMakeArgList(view, makefile)) {
         args += " " + arg;
     }
     
     return args;
 }
 
-String  amoMakeArgs() {
-    return amoMakeArgs(null);
-}
-
 BufferedReader amoMakeResult(String what) {
-    return amoMakeResult(what, null);
+    return amoMakeResult(null, what, null);
 }
 
 BufferedReader amoMakeResult(String what, File makefile) {
+    return amoMakeResult(null, what, makefile);
+}
+
+BufferedReader amoMakeResult(View view, String what, File makefile) {
     if (makefile == null)
-        makefile = amoFindMakeFile();
+        makefile = amoFindMakeFile(view);
     
     if (makefile != null && makefile.exists()) {
         if (makefile.getName().endsWith(".bsh")) {
@@ -75,7 +89,7 @@ BufferedReader amoMakeResult(String what, File makefile) {
             args.add(what);
             args.add("-s");
             args.add("NO_BUILD_TARGETS=1");
-            for (String arg : amoMakeArgList()) {
+            for (String arg : amoMakeArgList(view, makefile)) {
                 args.add(arg);
             }
             args.add("-C");

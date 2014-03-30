@@ -46,6 +46,9 @@ void amoMakeStartListener() {
     HashSet buffersToSave = new HashSet();
     HashSet savingBuffers = new HashSet();
     
+    HashSet viewsToUpdate = new HashSet();
+    HashSet viewsToCustomize = new HashSet();
+    
     EBComponent component = new EBComponent() {
         public File getMakefile() {
             return makefile;
@@ -123,7 +126,13 @@ void amoMakeStartListener() {
             }
             else if (message instanceof PropertiesChanged) {
                 amoListenerMessage("# PropertiesChanged");
+                for (View view: jEdit.getViews()) {
+                    viewsToUpdate.add(view);
+                    viewsToCustomize.add(view);
+                }
+                
                 sendUpdateComponents();
+                EditBus.sendAsync(amoEBMessage("CUSTOMIZE"));
             }
             else if (message instanceof BufferUpdate) {
                 BufferUpdate bufferUpdate = (BufferUpdate) message;
@@ -185,6 +194,14 @@ void amoMakeStartListener() {
                     updateLabel = true;
                 }
             }
+            else if (message instanceof ViewUpdate) {
+                ViewUpdate viewUpdate = (ViewUpdate) message;
+                
+                if (viewUpdate.getWhat() == ViewUpdate.CREATED) {
+                    viewsToCustomize.add(viewUpdate.getView());
+                    EditBus.sendAsync(amoEBMessage("CUSTOMIZE"));
+                }
+            }
             //else if (message instanceof AmoEBMessage) {
             else if (message.getClass().getName().equals("AmoEBMessage")) {
                 String param = message.paramString();
@@ -222,7 +239,19 @@ void amoMakeStartListener() {
                     }
                 }
                 else if (param.equals("CUSTOMIZE")) {
-                    if (! amoEnableAllCustomizations(true)) {
+                    if (viewsToCustomize.isEmpty()) {
+                        viewsToCustomize.add(jEdit.getActiveView());
+                    }
+                    
+                    HashSet views = viewsToCustomize.clone();
+                    
+                    for (View view: views) {
+                        if (amoEnableAllCustomizations(view)) {
+                            viewsToCustomize.remove(view);
+                        }
+                    }
+                    
+                    if (! viewsToCustomize.isEmpty()) {
                         EditBus.sendAsync(amoEBMessage("CUSTOMIZE"));
                     }
                 }

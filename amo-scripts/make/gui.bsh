@@ -10,7 +10,13 @@ includeOnce("log.bsh");
 includeOnce("result.bsh");
 
 Container amoMakeContainer() {
-    View view = jEdit.getActiveView();
+    return amoMakeContainer(null);
+}
+
+Container amoMakeContainer(View view) {
+    if (view == null) {
+        view = jEdit.getActiveView();
+    }
     
     if (view != null) {
         JMenuBar menuBar = view.getJMenuBar();
@@ -33,7 +39,11 @@ Container amoMakeContainer() {
 }
 
 void amoMakeRemoveComponents() {
-    Container container = amoMakeContainer();
+    amoMakeRemoveComponents(null);
+}
+
+void amoMakeRemoveComponents(View view) {
+    Container container = amoMakeContainer(view);
     
     if (container == null)
         return;
@@ -49,11 +59,19 @@ void amoMakeRemoveComponents() {
 }
 
 JComboBox amoMakeComboBox(String name, boolean create) {
-    return (JComboBox) amoMakeComponent(name, create, Class.forName("javax.swing.JComboBox"));
+    return amoMakeComboBox(null, name, create);
+}
+
+JComboBox amoMakeComboBox(View view, String name, boolean create) {
+    return (JComboBox) amoMakeComponent(view, name, create, Class.forName("javax.swing.JComboBox"));
 }
 
 JComponent amoMakeComponent(String name, boolean create, Class type) {
-    Container container = amoMakeContainer();
+    return amoMakeComponent(null, name, create, type);
+}
+
+JComponent amoMakeComponent(View view, String name, boolean create, Class type) {
+    Container container = amoMakeContainer(view);
     
     if (container == null)
         return null;
@@ -96,36 +114,40 @@ JComponent amoMakeComponent(String name, boolean create, Class type) {
 }
 
 void amoMakeUpdateComponents() {
-    amoMakeUpdateComponents(null);
+    amoMakeUpdateComponents(null, null);
 }
 
 void amoMakeUpdateComponents(File makefile) {
-    amoMakeUpdateComponents(makefile, true);
+    amoMakeUpdateComponents(null, makefile);
 }
 
-void amoMakeUpdateComponents(File makefile, boolean clear) {
+void amoMakeUpdateComponents(View view, File makefile) {
+    amoMakeUpdateComponents(view, makefile, true);
+}
+
+void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
     if (makefile == null)
-        makefile = amoFindMakeFile();
+        makefile = amoFindMakeFile(view);
         
     String labelText;
     
     {
-        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
+        JLabel label = (JLabel) amoMakeComponent(view, "AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
         if (label != null)
             labelText = label.getText();
     }
     
     if (clear) {
-        amoMakeRemoveComponents();
+        amoMakeRemoveComponents(view);
     }
     
     boolean changed = true;
     
     if (makefile != null) {
-        BufferedReader br = amoMakeResult("args", makefile);
+        BufferedReader br = amoMakeResult(view, "args", makefile);
         
         if (! clear) {
-            JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
+            JLabel label = (JLabel) amoMakeComponent(view, "AmoMakefileLabel", false, Class.forName("javax.swing.JLabel"));
             
             if (label != null) {
                 br.mark(1028 * 10);
@@ -150,7 +172,7 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                         br.reset();
                     }
                     catch (IOException ioException) {
-                        br = amoMakeResult("args", makefile);
+                        br = amoMakeResult(view, "args", makefile);
                     }
                 }
             }
@@ -158,12 +180,12 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
         
         if (changed) {
             if (! clear) {
-                amoMakeRemoveComponents();
+                amoMakeRemoveComponents(view);
             }
             
             String makefilePath = makefile.getPath().replace(makefile.separator, "/");
             
-            label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
+            label = (JLabel) amoMakeComponent(view, "AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
             
             if (label != null) {
                 if (labelText != null)
@@ -212,7 +234,7 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                 
                 //amoMessage(line);
                 if (index > 0) {
-                    JComboBox comboBox = amoMakeComboBox("AmoMake_" + line.substring(0, index), true);
+                    JComboBox comboBox = amoMakeComboBox(view, "AmoMake_" + line.substring(0, index), true);
                     
                     if (comboBox != null) {
                         boolean isEditable = comboBox.isEditable();
@@ -242,10 +264,10 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
     }
     else {
         if (! clear) {
-            amoMakeRemoveComponents();
+            amoMakeRemoveComponents(view);
         }
         
-        JLabel label = (JLabel) amoMakeComponent("AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
+        JLabel label = (JLabel) amoMakeComponent(view, "AmoMakefileLabel", true, Class.forName("javax.swing.JLabel"));
         
         if (label != null) {
             label.setText("Makefile not found ");
@@ -253,7 +275,7 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
     }
     
     if (changed) {
-        Container container = amoMakeContainer();
+        Container container = amoMakeContainer(view);
         
         if (container != null) {
             Dimension d = container.getPreferredSize();
@@ -369,14 +391,14 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
                             
                             //amoMessage(amoGuiMakeArgList().toString());
                             
-                            amoMakeUpdateComponents(makefile, false);
+                            amoMakeUpdateComponents(view, makefile, false);
                         }
                     });
                 }
             }
             
             if (clear)
-                amoMakeUpdateComponents(makefile, false);
+                amoMakeUpdateComponents(view, makefile, false);
             
             container.repaint();
         }
@@ -384,7 +406,11 @@ void amoMakeUpdateComponents(File makefile, boolean clear) {
 }
 
 Vector amoGuiMakeArgList() {
-    Container container = amoMakeContainer();
+    return amoGuiMakeArgList(null);
+}
+
+Vector amoGuiMakeArgList(View view) {
+    Container container = amoMakeContainer(view);
     
     Vector args = new Vector();
     
@@ -417,9 +443,13 @@ Vector amoGuiMakeArgList() {
 }
 
 String amoGuiMakeArgs() {
+    return amoGuiMakeArgs(null);
+}
+
+String amoGuiMakeArgs(View view) {
     String args = "";
     
-    for (String arg : amoGuiMakeArgList()) {
+    for (String arg : amoGuiMakeArgList(view)) {
         args += " " + arg;
     }
     

@@ -1,0 +1,4 @@
+sourceRelative("../../../amo-scripts/customize.bsh");
+
+amoEnableProjectsMenu(true);
+

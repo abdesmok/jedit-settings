@@ -93,7 +93,6 @@ JComponent amoMakeComponent(View view, String name, boolean create, Class type) 
                 }
                 else {
                     container.remove(existingComponent);
-                    continue;
                 }
             }
         }
@@ -258,6 +257,7 @@ void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
             
             if (label != null) {
                 label.putClientProperty("AmoMakePreviousArgs", currentArgs);
+                label.setHorizontalAlignment(SwingConstants.RIGHT);
                 //amoMessage("put " + currentArgs);
             }
         }
@@ -271,6 +271,7 @@ void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
         
         if (label != null) {
             label.setText("Makefile not found ");
+            label.setHorizontalAlignment(SwingConstants.RIGHT);
         }
     }
     

@@ -1,4 +1,5 @@
 import org.gjt.sp.jedit.*;
+import org.gjt.sp.util.*;
 import javax.swing.*;
 import projectviewer.*;
 import projectviewer.gui.*;
@@ -71,6 +72,12 @@ boolean amoEnableProjectsMenu(boolean enable, View view) {
     
     if (view != null) {
         ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+        
+        if (projectViewer == null) {
+            view.getDockableWindowManager().addDockableWindow("projectviewer");
+            projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+            view.getDockableWindowManager().removeDockableWindow("projectviewer");
+        }
         
         if (projectViewer != null) {
             JMenuBar menuBar = view.getJMenuBar();
@@ -146,4 +153,3 @@ boolean amoEnableAllCustomizations(boolean enable, View view) {
     
     return done;
 }
-

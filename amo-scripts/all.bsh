@@ -12,4 +12,3 @@ amoStopAll() {
     amoMakeStopListener();
     amoEnableAllCustomizations(false);
 }
-

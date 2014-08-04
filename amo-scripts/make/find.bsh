@@ -7,8 +7,18 @@ sourceRelative("../utils.bsh");
 
 includeOnce("log.bsh");
 
-String amoFindProjectDirectory(int index) {
-    View view = jEdit.getActiveView();
+String amoFindProjectDirectory() {
+    return amoFindProjectDirectory(null, -1);
+}
+
+String amoFindProjectDirectory(View view) {
+    return amoFindProjectDirectory(view, -1);
+}
+
+String amoFindProjectDirectory(View view, int index) {
+    if (view == null) {
+        view = jEdit.getActiveView();
+    }
     
     if (jEdit.getPlugin("projectviewer.ProjectPlugin", true) == null) {
         Macros.error(view, "ProjectViewer not installed");
@@ -51,10 +61,6 @@ String amoFindProjectDirectory(int index) {
         return null;
 }
 
-String amoFindProjectDirectory() {
-    return amoFindProjectDirectory(-1);
-}
-
 File amoFirstExistingFile(String directory, Vector fileNames) {
     for (String fileName : fileNames) {
         File file = new File(directory + File.separator + fileName);
@@ -65,25 +71,36 @@ File amoFirstExistingFile(String directory, Vector fileNames) {
 }
 
 File amoFindMakeFile() {
+    return amoFindMakeFile(null);
+}
+
+File amoFindMakeFile(View view) {
     Vector fileNames = new Vector();
     fileNames.add("Makefile.jedit");
     fileNames.add("Makefile.bsh");
     fileNames.add("Makefile");
     
-    return amoFindFile(fileNames);
+    return amoFindFile(view, fileNames);
 }
 
 File amoFindPropertiesFile() {
+    return amoFindPropertiesFile(null);
+}
+
+File amoFindPropertiesFile(View view) {
     Vector fileNames = new Vector();
     fileNames.add("jedit.properties");
     
-    return amoFindFile(fileNames);
+    return amoFindFile(view, fileNames);
 }
 
-File amoFindFile(Vector fileNames) {
+File amoFindFile(View view, Vector fileNames) {
     File file = null;
     
-    View view = jEdit.getActiveView();
+    if (view == null) {
+        view = jEdit.getActiveView();
+    }
+    
     Buffer buffer = (view == null) ? null : view.getBuffer();
     
     if (buffer != null) {
@@ -107,7 +124,7 @@ File amoFindFile(Vector fileNames) {
     }
     
     if (file == null) {
-        String path = amoFindProjectDirectory();
+        String path = amoFindProjectDirectory(view);
         
         if (path != null) {
             directory = new File(path);
@@ -121,7 +138,7 @@ File amoFindFile(Vector fileNames) {
     
     if (file == null) {
         for (int i = 0; ; ++i) {
-            String path = amoFindProjectDirectory(i);
+            String path = amoFindProjectDirectory(view, i);
             
             if (path != null) {
                 directory = new File(path);

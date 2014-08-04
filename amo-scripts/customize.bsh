@@ -1,10 +1,31 @@
 import org.gjt.sp.jedit.*;
+import org.gjt.sp.util.*;
 import javax.swing.*;
 import projectviewer.*;
 import projectviewer.gui.*;
 
-boolean amoDisplayProjectComboBox(boolean visible) {
-    View view = jEdit.getActiveView();
+boolean amoProjectComboBoxIsHidden() {
+    return jEdit.getProperty("amo.customize.hide-project-combo-box", "true").equals("true");
+}
+
+boolean amoHideProjectComboBox() {
+    return amoHideProjectComboBox(amoProjectComboBoxIsHidden(), null);
+}
+
+boolean amoHideProjectComboBox(View view) {
+    return amoHideProjectComboBox(amoProjectComboBoxIsHidden(), view);
+}
+
+boolean amoHideProjectComboBox(boolean hide) {
+    return amoHideProjectComboBox(hide, null);
+}
+
+boolean amoHideProjectComboBox(boolean hide, View view) {
+    jEdit.setProperty("amo.customize.hide-project-combo-box", String.valueOf(hide));
+    
+    if (view == null) {
+        view = jEdit.getActiveView();
+    }
     
     if (view != null) {
         ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
@@ -15,7 +36,7 @@ boolean amoDisplayProjectComboBox(boolean visible) {
                 JComponent component = projectViewer.getComponent(i);
                 
                 if (component instanceof ProjectComboBox) {
-                    component.setVisible(visible);
+                    component.setVisible(! hide);
                     
                     return true;
                 }
@@ -26,11 +47,37 @@ boolean amoDisplayProjectComboBox(boolean visible) {
     return false;
 }
 
+boolean amoProjectsMenuEnabled() {
+    return jEdit.getProperty("amo.customize.enable-projects-menu", "true").equals("true");;
+}
+
+boolean amoEnableProjectsMenu() {
+    return amoEnableProjectsMenu(amoProjectsMenuEnabled(), null);
+}
+
+boolean amoEnableProjectsMenu(View view) {
+    return amoEnableProjectsMenu(amoProjectsMenuEnabled(), view);
+}
+
 boolean amoEnableProjectsMenu(boolean enable) {
-    View view = jEdit.getActiveView();
+    return amoEnableProjectsMenu(enable, null);
+}
+
+boolean amoEnableProjectsMenu(boolean enable, View view) {
+    jEdit.setProperty("amo.customize.enable-projects-menu", String.valueOf(enable));
+    
+    if (view == null) {
+        view = jEdit.getActiveView();
+    }
     
     if (view != null) {
         ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+        
+        if (projectViewer == null) {
+            view.getDockableWindowManager().addDockableWindow("projectviewer");
+            projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+            view.getDockableWindowManager().removeDockableWindow("projectviewer");
+        }
         
         if (projectViewer != null) {
             JMenuBar menuBar = view.getJMenuBar();
@@ -79,10 +126,35 @@ boolean amoEnableProjectsMenu(boolean enable) {
     return false;
 }
 
-boolean amoEnableAllCustomizations(boolean enable) {
-    return amoDisplayProjectComboBox(! enable) && amoEnableProjectsMenu(enable);
+boolean amoEnableAllCustomizations() {
+    boolean done =  amoHideProjectComboBox();
+    done = amoEnableProjectsMenu() && done;
+    
+    return done;
 }
 
+boolean amoEnableAllCustomizations(boolean enable) {
+    boolean done = amoHideProjectComboBox(enable);
+    done = amoEnableProjectsMenu(enable) && done;
+    
+    return done;
+}
+
+boolean amoEnableAllCustomizations(View view) {
+    boolean done = amoHideProjectComboBox(view);
+    done = amoEnableProjectsMenu(view) && done;
+    
+    return done;
+}
+
+boolean amoEnableAllCustomizations(boolean enable, View view) {
+    boolean done = amoHideProjectComboBox(enable, view);
+    done = amoEnableProjectsMenu(enable, view) && done;
+    
+    return done;
+}
+
+/*
 class AmoDockButtonLayout implements LayoutManager {
     public boolean horizontal = false;
     public boolean hideCloseBox = false;
@@ -286,4 +358,4 @@ void amoHideDockCloseAndMenuButtons(View view, boolean hide) {
         }
     }
 }
-
+*/

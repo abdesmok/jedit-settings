@@ -1,4 +1,3 @@
 source(jEdit.getSettingsDirectory() + "/amo-scripts/all.bsh");
 
 amoStartAll();
-

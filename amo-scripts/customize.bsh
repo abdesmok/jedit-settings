@@ -83,3 +83,207 @@ boolean amoEnableAllCustomizations(boolean enable) {
     return amoDisplayProjectComboBox(! enable) && amoEnableProjectsMenu(enable);
 }
 
+class AmoDockButtonLayout implements LayoutManager {
+    public boolean horizontal = false;
+    public boolean hideCloseBox = false;
+    public boolean hideMenuButton = false;
+    
+    public void addLayoutComponent(String name, Component comp) {}
+    
+    public void removeLayoutComponent(Component comp) {}
+    
+    public Dimension preferredLayoutSize(Container parent) {
+        Insets insets = ((JComponent) parent).getBorder().getBorderInsets((JComponent) parent);
+        
+        if (parent.getComponentCount() <= 2) {
+            return new Dimension(0, 0);
+        }
+        
+        JComponent box = hideCloseBox ? (hideMenuButton ? null : parent.getComponent(1)) : parent.getComponent(0);
+        
+        if (horizontal) {
+            int width = parent.getWidth() - insets.right;
+            int rowHeight = parent.getComponent(2).getPreferredSize().height;
+            if (box != null && rowHeight < box.getPreferredSize().width) {
+                rowHeight = box.getPreferredSize().width;
+            }
+            
+            int x = insets.left;
+            if (! hideCloseBox) {
+                x += rowHeight;
+            }
+            if (! hideMenuButton) {
+                x += rowHeight;
+            }
+            
+            Dimension returnValue = new Dimension(0, rowHeight + insets.top + insets.bottom);
+            
+            for (int i = 2; i < parent.getComponentCount(); ++i) {
+                int buttonWidth = parent.getComponent(i).getPreferredSize().width;
+                if (buttonWidth + x > width) {
+                    x = buttonWidth + insets.left;
+                    returnValue.height += rowHeight;
+                }
+                else {
+                    x += buttonWidth;
+                }
+            }
+            return returnValue;
+        }
+        else {
+            int height = parent.getHeight() - insets.bottom;
+            int columnWidth = parent.getComponent(2).getPreferredSize().width;
+            if (box != null && columnWidth < box.getPreferredSize().height) {
+                columnWidth = box.getPreferredSize().height;
+            }
+            
+            int y = insets.top;
+            if (! hideCloseBox) {
+                y += columnWidth;
+            }
+            if (! hideMenuButton) {
+                y += columnWidth;
+            }
+            
+            Dimension returnValue = new Dimension(columnWidth + insets.left + insets.right, 0);
+            
+            for (int i = 2; i < parent.getComponentCount(); ++i) {
+                int buttonHeight = parent.getComponent(i).getPreferredSize().height;
+                if (buttonHeight + y > height) {
+                    returnValue.width += columnWidth;
+                    y = insets.top;
+                }
+                
+                y += buttonHeight;
+            }
+            return returnValue;
+        }
+    }
+    
+    public Dimension minimumLayoutSize(Container parent) { return preferredLayoutSize(parent); }
+    
+    public void layoutContainer(Container parent) {
+        Insets insets = ((JComponent) parent).getBorder().getBorderInsets((JComponent) parent);
+        
+        if (parent.getComponentCount() <= 2) {
+            for (int i = 0; i < parent.getComponentCount(); ++i) {
+                parent.getComponent(i).setVisible(false);
+            }
+            return;
+        }
+        
+        parent.getComponent(0).setVisible(! hideCloseBox);
+        parent.getComponent(1).setVisible(! hideMenuButton);
+        
+        JComponent box = hideCloseBox ? (hideMenuButton ? null : parent.getComponent(1)) : parent.getComponent(0);
+        
+        if (horizontal) {
+            int width = parent.getWidth() - insets.right;
+            int rowHeight = parent.getComponent(2).getPreferredSize().height;
+            if (box != null && rowHeight < box.getPreferredSize().width) {
+                rowHeight = box.getPreferredSize().width;
+            }
+            int x = insets.left;
+            int y = insets.top;
+            if (! hideCloseBox) {
+                parent.getComponent(0).setBounds(insets.left, insets.top, rowHeight, rowHeight);
+                x += rowHeight;
+            }
+            if (! hideMenuButton) {
+                parent.getComponent(1).setBounds(insets.left + rowHeight, insets.top, rowHeight, rowHeight);
+                x += rowHeight;
+            }
+            
+            for (int i = 2; i < parent.getComponentCount(); ++i) {
+                int buttonWidth = parent.getComponent(i).getPreferredSize().width;
+                if (buttonWidth + x > width) {
+                    x = insets.left;
+                    y += rowHeight;
+                }
+                parent.getComponent(i).setBounds(x, y, buttonWidth, rowHeight);
+                x += buttonWidth;
+            }
+        }
+        else {
+            int height = parent.getHeight() - insets.bottom;
+            int columnWidth = parent.getComponent(2).getPreferredSize().width;
+            if (box != null && rowHeight < box.getPreferredSize().height) {
+                columnWidth = box.getPreferredSize().height;
+            }
+            int x = insets.left;
+            int y = insets.top;
+            if (! hideCloseBox) {
+                parent.getComponent(0).setBounds(insets.left, insets.top, columnWidth, columnWidth);
+                y += columnWidth;
+            }
+            if (! hideMenuButton) {
+                parent.getComponent(1).setBounds(insets.left, insets.top + columnWidth, columnWidth, columnWidth);
+                y += columnWidth;
+            }
+            
+            for (int i = 2; i < parent.getComponentCount(); ++i) {
+                int buttonHeight = parent.getComponent(i).getPreferredSize().height;
+                if (buttonHeight + y > height) {
+                    x += columnWidth;
+                    y = insets.top;
+                }
+                parent.getComponent(i).setBounds(x, y, columnWidth, buttonHeight);
+                y += buttonHeight;
+            }
+        }
+    }
+}
+
+void amoHideDockCloseAndMenuButtons(View view, boolean hide) {
+    if (view == null) {
+        view = jEdit.getActiveView();
+    }
+    
+    if (view != null) {
+        DockableWindowManagerImpl dockableWindowManager = view.getDockableWindowManager();
+        
+        if (dockableWindowManager != null) {
+            int index = 0;
+            
+            for (JComponent child: dockableWindowManager.getComponents()) {
+                if (child instanceof JPanel &&
+                    child.getComponentCount() >= 2 &&
+                    child.getComponent(0) instanceof JButton &&
+                    child.getComponent(1) instanceof JButton
+                    )
+                {
+                    boolean ok = true;
+                    
+                    for (int c = 3; c < child.getComponentCount(); ++c) {
+                        if (! (child.getComponent(c) instanceof JToggleButton)) {
+                            ok = false;
+                            break;
+                        }
+                    }
+                    
+                    if (ok) {
+                        AmoDockButtonLayout layout;
+                        
+                        if (child.getLayout() instanceof AmoDockButtonLayout) {
+                            layout = (AmoDockButtonLayout) child.getLayout();
+                        }
+                        else {
+                            layout = new AmoDockButtonLayout();
+                            layout.horizontal = index == 0 || index == 3;
+                            child.setLayout(layout);
+                        }
+                        
+                        layout.hideCloseBox = hide;
+                        layout.hideMenuButton = hide;
+                        
+                        child.doLayout();
+                        child.repaint();
+                        
+                        ++index;
+                    }
+                }
+            }
+        }
+    }
+}
+

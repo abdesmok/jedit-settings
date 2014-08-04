@@ -12,11 +12,12 @@ make(what) {
             "VERBOSE=\n" +
             "VERBOSE=VERBOSE\n" +
             "DIAGNOSE=\n" +
-            "DIAGNOSE=DIAGNOSE"
+            "DIAGNOSE=DIAGNOSE\n" +
+            "TEST=*"
             ;
     }
     else if (what == "sync-path") {
-        return "D:/tmp/deleme"; //\nD:/tmp/deleme2\nD:/tmp/deleme3\nD:/tmp/deleme4\nD:/tmp/deleme5";
+        return ""; //D:/tmp/deleme"; //\nD:/tmp/deleme2\nD:/tmp/deleme3\nD:/tmp/deleme4\nD:/tmp/deleme5";
     }
     else if (what == "build" || what == "run") {
         if (what == "run") {

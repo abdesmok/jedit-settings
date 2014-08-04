@@ -7,8 +7,8 @@ void amoMessage(Object message) {
         DockableWindowManager dockableWindowManager = view.getDockableWindowManager();
         if (dockableWindowManager != null) {
             if (dockableWindowManager.isDockableWindowDocked("console")) {
-                if (! dockableWindowManager.isDockableWindowVisible("console"))
-                    dockableWindowManager.toggleDockableWindow("console");
+                /*if (! dockableWindowManager.isDockableWindowVisible("console"))
+                    dockableWindowManager.toggleDockableWindow("console");*/
                 ConsolePlugin.getConsole(view).getOutput().print(new Color(50, 10, 200), message == null ?  "null" : message.toString());
             }
         }

@@ -1,5 +1,6 @@
 [global]
 [c++]
+d_|AMO_DUMP(\|)
 df_|amo::info("DEBUG") << __FUNCTION__\|;
 _io|#include <stdio.h>\n
 i_|amo::info() << \|;
@@ -69,6 +70,7 @@ sig|signal
 [logs]
 [maple]
 [lotos]
+[PowerCenter Parameter File]
 [django]
 [ada]
 [php]

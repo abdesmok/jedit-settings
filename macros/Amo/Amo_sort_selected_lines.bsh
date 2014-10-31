@@ -1,0 +1,20 @@
+//sourceRelative("../../amo-scripts/make/log.bsh");
+
+import java.util.*;
+
+int[] lines = textArea.getSelectedLines();
+String[] strings = new String[lines.length];
+
+JEditBuffer buffer = textArea.getBuffer();
+
+for (int i = 0; i < lines.length; ++i) {
+    strings[i] = buffer.getLineText(lines[i]);
+}
+
+Arrays.sort(strings);
+
+for (int i = 0; i < lines.length; ++i) {
+    int line = lines[i];
+    buffer.remove(buffer.getLineStartOffset(line), buffer.getLineLength(line));
+    buffer.insert(buffer.getLineStartOffset(line), strings[i]);
+}

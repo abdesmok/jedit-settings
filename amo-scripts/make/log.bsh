@@ -17,4 +17,3 @@ void amoMessage(Object message) {
         //JOptionPane.showMessageDialog(null, message == null ?  "null" : message.toString());
     }
 }
-

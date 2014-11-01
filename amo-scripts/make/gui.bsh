@@ -247,7 +247,12 @@ void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
                             comboBox.addItem(line.substring(line.indexOf('=') + 1));
                         }
                         
-                        comboBox.setMinimumSize(new Dimension(50, 24));
+                        if (isEditable) {
+                            comboBox.setMinimumSize(new Dimension(3000, 24));
+                        }
+                        else {
+                            comboBox.setMinimumSize(new Dimension(300, 24));
+                        }
                         comboBox.setMaximumSize(comboBox.getMinimumSize());
                         comboBox.getParent().validate();
                         comboBox.setEditable(isEditable);
@@ -371,10 +376,10 @@ void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
                                     String value;
                                     
                                     Map attributes = comboBox.getFont().getAttributes();
-                                    attributes.put(TextAttribute.STRIKETHROUGH, emptyValueIndex == comboBox.getSelectedIndex());
+                                    attributes.put(TextAttribute.STRIKETHROUGH, emptyValueIndex != -1 && emptyValueIndex == comboBox.getSelectedIndex());
                                     comboBox.setFont(comboBox.getFont().deriveFont(attributes));
                                     
-                                    if (emptyValueIndex == comboBox.getSelectedIndex())
+                                    if (emptyValueIndex != -1 && emptyValueIndex == comboBox.getSelectedIndex())
                                         value = "";
                                     else
                                         value = comboBox.getSelectedItem();

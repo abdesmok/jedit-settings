@@ -56,7 +56,7 @@ String amoMakeArgs(View view, File makefile) {
     String args = "";
     
     for (String arg : amoMakeArgList(view, makefile)) {
-        args += " " + arg;
+        args += " \"" + arg + "\"";
     }
     
     return args;

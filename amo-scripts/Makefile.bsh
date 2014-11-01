@@ -15,7 +15,8 @@ make(what) {
             "VERBOSE=\n" +
             "VERBOSE=VERBOSE\n" +
             "DIAGNOSE=\n" +
-            "DIAGNOSE=DIAGNOSE"
+            "DIAGNOSE=DIAGNOSE\n" +
+            "TEST=*"
             ;
     }
     else if (what == "sync-path") {

@@ -506,7 +506,6 @@ fastopen.ignorecase=true
 fastopen.indexing.freq=12
 fastopen.nonprjOpenFiles.foregroundcolor=\#00b200
 fastopen.openFiles.foregroundcolor=\#000000
-fastopen.path.foregroundcolor=\#006666
 fastopen.patternFromSelectedText=false
 fastopen.search.delay=2.0
 fastopen.showalternaterows=true

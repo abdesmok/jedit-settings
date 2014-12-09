@@ -9,6 +9,27 @@ make(what) {
     
     if (what == "args") {
         return
+            "VERBOSE0=One\n" +
+            "VERBOSE0=Twho\n" +
+            "VERBOSE0=Three\n" +
+            "VERBOSE1=One\n" +
+            "VERBOSE1=Twho\n" +
+            "VERBOSE1=Three\n" +
+            "VERBOSE2=One\n" +
+            "VERBOSE2=Twho\n" +
+            "VERBOSE2=Three\n" +
+            "VERBOSE3=One\n" +
+            "VERBOSE3=Twho\n" +
+            "VERBOSE3=Three\n" +
+            "VERBOSE4=One\n" +
+            "VERBOSE4=Twho\n" +
+            "VERBOSE4=Three\n" +
+            "VERBOSE5=One\n" +
+            "VERBOSE5=Twho\n" +
+            "VERBOSE5=Three\n" +
+            "VERBOSE6=One\n" +
+            "VERBOSE6=Twho\n" +
+            "VERBOSE6=Three\n" +
             "VERBOSE=\n" +
             "VERBOSE=VERBOSE\n" +
             "DIAGNOSE=\n" +
@@ -17,7 +38,7 @@ make(what) {
             ;
     }
     else if (what == "sync-path") {
-        return ""; //D:/tmp/deleme"; //\nD:/tmp/deleme2\nD:/tmp/deleme3\nD:/tmp/deleme4\nD:/tmp/deleme5";
+        return ""; // "D:/tmp/deleme"; //\nD:/tmp/deleme2\nD:/tmp/deleme3\nD:/tmp/deleme4\nD:/tmp/deleme5";
     }
     else if (what == "build" || what == "run") {
         if (what == "run") {
@@ -51,4 +72,3 @@ make(what) {
     
     return "";
 }
-

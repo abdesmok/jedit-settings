@@ -43,6 +43,7 @@ insert-newline-indent.shortcut=ENTER
 action-bar.shortcut=C+ENTER
 redo.shortcut=C+e C+z
 make/make_compile.shortcut=S+F7
+Amo/Amo_sort_selected_lines.shortcut=CS+s
 expand-fold.shortcut=AS+ENTER
 end.shortcut=END
 select-block.shortcut=C+OPEN_BRACKET

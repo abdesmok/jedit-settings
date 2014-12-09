@@ -9,6 +9,32 @@ sourceRelative("../utils.bsh");
 includeOnce("log.bsh");
 includeOnce("result.bsh");
 
+void amoMakeDumpContainer(container) {
+    amoMakeDumpContainer(container, "");
+}
+
+void amoMakeDumpContainer(container, tab) {
+    if (container instanceof Container) {
+        String message = tab + container.getClass().getName();
+        
+        if (container.getLayout() != null) {
+            message += " [" + container.getLayout().getClass().getName() + "]";
+        }
+        
+        amoMessage(message);
+        
+        if (container.getComponentCount() > 0) {
+            amoMessage(tab + "{");
+            
+            for (int i = 0; i < container.getComponentCount(); ++i) {
+                amoMakeDumpContainer(container.getComponent(i), tab + "    ");
+            }
+            
+            amoMessage(tab + "}");
+        }
+    }
+}
+
 Container amoMakeContainer() {
     return amoMakeContainer(null);
 }
@@ -18,24 +44,70 @@ Container amoMakeContainer(View view) {
         view = jEdit.getActiveView();
     }
     
-    if (view != null) {
-        JMenuBar menuBar = view.getJMenuBar();
-        if (menuBar != null) {
+    if (view == null) {
+        return null;
+    }
+    
+    JComponent rootPane = view.getRootPane();
+    
+    if (rootPane == null) {
+        return null;
+    }
+    
+    Container container = rootPane.getClientProperty("AmoMakeContainer");
+    
+    Container newParent;
+    
+    JMenuBar menuBar = view.getJMenuBar();
+    
+    if (menuBar != null && menuBar.isVisible() && menuBar.getSize().height > 0) {
+        newParent = menuBar;
+    }
+    else {
+        newParent = rootPane.getComponent(1).getComponent(0).getComponent(1);
+    }
+    
+    if (container != null) {
+        Component parent = container.getParent();
         
-            for (int i = 0; i < menuBar.getComponentCount(); ++i) {
-                JComponent component = menuBar.getComponent(i);
-                if (component instanceof Box.Filler) {
-                    return menuBar;
-                }
+        if (parent == newParent) {
+            return container;
+        }
+        if (parent != null) {
+            parent.remove(container);
+            parent.revalidate();
+            parent.repaint();
+        }
+    }
+    else {
+        container = new JPanel();
+        //container.setLayout(new BoxLayout(container, 0));
+        container.setLayout(new FlowLayout(FlowLayout.CENTER, 1, 1));
+    }
+    
+    if (newParent == menuBar) {
+        boolean hasFiler = false;
+        
+        for (int i = 0; i < menuBar.getComponentCount(); ++i) {
+            JComponent component = menuBar.getComponent(i);
+            if (component instanceof Box.Filler) {
+                hasFiler = true;
+                break;
             }
-            
+        }
+        
+        if (! hasFiler) {
             menuBar.add(Box.createHorizontalGlue());
-            
-            return menuBar;
         }
     }
     
-    return null;
+    newParent.add(container);
+    newParent.revalidate();
+    newParent.repaint();
+    
+    rootPane.putClientProperty("AmoMakeContainer", container);
+    
+    return container;
 }
 
 void amoMakeRemoveComponents() {
@@ -106,6 +178,9 @@ JComponent amoMakeComponent(View view, String name, boolean create, Class type) 
     if (component != null) {
         component.setName(name);
         
+        if (type.equals(Class.forName("javax.swing.JLabel"))) {
+            
+        }
         container.add(component);
     }
     

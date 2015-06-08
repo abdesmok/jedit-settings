@@ -5,11 +5,19 @@ void amoMessage(Object message) {
     View view = jEdit.getActiveView();
     if (view != null) {
         console.Console console = ConsolePlugin.getConsole(view);
+        if (console == null) {
+            view.getDockableWindowManager().showDockableWindow("console");
+            //view.getDockableWindowManager().toggleDockableWindow("console");
+            console = ConsolePlugin.getConsole(view);
+        }
         if (console != null) {
             console.getOutput().print(new Color(50, 10, 200), message == null ?  "null" : message.toString());
         }
+        else {
+            JOptionPane.showMessageDialog(view, message == null ?  "null" : message.toString());
+        }
     }
     else {
-        //JOptionPane.showMessageDialog(null, message == null ?  "null" : message.toString());
+        JOptionPane.showMessageDialog(null, message == null ?  "null" : message.toString());
     }
 }

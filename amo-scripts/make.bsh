@@ -33,6 +33,15 @@ void amoMake(String what) {
             if (view != null) {
                 String args = amoMakeArgs(makefile);
                 Console console = ConsolePlugin.getConsole(view);
+                if (console == null) {
+                    view.getDockableWindowManager().showDockableWindow("console");
+                    console = ConsolePlugin.getConsole(view);
+                }
+                if (console == null) {
+                    amoMessage("Cannot find Console");
+                    return;
+                }
+                
                 SystemShell shell = ConsolePlugin.getSystemShell();
                 
                 //shell.detach(console);

@@ -81,11 +81,12 @@ Container amoMakeContainer(View view) {
     }
     else {
         container = new JPanel();
+        //container = new JToolBar();
         //container.setLayout(new BoxLayout(container, 0));
-        container.setLayout(new FlowLayout(FlowLayout.CENTER, 1, 1));
+        container.setLayout(new FlowLayout(FlowLayout.TRAILING, 1, 1));
     }
     
-    if (newParent == menuBar) {
+    /*if (newParent == menuBar) {
         boolean hasFiler = false;
         
         for (int i = 0; i < menuBar.getComponentCount(); ++i) {
@@ -99,7 +100,7 @@ Container amoMakeContainer(View view) {
         if (! hasFiler) {
             menuBar.add(Box.createHorizontalGlue());
         }
-    }
+    }*/
     
     newParent.add(container);
     newParent.revalidate();
@@ -359,7 +360,7 @@ void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
             
             if (label != null) {
                 label.putClientProperty("AmoMakePreviousArgs", currentArgs);
-                label.setHorizontalAlignment(SwingConstants.RIGHT);
+                //label.setHorizontalAlignment(SwingConstants.RIGHT);
                 //amoMessage("put " + currentArgs);
             }
         }
@@ -373,7 +374,7 @@ void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
         
         if (label != null) {
             label.setText("Makefile not found ");
-            label.setHorizontalAlignment(SwingConstants.RIGHT);
+            //label.setHorizontalAlignment(SwingConstants.RIGHT);
         }
     }
     

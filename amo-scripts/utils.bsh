@@ -17,4 +17,3 @@ if (! Arrays.asList(this.methods).contains("includeOnce")) {
         }
     }
 }
-

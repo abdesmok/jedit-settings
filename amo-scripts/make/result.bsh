@@ -70,6 +70,13 @@ BufferedReader amoMakeResult(String what, File makefile) {
     return amoMakeResult(null, what, makefile);
 }
 
+String make;
+
+if (System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
+    make = pathToFile(dirname(getSourceFileInfo()) + File.separator + ".." + File.separator + "make.exe").getAbsolutePath();
+else
+    make = "make";
+
 BufferedReader amoMakeResult(View view, String what, File makefile) {
     if (makefile == null)
         makefile = amoFindMakeFile(view);
@@ -85,7 +92,7 @@ BufferedReader amoMakeResult(View view, String what, File makefile) {
         else {
             ArrayList args = new ArrayList();
             
-            args.add("make");
+            args.add(make);
             args.add(what);
             args.add("-s");
             args.add("NO_BUILD_TARGETS=1");
@@ -109,4 +116,3 @@ BufferedReader amoMakeResult(View view, String what, File makefile) {
     
     return null;
 }
-

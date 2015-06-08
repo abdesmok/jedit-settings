@@ -4,6 +4,15 @@ includeOnce("make/result.bsh");
 
 import console.*;
 
+String make;
+
+if (System.getProperty("os.name").toLowerCase().indexOf("win") >= 0) {
+    make = pathToFile(dirname(getSourceFileInfo()) + File.separator + "make.exe").getAbsolutePath();
+}
+else {
+    make = "make";
+}
+
 void amoMake(String what) {
     File makefile = amoFindMakeFile();
     
@@ -34,7 +43,7 @@ void amoMake(String what) {
                 
                 // run make
                 amoMessage("\namobsh: start make");
-                console.run(shell, "make -f " + makefile.getName() + " " + what + args);
+                console.run(shell, make + " -f " + makefile.getName() + " " + what + args);
                 
                 amoMessage("\n");
                 

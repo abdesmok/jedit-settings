@@ -368,20 +368,31 @@ void amoMakeStartListener() {
                                         
                                         //amoMessage("save to " + savePath);
                                         statusList.add("<font color=blue>Written</font>");
+                                        
+                                        File saveFile = new File(savePath);
+                                        long blm = bufferFile.lastModified();
+                                        //long olm = saveFile.lastModified();
+                                        saveFile.setLastModified(blm);
+                                        //long nlm = saveFile.lastModified();
+                                        //amoMessage("blm " + blm + " olm " + olm + " nlm " + nlm);
                                     }
                                     else {
                                         File saveFile = new File(savePath);
                                         
                                         if (saveFile.exists()) {
-                                            if (saveFile.lastModified() < bufferFile.lastModified()) {
-                                                statusList.add("<font color=red>older</font>");
+                                            long timeDiff = saveFile.lastModified() - bufferFile.lastModified();
+                                            if (timeDiff < - 1 * 1000) {
+                                                statusList.add("<font color=red>Older" /* + " " + (- timeDiff / 1000.) + "s " */ + "</font>");
+                                            }
+                                            else if (timeDiff > 0) {
+                                                statusList.add("<font color=red>Newer" /* + " " + (timeDiff / 1000.) + "s " */ + "</font>");
                                             }
                                             else {
-                                                statusList.add("<font color=green>up-to-date</font>");
+                                                statusList.add("<font color=green>Up-to-date" /*+ " " + (timeDiff) + "ms " */ + "</font>");
                                             }
                                         }
                                         else {
-                                            statusList.add("<font color=gray>does not exist</font>");
+                                            statusList.add("<font color=gray>Does not exist</font>");
                                         }
                                     }
                                 }
@@ -398,16 +409,16 @@ void amoMakeStartListener() {
                         String toolTip = "<html><table>";
                         
                         if (currentBuffer == null) {
-                            labelText += "No Buffer";
+                            //labelText += "No Buffer";
                             toolTip += "<tr><td>No Buffer</tr></td>";
                         }
                         else {
-                            if (currentBuffer.isDirty()) {
+                            /*if (currentBuffer.isDirty()) {
                                 labelText += "<b><font color=red>" + currentBuffer.getName() + "</font></b>: ";
                             }
                             else {
                                 labelText += "<b>" + currentBuffer.getName() + "</b>: ";
-                            }
+                            }*/
                             toolTip +=
                                 "<tr><td><b>Buffer:</b></td><td colspan=2>" +
                                 currentBuffer.getPath().replace(File.separator, "/") + "</tr></td>";

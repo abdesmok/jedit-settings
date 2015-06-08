@@ -319,18 +319,40 @@ void amoMakeUpdateComponents(View view, File makefile, boolean clear) {
                         }
                         else {
                             //comboBox.addItem(line);
-                            comboBox.addItem(line.substring(line.indexOf('=') + 1));
+                            String item;
+                            
+                            int index2 = line.indexOf('|');
+                            
+                            if (index2 >= 0) {
+                                item = line.substring(index2 + 1);
+                                line = line.substring(0, index2);
+                            }
+                            else {
+                                item = line.substring(index + 1);
+                            }
+                            
+                            comboBox.addItem(item);
+                            items = comboBox.getClientProperty("AmoMakeItems");
+                            if (items == null) {
+                                items = new Vector();
+                                comboBox.putClientProperty("AmoMakeItems", items);
+                            }
+                            items.add(line);
                         }
+                        
+                        comboBox.setEditable(isEditable);
                         
                         if (isEditable) {
                             comboBox.setMinimumSize(new Dimension(3000, 24));
+                            if (comboBox.getSelectedItem() == null) {
+                                comboBox.setSelectedItem("");
+                            }
                         }
                         else {
                             comboBox.setMinimumSize(new Dimension(300, 24));
                         }
                         comboBox.setMaximumSize(comboBox.getMinimumSize());
                         comboBox.getParent().validate();
-                        comboBox.setEditable(isEditable);
                     }
                 }
             }
@@ -505,18 +527,16 @@ Vector amoGuiMakeArgList(View view) {
         if (component instanceof JComboBox && componentName != null && componentName.startsWith("AmoMake_")) {
             JComboBox comboBox = (JComboBox) component;
             
-            String variableName = componentName.substring(8);
-            String value = comboBox.getSelectedItem();
+            Vector items = comboBox.getClientProperty("AmoMakeItems");
             int index = comboBox.getSelectedIndex();
-            
-            if (index == comboBox.getClientProperty("AmoMakeEmptyValueIndex")) {
-                args.add(variableName + "=");
-                //amoMessage(variableName + "=");
+            String value;
+            if (items != null && index >= 0) {
+                value = items.elementAt(index);
             }
             else {
-                args.add(variableName + "=" + value);
-                //amoMessage(variableName + "=" + value);
+                value = componentName.substring(8) + "=" + comboBox.getSelectedItem();
             }
+            args.add(value);
         }
     }
     

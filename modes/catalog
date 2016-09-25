@@ -5,4 +5,6 @@
   <MODE NAME="scala" FILE="scala.xml" FILE_NAME_GLOB="*.scala" />
   <MODE NAME="autoit" FILE="au3.xml" FILE_NAME_GLOB="*.au3" />
   <MODE NAME="cucumber" FILE="cucumber.xml" FILE_NAME_GLOB="*.feature" />
+  <MODE NAME="cucumber" FILE="cucumber.xml" FILE_NAME_GLOB="*.feature" />
+  <MODE NAME="javascript" FILE="javascript.xml" FILE_NAME_GLOB="*.{js,js.in}" />
 </MODES>

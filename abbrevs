@@ -1,29 +1,33 @@
 [global]
 [c++]
-d_|AMO_DUMP(\|)
 df_|amo::info("DEBUG") << __FUNCTION__\|;
-_io|#include <stdio.h>\n
-i_|amo::info() << \|;
-_fo|for (\|; @; @) {\n\t@\n}
-_in|#include <\|>\n
-_lin|#include "\|"\n
-w_|amo::warning() << \|;
-_st|struct \|\n{\n\t@;\n}\n
+d_|AMO_DUMP(\|)
 _if|if (\|) {\n\t@\n}\n
+_st|struct \|\n{\n\t@;\n}\n
+itt_|#ifdef __TEST_TOOL__\n#include <TestTool.h>\n\|#endif
+main|#include <iostream>\n\nint main(int argc, char **args) {\n    std::cout << \| << std::endl;\n    return 0;\n}
+_lin|#include "\|"\n
 e_|amo::error() << \|;
-_wh|while(\|) {\n\t@\n}
 /**|/**\n * \|\n */
-_el|else {\n\t\|}
-_str|#include <string.h>\n
+w_|amo::warning() << \|;
 _lib|#include <stdlib.h>\n
+tt_|#ifdef __TEST_TOOL__\n\|\n#endif
+_el|else {\n\t\|}
 _ei|else if (\|) {\n\t@\n}
+i_|amo::info() << \|;
+_str|#include <string.h>\n
+_wh|while(\|) {\n\t@\n}
+_fo|for (\|; @; @) {\n\t@\n}
+_io|#include <stdio.h>\n
+_in|#include <\|>\n
 [sqr]
 [nsis2]
 [markdown]
 [asp]
 [latex]
-[factor]
 [cfscript]
+[factor]
+[m4]
 [batch]
 [assembly-mcs51]
 [vrml2]
@@ -34,28 +38,28 @@ _ei|else if (\|) {\n\t@\n}
 [patch]
 [beanshell]
 [pl1]
-[fortran90]
 [pyrex]
+[fortran90]
 [inno-setup]
 [inform]
 [netrexx]
 [eiffel]
 [fortran]
-[pl-sql9]
 [chill]
+[pl-sql9]
 [json]
 [macroscheduler]
 [smalltalk]
 [mustache-template]
 [idl]
 [haxe]
-[pvwave]
 [smarty]
+[pvwave]
 [ada95]
 [pl-sql]
 [vala]
-[apacheconf]
 [htaccess]
+[apacheconf]
 [clojure]
 [io]
 [pure]
@@ -72,15 +76,16 @@ sig|signal
 [logs]
 [maple]
 [lotos]
-[PowerCenter Parameter File]
+[java module-info]
 [django]
-[ada]
+[PowerCenter Parameter File]
 [php]
 l|echo '<pre>' . __FILE__ . ':' . __LINE__ . ': \|</pre>';
 bt|echo '<pre>'; debug_print_backtrace();\| echo '</pre>';
 vd|echo "<pre>"; var_dump($\|); echo "\\n</pre>";
 prer|print '<pre>' . print_r(\|, TRUE) . '</pre>';
 dp|dprint(\|);
+[ada]
 [yab]
 [lua]
 [makefile]
@@ -133,20 +138,22 @@ vos|<xsl:value-of select="\|"/>
 f|<xsl:fallback>\|</xsl:fallback>
 tn|<xsl:template name="\|">\n</xsl:template>
 tm|<xsl:template match="\|">\n</xsl:template>
+[drawj2d]
 [moin]
 [bibtex]
-[hxml]
 [modula3]
-[perl]
+[hxml]
 [tsp]
+[perl]
+[swift]
 [transact-sql]
 [lisp]
 [smi-mib]
 [actionscript]
 [pop11]
 [progress]
-[jamon]
 [ini]
+[jamon]
 [html]
 _amo|<span class="amo">\|</span>
 [go]
@@ -154,9 +161,9 @@ _amo|<span class="amo">\|</span>
 [bcel]
 [psp]
 [antlr]
-[PostgreSQL]
 [cmake]
 m|message(STATUS "\|")
+[PostgreSQL]
 [ant]
 [assembly-m68k]
 [omnimark]
@@ -166,6 +173,7 @@ m|message(STATUS "\|")
 [cvs-commit]
 [lilypond]
 [jsp]
+[protobuf]
 [foxpro]
 [rfc]
 [tex]
@@ -184,8 +192,8 @@ m|message(STATUS "\|")
 [zpt]
 [objective-c]
 [mqsc]
-[lex]
 [rust]
+[lex]
 [prolog]
 [assembly-r2000]
 [sdl/pr]
@@ -198,19 +206,20 @@ m|message(STATUS "\|")
 [forth]
 [nqc]
 [s#]
+[mavscript]
 [fhtml]
 [occam]
 [objectrexx]
 [rpm-spec]
 [apdl]
-[myghty]
 [cplex-lp]
+[myghty]
 [kotlin]
-[scala]
 [tcl]
+[scala]
 [rcp]
-[template-toolkit]
 [sip]
+[template-toolkit]
 [python]
 [i4gl]
 [clips]
@@ -231,9 +240,9 @@ m|message(STATUS "\|")
 [jflex]
 [d]
 [c]
+[maven]
 [coldfusion]
 [b]
-[maven]
 [typoscript]
 [scheme]
 [dart]
@@ -295,17 +304,17 @@ gbp|jEdit.getBooleanProperty(\|)
 sout|System.out.println(\|);
 ogsj|import org.gjt.sp.jedit.
 [assembly-parrot]
+[dot]
 [xml]
 YY|<$1>\n\|\n</$1>
 Ykeycombo|<keycombo><keycap>$1</keycap><keycap>$2</keycap></keycombo>
 Ykeycap|<keycap>\|</keycap>
-[dot]
 [rakefile]
-[cil]
 [powershell]
+[cil]
 [autoit]
-[postscript]
 [logtalk]
+[postscript]
 [sql-loader]
 [redcode]
 [literate-haskell]
@@ -313,8 +322,8 @@ Ykeycap|<keycap>\|</keycap>
 [doxygen]
 [javacc]
 [cucumber]
-[pike]
 [ruby]
+[pike]
 [applescript]
 [ml]
 [pascal]
@@ -323,8 +332,8 @@ Ykeycap|<keycap>\|</keycap>
 [freemarker]
 [coffeescript]
 [vbscript]
-[url]
 [visualbasic]
+[url]
 [povray]
 [jmk]
 [icalendar]
@@ -342,8 +351,8 @@ Ykeycap|<keycap>\|</keycap>
 [assembly-x86]
 [binsource-agc]
 [ans-forth94]
+[xq]
+[gnuplot]
 [javascript]
 cl|console.log(\|);
 [uscript]
-[gnuplot]
-[xq]

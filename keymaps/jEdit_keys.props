@@ -1,7 +1,8 @@
 #jEdit's keymap jEdit
-#Fri Sep 16 15:45:58 CEST 2016
+#Wed Jan 04 17:15:43 CET 2017
 Amo/Amo_cpp_header.shortcut=CA+h
 Amo/Amo_cpp_header_update.shortcut=CS+h
+Amo/Amo_eval_selection.shortcut=CS+a e
 Amo/Amo_increment.shortcut=CA+i
 Amo/Amo_sort_selected_lines.shortcut=CS+s
 Amo/Amo_tabify_empty_untabified_lines.shortcut=CS+t
@@ -42,6 +43,7 @@ collapse-fold.shortcut=A+BACK_SPACE
 combined-options.shortcut=A+o
 combined-options.shortcut2=C+F12
 complete-word.shortcut=C+b
+console-float.shortcut=CS+c
 copy-append-string-register.shortcut=C+r C+a
 copy-append.shortcut=C+e C+a
 copy-string-register.shortcut=C+r C+c

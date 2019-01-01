@@ -28,7 +28,8 @@ boolean amoHideProjectComboBox(boolean hide, View view) {
     }
     
     if (view != null) {
-        ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+        ProjectViewer projectViewer = ProjectViewer.getViewer(view);
+        //ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
         
         if (projectViewer != null) {
             
@@ -71,13 +72,15 @@ boolean amoEnableProjectsMenu(boolean enable, View view) {
     }
     
     if (view != null) {
-        ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
+        ProjectViewer projectViewer = ProjectViewer.getViewer(view);
+        
+        /*ProjectViewer projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
         
         if (projectViewer == null) {
             view.getDockableWindowManager().addDockableWindow("projectviewer");
             projectViewer = (ProjectViewer) view.getDockableWindowManager().getDockableWindow("projectviewer");
             view.getDockableWindowManager().removeDockableWindow("projectviewer");
-        }
+        }*/
         
         if (projectViewer != null) {
             JMenuBar menuBar = view.getJMenuBar();

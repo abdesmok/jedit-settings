@@ -1,0 +1,5 @@
+import bsh.Interpreter;
+
+String selection = textArea.getSelectedText();
+
+textArea.replaceSelection(selection + " = " + eval(selection));

@@ -53,3 +53,5 @@ plugins/projectviewer.ProjectPlugin/config.properties
 */jedit.properties
 
 plugins/sessions.SessionsPlugin/*
+/plugins/ftp.FtpPlugin/password-cache
+/plugins/gatchan.jedit.hyperlinks.HyperlinksPlugin/hyperlinks.xml
